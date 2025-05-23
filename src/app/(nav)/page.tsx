@@ -7,7 +7,7 @@ export const metadata = {
   description: "코다(CODA) 메인페이지",
 };
 
-export default function Home() {
+export default function HomePage() {
   return (
     <>
       <main>
@@ -167,7 +167,6 @@ export default function Home() {
           </div>
         </section>
       </main>
-      <Footer />
     </>
   );
 }

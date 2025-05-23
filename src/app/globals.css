@@ -52,3 +52,29 @@ body {
   margin-bottom: 0.6em;
   color: #111827;
 }
+
+@keyframes carousell-scroll-left {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-100%);
+  }
+}
+
+@keyframes carousell-scroll-right {
+  0% {
+    transform: translateX(-100%);
+  }
+  100% {
+    transform: translateX(0);
+  }
+}
+
+.carousell-scroll-left {
+  animation: carousell-scroll-left 30s linear infinite;
+}
+
+.carousell-scroll-right {
+  animation: carousell-scroll-right 30s linear infinite;
+}

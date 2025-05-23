@@ -1,31 +1,32 @@
 "use client";
 import Image from "next/image";
+import Link from "next/link";
 import React, { useState, useEffect } from "react";
 
 const menuItems = [
   {
     name: "브랜드",
-    link: "brand.php",
-    subMenu: [{ name: "브랜드", link: "brand.php" }],
+    link: "/brand",
+    subMenu: [{ name: "브랜드", link: "/brand" }],
   },
   {
     name: "제품",
-    link: "item.php",
+    link: "/product",
     subMenu: [
-      { name: "무인회수기", link: "item_list_coda.php" },
-      { name: "차량용RFID", link: "item_rfid.php" },
-      { name: "음식물종량기", link: "item_food.php" },
+      { name: "무인회수기", link: "/product/recycle-machine" },
+      { name: "차량용RFID", link: "/product/rfid" },
+      { name: "음식물종량기", link: "/product/food-waste-disposal" },
     ],
   },
   {
     name: "소식",
-    link: "news.php",
-    subMenu: [{ name: "소식", link: "news.php" }],
+    link: "/news",
+    subMenu: [{ name: "소식", link: "/news" }],
   },
   {
     name: "커뮤니티",
-    link: "community-temp.php",
-    subMenu: [{ name: "커뮤니티", link: "community-temp.php" }],
+    link: "/community",
+    subMenu: [{ name: "커뮤니티", link: "/community" }],
   },
 ];
 
@@ -60,7 +61,7 @@ export default function Nav() {
     >
       <div className="relative flex items-center justify-between w-[1100px] mx-auto max-w-[90%] h-20">
         <div className="flex items-center">
-          <a href="index.php">
+          <Link href="/">
             <Image
               src="https://do40f6yw4fd7i.cloudfront.net/img13/common/logo_white.webp"
               alt="코다(CODA)"
@@ -79,7 +80,7 @@ export default function Nav() {
                 isScrolled || isHovered ? "block" : "hidden"
               }`}
             />
-          </a>
+          </Link>
         </div>
 
         {/* 네비게이션 */}

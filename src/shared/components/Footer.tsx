@@ -67,7 +67,10 @@ export default function Footer() {
                 title="지테크인터내셔날 유튜브"
                 className="text-white"
               >
-                <FontAwesomeIcon icon={faYoutube} className="text-2xl" />
+                <FontAwesomeIcon
+                  icon={faYoutube}
+                  className="w-[30px] h-[30px]"
+                />
               </Link>
             </li>
             <li>
@@ -76,25 +79,10 @@ export default function Footer() {
                 title="지테크인터내셔날 인스타그램"
                 className="text-white"
               >
-                <FontAwesomeIcon icon={faInstagram} className="text-2xl" />
-              </Link>
-            </li>
-            <li>
-              <Link
-                href="tel:010-9282-4070"
-                title="담당자 연락처"
-                className="text-white"
-              >
-                <FontAwesomeIcon icon={faPhone} className="text-2xl" />
-              </Link>
-            </li>
-            <li>
-              <Link
-                href="mailto:stmo11@gtech21.net"
-                title="담당자 이메일"
-                className="text-white"
-              >
-                <FontAwesomeIcon icon={faEnvelope} className="text-2xl" />
+                <FontAwesomeIcon
+                  icon={faInstagram}
+                  className="w-[30px] h-[30px]"
+                />
               </Link>
             </li>
             <li>
@@ -103,7 +91,28 @@ export default function Footer() {
                 title="지테크인터내셔날 네이버 블로그"
                 className="text-white"
               >
-                <FontAwesomeIcon icon={faNeos} className="text-2xl" />
+                <FontAwesomeIcon icon={faNeos} className="w-[30px] h-[30px]" />
+              </Link>
+            </li>
+            <li>
+              <Link
+                href="tel:010-9282-4070"
+                title="담당자 연락처"
+                className="text-white"
+              >
+                <FontAwesomeIcon icon={faPhone} className="w-[30px] h-[30px]" />
+              </Link>
+            </li>
+            <li>
+              <Link
+                href="mailto:stmo11@gtech21.net"
+                title="담당자 이메일"
+                className="text-white"
+              >
+                <FontAwesomeIcon
+                  icon={faEnvelope}
+                  className="w-[30px] h-[30px]"
+                />
               </Link>
             </li>
           </ul>
