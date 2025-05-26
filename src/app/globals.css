@@ -5,6 +5,20 @@
   --foreground: #171717;
 }
 
+@font-face {
+  font-family: "Noto Sans KR";
+  font-style: normal;
+  font-weight: 400;
+  src: url("/fonts/noto-sans-kr-v36-korean-regular.woff2") format("woff2");
+}
+
+@font-face {
+  font-family: "Noto Sans KR";
+  font-style: normal;
+  font-weight: 900;
+  src: url("/fonts/noto-sans-kr-v36-korean-900.woff2") format("woff2");
+}
+
 @theme inline {
   --color-background: var(--background);
   --color-foreground: var(--foreground);
@@ -22,7 +36,8 @@
 body {
   background: var(--background);
   color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: "Noto Sans KR";
+  letter-spacing: -0.1em;
 }
 
 /* 에디터 직접 스타일링 */

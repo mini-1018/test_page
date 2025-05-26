@@ -1,6 +1,5 @@
 import Image from "next/image";
 import Link from "next/link";
-import Footer from "@shared/components/Footer";
 
 export const metadata = {
   title: "코다(CODA) 메인페이지",
