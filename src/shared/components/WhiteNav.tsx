@@ -1,7 +1,7 @@
 "use client";
-import Image from "next/image";
+import { useState, useEffect } from "react";
 import Link from "next/link";
-import React, { useState, useEffect } from "react";
+import Image from "next/image";
 
 const menuItems = [
   {
@@ -30,7 +30,7 @@ const menuItems = [
   },
 ];
 
-export default function Nav() {
+export default function WhiteNav() {
   const [isScrolled, setIsScrolled] = useState(false);
   const [isHovered, setIsHovered] = useState(false);
   const [hoveredSubmenu, setHoveredSubmenu] = useState<string | null>(null);
@@ -46,10 +46,13 @@ export default function Nav() {
     };
   }, []);
 
+  // 스크롤하거나 호버하면 다크 테마
+  const shouldShowDarkTheme = isScrolled || isHovered;
+
   return (
     <header
       className={`fixed top-0 left-0 w-full z-50 transition-all duration-300 ${
-        isScrolled || isHovered ? "bg-white" : "bg-transparent"
+        shouldShowDarkTheme ? "bg-white" : "bg-transparent"
       }`}
       style={{
         height: isHovered ? "280px" : "80px",
@@ -68,7 +71,7 @@ export default function Nav() {
               width={100}
               height={40}
               className={`transition-all ${
-                isScrolled || isHovered ? "hidden" : "block"
+                shouldShowDarkTheme ? "hidden" : "block"
               }`}
             />
             <Image
@@ -77,7 +80,7 @@ export default function Nav() {
               width={100}
               height={40}
               className={`transition-all ${
-                isScrolled || isHovered ? "block" : "hidden"
+                shouldShowDarkTheme ? "block" : "hidden"
               }`}
             />
           </Link>
@@ -92,7 +95,7 @@ export default function Nav() {
                 <a
                   href={menu.link}
                   className={`transition-colors text-sm font-light hover:text-gray-800 relative ${
-                    isScrolled || isHovered ? "text-black" : "text-white"
+                    shouldShowDarkTheme ? "text-black" : "text-white"
                   }`}
                 >
                   {menu.name}
@@ -104,23 +107,25 @@ export default function Nav() {
                 </a>
 
                 {/* 서브메뉴 */}
-                {isHovered && (
-                  <div
-                    className="absolute top-[76px] w-[100px]"
-                    onMouseEnter={() => setHoveredSubmenu(menu.name)}
-                    onMouseLeave={() => setHoveredSubmenu(null)}
-                  >
-                    {menu.subMenu.map((subItem, subIndex) => (
-                      <a
-                        key={subIndex}
-                        href={subItem.link}
-                        className="block text-sm text-gray-600 hover:text-blue-500 transition-colors mt-3 first:mt-0"
-                      >
-                        {subItem.name}
-                      </a>
-                    ))}
-                  </div>
-                )}
+                <div
+                  className={`absolute top-[76px] w-[100px] transition-all duration-300 ${
+                    isHovered
+                      ? "opacity-100 translate-y-0"
+                      : "opacity-0 translate-y-[-10px] pointer-events-none"
+                  }`}
+                  onMouseEnter={() => setHoveredSubmenu(menu.name)}
+                  onMouseLeave={() => setHoveredSubmenu(null)}
+                >
+                  {menu.subMenu.map((subItem, subIndex) => (
+                    <a
+                      key={subIndex}
+                      href={subItem.link}
+                      className="block text-sm text-gray-600 hover:text-blue-500 transition-colors mt-3 first:mt-0"
+                    >
+                      {subItem.name}
+                    </a>
+                  ))}
+                </div>
               </li>
             ))}
           </ul>

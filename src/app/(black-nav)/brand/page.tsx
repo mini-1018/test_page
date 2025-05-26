@@ -8,7 +8,7 @@ export const metadata = {
 export default function BrandPage() {
   return (
     <main className="w-full">
-      {/* 메인 비주얼 섹션 */}
+      {/* 메인 비주얼 섹션
       <section className="w-full">
         <div className="relative">
           <Image
@@ -20,7 +20,7 @@ export default function BrandPage() {
             priority
           />
         </div>
-      </section>
+      </section> */}
 
       {/* 자원 선순환 플랫폼 섹션 */}
       <section className="w-full mt-44 mb-80">

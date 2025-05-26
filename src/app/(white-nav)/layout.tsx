@@ -1,6 +1,7 @@
 import "@app/globals.css";
 import Footer from "@shared/components/Footer";
-import Nav from "@shared/components/Nav";
+import Nav from "@shared/components/BlackNav";
+import WhiteNav from "@shared/components/WhiteNav";
 
 export default function RootLayout({
   children,
@@ -9,7 +10,7 @@ export default function RootLayout({
 }>) {
   return (
     <>
-      <Nav />
+      <WhiteNav />
       {children}
       <Footer />
     </>
