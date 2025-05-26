@@ -33,8 +33,8 @@ export default function ProductLineup() {
   return (
     <div className="w-full">
       <div className="w-[1280px] mx-auto px-4">
-        <div className="container mx-auto">
-          <h1 className="text-4xl font-bold text-center text-gray-800 mb-12 pt-8">
+        <div className="container mx-auto mt-[250px] mb-[150px]">
+          <h1 className="text-4xl font-bold text-center text-gray-800 mb-[100px] pt-8">
             코다(CODA) 제품 라인업
           </h1>
 

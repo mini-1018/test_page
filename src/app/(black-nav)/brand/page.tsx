@@ -35,7 +35,7 @@ export default function BrandPage() {
             />
           </div>
           <div className="text-center">
-            <h2 className="text-4xl font-bold text-blue-500 mb-4">
+            <h2 className="text-4xl font-bold text-blue-500 mt-12 mb-8">
               자원 선순환 플랫폼
             </h2>
             <p className="text-xl font-light text-gray-500">

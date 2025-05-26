@@ -1,0 +1,41 @@
+{
+  "name": "App",
+  "icons": [
+    {
+      "src": "../FAVICON_36.webp",
+      "sizes": "36x36",
+      "type": "image/ico",
+      "density": "0.75"
+    },
+    {
+      "src": "../FAVICON_48.webp",
+      "sizes": "48x48",
+      "type": "image/ico",
+      "density": "1.0"
+    },
+    {
+      "src": "../FAVICON_72.webp",
+      "sizes": "72x72",
+      "type": "image/ico",
+      "density": "1.5"
+    },
+    {
+      "src": "../FAVICON_96.webp",
+      "sizes": "96x96",
+      "type": "image/ico",
+      "density": "2.0"
+    },
+    {
+      "src": "../FAVICON_144.webp",
+      "sizes": "144x144",
+      "type": "image/ico",
+      "density": "3.0"
+    },
+    {
+      "src": "../FAVICON_192.webp",
+      "sizes": "192x192",
+      "type": "image/ico",
+      "density": "4.0"
+    }
+  ]
+}

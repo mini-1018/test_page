@@ -51,7 +51,7 @@ export default function WhiteNav() {
 
   return (
     <header
-      className={`fixed top-0 left-0 w-full z-50 transition-all duration-300 ${
+      className={`hidden md:block fixed top-0 left-0 w-full z-50 transition-all duration-300 ${
         shouldShowDarkTheme
           ? "bg-white border-b-1 border-gray-200"
           : "bg-transparent"

@@ -5,6 +5,20 @@
   --foreground: #171717;
 }
 
+/* @font-face {
+  font-family: "Noto Sans KR";
+  font-style: normal;
+  font-weight: 400;
+  src: url("https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@400&display=swap");
+}
+
+@font-face {
+  font-family: "Noto Sans KR";
+  font-style: bold;
+  font-weight: 900;
+  src: url("https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@900&display=swap");
+} */
+
 @font-face {
   font-family: "Noto Sans KR";
   font-style: normal;
