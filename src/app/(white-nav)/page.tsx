@@ -35,7 +35,7 @@ export default function HomePage() {
               alt="코다(CODA) 로고"
               className="mx-auto mb-[30px]"
             />
-            <h2 className="text-[40px] leading-[1.3] mb-[50px]">
+            <h2 className="text-[40px] leading-[1.3] mb-[50px] font-bold">
               바다 속 향유고래 지킴이
               <br />
               자원순환 CAN+PET 무인회수기
@@ -52,7 +52,7 @@ export default function HomePage() {
                 <h3 className="text-[32px] text-[#4b8cca] bg-gradient-to-r from-[#4b8cca] to-white text-white pl-[10px] mr-[100px] font-light">
                   01
                 </h3>
-                <h4 className="text-[42px] leading-[1.3] my-[20px]">
+                <h4 className="text-[42px] leading-[1.3] my-[20px] font-bold">
                   지구를 지키는 작은 시작
                   <br />
                   CODA의 순환 이야기
@@ -93,7 +93,7 @@ export default function HomePage() {
                 <h3 className="text-[32px] text-[#4b8cca] bg-gradient-to-r from-[#4b8cca] to-white text-white pl-[10px] mr-[100px] font-light">
                   02
                 </h3>
-                <h4 className="text-[42px] leading-[1.3] my-[20px]">
+                <h4 className="text-[42px] leading-[1.3] my-[20px] font-bold">
                   건강한 지구를 위한 활동
                   <br />
                   CODA와 함께 해주세요.
@@ -115,8 +115,8 @@ export default function HomePage() {
         <section className="pt-[150px] pb-[150px]">
           <div className="w-[1100px] max-w-[95%] mx-auto">
             <div className="mb-[50px]">
-              <h3 className="text-[20px] text-[#4b8cca]">제품소개</h3>
-              <h4 className="text-[42px] leading-[1.3] mt-[20px]">
+              <h3 className="text-[20px] text-[#4b8cca] font-bold">제품소개</h3>
+              <h4 className="text-[42px] leading-[1.3] mt-[20px] font-bold">
                 CODA와 함께
                 <br />
                 환경을 지켜주세요.
