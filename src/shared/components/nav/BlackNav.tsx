@@ -1,5 +1,5 @@
 "use client";
-import { useState, useEffect } from "react";
+import { useState } from "react";
 import Link from "next/link";
 import Image from "next/image";
 
@@ -26,40 +26,24 @@ const menuItems = [
   {
     name: "커뮤니티",
     link: "/community",
-    subMenu: [{ name: "커뮤니티", link: "/community" }],
+    subMenu: [
+      { name: "공지사항", link: "/community/notice" },
+      { name: "자유게시판", link: "/community/board" },
+      { name: "자료실", link: "/community/downloads" },
+    ],
   },
 ];
 
-export default function WhiteNav() {
-  const [isScrolled, setIsScrolled] = useState(false);
+export default function BlackNav() {
   const [isHovered, setIsHovered] = useState(false);
   const [hoveredSubmenu, setHoveredSubmenu] = useState<string | null>(null);
 
-  useEffect(() => {
-    const handleScroll = () => {
-      setIsScrolled(window.scrollY >= 40);
-    };
-
-    window.addEventListener("scroll", handleScroll);
-    return () => {
-      window.removeEventListener("scroll", handleScroll);
-    };
-  }, []);
-
-  // 스크롤하거나 호버하면 다크 테마
-  const shouldShowDarkTheme = isScrolled || isHovered;
-
   return (
     <header
-      className={`hidden md:block fixed top-0 left-0 w-full z-50 transition-all duration-300 ${
-        shouldShowDarkTheme
-          ? "bg-white border-b-1 border-gray-200"
-          : "bg-transparent"
-      }`}
+      className="fixed top-0 left-0 w-full z-50 bg-white transition-all duration-300 border-b-1 border-gray-200 hidden md:block"
       style={{
         height: isHovered ? "280px" : "80px",
-        transition:
-          "height 0.3s ease-in-out, background-color 0.3s ease-in-out",
+        transition: "height 0.3s ease-in-out",
       }}
       onMouseEnter={() => setIsHovered(true)}
       onMouseLeave={() => setIsHovered(false)}
@@ -68,22 +52,10 @@ export default function WhiteNav() {
         <div className="flex items-center">
           <Link href="/">
             <Image
-              src="https://do40f6yw4fd7i.cloudfront.net/img13/common/logo_white.webp"
-              alt="코다(CODA)"
-              width={100}
-              height={40}
-              className={`transition-all ${
-                shouldShowDarkTheme ? "hidden" : "block"
-              }`}
-            />
-            <Image
               src="https://do40f6yw4fd7i.cloudfront.net/img13/common/logo.webp"
               alt="코다(CODA)"
               width={100}
               height={40}
-              className={`transition-all ${
-                shouldShowDarkTheme ? "block" : "hidden"
-              }`}
             />
           </Link>
         </div>
@@ -96,9 +68,7 @@ export default function WhiteNav() {
                 {/* 메인 메뉴 */}
                 <a
                   href={menu.link}
-                  className={`transition-colors text-sm font-light hover:text-gray-800 relative ${
-                    shouldShowDarkTheme ? "text-black" : "text-white"
-                  }`}
+                  className="transition-colors text-sm font-light text-black hover:text-gray-800 relative"
                 >
                   {menu.name}
                   <span

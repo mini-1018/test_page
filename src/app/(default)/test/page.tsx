@@ -1,6 +1,6 @@
 "use client";
 
-import MobileNav from "@shared/components/MobileNav";
+import MobileNav from "@shared/components/nav/MobileNav";
 
 export default function TestPage() {
   return (

@@ -1,8 +1,26 @@
 import Image from "next/image";
+import metaData from "@shared/metaData/metaData";
+
+const title = metaData.brand.title;
+const description = metaData.brand.description;
+const keywords = metaData.brand.keywords;
+const canonical = metaData.brand.alternates.canonical;
 
 export const metadata = {
-  title: "코다(CODA) 브랜드",
-  description: "코다(CODA) 브랜드",
+  title,
+  description,
+  alternates: {
+    canonical: canonical,
+  },
+  keywords,
+  openGraph: {
+    title,
+    description,
+  },
+  twitter: {
+    title,
+    description,
+  },
 };
 
 export default function BrandPage() {

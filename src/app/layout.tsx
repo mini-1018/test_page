@@ -1,6 +1,11 @@
 import "@app/globals.css";
-
 import { Metadata, Viewport } from "next";
+import metaData from "@shared/metaData/metaData";
+
+const title = metaData.home.title;
+const description = metaData.home.description;
+const canonical = metaData.home.canonical;
+const keywords = metaData.home.keywords;
 
 export const viewport: Viewport = {
   width: "device-width",
@@ -16,19 +21,9 @@ export const metadata: Metadata = {
       ? "https://www.coda230.com"
       : "http://localhost:3000"
   ),
-  title: "코다(CODA)",
-  description:
-    "코다(CODA)의 무인회수기로 재활용을 더 쉽게, RFID 기술 기반 음식물종량기로 폐기물을 스마트하게 관리하세요. 개인, 기업, 공공기관 모두를 위한 맞춤형 친환경 파트너로 지속가능한 미래를 함께 만들어갑니다.",
-  keywords: [
-    "지테크",
-    "코다",
-    "CODA",
-    "재활용",
-    "친환경",
-    "무인회수기",
-    "음식물종량기",
-    "RFID",
-  ],
+  title,
+  description,
+  keywords,
   authors: [{ name: "코다(CODA)" }],
   robots: {
     index: true,
@@ -44,13 +39,12 @@ export const metadata: Metadata = {
     },
   },
   alternates: {
-    canonical: "https://www.coda230.com/",
+    canonical,
   },
   openGraph: {
-    title: "코다(CODA)",
-    description:
-      "코다(CODA)의 무인회수기로 재활용을 더 쉽게, RFID 기술 기반 음식물종량기로 폐기물을 스마트하게 관리하세요. 개인, 기업, 공공기관 모두를 위한 맞춤형 친환경 파트너로 지속가능한 미래를 함께 만들어갑니다.",
-    url: "https://www.coda230.com/",
+    title,
+    description,
+    url: canonical,
     siteName: "코다(CODA)",
     images: [
       {
@@ -65,9 +59,8 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "코다(CODA)",
-    description:
-      "코다(CODA)의 무인회수기로 재활용을 더 쉽게, RFID 기술 기반 음식물종량기로 폐기물을 스마트하게 관리하세요. 개인, 기업, 공공기관 모두를 위한 맞춤형 친환경 파트너로 지속가능한 미래를 함께 만들어갑니다.",
+    title,
+    description,
     images: ["/img/favicon/facebook-thumbnail_CODA.bmp"],
   },
   icons: {

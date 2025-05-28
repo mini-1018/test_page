@@ -145,7 +145,11 @@ export default function Footer() {
                 {
                   title: "커뮤니티",
                   link: "/community-temp",
-                  submenu: [],
+                  submenu: [
+                    { name: "공지사항", link: "/community/notice" },
+                    { name: "자유게시판", link: "/community/board" },
+                    { name: "자료실", link: "/community/downloads" },
+                  ],
                 },
               ].map((menu, index) => (
                 <li key={index} className="md:ml-[15%] md:first:ml-0">
