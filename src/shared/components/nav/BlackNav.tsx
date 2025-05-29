@@ -28,8 +28,9 @@ const menuItems = [
     link: "/community",
     subMenu: [
       { name: "공지사항", link: "/community/notice" },
-      { name: "자유게시판", link: "/community/board" },
-      { name: "자료실", link: "/community/downloads" },
+      { name: "F&Q", link: "/community/faq" },
+      { name: "고객문의", link: "/community/support" },
+      { name: "다운로드", link: "/community/downloads" },
     ],
   },
 ];
