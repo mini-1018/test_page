@@ -2,15 +2,14 @@ import Link from "next/link";
 
 const post = {
   id: 1,
-  title: "무인회수기 이용 문의",
-  author: "김문의",
-  date: "2025-05-27",
-  content: `무인회수기 이용문의 드립니다.`,
-  answer: "고객센터로 문의바랍니다.",
-  category: "이용문의",
+  title: "이벤트",
+  author: "코다",
+  date: "2025-05-25",
+  content: `안녕하세요, 코다입니다. 이번 이벤트는 무인회수기 이용 고객님들을 위한 특별한 혜택을 제공합니다. 자세한 내용은 홈페이지를 참고해주세요.`,
+  category: "이벤트",
 };
 
-export default function SupportDetailPage() {
+export default function NoticeDetailPage() {
   return (
     <main className="min-h-screen bg-gray-50">
       {/* 헤더 영역 */}
@@ -42,25 +41,9 @@ export default function SupportDetailPage() {
           </div>
         </div>
 
-        {/* 답변 섹션 */}
-        <div className="mt-12">
-          <div className="bg-white rounded-xl shadow-sm border border-gray-200 overflow-hidden">
-            {/* 답변 헤더 */}
-            <div className="border-b border-gray-200 p-6">
-              <h3 className="text-lg text-gray-900">답변입니다.</h3>
-            </div>
-            {/* 답변 */}
-            <div className="p-6">
-              <p className="text-gray-700 leading-relaxed whitespace-pre-line">
-                {post.answer}
-              </p>
-            </div>
-          </div>
-        </div>
-
         {/* 하단 네비게이션 */}
         <div className="mt-12 flex justify-between items-center">
-          <Link href="/community/support">
+          <Link href="/community/notice">
             <button className="flex items-center gap-2 px-4 py-2 text-gray-600 hover:text-blue-600 transition-colors transition-transform duration-200 hover:-translate-x-1">
               <svg
                 className="w-4 h-4"

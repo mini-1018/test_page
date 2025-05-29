@@ -34,7 +34,7 @@ const Editor = dynamic(
   { ssr: false }
 );
 
-export default function MCEditor() {
+export default function MCEditor({ buttonText }: { buttonText: string }) {
   const editorRef = useRef<any>(null);
   const [title, setTitle] = useState<string>("");
   const [content, setContent] = useState<string>("");
@@ -61,7 +61,7 @@ export default function MCEditor() {
                 height: 700,
                 menubar: false,
                 language: "ko_KR",
-                language_url: "tinymce/langs/ko_KR.js", // public 폴더 기준 경로
+                language_url: "/tinymce/langs/ko_KR.js", // public 폴더 기준 경로
                 skin: false,
                 content_css: "/tinymce/content.css",
                 importcss_append: true,
@@ -137,7 +137,7 @@ export default function MCEditor() {
             />
             <div className="mt-8">
               <button className="px-6 py-2 rounded-lg bg-black text-white font-semibold hover:bg-gray-800 transition-colors duration-200 shadow-md">
-                게시글 등록
+                {buttonText}
               </button>
             </div>
           </div>

@@ -1,14 +1,6 @@
 "use client";
 import React, { useState } from "react";
-import {
-  Calendar,
-  User,
-  Eye,
-  Plus,
-  Search,
-  FileText,
-  ChevronRight,
-} from "lucide-react";
+import { Calendar, User, Search, FileText, ChevronRight } from "lucide-react";
 import Image from "next/image";
 import Link from "next/link";
 
@@ -17,9 +9,10 @@ export interface SupportPost {
   title: string;
   author: string;
   date: string;
-  comments: string[];
+  answer: string;
   category: string;
   content: string;
+  password: string;
 }
 
 interface SupportProps {
@@ -72,9 +65,9 @@ const Support: React.FC<SupportProps> = ({ posts }) => {
             </div>
           </div>
         </div>
-        <Link href="/community/board/write">
-          <button className="px-6 py-4 bg-gradient-to-r from-gray-600 to-gray-700 hover:from-gray-700 hover:to-gray-900 text-white font-semibold rounded-xl transition-all duration-200 flex items-center gap-3 whitespace-nowrap shadow-lg hover:shadow-xl transform hover:-translate-y-0.5">
-            <Plus className="w-5 h-5" />글 작성
+        <Link href="/community/support/write">
+          <button className="px-6 py-4 bg-blue-500 hover:bg-blue-800 text-white font-semibold rounded-xl transition-all duration-200 flex items-center gap-1 whitespace-nowrap shadow-lg hover:shadow-xl transform hover:-translate-y-0.5">
+            문의하기
           </button>
         </Link>
       </div>
@@ -94,7 +87,7 @@ const Support: React.FC<SupportProps> = ({ posts }) => {
           <div className="divide-y divide-gray-100/60">
             {filteredPosts.map((post) => (
               <div key={post.id} className="group relative">
-                <Link href={`/community/board/${post.id}`}>
+                <Link href={`/community/support/${post.id}`}>
                   <div className="absolute inset-0 bg-gradient-to-r from-transparent via-gray-50/50 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
                   <div className="relative px-8 py-6 border-b border-gray-100/80 hover:border-gray-200/60 transition-all duration-200 cursor-pointer">
                     <div className="flex items-start justify-between">
@@ -107,7 +100,7 @@ const Support: React.FC<SupportProps> = ({ posts }) => {
                             {post.title}
                           </h3>
                           <span className="inline-flex items-center px-2 py-1 rounded-md bg-slate-100 text-slate-600 text-sm font-medium">
-                            {post.comments}
+                            {post.answer ? "답변완료" : "답변대기"}
                           </span>
                         </div>
                         <div className="flex items-center gap-6 text-sm text-gray-500">

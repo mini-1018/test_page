@@ -1,36 +1,29 @@
 "use client";
 import React, { useState } from "react";
-import {
-  Pin,
-  Calendar,
-  User,
-  Eye,
-  Search,
-  FileText,
-  ChevronRight,
-} from "lucide-react";
+import { Calendar, User, Search, FileText, ChevronRight } from "lucide-react";
+import Link from "next/link";
 import Image from "next/image";
 
-export interface Post {
+export interface NoticeType {
   id: number;
   title: string;
   author: string;
   date: string;
-  views: number;
-  isPinned?: boolean;
+  category: string;
+  content: string;
 }
 
-interface BoardNoticeProps {
-  posts: Post[];
+interface NoticeProps {
+  notices: NoticeType[];
 }
 
-const Notice: React.FC<BoardNoticeProps> = ({ posts }) => {
+const Notice: React.FC<NoticeProps> = ({ notices }) => {
   const [searchTerm, setSearchTerm] = useState("");
 
-  const filteredPosts = posts.filter(
-    (post) =>
-      post.title.toLowerCase().includes(searchTerm.toLowerCase()) ||
-      post.author.toLowerCase().includes(searchTerm.toLowerCase())
+  const filterednotices = notices.filter(
+    (notice) =>
+      notice.title.toLowerCase().includes(searchTerm.toLowerCase()) ||
+      notice.author.toLowerCase().includes(searchTerm.toLowerCase())
   );
 
   return (
@@ -76,7 +69,7 @@ const Notice: React.FC<BoardNoticeProps> = ({ posts }) => {
 
       {/* 게시글 목록 */}
       <div className="bg-white/90 backdrop-blur-sm rounded-2xl border border-gray-200/60 shadow-xl overflow-hidden">
-        {filteredPosts.length === 0 ? (
+        {filterednotices.length === 0 ? (
           <div className="px-8 py-20 text-center text-gray-500">
             <div className="w-16 h-16 bg-gray-100 rounded-2xl flex items-center justify-center mx-auto mb-6">
               <FileText className="w-8 h-8 text-gray-400" />
@@ -87,48 +80,47 @@ const Notice: React.FC<BoardNoticeProps> = ({ posts }) => {
           </div>
         ) : (
           <div className="divide-y divide-gray-100/60">
-            {filteredPosts.map((post) => (
-              <div key={post.id} className="group relative">
-                <div className="absolute inset-0 bg-gradient-to-r from-transparent via-gray-50/50 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
-                <div className="relative px-8 py-6 border-b border-gray-100/80 hover:border-gray-200/60 transition-all duration-200 cursor-pointer">
-                  <div className="flex items-start justify-between">
-                    <div className="flex-1 min-w-0 space-y-3">
-                      <div className="flex items-center gap-4">
-                        {post.isPinned && (
-                          <div className="flex items-center justify-center w-6 h-6 bg-red-50 rounded-full flex-shrink-0">
-                            <Pin className="w-3.5 h-3.5 text-red-500" />
-                          </div>
-                        )}
-                        <h3 className="text-slate-900 font-semibold text-lg leading-tight group-hover:text-slate-700 transition-colors duration-200 truncate">
-                          {post.title}
-                        </h3>
-                      </div>
-                      <div className="flex items-center gap-6 text-sm text-gray-500">
+            {filterednotices.map((notice) => (
+              <div key={notice.id} className="group relative">
+                <Link href={`/community/notice/${notice.id}`}>
+                  <div className="absolute inset-0 bg-gradient-to-r from-transparent via-gray-50/50 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+                  <div className="relative px-8 py-6 border-b border-gray-100/80 hover:border-gray-200/60 transition-all duration-200 cursor-pointer">
+                    <div className="flex items-start justify-between">
+                      <div className="flex-1 min-w-0 space-y-3">
                         <div className="flex items-center gap-2">
-                          <div className="w-5 h-5 bg-gray-100 rounded-full flex items-center justify-center">
-                            <User className="w-3 h-3 text-gray-600" />
-                          </div>
-                          <span className="font-medium">{post.author}</span>
-                        </div>
-                        <div className="flex items-center gap-2">
-                          <Calendar className="w-4 h-4 text-gray-400" />
-                          <span>
-                            {new Date(post.date).toLocaleDateString("ko-KR")}
+                          <span className="inline-flex items-center px-3 py-1 rounded-full text-xs font-medium bg-gray-100/80 text-gray-600 border border-gray-200/50">
+                            {notice.category}
                           </span>
+                          <h3 className="text-slate-900 text-lg leading-tight group-hover:text-slate-700 transition-colors duration-200 truncate">
+                            {notice.title}
+                          </h3>
                         </div>
-                        <div className="flex items-center gap-2">
-                          <Eye className="w-4 h-4 text-gray-400" />
-                          <span>{post.views.toLocaleString()}</span>
+
+                        <div className="flex items-center gap-6 text-sm text-gray-500">
+                          <div className="flex items-center gap-2">
+                            <div className="w-5 h-5 bg-gray-100 rounded-full flex items-center justify-center">
+                              <User className="w-3 h-3 text-gray-600" />
+                            </div>
+                            <span className="font-medium">{notice.author}</span>
+                          </div>
+                          <div className="flex items-center gap-2">
+                            <Calendar className="w-4 h-4 text-gray-400" />
+                            <span>
+                              {new Date(notice.date).toLocaleDateString(
+                                "ko-KR"
+                              )}
+                            </span>
+                          </div>
                         </div>
                       </div>
-                    </div>
-                    <div className="ml-6 opacity-0 group-hover:opacity-100 transition-opacity duration-200">
-                      <div className="w-8 h-8 bg-gray-50 rounded-full flex items-center justify-center">
-                        <ChevronRight className="w-4 h-4 text-gray-400" />
+                      <div className="ml-6 opacity-0 group-hover:opacity-100 transition-opacity duration-200">
+                        <div className="w-8 h-8 bg-gray-50 rounded-full flex items-center justify-center">
+                          <ChevronRight className="w-4 h-4 text-gray-400" />
+                        </div>
                       </div>
                     </div>
                   </div>
-                </div>
+                </Link>
               </div>
             ))}
           </div>

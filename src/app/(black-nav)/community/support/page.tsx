@@ -1,14 +1,15 @@
-import Board, { SupportPost } from "./support";
+import Support, { SupportPost } from "./support";
 
-const SupportPosts: SupportPost[] = [
+export const SupportPosts: SupportPost[] = [
   {
     id: 1,
-    title: "무인회수기 이용 후기",
-    author: "김후기",
+    title: "무인회수기 이용 문의",
+    author: "김문의",
     date: "2025-05-27",
-    comments: [],
-    category: "후기",
-    content: "",
+    answer: "고객센터로 문의부탁드립니다.",
+    password: "1234",
+    category: "이용문의",
+    content: "무인회수기 이용",
   },
   {
     id: 2,
@@ -16,42 +17,46 @@ const SupportPosts: SupportPost[] = [
     author: "김불만",
     date: "2025-05-26",
     content: "",
-    comments: [],
+    answer: "고객센터로 문의부탁드립니다.",
+    password: "1234",
     category: "건의",
   },
   {
     id: 3,
-    title: "차량용RFID 사용 팁",
-    author: "김개꿀",
+    title: "차량용RFID 이용 문의",
+    author: "김문의",
     date: "2025-05-25",
     content: "",
-    comments: [],
-    category: "팁",
+    answer: "",
+    password: "1234",
+    category: "이용문의",
   },
   {
     id: 4,
-    title: "음식물 종량기 이용후기",
+    title: "음식물 종량기 고장문의",
     author: "김음식",
     date: "2025-05-24",
     content: "",
-    comments: [],
-    category: "후기",
+    answer: "",
+    password: "1234",
+    category: "고장문의",
   },
   {
     id: 5,
-    title: "종량기 추천",
-    author: "김추천",
+    title: "종량기 사용법 문의",
+    author: "김사용",
     date: "2025-05-23",
     content: "",
-    comments: [],
-    category: "추천",
+    answer: "",
+    password: "1234",
+    category: "이용문의",
   },
 ];
 
 export default function CommunityPage() {
   return (
     <main className="max-w-6xl mx-auto pb-32 pt-32">
-      <Board posts={SupportPosts} />
+      <Support posts={SupportPosts} />
     </main>
   );
 }

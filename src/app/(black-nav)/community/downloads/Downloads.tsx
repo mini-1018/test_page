@@ -47,7 +47,7 @@ const Downloads: React.FC<BoardDownloadsProps> = ({ posts }) => {
             />
           </div>
           <div>
-            <h1 className="text-3xl font-bold text-slate-900 mb-1">자료실</h1>
+            <h1 className="text-3xl font-bold text-slate-900 mb-1">다운로드</h1>
             <p className="text-gray-600 text-lg">
               코다(CODA) 제품 카탈로그를 다운로드 하세요
             </p>
@@ -82,7 +82,7 @@ const Downloads: React.FC<BoardDownloadsProps> = ({ posts }) => {
               <FileText className="w-8 h-8 text-gray-400" />
             </div>
             <p className="text-xl font-semibold mb-2 text-slate-700">
-              자료가 없습니다
+              검색결과가 없습니다
             </p>
           </div>
         ) : (
