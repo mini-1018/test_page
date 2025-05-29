@@ -1,6 +1,6 @@
 import Support from "./support";
 
-export const SupportPosts = [
+const SupportPosts = [
   {
     id: 1,
     title: "무인회수기 이용 문의",

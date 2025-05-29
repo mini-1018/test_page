@@ -38,7 +38,7 @@ export default function FullPageScroll() {
   ];
 
   // 특정 섹션으로 스크롤 이동
-  const scrollToSection = (index) => {
+  const scrollToSection = (index: any) => {
     const element = document.getElementById(sections[index].id);
     if (element) {
       element.scrollIntoView({ behavior: "smooth" });
@@ -68,7 +68,7 @@ export default function FullPageScroll() {
 
   // 키보드 네비게이션
   useEffect(() => {
-    const handleKeyDown = (e) => {
+    const handleKeyDown = (e: any) => {
       if (e.key === "ArrowDown" && currentSection < sections.length - 1) {
         scrollToSection(currentSection + 1);
       } else if (e.key === "ArrowUp" && currentSection > 0) {
