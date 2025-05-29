@@ -1,6 +1,6 @@
-import Support, { SupportPost } from "./support";
+import Support from "./support";
 
-export const SupportPosts: SupportPost[] = [
+export const SupportPosts = [
   {
     id: 1,
     title: "무인회수기 이용 문의",

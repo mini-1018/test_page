@@ -4,7 +4,7 @@ import { Calendar, User, Search, FileText, ChevronRight } from "lucide-react";
 import Image from "next/image";
 import Link from "next/link";
 
-export interface SupportPost {
+interface SupportPost {
   id: number;
   title: string;
   author: string;
