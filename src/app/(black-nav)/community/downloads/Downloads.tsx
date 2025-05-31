@@ -136,6 +136,7 @@ const Downloads: React.FC<BoardDownloadsProps> = ({ posts }) => {
           </div>
         )}
       </div>
+      <Image src={'/img/main/main_sec02_2.webp'} width={300} height={300} alt="카탈로그"/>
     </div>
   );
 };

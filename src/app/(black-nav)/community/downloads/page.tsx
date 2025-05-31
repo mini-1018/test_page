@@ -1,3 +1,4 @@
+import CatalogTabs from "./CatalogTabs";
 import Downloads, { DownloadPost } from "./Downloads";
 
 const downloadsPosts: DownloadPost[] = [
@@ -52,6 +53,7 @@ export default function DownloadsPage() {
   return (
     <main className="max-w-6xl mx-auto pb-32 pt-32">
       <Downloads posts={downloadsPosts} />
+      <CatalogTabs />
     </main>
   );
 }
