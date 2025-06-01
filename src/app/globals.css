@@ -207,3 +207,102 @@ body {
     @apply bg-background text-foreground;
   }
 }
+
+/* 스크롤바 숨기기 */
+.scrollbar-hide {
+  scrollbar-width: none;
+  -ms-overflow-style: none;
+}
+
+.scrollbar-hide::-webkit-scrollbar {
+  display: none;
+}
+
+/* 현재 타겟된 섹션에 대응하는 네비게이션 스타일 */
+.target-section:target ~ * .nav-link[data-target]:target,
+.target-section:target ~ * .nav-link[href*="#"]:target {
+  color: rgb(255 255 255) !important;
+  font-weight: 700 !important;
+  text-shadow: 0 0 10px rgba(255, 255, 255, 0.5);
+}
+
+.target-section:target ~ * .nav-link[data-target]:target .nav-indicator,
+.target-section:target ~ * .nav-link[href*="#"]:target .nav-indicator {
+  width: 2.5rem !important;
+  background-color: rgb(255 255 255) !important;
+  box-shadow: 0 0 10px rgba(255, 255, 255, 0.7);
+}
+
+/* 더 간단한 방법: CSS의 :target 가상 클래스 활용 */
+section:target ~ * nav a[href]:target,
+nav a[href]:target {
+  color: rgb(255 255 255) !important;
+  font-weight: 700 !important;
+  text-shadow: 0 0 10px rgba(255, 255, 255, 0.5);
+  transform: scale(1.05);
+}
+
+nav a[href]:target .nav-indicator {
+  width: 2.5rem !important;
+  background-color: rgb(255 255 255) !important;
+  box-shadow: 0 0 10px rgba(255, 255, 255, 0.7);
+}
+
+/* 현재 활성 섹션 표시를 위한 추가 스타일 */
+section:target {
+  position: relative;
+}
+
+section:target::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  border: 2px solid rgba(255, 255, 255, 0.1);
+  pointer-events: none;
+  z-index: 1;
+}
+
+/* 부드러운 트랜지션을 위한 CSS */
+.nav-link {
+  position: relative;
+  transition: all 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.nav-link::after {
+  content: "";
+  position: absolute;
+  left: -0.5rem;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 0;
+  height: 0;
+  border-left: 4px solid transparent;
+  border-right: 4px solid transparent;
+  border-bottom: 4px solid rgb(255 255 255);
+  opacity: 0;
+  transition: all 0.3s ease;
+}
+
+.nav-link:target::after {
+  opacity: 1;
+  left: -1rem;
+}
+
+/* 추가적인 시각적 효과 */
+@keyframes glow {
+  0%,
+  100% {
+    text-shadow: 0 0 5px rgba(255, 255, 255, 0.5);
+  }
+  50% {
+    text-shadow: 0 0 20px rgba(255, 255, 255, 0.8),
+      0 0 30px rgba(255, 255, 255, 0.6);
+  }
+}
+
+.nav-link:target {
+  animation: glow 2s ease-in-out infinite;
+}

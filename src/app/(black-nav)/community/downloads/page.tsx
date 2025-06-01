@@ -1,5 +1,6 @@
 import CatalogTabs from "./CatalogTabs";
 import Downloads, { DownloadPost } from "./Downloads";
+import Carousel3D from "@shared/components/carousel/Carousel.render";
 
 const downloadsPosts: DownloadPost[] = [
   {
