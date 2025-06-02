@@ -16,7 +16,6 @@ export interface NoticeType {
 interface NoticeProps {
   notices: NoticeType[];
 }
-
 const Notice: React.FC<NoticeProps> = ({ notices }) => {
   const [searchTerm, setSearchTerm] = useState("");
 
@@ -52,7 +51,7 @@ const Notice: React.FC<NoticeProps> = ({ notices }) => {
       <div className="flex gap-4 mb-8">
         <div className="flex-1">
           <div className="relative group">
-            <div className="absolute inset-0 bg-gradient-to-r from-gray-100 to-gray-50 rounded-xl opacity-0 group-hover:opacity-100 transition-opacity duration-200"></div>
+            <div className="absolute inset-0 bg-gradient-to-r from-gray-100 to-blue-300 rounded-xl opacity-0 group-hover:opacity-100 transition-opacity duration-200"></div>
             <div className="relative">
               <Search className="absolute left-4 top-1/2 transform -translate-y-1/2 text-gray-400 w-5 h-5 group-focus-within:text-gray-600 transition-colors" />
               <input
@@ -60,7 +59,7 @@ const Notice: React.FC<NoticeProps> = ({ notices }) => {
                 placeholder="검색어를 입력하세요..."
                 value={searchTerm}
                 onChange={(e) => setSearchTerm(e.target.value)}
-                className="w-full pl-12 pr-4 py-4 bg-white/80 backdrop-blur-sm border border-gray-200/60 rounded-xl focus:outline-none focus:ring-2 focus:ring-gray-300/50 focus:border-gray-300 transition-all duration-200 placeholder-gray-400 text-slate-700 shadow-sm"
+                className="w-full pl-12 pr-4 py-4 bg-white/80 backdrop-blur-sm border border-blue-300 rounded-xl focus:outline-none focus:ring-2 focus:ring-blue-400 focus:border-gray-300 transition-all duration-200 placeholder-gray-400 text-slate-700 shadow-sm"
               />
             </div>
           </div>
@@ -83,7 +82,7 @@ const Notice: React.FC<NoticeProps> = ({ notices }) => {
             {filterednotices.map((notice) => (
               <div key={notice.id} className="group relative">
                 <Link href={`/community/notice/${notice.id}`}>
-                  <div className="absolute inset-0 bg-gradient-to-r from-transparent via-gray-50/50 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+                  <div className="absolute inset-0 bg-gradient-to-r from-gray-100 to-blue-300 opacity-0 group-hover:opacity-100 transition-opacity duration-200 rounded-xl"></div>
                   <div className="relative px-8 py-6 border-b border-gray-100/80 hover:border-gray-200/60 transition-all duration-200 cursor-pointer">
                     <div className="flex items-start justify-between">
                       <div className="flex-1 min-w-0 space-y-3">
@@ -91,7 +90,7 @@ const Notice: React.FC<NoticeProps> = ({ notices }) => {
                           <span className="inline-flex items-center px-3 py-1 rounded-full text-xs font-medium bg-gray-100/80 text-gray-600 border border-gray-200/50">
                             {notice.category}
                           </span>
-                          <h3 className="text-slate-900 text-lg leading-tight group-hover:text-slate-700 transition-colors duration-200 truncate">
+                          <h3 className="text-slate-900 font-semibold text-lg leading-tight group-hover:text-slate-700 transition-colors duration-200 truncate">
                             {notice.title}
                           </h3>
                         </div>
