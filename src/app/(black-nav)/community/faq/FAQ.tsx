@@ -1,6 +1,6 @@
 "use client";
 import React, { useState } from "react";
-import { Calendar, Search, FileText } from "lucide-react";
+import { Search, FileText } from "lucide-react";
 import Image from "next/image";
 import Link from "next/link";
 import {
@@ -76,7 +76,7 @@ const FAQ: React.FC<FaqProps> = ({ posts }) => {
               <FileText className="w-8 h-8 text-gray-400" />
             </div>
             <p className="text-xl font-semibold mb-2 text-slate-700">
-              검색 결과가 없습니다
+              검색결과가 없습니다
             </p>
           </div>
         ) : (

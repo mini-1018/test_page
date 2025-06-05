@@ -6,8 +6,6 @@ import {
   FileText,
   User,
   Calendar,
-  Eye,
-  ChevronRight,
   Download,
 } from "lucide-react";
 
@@ -16,7 +14,6 @@ export interface DownloadPost {
   title: string;
   author: string;
   date: string;
-  views: number;
   fileSize: string;
   downloadCount: number;
   imageUrl: string;
@@ -123,9 +120,6 @@ const Downloads: React.FC<BoardDownloadsProps> = ({ posts }) => {
                     <h3 className="text-slate-900 font-semibold text-lg leading-tight group-hover:text-blue-600 transition-colors duration-200 line-clamp-2 flex-1">
                       {post.title}
                     </h3>
-                    <div className="opacity-0 group-hover:opacity-100 transition-opacity duration-200">
-                      <ChevronRight className="w-5 h-5 text-gray-400" />
-                    </div>
                   </div>
 
                   {/* 메타 정보 */}
@@ -145,8 +139,6 @@ const Downloads: React.FC<BoardDownloadsProps> = ({ posts }) => {
                         </span>
                       </div>
                       <div className="flex items-center gap-2">
-                        <Eye className="w-4 h-4 text-gray-400" />
-                        <span>{post.views.toLocaleString()}</span>
                       </div>
                     </div>
 

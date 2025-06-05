@@ -80,7 +80,7 @@ const Support: React.FC<SupportProps> = ({ posts }) => {
               <FileText className="w-8 h-8 text-gray-400" />
             </div>
             <p className="text-xl font-semibold mb-2 text-slate-700">
-              게시글이 없습니다
+              검색결과가 없습니다
             </p>
           </div>
         ) : (
