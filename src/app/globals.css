@@ -6,7 +6,7 @@
 @font-face {
   font-family: "Pretendard";
   font-style: normal;
-  font-weight: 400;
+  font-weight: 500;
   src: url("/fonts/Pretendard-Regular.woff2") format("woff2");
 }
 
@@ -50,6 +50,11 @@
   --radius-xl: calc(var(--radius) + 4px);
 }
 
+@theme {
+  --color-secondary: #0095D3;
+  --color-third: #131F6B;
+}
+
 body {
   font-family: "Pretendard";
 }
@@ -82,31 +87,6 @@ body {
   color: #111827;
 }
 
-@keyframes carousell-scroll-left {
-  0% {
-    transform: translateX(0);
-  }
-  100% {
-    transform: translateX(-100%);
-  }
-}
-
-@keyframes carousell-scroll-right {
-  0% {
-    transform: translateX(-100%);
-  }
-  100% {
-    transform: translateX(0);
-  }
-}
-
-.carousell-scroll-left {
-  animation: carousell-scroll-left 30s linear infinite;
-}
-
-.carousell-scroll-right {
-  animation: carousell-scroll-right 30s linear infinite;
-}
 
 :root {
   --radius: 0.625rem;

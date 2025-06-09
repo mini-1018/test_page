@@ -44,7 +44,7 @@ export default function BrandPage() {
             {/* <h2 className="text-4xl font-bold text-blue-500 mt-12 mb-8">
               자원 선순환 플랫폼
             </h2> */}
-            <Typewriter className="text-4xl font-bold text-blue-500 mt-12 mb-8">
+            <Typewriter className="text-4xl font-bold text-secondary mt-12 mb-8">
               자원 선순환 플랫폼
             </Typewriter>
             <FadeUpOnView delay={1000}>
@@ -77,7 +77,7 @@ export default function BrandPage() {
         <div className="max-w-6xl mx-auto px-4">
           <div className="text-center mb-20">
             <FadeUpOnView>
-            <h2 className="text-5xl font-bold text-indigo-900 leading-tight">
+            <h2 className="text-5xl font-bold text-third leading-tight">
               향유고래
               <br />
               자연보전
@@ -99,7 +99,7 @@ export default function BrandPage() {
                   alt="코다(CODA) 1번 컨텐츠"
                   className="inline-block mb-2.5"
                 />
-                <h3 className="text-l md:text-2xl font-bold text-blue-500 mb-2">
+                <h3 className="!text-2xl font-bold text-secondary mb-2">
                   하와이 섬, 해변에서 발견된 향유고래
                 </h3>
                 <p className="text-base text-black">
@@ -131,7 +131,7 @@ export default function BrandPage() {
                   alt="코다(CODA) 2번 컨텐츠"
                   className="inline-block mb-2.5"
                 />
-                <h3 className="text-lg font-bold text-blue-500 mb-2">
+                <h3 className="!text-2xl font-bold text-secondary mb-2">
                   전세계 해양쓰레기로 인한 피해
                 </h3>
                 <p className="text-base text-black">
@@ -163,7 +163,7 @@ export default function BrandPage() {
                   alt="코다(CODA) 3번 컨텐츠"
                   className="inline-block mb-2.5"
                 />
-                <h3 className="text-2xl font-bold text-blue-500 mb-2">
+                <h3 className="!text-2xl font-bold text-secondary mb-2">
                   넘치는 페트병, 캔 폐기물
                 </h3>
                 <p className="text-base text-black">
@@ -195,7 +195,7 @@ export default function BrandPage() {
                   alt="코다(CODA) 4번 컨텐츠"
                   className="inline-block mb-2.5"
                 />
-                <h3 className="text-2xl font-bold text-blue-500 mb-2">
+                <h3 className="!text-2xl font-bold text-secondary mb-2">
                   탄소 중립 시대
                   <br />
                   공기 중의 이산화탄소 농도 줄이기
@@ -224,7 +224,7 @@ export default function BrandPage() {
       <FadeUpOnView>
       <section className="w-full py-40">
         <div className="max-w-6xl mx-auto px-4 text-center flex flex-col items-center">
-          <h2 className="text-5xl font-bold text-indigo-900 leading-tight mb-8">
+          <h2 className="text-5xl font-bold text-third leading-tight mb-8">
             재활용자원
             <br />
             모아주세요
