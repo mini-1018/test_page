@@ -150,22 +150,22 @@ export default function HomePage() {
               {[
                 {
                   title: "무인회수기",
-                  link: "item_list_coda",
+                  link: "/products/recycle-machines",
                   img: "https://do40f6yw4fd7i.cloudfront.net/img13/main/main_sec03_1.webp",
                 },
                 {
                   title: "차량용RFID",
-                  link: "item_rfid",
+                  link: "/products/rfid",
                   img: "https://do40f6yw4fd7i.cloudfront.net/img13/main/main_sec03_2.webp",
                 },
                 {
                   title: "음식물종량기",
-                  link: "item_food",
+                  link: "/products/food-waste-disposal",
                   img: "https://do40f6yw4fd7i.cloudfront.net/img13/main/main_sec03_4.webp",
                 },
                 {
                   title: "CODA 더 알아보기",
-                  link: "brand",
+                  link: "/brand",
                   img: "https://do40f6yw4fd7i.cloudfront.net/img13/main/main_sec03_5.webp",
                 },
               ].map((item, index) => (
