@@ -5,7 +5,7 @@ export default function ProductLineup() {
   const products = [
     {
       id: "coda",
-      href: "/product/recycle-machine",
+      href: "/products/recycle-machines",
       image:
         "https://do40f6yw4fd7i.cloudfront.net/img13/item_list_coda/item_coda.webp",
       title: "압축기",
@@ -14,7 +14,7 @@ export default function ProductLineup() {
     },
     {
       id: "crush",
-      href: "/product/rfid",
+      href: "/products/rfid",
       image: "https://do40f6yw4fd7i.cloudfront.net/img13/item/item_rfid.webp",
       title: "차량용RFID",
       subtitle: "차량용RFID",
@@ -22,7 +22,7 @@ export default function ProductLineup() {
     },
     {
       id: "esg",
-      href: "/product/food-waste-disposal",
+      href: "/products/food-waste-disposal",
       image: "https://do40f6yw4fd7i.cloudfront.net/img13/item/item_food.webp",
       title: "음식물 종량기",
       subtitle: "음식물 종량기",

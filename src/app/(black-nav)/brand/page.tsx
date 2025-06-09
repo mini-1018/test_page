@@ -26,20 +26,6 @@ export const metadata = {
 export default function BrandPage() {
   return (
     <main className="w-full">
-      {/* 메인 비주얼 섹션
-      <section className="w-full">
-        <div className="relative">
-          <Image
-            src="https://do40f6yw4fd7i.cloudfront.net/img13/brand/coda_brand_s1.webp"
-            width={1920}
-            height={1080}
-            className="w-full h-auto"
-            alt="코다(CODA) 메인 이미지"
-            priority
-          />
-        </div>
-      </section> */}
-
       {/* 자원 선순환 플랫폼 섹션 */}
       <section className="w-full mt-44 mb-80">
         <div className="max-w-6xl mx-auto px-4 text-center">

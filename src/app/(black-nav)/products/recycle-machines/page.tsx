@@ -1,11 +1,11 @@
 import Image from "next/image";
 import Link from "next/link";
 
-export default function MachineLineup() {
+export default function machinesLineup() {
   const products = [
     {
       id: "coda",
-      href: "/product/recycle-machine/compressor",
+      href: "/products/recycle-machines/compressor",
       image:
         "https://do40f6yw4fd7i.cloudfront.net/img13/item_list_coda/item_coda.webp",
       title: "압축기",
@@ -14,7 +14,7 @@ export default function MachineLineup() {
     },
     {
       id: "crush",
-      href: "/product/recycle-machine/crush",
+      href: "/products/recycle-machines/crusher",
       image:
         "https://do40f6yw4fd7i.cloudfront.net/img13/item_list_coda/item_coda_crush.webp",
       title: "파쇄기",
@@ -23,7 +23,7 @@ export default function MachineLineup() {
     },
     {
       id: "esg",
-      href: "/product/recycle-machine/esg",
+      href: "/products/recycle-machines/esg",
       image:
         "https://do40f6yw4fd7i.cloudfront.net/img13/item_list_coda/item_coda_esg.webp",
       title: "ESG",

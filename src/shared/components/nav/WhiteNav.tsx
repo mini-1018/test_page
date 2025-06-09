@@ -11,11 +11,11 @@ const menuItems = [
   },
   {
     name: "제품",
-    link: "/product",
+    link: "/products",
     subMenu: [
-      { name: "무인회수기", link: "/product/recycle-machine" },
-      { name: "차량용RFID", link: "/product/rfid" },
-      { name: "음식물종량기", link: "/product/food-waste-disposal" },
+      { name: "무인회수기", link: "/products/recycle-machines" },
+      { name: "차량용RFID", link: "/products/rfid" },
+      { name: "음식물종량기", link: "/products/food-waste-disposal" },
     ],
   },
   {
