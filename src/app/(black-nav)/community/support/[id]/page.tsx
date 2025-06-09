@@ -47,7 +47,7 @@ export default function SupportDetailPage() {
           <div className="bg-white rounded-xl shadow-sm border border-gray-200 overflow-hidden">
             {/* 답변 헤더 */}
             <div className="border-b border-gray-200 p-6">
-              <h3 className="text-lg text-gray-900">답변입니다.</h3>
+              <h3 className="!text-lg text-gray-900">답변입니다.</h3>
             </div>
             {/* 답변 */}
             <div className="p-6">

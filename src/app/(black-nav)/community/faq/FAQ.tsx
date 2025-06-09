@@ -9,6 +9,7 @@ import {
   AccordionItem,
   AccordionTrigger,
 } from "@/shared/components/ui/accordion";
+import ResponsivePadding from "@shared/components/common/ResponsivePadding";
 
 export interface FaqPost {
   id: number;
@@ -29,6 +30,7 @@ const FAQ: React.FC<FaqProps> = ({ posts }) => {
   );
 
   return (
+    <ResponsivePadding>
     <div className="max-w-5xl mx-auto py-32">
       {/* 헤더 */}
       <div className="mb-12">
@@ -87,19 +89,19 @@ const FAQ: React.FC<FaqProps> = ({ posts }) => {
           >
             {filteredPosts.map((post) => (
               <AccordionItem key={post.id} value={String(post.id)}>
-                <AccordionTrigger className="px-8 py-6 hover:bg-gray-50 transition-all flex items-start justify-between gap-4">
+                <AccordionTrigger className="px-2 sm:px-8 py-6 hover:bg-gray-50 transition-all flex items-start justify-between gap-4 cursor-pointer">
                   <div className="flex-1 min-w-0 space-y-3 text-left">
                     <div className="flex items-center gap-4">
-                      <span className="inline-flex items-center px-3 py-1 rounded-full text-xs font-medium bg-gray-100/80 text-gray-600 border border-gray-200/50">
+                      <span className="inline-flex flex-shrink-0 whitespace-nowrap items-center px-3 py-1 rounded-full text-xs font-medium bg-gray-100/80 text-gray-600 border border-gray-200/50">
                         {post.category}
                       </span>
-                      <h3 className="text-slate-900 font-semibold text-lg leading-tight truncate">
+                      <h3 className="text-slate-900 font-semibold !text-[16px] sm:!text-lg leading-tight">
                         {post.title}
                       </h3>
                     </div>
                   </div>
                 </AccordionTrigger>
-                <AccordionContent className="bg-gray-50 px-8 py-16 text-slate-700 text-base">
+                <AccordionContent className="bg-gray-50 px-8 py-16 text-slate-700 text-[14px] sm:text-base">
                   {post.content}
                   <div className="mt-8 flex justify-center items-center gap-3">
                     <span>원하시는 답변이 없으신가요?</span>
@@ -117,6 +119,7 @@ const FAQ: React.FC<FaqProps> = ({ posts }) => {
         )}
       </div>
     </div>
+    </ResponsivePadding>
   );
 };
 

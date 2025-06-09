@@ -207,3 +207,19 @@ body {
     @apply bg-background text-foreground;
   }
 }
+
+h1 {
+  @apply text-2xl font-bold leading-tight tracking-tight;
+}
+
+h2 {
+  @apply text-[24px] md:text-[32px] xl:text-[40px] font-semibold leading-tight tracking-tight;
+}
+
+h3 {
+  @apply text-[24px] md:text-[32px] xl:text-[40px] font-semibold leading-tight tracking-tight;
+}
+
+h4 {
+  @apply text-[24px] md:text-[32px] xl:text-[40px] font-semibold leading-tight tracking-tight;
+}

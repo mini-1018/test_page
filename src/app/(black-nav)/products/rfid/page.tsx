@@ -2,7 +2,7 @@ export default function RFIDPage() {
   return (
     <div className="w-full">
       <div className="max-w-full mx-auto">
-        {/* 헤더 섹션 (추가) */}
+        {/* 헤더 섹션 (추가)
         <div className="w-full relative">
           <div className="absolute top-[17%] left-1/2 transform -translate-x-1/2 -translate-y-1/2 text-center w-full z-10">
             <p className="text-white text-[28px] font-bold my-[5px] shadow-text">
@@ -17,7 +17,7 @@ export default function RFIDPage() {
             alt="코다(CODA) RFID 음식물회수 결제시스템 - 음식점 4000개 업소 운영"
             className="w-full block relative z-0"
           />
-        </div>
+        </div> */}
 
         {/* 헤더 섹션 */}
         <div className="w-full">

@@ -11,7 +11,7 @@ import { faPhone, faEnvelope } from "@fortawesome/free-solid-svg-icons";
 export default function Footer() {
   return (
     <footer className="bg-[#111] py-[50px]">
-      <div className="flex flex-col-reverse md:flex-row justify-between w-[1300px] max-w-[95%] mx-auto">
+      <div className="flex flex-col-reverse md:flex-row justify-between w-[1300px] max-w-[90%] mx-auto">
         {/* 왼쪽 영역 */}
         <div className="w-full md:w-1/2 mt-8 md:mt-0">
           <Image
@@ -155,14 +155,14 @@ export default function Footer() {
                 <li key={index} className="md:ml-[15%] md:first:ml-0">
                   <Link
                     href={menu.link}
-                    className="block text-white text-base font-bold mb-[30px]"
+                    className="block text-white text-[12px] md:text-[16px] font-bold mb-[30px]"
                   >
                     {menu.title}
                   </Link>
                   <ul>
                     {menu.submenu.map((sub, subIndex) => (
                       <li key={subIndex} className="mb-[20px]">
-                        <Link href={sub.link} className="text-base text-[#666]">
+                        <Link href={sub.link} className="text-[12px] sm:text-[14px] md:text-[12px] xl:text-[14px] text-[#666]">
                           {sub.name}
                         </Link>
                       </li>

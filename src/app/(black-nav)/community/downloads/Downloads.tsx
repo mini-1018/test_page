@@ -8,6 +8,7 @@ import {
   Calendar,
   Download,
 } from "lucide-react";
+import ResponsivePadding from "@shared/components/common/ResponsivePadding";
 
 export interface DownloadPost {
   id: number;
@@ -33,6 +34,7 @@ const Downloads: React.FC<BoardDownloadsProps> = ({ posts }) => {
   );
 
   return (
+    <ResponsivePadding>
     <div className="max-w-5xl mx-auto">
       {/* 헤더 */}
       <div className="mb-12">
@@ -117,7 +119,7 @@ const Downloads: React.FC<BoardDownloadsProps> = ({ posts }) => {
                 <div className="p-6 space-y-4">
                   {/* 제목 */}
                   <div className="flex items-center gap-4">
-                    <h3 className="text-slate-900 font-semibold text-lg leading-tight group-hover:text-blue-600 transition-colors duration-200 line-clamp-2 flex-1">
+                    <h3 className="text-slate-900 font-semibold !text-lg leading-tight group-hover:text-blue-600 transition-colors duration-200 line-clamp-2 flex-1">
                       {post.title}
                     </h3>
                   </div>
@@ -155,6 +157,7 @@ const Downloads: React.FC<BoardDownloadsProps> = ({ posts }) => {
         </div>
       )}
     </div>
+    </ResponsivePadding>
   );
 };
 

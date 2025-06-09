@@ -1,6 +1,7 @@
 import React from "react";
 import Image from "next/image";
 import { Calendar } from "lucide-react";
+import ResponsivePadding from "@shared/components/common/ResponsivePadding";
 
 export interface NewsPost {
   id: number;
@@ -16,6 +17,7 @@ interface NewsProps {
 
 const News: React.FC<NewsProps> = ({ posts }) => {
   return (
+    <ResponsivePadding>
     <div className="max-w-5xl mx-auto">
       {/* 헤더 */}
       <div className="mb-12">
@@ -74,7 +76,7 @@ const News: React.FC<NewsProps> = ({ posts }) => {
                     </span>
                   </div>
                   {/* 제목 */}
-                  <h3 className="text-slate-900 font-semibold text-lg leading-tight group-hover:text-blue-600 transition-colors duration-200 line-clamp-2">
+                  <h3 className="text-slate-900 font-semibold !text-lg leading-tight group-hover:text-blue-600 transition-colors duration-200 line-clamp-2">
                     {post.title}
                   </h3>
 
@@ -92,6 +94,7 @@ const News: React.FC<NewsProps> = ({ posts }) => {
         </div>
       )}
     </div>
+    </ResponsivePadding>
   );
 };
 
