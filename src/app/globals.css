@@ -3,32 +3,11 @@
 
 @custom-variant dark (&:is(.dark *));
 
-/* @font-face {
-  font-family: "Noto Sans KR";
+@font-face {
+  font-family: "Pretendard";
   font-style: normal;
   font-weight: 400;
-  src: url("https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@400&display=swap");
-}
-
-@font-face {
-  font-family: "Noto Sans KR";
-  font-style: bold;
-  font-weight: 900;
-  src: url("https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@900&display=swap");
-} */
-
-@font-face {
-  font-family: "Noto Sans KR";
-  font-style: normal;
-  font-weight: 400;
-  src: url("/fonts/noto-sans-kr-v36-korean-regular.woff2") format("woff2");
-}
-
-@font-face {
-  font-family: "Noto Sans KR";
-  font-style: normal;
-  font-weight: 900;
-  src: url("/fonts/noto-sans-kr-v36-korean-900.woff2") format("woff2");
+  src: url("/fonts/Pretendard-Regular.woff2") format("woff2");
 }
 
 @theme inline {
@@ -72,8 +51,7 @@
 }
 
 body {
-  font-family: "Noto Sans KR";
-  letter-spacing: -0.1em;
+  font-family: "Pretendard";
 }
 
 /* 에디터 직접 스타일링 */
