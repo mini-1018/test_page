@@ -102,7 +102,14 @@ const Support: React.FC<SupportProps> = ({ posts }) => {
                               <span className="inline-flex items-center px-2 md:px-3 py-1 rounded-full text-xs font-medium bg-gray-100/80 text-gray-600 border border-gray-200/50">
                                 {post.category}
                               </span>
-                              <span className="inline-flex items-center px-2 py-1 rounded-md bg-slate-100 text-slate-600 text-xs md:text-sm font-medium md:order-last">
+                              <span
+                                className={`inline-flex items-center px-2 py-1 rounded-md text-xs md:text-sm font-medium md:order-last
+                                  ${post.answer
+                                    ? "bg-blue-100 text-blue-600"
+                                    : "bg-red-100 text-red-600"
+                                  }`
+                                }
+                              >
                                 {post.answer ? "답변완료" : "답변대기"}
                               </span>
                             </div>
