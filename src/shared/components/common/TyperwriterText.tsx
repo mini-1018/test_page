@@ -8,7 +8,7 @@ interface TypewriterProps {
   }
 
 export default function Typewriter({ children, speed = 80, className = "" }:TypewriterProps) {
-  const [display, setDisplay] = useState(children); // SSR에서 전체 텍스트 표시
+  const [display, setDisplay] = useState(children);
   const [mounted, setMounted] = useState(false);
 
   useEffect(() => {

@@ -6,12 +6,10 @@ import Image from "next/image";
 const menuItems = [
   {
     name: "브랜드",
-    link: "/brand",
     subMenu: [{ name: "브랜드", link: "/brand" }],
   },
   {
     name: "제품",
-    link: "/products",
     subMenu: [
       { name: "무인회수기", link: "/products/recycle-machines" },
       { name: "차량용RFID", link: "/products/rfid" },
@@ -20,12 +18,10 @@ const menuItems = [
   },
   {
     name: "소식",
-    link: "/news",
     subMenu: [{ name: "소식", link: "/news" }],
   },
   {
     name: "커뮤니티",
-    link: "/community",
     subMenu: [
       { name: "공지사항", link: "/community/notice" },
       { name: "FAQ", link: "/community/faq" },
@@ -68,6 +64,7 @@ export default function WhiteNav() {
       }}
       onMouseEnter={() => setIsHovered(true)}
       onMouseLeave={() => setIsHovered(false)}
+      onClick={() => setIsHovered(!isHovered)}
     >
       <div className="relative flex items-center justify-between w-[1100px] mx-auto max-w-[90%] h-20">
         <div className="flex items-center">
@@ -100,8 +97,7 @@ export default function WhiteNav() {
               <li key={index} className="relative group w-[100px]">
                 {/* 메인 메뉴 */}
                 <a
-                  href={menu.link}
-                  className={`transition-colors text-sm font-light hover:text-gray-800 relative ${
+                  className={`transition-colors text-nomal font-light hover:text-gray-800 relative ${
                     shouldShowDarkTheme ? "text-black" : "text-white"
                   }`}
                 >
@@ -124,13 +120,13 @@ export default function WhiteNav() {
                   onMouseLeave={() => setHoveredSubmenu(null)}
                 >
                   {menu.subMenu.map((subItem, subIndex) => (
-                    <a
+                    <Link
                       key={subIndex}
                       href={subItem.link}
                       className="block text-sm text-gray-600 hover:text-blue-500 transition-colors mt-3 first:mt-0"
                     >
                       {subItem.name}
-                    </a>
+                    </Link>
                   ))}
                 </div>
               </li>

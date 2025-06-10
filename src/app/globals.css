@@ -6,8 +6,15 @@
 @font-face {
   font-family: "Pretendard";
   font-style: normal;
-  font-weight: 500;
+  font-weight: 400;
   src: url("/fonts/Pretendard-Regular.woff2") format("woff2");
+}
+
+@font-face {
+  font-family: "Pretendard";
+  font-style: bold;
+  font-weight: 700;
+  src: url("/fonts/Pretendard-Black.woff2") format("woff2");
 }
 
 @theme inline {
@@ -53,6 +60,32 @@
 @theme {
   --color-secondary: #0095D3;
   --color-third: #131F6B;
+}
+
+@keyframes carousell-scroll-left {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-100%);
+  }
+}
+
+@keyframes carousell-scroll-right {
+  0% {
+    transform: translateX(-100%);
+  }
+  100% {
+    transform: translateX(0);
+  }
+}
+
+.carousell-scroll-left {
+  animation: carousell-scroll-left 30s linear infinite;
+}
+
+.carousell-scroll-right {
+  animation: carousell-scroll-right 30s linear infinite;
 }
 
 body {
@@ -167,17 +200,17 @@ body {
 }
 
 h1 {
-  @apply text-2xl font-bold leading-tight tracking-tight;
+  @apply text-[24px] md:text-[32px] xl:text-[40px] font-bold leading-tight tracking-tight;
 }
 
 h2 {
-  @apply text-[24px] md:text-[32px] xl:text-[40px] font-semibold leading-tight tracking-tight;
+  @apply text-[24px] md:text-[32px] xl:text-[40px] font-bold leading-tight tracking-tight;
 }
 
 h3 {
-  @apply text-[24px] md:text-[32px] xl:text-[40px] font-semibold leading-tight tracking-tight;
+  @apply text-[24px] md:text-[32px] xl:text-[40px] font-bold leading-tight tracking-tight;
 }
 
 h4 {
-  @apply text-[24px] md:text-[32px] xl:text-[40px] font-semibold leading-tight tracking-tight;
+  @apply text-[24px] md:text-[32px] xl:text-[40px] font-bold leading-tight tracking-tight;
 }

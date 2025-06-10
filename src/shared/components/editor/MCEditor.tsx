@@ -11,21 +11,9 @@ const Editor = dynamic(
     await import("tinymce/icons/default");
     await import("tinymce/themes/silver");
     await import("tinymce/models/dom");
-    await import("tinymce/plugins/advlist");
-    await import("tinymce/plugins/autolink");
-    await import("tinymce/plugins/lists");
-    await import("tinymce/plugins/link");
     await import("tinymce/plugins/image");
-    await import("tinymce/plugins/charmap");
-    await import("tinymce/plugins/preview");
-    await import("tinymce/plugins/anchor");
-    await import("tinymce/plugins/searchreplace");
-    await import("tinymce/plugins/visualblocks");
-    await import("tinymce/plugins/code");
-    await import("tinymce/plugins/fullscreen");
-    await import("tinymce/plugins/insertdatetime");
+    await import("tinymce/plugins/link");
     await import("tinymce/plugins/media");
-    await import("tinymce/plugins/table");
     await import("tinymce/plugins/wordcount");
     await import("tinymce/plugins/importcss");
     const mod = await import("@tinymce/tinymce-react");
@@ -41,19 +29,19 @@ export default function MCEditor({ buttonText }: { buttonText: string }) {
 
   return (
     <>
-      <div className="w-[90%] mx-auto mt-10 bg-white rounded-xl shadow-lg p-8 flex-col gap-8">
+      <div className="w-[96%] sm:w-[90%] mx-auto mt-10 bg-white rounded-xl shadow-lg p-4 sm:p-8 flex flex-col gap-8">
         <div className="mb-4">
           <input
             type="text"
             onChange={(e) => setTitle(e.target.value)}
             value={title}
             placeholder="제목을 입력하세요"
-            className="text-3xl border-b-2 border-[#EEEEEE] focus:border-blue-500 transition duration-200 focus:outline-none w-[50%] pb-3"
+            className="text-xl sm:text-2xl md:text-3xl border-b-2 border-[#EEEEEE] focus:border-blue-500 transition duration-200 focus:outline-none w-full sm:w-[70%] md:w-[50%] pb-3"
           />
         </div>
-        <div className="flex gap-8">
+        <div className="flex flex-col xl:flex-row gap-8">
           {/* 에디터 영역 */}
-          <div className="w-1/2">
+          <div className="w-full xl:w-1/2">
             <Editor
               onInit={(_, editor) => (editorRef.current = editor)}
               onEditorChange={(newContent) => setContent(newContent)}
@@ -61,37 +49,19 @@ export default function MCEditor({ buttonText }: { buttonText: string }) {
                 height: 700,
                 menubar: false,
                 language: "ko_KR",
-                language_url: "/tinymce/langs/ko_KR.js", // public 폴더 기준 경로
+                language_url: "/tinymce/langs/ko_KR.js",
                 skin: false,
                 content_css: "/tinymce/content.css",
-                importcss_append: true,
-                importcss_selector_filter: ".tailwind-", // 예: tailwind- 접두사만
                 plugins: [
-                  "advlist",
-                  "autolink",
-                  "lists",
-                  "link",
                   "image",
-                  "charmap",
-                  "preview",
-                  "anchor",
-                  "searchreplace",
-                  "visualblocks",
-                  "code",
-                  "fullscreen",
-                  "insertdatetime",
+                  "link",
                   "media",
-                  "table",
                   "wordcount",
                   "importcss",
                 ],
-                // 툴바 모드를 'floating'이나 'wrap'으로 설정
-                toolbar_mode: "wrap",
-                toolbar1: "undo redo | blocks fontfamily fontsize",
-                toolbar2:
-                  "bold italic underline strikethrough | forecolor backcolor | alignleft aligncenter alignright alignjustify bullist numlist outdent indent",
-                toolbar3:
-                  "image table | charmap insertdatetime | link unlink | searchreplace code fullscreen removeformat",
+                toolbar: false,
+                branding: false,
+                statusbar: false,
                 images_upload_url: "/api/upload",
                 automatic_uploads: true,
                 images_reuse_filename: true,
@@ -111,45 +81,17 @@ export default function MCEditor({ buttonText }: { buttonText: string }) {
                   return data.url;
                 },
                 content_style: `
-              body { font-family: 'Inter', 'Noto Sans KR', sans-serif; background: #fff; }
-              .mce-content-body { min-height: 500px; }
-              img { border-radius: 0.75rem; box-shadow: 0 2px 8px rgba(0,0,0,0.08); margin: 1.5rem auto; display: block; max-width: 100%; height: auto; }
-              figure.image { display: inline-block; margin: 0 1rem 1rem 0; }
-              .tox-toolbar__primary { background: #f9fafb; border-radius: 0.75rem; border: 1px solid #e5e7eb; box-shadow: 0 1px 2px rgba(0,0,0,0.03); }
-              .tox .tox-tbtn:hover { background: #e5e7eb !important; transition: background 0.15s; }
-              .tox .tox-tbtn--enabled, .tox .tox-tbtn:focus { background: #e5e7eb !important; }
-              .tox .tox-toolbar__group { margin-right: 0.5rem; }
-              .tox .tox-tbtn svg { width: 1.25rem; height: 1.25rem; }
-            `,
-                branding: false,
-                block_formats: "제목 1=h2;제목 2=h3;본문=p;인용문=blockquote",
-                table_toolbar:
-                  "tableprops tabledelete | tableinsertrowbefore tableinsertrowafter tabledeleterow | tableinsertcolbefore tableinsertcolafter tabledeletecol",
-                resize: true,
-                image_dimensions: true,
-                image_class_list: [
-                  { title: "기본", value: "" },
-                  { title: "왼쪽 정렬", value: "align-left" },
-                  { title: "오른쪽 정렬", value: "align-right" },
-                  { title: "가운데 정렬", value: "align-center" },
-                ],
+                  body { font-family: 'Inter', 'Noto Sans KR', sans-serif; background: #fff; }
+                  .mce-content-body { min-height: 500px; }
+                  img { border-radius: 0.75rem; box-shadow: 0 2px 8px rgba(0,0,0,0.08); margin: 1.5rem auto; display: block; max-width: 100%; height: auto; }
+                `,
               }}
             />
             <div className="mt-8">
-              <button className="px-6 py-2 rounded-lg bg-black text-white font-semibold hover:bg-gray-800 transition-colors duration-200 shadow-md">
+              <button className="px-6 py-2 rounded-lg bg-black text-white font-semibold hover:bg-gray-800 transition-colors duration-200 shadow-md w-full sm:w-auto">
                 {buttonText}
               </button>
             </div>
-          </div>
-          {/* 미리보기 영역 */}
-          <div className="w-1/2 pl-8 border-2 border-[#EEEEEE] rounded-xl p-3 overflow-scroll h-[700px]">
-            <h3 className="text-xl font-semibold mb-4 text-gray-800">
-              미리보기
-            </h3>
-            <div
-              className="prose max-w-none"
-              dangerouslySetInnerHTML={{ __html: content }}
-            />
           </div>
         </div>
       </div>

@@ -153,12 +153,11 @@ export default function Footer() {
                 },
               ].map((menu, index) => (
                 <li key={index} className="md:ml-[15%] md:first:ml-0">
-                  <Link
-                    href={menu.link}
+                  <p
                     className="block text-white text-[12px] md:text-[16px] font-bold mb-[30px]"
                   >
                     {menu.title}
-                  </Link>
+                  </p>
                   <ul>
                     {menu.submenu.map((sub, subIndex) => (
                       <li key={subIndex} className="mb-[20px]">

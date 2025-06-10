@@ -1,3 +1,4 @@
+import FadeUpOnView from "@shared/components/common/FadeUpOnView";
 import Image from "next/image";
 import Link from "next/link";
 
@@ -11,6 +12,7 @@ export default function machinesLineup() {
       title: "압축기",
       subtitle: "PET / CAN / 공용",
       alt: "코다(CODA) 무인회수기, 압축기(PET,CAN,공용)",
+      delay: 0,
     },
     {
       id: "crush",
@@ -20,6 +22,7 @@ export default function machinesLineup() {
       title: "파쇄기",
       subtitle: "PET 전용",
       alt: "코다(CODA) 무인회수기, 파쇄기(PET)",
+      delay: 200,
     },
     {
       id: "esg",
@@ -29,20 +32,26 @@ export default function machinesLineup() {
       title: "ESG",
       subtitle: "탄소저감형",
       alt: "코다(CODA) 무인회수기, ESG(탄소저감형)",
+      delay: 400,
     },
   ];
 
   return (
     <div className="w-full">
-      <div className="w-[1280px] mx-auto px-4">
-        <div className="container mx-auto mt-[250px] mb-[150px]">
-          <h1 className="text-4xl font-bold text-center text-gray-800 mb-[100px] pt-8">
-            무인회수기 라인업
+      <div className="w-full mx-auto px-4">
+        <div className="container mx-auto mt-[100px] mb-[100px] md:mt-[200px] md:mb-[160px]">
+          <div className="flex flex-col items-center mb-20 gap-[20px]">
+          <h1 className="font-bold text-third pt-8">
+            무인회수기 제품 안내
           </h1>
-
-          <ul className="flex flex-wrap justify-between items-center gap-8">
+          <h3 className="!text-lg md:!text-2xl !font-normal text-#656565 text-center">
+            국내 기술 30년 융복합 측정기술 노하우를 바탕으로 한 최적의 자원 선순환 솔루션
+          </h3>
+          </div>
+          <ul className="flex flex-wrap justify-center items-center gap-16">
             {products.map((product) => (
-              <li key={product.id} className="flex flex-col items-center">
+              <FadeUpOnView key={product.id} delay={product.delay}>
+              <li key={product.id} className="flex flex-col items-center p-[80px] border-gray-800 border-1 rounded-md">
                 <Link
                   href={product.href}
                   className="group text-center transition-all duration-300 hover:scale-105"
@@ -67,6 +76,7 @@ export default function machinesLineup() {
                   </div>
                 </Link>
               </li>
+              </FadeUpOnView>
             ))}
           </ul>
         </div>

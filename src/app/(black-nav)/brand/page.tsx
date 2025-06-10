@@ -41,9 +41,6 @@ export default function BrandPage() {
             />
           </div>
           <div className="text-center">
-            {/* <h2 className="text-4xl font-bold text-blue-500 mt-12 mb-8">
-              자원 선순환 플랫폼
-            </h2> */}
             <Typewriter className="text-4xl font-bold text-secondary mt-12 mb-8">
               자원 선순환 플랫폼
             </Typewriter>
