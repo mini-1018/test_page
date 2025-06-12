@@ -69,7 +69,7 @@ export default function Footer() {
               >
                 <FontAwesomeIcon
                   icon={faYoutube}
-                  className="w-[30px] h-[30px]"
+                  className="w-[24px] h-[24px] md:w-[30px] md:h-[30px]"
                 />
               </Link>
             </li>
@@ -81,7 +81,7 @@ export default function Footer() {
               >
                 <FontAwesomeIcon
                   icon={faInstagram}
-                  className="w-[30px] h-[30px]"
+                  className="w-[24px] h-[24px] md:w-[30px] md:h-[30px]"
                 />
               </Link>
             </li>
@@ -91,7 +91,7 @@ export default function Footer() {
                 title="지테크인터내셔날 네이버 블로그"
                 className="text-white"
               >
-                <FontAwesomeIcon icon={faNeos} className="w-[30px] h-[30px]" />
+                <FontAwesomeIcon icon={faNeos} className="w-[24px] h-[24px] md:w-[30px] md:h-[30px]" />
               </Link>
             </li>
             <li>
@@ -100,7 +100,7 @@ export default function Footer() {
                 title="담당자 연락처"
                 className="text-white"
               >
-                <FontAwesomeIcon icon={faPhone} className="w-[30px] h-[30px]" />
+                <FontAwesomeIcon icon={faPhone} className="w-[24px] h-[24px] md:w-[30px] md:h-[30px]" />
               </Link>
             </li>
             <li>
@@ -111,7 +111,7 @@ export default function Footer() {
               >
                 <FontAwesomeIcon
                   icon={faEnvelope}
-                  className="w-[30px] h-[30px]"
+                  className="w-[24px] h-[24px] md:w-[30px] md:h-[30px]"
                 />
               </Link>
             </li>
@@ -125,30 +125,28 @@ export default function Footer() {
               {[
                 {
                   title: "브랜드",
-                  link: "/brand",
-                  submenu: [{ name: "브랜드", link: "/brand" }],
+                  subMenu: [{ name: "브랜드", link: "/brand" }],
                 },
                 {
                   title: "제품",
-                  link: "/item",
-                  submenu: [
-                    { name: "무인회수기", link: "/item_list_coda" },
-                    { name: "차량용RFID", link: "/item_rfid" },
-                    { name: "음식물종량기", link: "/item_food" },
+                  subMenu: [
+                    { name: "무인회수기", link: "/products/recycle-machines" },
+                    { name: "차량용RFID", link: "/products/rfid" },
+                    { name: "음식물종량기", link: "/products/food-waste-disposal" },
                   ],
                 },
                 {
                   title: "소식",
-                  link: "/news",
-                  submenu: [{ name: "소식", link: "/news" }],
+                  subMenu: [{ name: "소식", link: "/news" }],
                 },
                 {
                   title: "커뮤니티",
                   link: "/community-temp",
-                  submenu: [
+                  subMenu: [
                     { name: "공지사항", link: "/community/notice" },
-                    { name: "자유게시판", link: "/community/board" },
-                    { name: "자료실", link: "/community/downloads" },
+                    { name: "FAQ", link: "/community/faq" },
+                    { name: "고객문의", link: "/community/support" },
+                    { name: "다운로드", link: "/community/downloads" },
                   ],
                 },
               ].map((menu, index) => (
@@ -159,7 +157,7 @@ export default function Footer() {
                     {menu.title}
                   </p>
                   <ul>
-                    {menu.submenu.map((sub, subIndex) => (
+                    {menu.subMenu.map((sub, subIndex) => (
                       <li key={subIndex} className="mb-[20px]">
                         <Link href={sub.link} className="text-[12px] sm:text-[14px] md:text-[12px] xl:text-[14px] text-[#666]">
                           {sub.name}
