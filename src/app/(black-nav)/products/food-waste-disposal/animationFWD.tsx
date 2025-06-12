@@ -10,7 +10,7 @@ export default function AnimationFWD() {
             전국 지자체가 선택한 검증된 음식물 종량기
           </h2>
         </div>
-        <div className="w-full overflow-hidden relative">
+        <div className="w-full overflow-hidden relative flex flex-col gap-6 sm:gap-10">
           {/* 왼쪽으로 스크롤하는 첫 번째 이미지 그룹 */}
           <div className="flex carousell-scroll-left whitespace-nowrap">
             <div className="flex min-w-[1024px] w-[1024px] md:min-w-[1980px] md:w-[1980px]">
@@ -19,7 +19,7 @@ export default function AnimationFWD() {
                 width={1980}
                 height={400}
                 alt="스크롤 이미지"
-                className="h-auto pt-16 inline-block"
+                className="inline-block"
               />
             </div>
             <div className="flex min-w-[1024px] w-[1024px] md:min-w-[1980px] md:w-[1980px]">
@@ -28,7 +28,7 @@ export default function AnimationFWD() {
                 width={1980}
                 height={400}
                 alt="스크롤 이미지"
-                className="h-auto pt-16 inline-block"
+                className="inline-block"
               />
             </div>
           </div>
@@ -40,7 +40,7 @@ export default function AnimationFWD() {
                 width={1980}
                 height={400}
                 alt="스크롤 이미지"
-                className="h-auto pt-16 inline-block"
+                className=" inline-block"
               />
             </div>
             <div className="flex min-w-[1024px] w-[1024px] md:min-w-[1980px] md:w-[1980px]">
@@ -49,7 +49,7 @@ export default function AnimationFWD() {
                 width={1980}
                 height={400}
                 alt="스크롤 이미지"
-                className="h-auto pt-16 inline-block"
+                className="inline-block"
               />
             </div>
           </div>
