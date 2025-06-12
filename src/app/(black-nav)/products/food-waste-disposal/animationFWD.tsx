@@ -13,43 +13,62 @@ export default function AnimationFWD() {
         <div className="w-full overflow-hidden relative flex flex-col gap-6 sm:gap-10">
           {/* 왼쪽으로 스크롤하는 첫 번째 이미지 그룹 */}
           <div className="flex carousell-scroll-left whitespace-nowrap">
-            <div className="flex min-w-[1024px] w-[1024px] md:min-w-[1980px] md:w-[1980px]">
+            <div className="flex-shrink-0 w-[1024px] lg:w-[1980px]">
               <Image
-                src="https://do40f6yw4fd7i.cloudfront.net/img13/etc1.png"
+                src="/img/coda_fwd_01.webp"
                 width={1980}
                 height={400}
                 alt="스크롤 이미지"
-                className="inline-block"
+                className="w-full h-auto object-cover"
               />
             </div>
-            <div className="flex min-w-[1024px] w-[1024px] md:min-w-[1980px] md:w-[1980px]">
+            <div className="flex-shrink-0 w-[1024px] lg:w-[1980px]">
               <Image
-                src="https://do40f6yw4fd7i.cloudfront.net/img13/etc1.png"
+                src="/img/coda_fwd_01.webp"
                 width={1980}
                 height={400}
                 alt="스크롤 이미지"
-                className="inline-block"
+                className="w-full h-auto object-cover"
+              />
+            </div>
+            <div className="flex-shrink-0 w-[1024px] lg:w-[1980px]">
+              <Image
+                src="/img/coda_fwd_01.webp"
+                width={1980}
+                height={400}
+                alt="스크롤 이미지"
+                className="w-full h-auto object-cover"
               />
             </div>
           </div>
-          {/* 왼쪽으로 스크롤하는 첫 번째 이미지 그룹 */}
+          
+          {/* 오른쪽으로 스크롤하는 두 번째 이미지 그룹 */}
           <div className="flex carousell-scroll-right whitespace-nowrap">
-            <div className="flex min-w-[1024px] w-[1024px] md:min-w-[1980px] md:w-[1980px]">
+            <div className="flex-shrink-0 w-[1024px] lg:w-[1980px]">
               <Image
-                src="https://do40f6yw4fd7i.cloudfront.net/img13/etc1.png"
+                src="/img/coda_fwd_01.webp"
                 width={1980}
                 height={400}
                 alt="스크롤 이미지"
-                className=" inline-block"
+                className="w-full h-auto object-cover"
               />
             </div>
-            <div className="flex min-w-[1024px] w-[1024px] md:min-w-[1980px] md:w-[1980px]">
+            <div className="flex-shrink-0 w-[1024px] lg:w-[1980px]">
               <Image
-                src="https://do40f6yw4fd7i.cloudfront.net/img13/etc1.png"
+                src="/img/coda_fwd_01.webp"
                 width={1980}
                 height={400}
                 alt="스크롤 이미지"
-                className="inline-block"
+                className="w-full h-auto object-cover"
+              />
+            </div>
+            <div className="flex-shrink-0 w-[1024px] lg:w-[1980px]">
+              <Image
+                src="/img/coda_fwd_01.webp"
+                width={1980}
+                height={400}
+                alt="스크롤 이미지"
+                className="w-full h-auto object-cover"
               />
             </div>
           </div>

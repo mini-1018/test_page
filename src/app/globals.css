@@ -67,13 +67,13 @@
     transform: translateX(0);
   }
   100% {
-    transform: translateX(-100%);
+    transform: translateX(-33.333%);
   }
 }
 
 @keyframes carousell-scroll-right {
   0% {
-    transform: translateX(-100%);
+    transform: translateX(-33.333%);
   }
   100% {
     transform: translateX(0);
@@ -82,10 +82,33 @@
 
 .carousell-scroll-left {
   animation: carousell-scroll-left 30s linear infinite;
+  width: calc(1024px * 3);
 }
 
 .carousell-scroll-right {
   animation: carousell-scroll-right 30s linear infinite;
+  width: calc(1024px * 3);
+}
+
+@media (min-width: 768px) {
+  .carousell-scroll-left {
+    animation-duration: 30s;
+    width: calc(1980px * 3);
+  }
+  
+  .carousell-scroll-right {
+    animation-duration: 30s;
+    width: calc(1980px * 3);
+  }
+}
+
+.carousell-scroll-left,
+.carousell-scroll-right {
+  will-change: transform;
+}
+
+.overflow-hidden {
+  -webkit-overflow-scrolling: touch;
 }
 
 body {
