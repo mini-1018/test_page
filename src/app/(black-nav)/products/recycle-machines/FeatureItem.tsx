@@ -1,3 +1,5 @@
+import Image from "next/image";
+
 interface FeatureItemProps {
   title: string;
   description: string;
@@ -15,15 +17,17 @@ export default function FeatureItem({
 }: FeatureItemProps) {
   return (
     <div className={mb}>
-      <div className="text-[32px] font-bold text-[#0095d3] mb-[10px]">
+      <div className="text-[18px] md:text-[26px] font-bold text-secondary mb-[10px]">
         {title}
       </div>
-      <div className="text-[26px] font-light text-[#656565]">{description}</div>
+      <div className="text-[14px] md:text-[20px] font-light text-[#656565]">{description}</div>
       {imageSrc && (
-        <img
+        <Image
           src={imageSrc}
           alt={alt || "코다(CODA) 기능 이미지"}
-          className="w-full h-auto pt-[30px]"
+          className="pt-[30px] m-auto"
+          width={450}
+          height={200}
         />
       )}
     </div>

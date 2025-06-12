@@ -1,3 +1,5 @@
+import Image from "next/image";
+
 interface NumberedSectionProps {
   number: string;
   title: string;
@@ -13,13 +15,15 @@ export default function NumberedSection({
 }: NumberedSectionProps) {
   return (
     <div className={`w-full ${bgColor}`}>
-      <div className="py-[150px] px-4 max-w-7xl mx-auto">
-        <img
+      <div className="py-[75px] md:py-[150px] px-4 max-w-7xl mx-auto">
+        <Image
           src={`https://do40f6yw4fd7i.cloudfront.net/img13/common/num_big${number}.webp`}
           alt={`코다(CODA) ${number}번 설명`}
-          className="mb-5"
+          width={100}
+          height={100}
+          className="mb-5 mx-auto w-[50px] md:w-[100px]"
         />
-        <div className="text-[45px] font-bold text-[#141a46] leading-tight mb-8">
+        <div className="text-[24px] md:text-[32px] xl:text-[40px] font-bold text-third leading-tight mb-8">
           {title.split("\n").map((line, index) => (
             <div key={index}>{line}</div>
           ))}

@@ -63,6 +63,7 @@ export default function machinesLineup() {
                       height={320}
                       alt={product.alt}
                       className="w-[140px] h-auto object-cover transition-opacity duration-300 group-hover:opacity-75"
+                      priority
                     />
                   </div>
 

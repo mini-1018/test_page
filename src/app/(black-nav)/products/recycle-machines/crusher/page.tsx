@@ -1,16 +1,16 @@
 import NumberedSection from "../NumberedSection";
 import FeatureSection from "../FeatureSection";
 import FeatureItem from "../FeatureItem";
-import Image from "next/image"; // next/image 컴포넌트 import
+import Image from "next/image";
 
-export default function CodaPage() {
+export default function CrushPage() {
   return (
     <div className="w-full">
       <div className="max-w-full mx-auto text-center">
         {/* 헤더 섹션 */}
         <div className="w-full">
           <Image
-            src="https://do40f6yw4fd7i.cloudfront.net/img13/item_coda_coda/coda_coda_s1.webp"
+            src="https://do40f6yw4fd7i.cloudfront.net/img13/item_coda_crush/coda_crush_s1_text.webp"
             alt="코다(CODA) 무인회수기 메인이미지"
             className="w-full h-auto pt-[64px] md:pt-[80px]"
             width={1920}
@@ -24,11 +24,11 @@ export default function CodaPage() {
           <div className="max-w-7xl mx-auto px-4">
             <div className="mb-[30px]">
               <Image
-                className="mx-auto w-[80px] md:w-[160px]"
-                src="https://do40f6yw4fd7i.cloudfront.net/img13/item_coda_coda/coda_coda_s2.webp"
+                className="mx-auto w-[30px] md:w-[60px]"
+                src="https://do40f6yw4fd7i.cloudfront.net/img13/item_coda_crush/coda_crush_s2.webp"
                 alt="코다(CODA) 페트 이미지"
-                width={160}
-                height={180}
+                width={60}
+                height={80}
               />
             </div>
             <div>
@@ -51,7 +51,7 @@ export default function CodaPage() {
         <div className="w-full">
           <Image
             className="w-full h-auto"
-            src="https://do40f6yw4fd7i.cloudfront.net/img13/item_coda_coda/coda_coda_s3.webp"
+            src="https://do40f6yw4fd7i.cloudfront.net/img13/item_coda_crush/coda_crush_s3.webp"
             alt="코다(CODA) 무인회수기 서브이미지"
             width={1920}
             height={800}
@@ -62,11 +62,11 @@ export default function CodaPage() {
         <FeatureSection
           bgColor="bg-[#f5f6f9]"
           title={`모으고\n살리고\n보상받고`}
-          description={`'무인회수기에 CAN, PET 투입하면\n압축기가 부피를 줄이며 선별 저장, 자원 순환률을 높여\n해양동물을 비롯한 환경을 회복합니다.'`}
+          description={`'무인회수기에 CAN, PET 투입하면\n파쇄기가 부피를 줄이며 선별 저장, 자원 순환률을 높여\n해양동물을 비롯한 환경을 회복합니다.'`}
         >
           <Image
             className="mx-auto sm:w-[60%] min-w-[300px]"
-            src="https://do40f6yw4fd7i.cloudfront.net/img13/item_coda_coda/coda_coda_s4.webp"
+            src="https://do40f6yw4fd7i.cloudfront.net/img13/item_coda_crush/coda_crush_s4.webp"
             alt="코다(CODA) 무인회수기 메인설명"
             width={800}
             height={800}
@@ -77,7 +77,7 @@ export default function CodaPage() {
         <NumberedSection number="1" title={`자원 선순환\n프로세스`}>
           <Image
             className="pt-[30px] pb-[80px] m-auto"
-            src="https://do40f6yw4fd7i.cloudfront.net/img13/item_coda_coda/coda_coda_s5.webp"
+            src="https://do40f6yw4fd7i.cloudfront.net/img13/item_coda_crush/coda_crush_s5.webp"
             alt="코다(CODA) 무인회수기 자원 선순환 프로세스"
             width={750}
             height={600}
@@ -92,58 +92,71 @@ export default function CodaPage() {
 
         {/* 차별화 기능 섹션 */}
         <NumberedSection number="2" title={`차별화 기능`} bgColor="bg-[#f5f6f9]">
-        <div className="w-full bg-[#f5f6f9]">
-          <div className="py-[20px] px-4 mx-auto">
-            <Image
-              src="https://do40f6yw4fd7i.cloudfront.net/img13/common/icon_ai.webp"
-              alt="코다(CODA) 무인회수기 AI"
-              className="mb-[50px] m-auto"
-              width={80}
-              height={60}
-            />
-            <div className="text-[14px] md:text-[20px] font-light text-[#656565] mb-[100px]">
-              '인공지능 센싱기술로 회수 가능 자원(CAN, PET) & 불가능 자원을
-              선별하여
-              <br />
-              반환(배출) 및 압축을 통한 저장으로 자원 순환률을 높입니다.'
+          <div className="w-full bg-[#f5f6f9]">
+            <div className="py-[20px] px-4 mx-auto">
+              <Image
+                src="https://do40f6yw4fd7i.cloudfront.net/img13/common/icon_ai.webp"
+                alt="코다(CODA) 무인회수기 AI"
+                className="mb-[50px] m-auto"
+                width={80}
+                height={60}
+              />
+              <div className="text-[14px] md:text-[20px] font-light text-[#656565] mb-[100px]">
+                '인공지능 센싱기술로 회수 가능 자원(CAN, PET) & 불가능 자원을
+                선별하여
+                <br />
+                반환(배출) 및 압축을 통한 저장으로 자원 순환률을 높입니다.'
+              </div>
+
+              <FeatureItem
+                title="압축기 / 파쇄기 운송비용 비교"
+                description="가득찬 수거통 회수 시, 운송비 절감"
+                imageSrc="https://do40f6yw4fd7i.cloudfront.net/img13/item_coda_crush/coda_crush_s9_1.webp"
+                alt="코다(CODA) 무인회수기 운송비용 비교"
+              />
+
+              <div className="text-[14px] md:text-[20px] font-light text-[#656565]">
+                동일한 500ml PET 500개 기준
+                <br />
+                압축기와 파쇄기 적재량 비교
+              </div>
+              <Image
+                className="w-[500px] h-auto pt-[30px] pb-[120px] mx-auto"
+                src="https://do40f6yw4fd7i.cloudfront.net/img13/item_coda_crush/coda_crush_s9_1_2.webp"
+                alt="코다(CODA) 무인회수기 적재량 비교"
+                width={500}
+                height={300}
+              />
+
+              <FeatureItem
+                title="회수가능자원 1차 판독 / 선별"
+                description="AI 센싱기술 & 고효율 압축성능"
+                imageSrc="https://do40f6yw4fd7i.cloudfront.net/img13/item_coda_crush/coda_crush_s9_2.webp"
+                alt="코다(CODA) 무인회수기 AI 센싱기술"
+              />
+
+              <FeatureItem
+                title="회수가능자원 2차 판독 / 자동 배출"
+                description="첨단 로보틱스 활용한 배출구 반환 기능"
+                imageSrc="https://do40f6yw4fd7i.cloudfront.net/img13/item_coda_crush/coda_crush_s9_3.webp"
+                alt="코다(CODA) 무인회수기 첨단 로보틱스"
+              />
+
+              <FeatureItem
+                title="자원 투입 시, 투입구 센서 자동 인식"
+                description="투입시 LED 표시, 음성 안내 등의 사용 안전성"
+                imageSrc="https://do40f6yw4fd7i.cloudfront.net/img13/item_coda_crush/coda_crush_s9_5.webp"
+                alt="코다(CODA) 무인회수기 투입구 센서 자동 인식"
+              />
             </div>
-
-            <FeatureItem
-              title="회수가능자원 1차 판독 / 선별"
-              description="AI 센싱기술 & 고효율 압축성능"
-              imageSrc="https://do40f6yw4fd7i.cloudfront.net/img13/item_coda_coda/coda_coda_s9_1.webp"
-              alt="코다(CODA) 무인회수기 AI 센싱기술"
-            />
-
-            <FeatureItem
-              title="회수가능자원 2차 판독 / 자동 배출"
-              description="첨단 로보틱스 활용한 배출구 반환 기능"
-              imageSrc="https://do40f6yw4fd7i.cloudfront.net/img13/item_coda_coda/coda_coda_s9_2.webp"
-              alt="코다(CODA) 무인회수기 첨단 로보틱스"
-            />
-
-            <FeatureItem
-              title="타사 대비 월등한 처리 속도"
-              description="정확한 자원 판단 설계와 고도화된 구조 기반 장비의 최적 성능 구현"
-              imageSrc="https://do40f6yw4fd7i.cloudfront.net/img13/item_coda_coda/coda_coda_s9_6.webp"
-              alt="코다(CODA) 무인회수기 처리 속도"
-            />
-
-            <FeatureItem
-              title="자원 투입 시, 투입구 센서 자동 인식"
-              description="투입시 LED 표시, 음성 안내 등의 사용 안전성"
-              imageSrc="https://do40f6yw4fd7i.cloudfront.net/img13/item_coda_coda/coda_coda_s9_4.webp"
-              alt="코다(CODA) 무인회수기 투입구 센서 자동 인식"
-            />
           </div>
-        </div>
         </NumberedSection>
 
         {/* 사용방법 섹션 */}
         <NumberedSection number="3" title="사용방법">
           <Image
             className="pt-[30px] pb-[40px] md:pb-[80px] m-auto"
-            src="https://do40f6yw4fd7i.cloudfront.net/img13/item_coda_coda/coda_coda_s6_1.webp"
+            src="https://do40f6yw4fd7i.cloudfront.net/img13/item_coda_crush/coda_crush_s6_1.webp"
             alt="코다(CODA) 무인회수기 사용설명"
             width={1000}
             height={800}
@@ -160,7 +173,7 @@ export default function CodaPage() {
 
           <Image
             className="mx-auto pt-[30px] pb-[80px]"
-            src="https://do40f6yw4fd7i.cloudfront.net/img13/item_coda_coda/coda_coda_s6_2.webp"
+            src="https://do40f6yw4fd7i.cloudfront.net/img13/item_coda_crush/coda_crush_s6_2.webp"
             alt="코다(CODA) 무인회수기 사용편의성"
             width={400}
             height={300}
@@ -176,7 +189,7 @@ export default function CodaPage() {
 
           <Image
             className="m-auto pt-[30px] pb-[80px]"
-            src="https://do40f6yw4fd7i.cloudfront.net/img13/item_coda_coda/coda_coda_s6_3.webp"
+            src="https://do40f6yw4fd7i.cloudfront.net/img13/item_coda_crush/coda_crush_s6_3.webp"
             alt="코다(CODA) 무인회수기 안전기능"
             width={800}
             height={600}
@@ -185,61 +198,61 @@ export default function CodaPage() {
 
         {/* 회수자원 보상체계 섹션 */}
         <NumberedSection number="4" title={`회수자원\n보상체계`} bgColor="bg-[#f5f6f9]">
-        <div className="w-full bg-[#f5f6f9]">
-          <div className="py-[20px] px-4 max-w-7xl mx-auto">
-            <div className="text-center">
-              <span className="text-[18px] md:text-[26px] text-[#818181] inline-block">
-                투입량 만큼 사용자 맞춤 보상 -
-              </span>
-              <span className="text-[18px] md:text-[26px] text-[#0095d3] inline-block">
-                현금/교통카드/지역화폐
-              </span>
+          <div className="w-full bg-[#f5f6f9]">
+            <div className="py-[20px] px-4 max-w-7xl mx-auto">
+              <div className="text-center">
+                <span className="text-[18px] md:text-[26px] text-[#818181] inline-block">
+                  투입량 만큼 사용자 맞춤 보상 -
+                </span>
+                <span className="text-[18px] md:text-[26px] text-[#0095d3] inline-block">
+                  현금/교통카드/지역화폐
+                </span>
+              </div>
+              <Image
+                className="pt-[30px] mb-[100px] md:mb-[200px] m-auto"
+                src="https://do40f6yw4fd7i.cloudfront.net/img13/item_coda_crush/coda_crush_s7_1.webp"
+                alt="코다(CODA) 무인회수기 회수자원 보상체계"
+                width={800}
+                height={600}
+              />
+              <div className="text-[18px] md:text-[26px] font-bold text-[#0095d3] mb-[20px]">
+                코다 전용앱 사용 방법
+              </div>
+              <div className="text-[24px] md:text-[36px] text-[#0095d3] mb-[10px]">
+                '가장 손쉽고 빠르게'
+              </div>
+              <div className="text-[14px] md:text-[20px] font-light text-[#7f809b] mb-[30px] md:mb-[50px]">
+                직관적인 포인트 적립과 송금 시스템 제공
+              </div>
+              <Image
+                className="m-auto pt-[30px] pb-[120px]"
+                src="https://do40f6yw4fd7i.cloudfront.net/img13/item_coda_crush/coda_crush_s7_2.webp"
+                alt="코다(CODA) 무인회수기 전용앱 사용방법"
+                width={800}
+                height={600}
+              />
+              <div className="text-[18px] md:text-[26px] font-bold text-[#0095d3] mb-[10px]">
+                CODA 검색 (QR)
+              </div>
+              <Image
+                className="pt-[30px] pb-[10px] m-auto"
+                src="https://do40f6yw4fd7i.cloudfront.net/img13/item_coda_crush/coda_crush_s7_3.webp"
+                alt="코다(CODA) 무인회수기 QR 코드"
+                width={100}
+                height={100}
+              />
             </div>
-            <Image
-              className="pt-[30px] mb-[100px] md:mb-[200px] m-auto"
-              src="https://do40f6yw4fd7i.cloudfront.net/img13/item_coda_coda/coda_coda_s7_1.webp"
-              alt="코다(CODA) 무인회수기 회수자원 보상체계"
-              width={800}
-              height={600}
-            />
-            <div className="text-[18px] md:text-[26px] font-bold text-[#0095d3] mb-[20px]">
-              코다 전용앱 사용 방법
-            </div>
-            <div className="text-[24px] md:text-[36px] text-[#0095d3] mb-[10px]">
-              '가장 손쉽고 빠르게'
-            </div>
-            <div className="text-[14px] md:text-[20px] font-light text-[#7f809b] mb-[30px] md:mb-[50px]">
-              직관적인 포인트 적립과 송금 시스템 제공
-            </div>
-            <Image
-              className="pt-[30px] pb-[120px] m-auto"
-              src="https://do40f6yw4fd7i.cloudfront.net/img13/item_coda_coda/coda_coda_s7_2.webp"
-              alt="코다(CODA) 무인회수기 전용앱 사용방법"
-              width={800}
-              height={600}
-            />
-            <div className="text-[18px] md:text-[26px] font-bold text-[#0095d3] mb-[10px]">
-              CODA 검색 (QR)
-            </div>
-            <Image
-              className="pt-[30px] pb-[10px] m-auto"
-              src="https://do40f6yw4fd7i.cloudfront.net/img13/item_coda_coda/coda_coda_s7_3.webp"
-              alt="코다(CODA) 무인회수기 QR 코드"
-              width={100}
-              height={100}
-            />
           </div>
-        </div>
         </NumberedSection>
 
-        {/* 무인회수기 압축기모델 섹션 */}
-        <NumberedSection number="5" title={"무인회수기\n압축기모델"}>
+        {/* 무인회수기 파쇄기모델 섹션 */}
+        <NumberedSection number="5" title={"무인회수기\n파쇄기모델"}>
           <Image
-            className="w-full h-auto pt-[30px]"
-            src="https://do40f6yw4fd7i.cloudfront.net/img13/item_coda_coda/coda_coda_s8.webp"
-            alt="코다(CODA) 무인회수기 압축기"
-            width={1920}
-            height={800}
+            className="pt-[30px] m-auto w-[160px] md:w-[290px]"
+            src="https://do40f6yw4fd7i.cloudfront.net/img13/item_coda_crush/coda_crush_s8.webp"
+            alt="코다(CODA) 무인회수기 파쇄기"
+            width={290}
+            height={300}
           />
         </NumberedSection>
 
@@ -298,7 +311,7 @@ export default function CodaPage() {
         <div className="w-full">
           <Image
             className="w-full h-auto"
-            src="https://do40f6yw4fd7i.cloudfront.net/img13/item_coda_coda/coda_coda_s11.webp"
+            src="https://do40f6yw4fd7i.cloudfront.net/img13/item_coda_crush/coda_crush_s11.webp"
             alt="코다(CODA) 무인회수기 서브이미지"
             width={1920}
             height={800}
