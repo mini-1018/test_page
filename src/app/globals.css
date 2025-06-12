@@ -115,6 +115,18 @@ body {
   font-family: "Pretendard";
 }
 
+/* iOS에서 gap 간격 문제 해결 */
+@supports (-webkit-touch-callout: none) {
+  /* iOS Safari에서만 적용 */
+  .gap-6 {
+    gap: 1rem !important;
+  }
+  
+  .sm\:gap-10 {
+    gap: 1.5rem !important;
+  }
+}
+
 /* 에디터 직접 스타일링 */
 .prose h1 {
   font-size: 2.25rem; /* 36px */
