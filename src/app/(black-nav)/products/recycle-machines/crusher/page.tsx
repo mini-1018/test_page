@@ -248,10 +248,10 @@ export default function CrushPage() {
         {/* 무인회수기 파쇄기모델 섹션 */}
         <NumberedSection number="5" title={"무인회수기\n파쇄기모델"}>
           <Image
-            className="pt-[30px] m-auto w-[160px] md:w-[290px]"
+            className="pt-[30px] m-auto w-[120px] md:w-[200px]"
             src="https://do40f6yw4fd7i.cloudfront.net/img13/item_coda_crush/coda_crush_s8.webp"
             alt="코다(CODA) 무인회수기 파쇄기"
-            width={290}
+            width={220}
             height={300}
           />
         </NumberedSection>

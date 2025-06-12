@@ -235,11 +235,11 @@ export default function CodaPage() {
         {/* 무인회수기 압축기모델 섹션 */}
         <NumberedSection number="5" title={"무인회수기\n압축기모델"}>
           <Image
-            className="w-full h-auto pt-[30px]"
+            className="pt-[30px] m-auto"
             src="https://do40f6yw4fd7i.cloudfront.net/img13/item_coda_coda/coda_coda_s8.webp"
             alt="코다(CODA) 무인회수기 압축기"
-            width={1920}
-            height={800}
+            width={700}
+            height={600}
           />
         </NumberedSection>
 
