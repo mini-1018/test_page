@@ -61,7 +61,6 @@
   --color-secondary: #0095D3;
   --color-third: #131F6B;
 }
-
 @keyframes carousell-scroll-left {
   0% {
     transform: translateX(0);
@@ -102,85 +101,59 @@
   }
 }
 
-/* iOS Safari 전용 강제 수정 - 개선 버전 */
+/* iOS Safari 전용 수정 - 간소화된 버전 */
 @supports (-webkit-touch-callout: none) {
-  .flex.flex-col > .flex {
-    margin-top: 0 !important;
-    margin-bottom: 0 !important;
-    padding-top: 0 !important;
-    padding-bottom: 0 !important;
-    -webkit-box-sizing: border-box !important;
-    box-sizing: border-box !important;
+  /* 컨테이너 설정 */
+  .w-full.overflow-hidden.relative.flex.flex-col {
+    display: flex;
+    flex-direction: column;
+    gap: 0;
+    line-height: 0;
+    font-size: 0;
   }
   
+  /* 각 스크롤 그룹 */
   .carousell-scroll-left,
   .carousell-scroll-right {
-    display: -webkit-box !important;
-    display: -webkit-flex !important;
-    display: flex !important;
-    line-height: 0 !important;
-    font-size: 0 !important;
-    -webkit-box-align: start !important;
-    -webkit-align-items: flex-start !important;
-    align-items: flex-start !important;
-  }
-  
-  .carousell-scroll-left > div,
-  .carousell-scroll-right > div {
-    -webkit-box-sizing: border-box !important;
-    box-sizing: border-box !important;
-    vertical-align: top !important;
-  }
-  
-  .carousell-scroll-left + .carousell-scroll-right,
-  .carousell-scroll-right + .carousell-scroll-left {
-    margin-top: -2px !important;
-  }
-}
-
-/* iOS Safari용 추가 */
-@supports (-webkit-touch-callout: none) {
-  .carousell-scroll-left *,
-  .carousell-scroll-right * {
-    -webkit-appearance: none !important;
-    -webkit-transform: translateZ(0) !important;
-    transform: translateZ(0) !important;
-  }
-}
-
-@supports (-webkit-touch-callout: none) {
-  .flex.flex-col {
+    display: flex;
+    align-items: flex-start;
+    line-height: 0;
+    font-size: 0;
+    margin: 0;
+    padding: 0;
+    border: 0;
+    vertical-align: top;
     -webkit-transform: translateZ(0);
     transform: translateZ(0);
-    -webkit-backface-visibility: hidden;
-    backface-visibility: hidden;
   }
   
-  .carousell-scroll-left,
-  .carousell-scroll-right {
-    -webkit-transform: translate3d(0, 0, 0);
-    transform: translate3d(0, 0, 0);
-    position: relative;
-    z-index: 1;
+  /* 이미지 컨테이너 */
+  .carousell-scroll-left > div,
+  .carousell-scroll-right > div {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    vertical-align: top;
+    line-height: 0;
+    font-size: 0;
   }
   
-  .carousell-scroll-left + .carousell-scroll-right {
-    margin-top: -4px !important;
-    -webkit-transform: translate3d(0, -4px, 0);
-    transform: translate3d(0, -4px, 0);
+  /* 이미지 자체 */
+  .carousell-scroll-left img,
+  .carousell-scroll-right img {
+    display: block;
+    margin: 0;
+    padding: 0;
+    border: 0;
+    vertical-align: top;
+    line-height: 0;
+    font-size: 0;
   }
   
-  .carousell-scroll-right + .carousell-scroll-left {
-    margin-top: -4px !important;
-    -webkit-transform: translate3d(0, -4px, 0);
-    transform: translate3d(0, -4px, 0);
-  }
-}
-
-@supports (-webkit-touch-callout: none) {
+  /* 그룹 간 간격 제거 */
   .carousell-scroll-left + .carousell-scroll-right,
   .carousell-scroll-right + .carousell-scroll-left {
-    margin-top: -200px !important; /* 더 큰 음수값 */
+    margin-top: 0 !important;
   }
 }
 
