@@ -25,33 +25,43 @@ export default function RfidFWD({
 
   // 기본 이미지 배열
   const defaultImages: string[] = [
-    '/img/coda_food_reference_01.png',
-    '/img/coda_food_reference_01.png',
-    '/img/coda_food_reference_01.png',
-    '/img/coda_food_reference_01.png',
-    '/img/coda_food_reference_01.png',
-    '/img/coda_food_reference_01.png',
-    '/img/coda_food_reference_01.png',
-    '/img/coda_food_reference_01.png',
-    '/img/coda_food_reference_01.png',
-    '/img/coda_food_reference_01.png',
-    '/img/coda_food_reference_01.png',
-    '/img/coda_food_reference_01.png',
-    '/img/coda_food_reference_01.png',
-    '/img/coda_food_reference_01.png',
-    '/img/coda_food_reference_01.png',
-    '/img/coda_food_reference_01.png',
-    '/img/coda_food_reference_01.png',
-    '/img/coda_food_reference_01.png',
-    '/img/coda_food_reference_01.png',
-    '/img/coda_food_reference_01.png',
-    '/img/coda_food_reference_01.png',
-    '/img/coda_food_reference_01.png',
-    '/img/coda_food_reference_01.png',
+    '/img/eatery/coda_food_reference_01.png',
+    '/img/eatery/coda_food_reference_02.png',
+    '/img/eatery/coda_food_reference_03.png',
+    '/img/eatery/coda_food_reference_04.png',
+    '/img/eatery/coda_food_reference_05.png',
+    '/img/eatery/coda_food_reference_06.png',
+    '/img/eatery/coda_food_reference_07.png',
+    '/img/eatery/coda_food_reference_08.png',
+    '/img/eatery/coda_food_reference_09.png',
+    '/img/eatery/coda_food_reference_10.png',
+    '/img/eatery/coda_food_reference_11.png',
+    '/img/eatery/coda_food_reference_12.png',
+    '/img/eatery/coda_food_reference_13.png',
+    '/img/eatery/coda_food_reference_14.png',
+    '/img/eatery/coda_food_reference_15.png',
+    '/img/eatery/coda_food_reference_16.png',
+    '/img/eatery/coda_food_reference_17.png',
+    '/img/eatery/coda_food_reference_18.png',
+    '/img/eatery/coda_food_reference_19.png',
+    '/img/eatery/coda_food_reference_20.png',
+    '/img/eatery/coda_food_reference_21.png',
+    '/img/eatery/coda_food_reference_22.png',
+    '/img/eatery/coda_food_reference_23.png',
+    '/img/eatery/coda_food_reference_24.png',
+    '/img/eatery/coda_food_reference_25.png',
+    '/img/eatery/coda_food_reference_26.png',
+    '/img/eatery/coda_food_reference_27.png',
+    '/img/eatery/coda_food_reference_28.png',
+    '/img/eatery/coda_food_reference_29.png',
+    '/img/eatery/coda_food_reference_30.png',
+    '/img/eatery/coda_food_reference_31.png',
+    '/img/eatery/coda_food_reference_32.png',
   ];
 
   const images = customImages || defaultImages;
 
+  // 화면 크기별 그룹 사이즈 계산
   const getGroupSize = () => {
     if (typeof window === 'undefined') return 20;
     
@@ -121,7 +131,7 @@ export default function RfidFWD({
                         alt={`이미지 ${slideIndex}-${imageIndex + 1}`}
                         fill
                         className="object-cover"
-                        sizes="(max-width: 768px) 80px, (max-width: 1024px) 80px, 100px"
+                        sizes="(max-width: 768px) 100px, (max-width: 1024px) 120px, 140px"
                         unoptimized={true}
                       />
                     </div>
