@@ -51,7 +51,7 @@ export default function AnimationFWD() {
                 height={400}
                 alt="스크롤 이미지"
                 className="w-full h-auto object-cover"
-                priority={true}
+                style={{ display: 'block', lineHeight: 0, verticalAlign: 'top' }}
               />
             </div>
             <div className="flex-shrink-0 w-[1024px] lg:w-[1980px]">
@@ -61,6 +61,7 @@ export default function AnimationFWD() {
                 height={400}
                 alt="스크롤 이미지"
                 className="w-full h-auto object-cover"
+                style={{ display: 'block', lineHeight: 0, verticalAlign: 'top' }}
               />
             </div>
             <div className="flex-shrink-0 w-[1024px] lg:w-[1980px]">
@@ -70,6 +71,7 @@ export default function AnimationFWD() {
                 height={400}
                 alt="스크롤 이미지"
                 className="w-full h-auto object-cover"
+                style={{ display: 'block', lineHeight: 0, verticalAlign: 'top' }}
               />
             </div>
           </div>
