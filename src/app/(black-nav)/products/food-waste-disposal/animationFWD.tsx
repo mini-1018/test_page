@@ -12,7 +12,7 @@ export default function AnimationFWD() {
           </h2>
         </div>
         
-        <div className="w-full overflow-hidden relative flex flex-col gap-4 md:gap-6">
+        <div className="w-full overflow-hidden relative flex flex-col gap-4 md:gap-10">
           {/* 왼쪽으로 스크롤하는 첫 번째 이미지 그룹 */}
           <div className="flex carousell-scroll-left">
             <div className="flex-shrink-0 w-[1024px] lg:w-[1980px]">
@@ -45,7 +45,7 @@ export default function AnimationFWD() {
           </div>
           
           {/* 오른쪽으로 스크롤하는 두 번째 이미지 그룹 */}
-          <div className="flex carousell-scroll-right">
+          <div className="flex carousell-scroll-right_40s">
             <div className="flex-shrink-0 w-[1024px] lg:w-[1980px]">
               <Image
                 src="/img/coda_fwd_02.webp"
@@ -76,7 +76,7 @@ export default function AnimationFWD() {
           </div>
           
           {/* 세 번째 그룹 */}
-          <div className="flex carousell-scroll-left">
+          <div className="flex carousell-scroll-left_40s">
             <div className="flex-shrink-0 w-[1024px] lg:w-[1980px]">
               <Image
                 src="/img/coda_fwd_03.webp"

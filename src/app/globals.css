@@ -89,6 +89,16 @@
   width: calc(1024px * 3);
 }
 
+.carousell-scroll-left_40s {
+  animation: carousell-scroll-left 40s linear infinite;
+  width: calc(1024px * 3);
+}
+
+.carousell-scroll-right_40s {
+  animation: carousell-scroll-right 40s linear infinite;
+  width: calc(1024px * 3);
+}
+
 @media (min-width: 768px) {
   .carousell-scroll-left {
     animation-duration: 60s;
@@ -96,6 +106,16 @@
   }
   
   .carousell-scroll-right {
+    animation-duration: 60s;
+    width: calc(1980px * 3);
+  }
+
+  .carousell-scroll-left_40s {
+    animation-duration: 60s;
+    width: calc(1980px * 3);
+  }
+  
+  .carousell-scroll-right_40s {
     animation-duration: 60s;
     width: calc(1980px * 3);
   }

@@ -1,5 +1,6 @@
 import Image from "next/image";
 import FadeUpOnView from "@/shared/components/common/FadeUpOnView";
+import RfidFWD from "./RfidFWD";
 
 export default function RFIDPage() {
   return (
@@ -16,6 +17,25 @@ export default function RFIDPage() {
             priority={true}
           />
         </div>
+
+        {/* RFID FWD 섹션 */}
+          <div className="flex flex-col items-center py-[75px] md:py-[150px] mt-[75px] px-4 gap-4 text-center">
+            <h3 className="text-third">검증된 시스템</h3>
+            <p className="text-[14px] md:text-[20px] text-[#868686] mb-0">
+                4000개 음식업소에서 신뢰하는
+                <br />
+                <span
+                  className="inline"
+                  style={{
+                    background: "linear-gradient(transparent 40%, #f8e0af 60%)",
+                  }}
+                >
+                  정확하고 신속한 수거량 무게 측정 및 결제 시스템
+                </span>
+              </p>
+              
+            <RfidFWD />
+          </div>
 
         {/* 인트로 섹션 */}
         <FadeUpOnView>
