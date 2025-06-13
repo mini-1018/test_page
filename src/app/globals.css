@@ -115,14 +115,27 @@ body {
   font-family: "Pretendard";
 }
 
-/* 기존 gap 스타일 제거하고 margin으로 대체 */
+/* 기존 gap 스타일 제거하고 margin으로 대체 - 간격 줄임 */
 .carousell-container > * + * {
-  margin-top: 1.5rem; /* gap-6 대신 */
+  margin-top: 0.75rem; /* 12px - 기존 1.5rem에서 줄임 */
 }
 
 @media (min-width: 640px) {
   .carousell-container > * + * {
-    margin-top: 2.5rem; /* sm:gap-10 대신 */
+    margin-top: 1rem; /* 16px - 기존 2.5rem에서 줄임 */
+  }
+}
+
+/* iOS Safari 전용 - 더 작게 조정 */
+@supports (-webkit-touch-callout: none) {
+  .carousell-container > * + * {
+    margin-top: 0.5rem !important; /* 8px */
+  }
+  
+  @media (min-width: 640px) {
+    .carousell-container > * + * {
+      margin-top: 0.75rem !important; /* 12px */
+    }
   }
 }
 
