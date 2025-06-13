@@ -12,38 +12,7 @@ export default function AnimationFWD() {
         
         <div className="w-full overflow-hidden relative flex flex-col">
           {/* 왼쪽으로 스크롤하는 첫 번째 이미지 그룹 */}
-          <div className="flex carousell-scroll-left">
-            <div className="flex-shrink-0 w-[1024px] lg:w-[1980px]">
-              <Image
-                src="/img/coda_fwd_01.webp"
-                width={1980}
-                height={400}
-                alt="스크롤 이미지"
-                className="w-full h-auto object-cover"
-              />
-            </div>
-            <div className="flex-shrink-0 w-[1024px] lg:w-[1980px]">
-              <Image
-                src="/img/coda_fwd_01.webp"
-                width={1980}
-                height={400}
-                alt="스크롤 이미지"
-                className="w-full h-auto object-cover"
-              />
-            </div>
-            <div className="flex-shrink-0 w-[1024px] lg:w-[1980px]">
-              <Image
-                src="/img/coda_fwd_01.webp"
-                width={1980}
-                height={400}
-                alt="스크롤 이미지"
-                className="w-full h-auto object-cover"
-              />
-            </div>
-          </div>
-          
-          {/* 오른쪽으로 스크롤하는 두 번째 이미지 그룹 */}
-          <div className="flex carousell-scroll-right" style={{ lineHeight: 0 }}>
+          <div className="flex carousell-scroll-left" style={{ lineHeight: 0 }}>
             <div className="flex-shrink-0 w-[1024px] lg:w-[1980px]" style={{ lineHeight: 0 }}>
               <Image
                 src="/img/coda_fwd_01.webp"
@@ -72,6 +41,43 @@ export default function AnimationFWD() {
                 alt="스크롤 이미지"
                 className="w-full h-auto object-cover"
                 style={{ display: 'block', lineHeight: 0, verticalAlign: 'top' }}
+              />
+            </div>
+          </div>
+          
+          {/* 오른쪽으로 스크롤하는 두 번째 이미지 그룹 */}
+          <div className="flex carousell-scroll-right" style={{ lineHeight: 0 }}>
+            <div className="flex-shrink-0 w-[1024px] lg:w-[1980px]" style={{ lineHeight: 0 }}>
+              <Image
+                src="/img/coda_fwd_01.webp"
+                width={1980}
+                height={400}
+                alt="스크롤 이미지"
+                className="w-full h-auto object-cover"
+                style={{ display: 'block', lineHeight: 0, verticalAlign: 'top' }}
+                priority={true}
+              />
+            </div>
+            <div className="flex-shrink-0 w-[1024px] lg:w-[1980px]">
+              <Image
+                src="/img/coda_fwd_01.webp"
+                width={1980}
+                height={400}
+                alt="스크롤 이미지"
+                className="w-full h-auto object-cover"
+                style={{ display: 'block', lineHeight: 0, verticalAlign: 'top' }}
+                priority={true}
+              />
+            </div>
+            <div className="flex-shrink-0 w-[1024px] lg:w-[1980px]">
+              <Image
+                src="/img/coda_fwd_01.webp"
+                width={1980}
+                height={400}
+                alt="스크롤 이미지"
+                className="w-full h-auto object-cover"
+                style={{ display: 'block', lineHeight: 0, verticalAlign: 'top' }}
+                priority={true}
               />
             </div>
           </div>
