@@ -43,8 +43,8 @@ export default function AnimationFWD() {
           </div>
           
           {/* 오른쪽으로 스크롤하는 두 번째 이미지 그룹 */}
-          <div className="flex carousell-scroll-right">
-            <div className="flex-shrink-0 w-[1024px] lg:w-[1980px]">
+          <div className="flex carousell-scroll-right" style={{ lineHeight: 0 }}>
+            <div className="flex-shrink-0 w-[1024px] lg:w-[1980px]" style={{ lineHeight: 0 }}>
               <Image
                 src="/img/coda_fwd_01.webp"
                 width={1980}
