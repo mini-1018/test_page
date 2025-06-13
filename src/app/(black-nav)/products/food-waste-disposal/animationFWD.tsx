@@ -17,7 +17,7 @@ export default function AnimationFWD() {
           <div className="flex carousell-scroll-left">
             <div className="flex-shrink-0 w-[1024px] lg:w-[1980px]">
               <Image
-                src="/img/coda_fwd_01.webp"
+                src="https://do40f6yw4fd7i.cloudfront.net/img13/coda_fwd_01.webp"
                 width={1980}
                 height={61}
                 alt="스크롤 이미지"
@@ -26,7 +26,7 @@ export default function AnimationFWD() {
             </div>
             <div className="flex-shrink-0 w-[1024px] lg:w-[1980px]">
               <Image
-                src="/img/coda_fwd_01.webp"
+                src="https://do40f6yw4fd7i.cloudfront.net/img13/coda_fwd_01.webp"
                 width={1980}
                 height={61}
                 alt="스크롤 이미지"
@@ -35,7 +35,7 @@ export default function AnimationFWD() {
             </div>
             <div className="flex-shrink-0 w-[1024px] lg:w-[1980px]">
               <Image
-                src="/img/coda_fwd_01.webp"
+                src="https://do40f6yw4fd7i.cloudfront.net/img13/coda_fwd_01.webp"
                 width={1980}
                 height={61}
                 alt="스크롤 이미지"
@@ -48,7 +48,7 @@ export default function AnimationFWD() {
           <div className="flex carousell-scroll-right_40s">
             <div className="flex-shrink-0 w-[1024px] lg:w-[1980px]">
               <Image
-                src="/img/coda_fwd_02.webp"
+                src="https://do40f6yw4fd7i.cloudfront.net/img13/coda_fwd_02.webp"
                 width={1980}
                 height={61}
                 alt="스크롤 이미지"
@@ -57,7 +57,7 @@ export default function AnimationFWD() {
             </div>
             <div className="flex-shrink-0 w-[1024px] lg:w-[1980px]">
               <Image
-                src="/img/coda_fwd_02.webp"
+                src="https://do40f6yw4fd7i.cloudfront.net/img13/coda_fwd_02.webp"
                 width={1980}
                 height={61}
                 alt="스크롤 이미지"
@@ -66,7 +66,7 @@ export default function AnimationFWD() {
             </div>
             <div className="flex-shrink-0 h-[31.72px] md:h-[61.36px] w-[1024px] lg:w-[1980px]">
               <Image
-                src="/img/coda_fwd_02.webp"
+                src="https://do40f6yw4fd7i.cloudfront.net/img13/coda_fwd_02.webp"
                 width={1980}
                 height={61}
                 alt="스크롤 이미지"
@@ -79,7 +79,7 @@ export default function AnimationFWD() {
           <div className="flex carousell-scroll-left_40s">
             <div className="flex-shrink-0 w-[1024px] lg:w-[1980px]">
               <Image
-                src="/img/coda_fwd_03.webp"
+                src="https://do40f6yw4fd7i.cloudfront.net/img13/coda_fwd_03.webp"
                 width={1980}
                 height={61}
                 alt="스크롤 이미지"
@@ -88,7 +88,7 @@ export default function AnimationFWD() {
             </div>
             <div className="flex-shrink-0 w-[1024px] lg:w-[1980px]">
               <Image
-                src="/img/coda_fwd_03.webp"
+                src="https://do40f6yw4fd7i.cloudfront.net/img13/coda_fwd_03.webp"
                 width={1980}
                 height={61}
                 alt="스크롤 이미지"
@@ -97,7 +97,7 @@ export default function AnimationFWD() {
             </div>
             <div className="flex-shrink-0 w-[1024px] lg:w-[1980px]">
               <Image
-                src="/img/coda_fwd_03.webp"
+                src="https://do40f6yw4fd7i.cloudfront.net/img13/coda_fwd_03.webp"
                 width={1980}
                 height={61}
                 alt="스크롤 이미지"
