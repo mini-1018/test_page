@@ -11,7 +11,7 @@ interface InfiniteCarouselProps {
   className?: string;
 }
 
-export default function RfidFWD({
+export default function AnimationRfid ({
   images: customImages,
   slideInterval = 3000,
   className = ''

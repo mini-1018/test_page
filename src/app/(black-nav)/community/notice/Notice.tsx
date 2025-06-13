@@ -1,6 +1,6 @@
 "use client";
 import React, { useState } from "react";
-import { Calendar, User, Search, FileText } from "lucide-react";
+import { Calendar, User, Search, FileText, ChevronRight } from "lucide-react"; // ChevronRight 추가
 import Link from "next/link";
 import Image from "next/image";
 import ResponsivePadding from "@shared/components/common/ResponsivePadding";
@@ -62,7 +62,7 @@ const Notice: React.FC<NoticeProps> = ({ notices }) => {
                   placeholder="검색어를 입력하세요..."
                   value={searchTerm}
                   onChange={(e) => setSearchTerm(e.target.value)}
-                  className="w-full pl-12 pr-4 py-4 bg-white/80 backdrop-blur-sm border border-blue-300 rounded-xl focus:outline-none focus:ring-2 focus:ring-blue-400 focus:border-gray-300 transition-all duration-200 placeholder-gray-400 text-slate-700 shadow-sm"
+                  className="w-full pl-12 pr-4 py-4 border border-blue-300 rounded-xl focus:outline-none focus:ring-2 focus:ring-blue-400 focus:border-gray-300 transition-all duration-200 placeholder-gray-400 text-slate-700 shadow-sm"
                 />
               </div>
             </div>
@@ -110,6 +110,13 @@ const Notice: React.FC<NoticeProps> = ({ notices }) => {
                                 {new Date(notice.date).toLocaleDateString("ko-KR")}
                               </span>
                             </div>
+                          </div>
+                        </div>
+                        
+                        {/* 화살표 아이콘 - md 이상에서만 표시 */}
+                        <div className="hidden md:block ml-6 opacity-0 group-hover:opacity-100 transition-opacity duration-200">
+                          <div className="w-8 h-8 bg-gray-50 rounded-full flex items-center justify-center">
+                            <ChevronRight className="w-4 h-4 text-gray-400" />
                           </div>
                         </div>
                       </div>

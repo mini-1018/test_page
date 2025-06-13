@@ -1,6 +1,6 @@
 import Image from "next/image";
 import FadeUpOnView from "@/shared/components/common/FadeUpOnView";
-import RfidFWD from "./RfidFWD";
+import AnimationRfid from "./AnimationRfid";
 
 export default function RFIDPage() {
   return (
@@ -33,8 +33,7 @@ export default function RFIDPage() {
                   신속하고 정확한 수거량 측정 및 결제 시스템
                 </span>
               </p>
-              
-            <RfidFWD />
+            <AnimationRfid />
           </div>
 
         {/* 인트로 섹션 */}
