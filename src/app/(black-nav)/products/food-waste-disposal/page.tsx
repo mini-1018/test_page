@@ -13,7 +13,7 @@ export default function CodaFoodPage() {
             height={1080}
             className="w-full h-auto"
             alt="우수 발명품 및 조달청 우수제품 선정 음식물 종량기"
-            priority
+            priority={true}
           />
         </section>
 

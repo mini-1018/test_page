@@ -15,7 +15,7 @@ export default function CrushPage() {
             className="w-full h-auto pt-[64px] md:pt-[80px]"
             width={1920}
             height={800}
-            priority
+            priority={true}
           />
         </div>
 

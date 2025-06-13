@@ -22,7 +22,7 @@ export default function HomePage() {
               height={1080}
               className="w-full h-auto"
               alt="코다(CODA) 메인 이미지"
-              priority
+              priority={true}
             />
           </div>
         </section>

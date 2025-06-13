@@ -13,7 +13,7 @@ export default function RFIDPage() {
             width={1920}
             height={600}
             className="w-full h-auto mt-[80px]"
-            priority
+            priority={true}
           />
         </div>
 

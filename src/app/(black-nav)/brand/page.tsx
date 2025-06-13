@@ -38,7 +38,7 @@ export default function BrandPage() {
               height={300}
               alt="코다(CODA) 자원 선순환 플랫폼"
               className="rounded-none w-[150px] md:w-[250px]"
-              priority
+              priority={true}
             />
           </div>
           <div className="text-center">

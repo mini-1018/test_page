@@ -65,7 +65,7 @@ export default function AnimationFWD() {
                 className="w-full h-auto object-cover"
                 style={{ display: 'block', lineHeight: 0, verticalAlign: 'top' }}
                 priority={true}
-                unoptimized={true}
+                // unoptimized={true}
                 loading="eager"
               />
             </div>
@@ -78,7 +78,7 @@ export default function AnimationFWD() {
                 className="w-full h-auto object-cover"
                 style={{ display: 'block', lineHeight: 0, verticalAlign: 'top' }}
                 priority={true}
-                unoptimized={true}
+                // unoptimized={true}
                 loading="eager"
               />
             </div>
@@ -91,7 +91,7 @@ export default function AnimationFWD() {
                 className="w-full h-auto object-cover"
                 style={{ display: 'block', lineHeight: 0, verticalAlign: 'top' }}
                 priority={true}
-                unoptimized={true}
+                // unoptimized={true}
                 loading="eager"
               />
             </div>
@@ -108,7 +108,7 @@ export default function AnimationFWD() {
                 className="w-full h-auto object-cover"
                 style={{ display: 'block', lineHeight: 0, verticalAlign: 'top' }}
                 priority={true}
-                unoptimized={true}
+                // unoptimized={true}
                 loading="eager"
               />
             </div>
@@ -121,7 +121,7 @@ export default function AnimationFWD() {
                 className="w-full h-auto object-cover"
                 style={{ display: 'block', lineHeight: 0, verticalAlign: 'top' }}
                 priority={true}
-                unoptimized={true}
+                // unoptimized={true}
                 loading="eager"
               />
             </div>
@@ -134,7 +134,7 @@ export default function AnimationFWD() {
                 className="w-full h-auto object-cover"
                 style={{ display: 'block', lineHeight: 0, verticalAlign: 'top' }}
                 priority={true}
-                unoptimized={true}
+                // unoptimized={true}
                 loading="eager"
               />
             </div>
