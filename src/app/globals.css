@@ -102,6 +102,27 @@
   }
 }
 
+@supports (-webkit-touch-callout: none) {
+  .flex.flex-col > .flex {
+    margin-top: 0 !important;
+    margin-bottom: 0 !important;
+    padding-top: 0 !important;
+    padding-bottom: 0 !important;
+  }
+  
+  .carousell-scroll-left,
+  .carousell-scroll-right {
+    display: flex !important;
+    line-height: 0 !important;
+    font-size: 0 !important;
+  }
+  
+  .carousell-scroll-left + .carousell-scroll-right,
+  .carousell-scroll-right + .carousell-scroll-left {
+    margin-top: -1px !important;
+  }
+}
+
 .carousell-scroll-left,
 .carousell-scroll-right {
   will-change: transform;
