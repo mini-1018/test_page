@@ -1,5 +1,5 @@
 import Image from "next/image";
-import AnimationFWD from "./animationFWD";
+import AnimationFWD from "./AnimationFWD";
 
 export default function CodaFoodPage() {
   return (
