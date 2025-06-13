@@ -10,30 +10,28 @@ export default function AnimationFWD() {
           </h2>
         </div>
         
-        <div className="w-full overflow-hidden relative flex flex-col" style={{ lineHeight: 0, fontSize: 0 }}>
+        <div className="w-full overflow-hidden relative flex flex-col">
           {/* 왼쪽으로 스크롤하는 첫 번째 이미지 그룹 */}
-          <div className="flex carousell-scroll-left" style={{ lineHeight: 0 }}>
-            <div className="flex-shrink-0 w-[1024px] lg:w-[1980px]" style={{ lineHeight: 0 }}>
+          <div className="flex carousell-scroll-left">
+            <div className="flex-shrink-0 w-[1024px] lg:w-[1980px]">
               <Image
                 src="/img/coda_fwd_01.webp"
                 width={1980}
                 height={400}
                 alt="스크롤 이미지"
                 className="w-full h-auto object-cover"
-                style={{ display: 'block', lineHeight: 0, verticalAlign: 'top' }}
                 priority={true}
                 unoptimized={true}
                 loading="eager"
               />
             </div>
-            <div className="flex-shrink-0 w-[1024px] lg:w-[1980px]" style={{ lineHeight: 0 }}>
+            <div className="flex-shrink-0 w-[1024px] lg:w-[1980px]">
               <Image
                 src="/img/coda_fwd_01.webp"
                 width={1980}
                 height={400}
                 alt="스크롤 이미지"
                 className="w-full h-auto object-cover"
-                style={{ display: 'block', lineHeight: 0, verticalAlign: 'top' }}
                 priority={true}
                 unoptimized={true}
                 loading="eager"
