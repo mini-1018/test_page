@@ -180,7 +180,7 @@
 @supports (-webkit-touch-callout: none) {
   .carousell-scroll-left + .carousell-scroll-right,
   .carousell-scroll-right + .carousell-scroll-left {
-    margin-top: -40px !important; /* 더 큰 음수값 */
+    margin-top: -200px !important; /* 더 큰 음수값 */
   }
 }
 
