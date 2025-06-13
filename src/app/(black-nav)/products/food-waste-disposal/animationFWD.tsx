@@ -10,7 +10,7 @@ export default function AnimationFWD() {
             전국 지자체가 선택한 검증된 음식물 종량기
           </h2>
         </div>
-        <div className="w-full overflow-hidden relative flex flex-col space-y-3 sm:space-y-4">
+        <div className="w-full overflow-hidden relative flex flex-col">
           {/* 왼쪽으로 스크롤하는 첫 번째 이미지 그룹 */}
           <div className="flex carousell-scroll-left whitespace-nowrap">
             <div className="flex-shrink-0 w-[1024px] lg:w-[1980px]">

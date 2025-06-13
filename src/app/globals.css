@@ -115,46 +115,6 @@ body {
   font-family: "Pretendard";
 }
 
-/* 기존 gap 스타일 제거하고 margin으로 대체 - 간격 줄임 */
-.carousell-container > * + * {
-  margin-top: 0.75rem; /* 12px - 기존 1.5rem에서 줄임 */
-}
-
-@media (min-width: 640px) {
-  .carousell-container > * + * {
-    margin-top: 1rem; /* 16px - 기존 2.5rem에서 줄임 */
-  }
-}
-
-/* iOS Safari 전용 - 더 작게 조정 */
-@supports (-webkit-touch-callout: none) {
-  .carousell-container > * + * {
-    margin-top: 0.5rem !important; /* 8px */
-  }
-  
-  @media (min-width: 640px) {
-    .carousell-container > * + * {
-      margin-top: 0.75rem !important; /* 12px */
-    }
-  }
-}
-
-/* iOS에서 gap 간격 문제 해결 - 더 구체적으로 수정 */
-@supports (-webkit-touch-callout: none) {
-  .flex.flex-col.gap-6 {
-    gap: 0.75rem !important; /* 1.5rem에서 줄임 */
-  }
-  
-  .flex.flex-col.gap-6.sm\:gap-10 {
-    gap: 1rem !important; /* 2.5rem에서 줄임 */
-  }
-  
-  @media (min-width: 640px) {
-    .flex.flex-col.gap-6.sm\:gap-10 {
-      gap: 1.5rem !important;
-    }
-  }
-}
 
 /* 에디터 직접 스타일링 */
 .prose h1 {
