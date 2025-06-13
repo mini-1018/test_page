@@ -118,21 +118,19 @@ export default function RfidFWD({
               <div
                 key={`slide-${slideIndex}`}
                 className="embla__slide flex-none p-2 md:p-3 lg:p-4"
-                style={{ minWidth: '100%' }}
+                style={{ minWidth: '100%' }} // 이 부분 다시 추가
               >
                 <div className="grid grid-rows-3 grid-cols-3 md:grid-rows-4 md:grid-cols-4 lg:grid-rows-4 lg:grid-cols-5 h-full gap-1 md:gap-2 lg:gap-3 justify-center">
                   {slideImages.map((src, imageIndex) => (
                     <div
                       key={`${slideIndex}-${imageIndex}`}
-                      className="w-full h-full relative overflow-hidden rounded-md"
+                      className="w-full h-full relative"
                     >
                       <Image
                         src={src}
                         alt={`이미지 ${slideIndex}-${imageIndex + 1}`}
                         fill
-                        className="object-cover"
-                        sizes="(max-width: 768px) 100px, (max-width: 1024px) 120px, 140px"
-                        unoptimized={true}
+                        className="object-contain"
                       />
                     </div>
                   ))}
