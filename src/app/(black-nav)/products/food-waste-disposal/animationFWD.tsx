@@ -10,7 +10,7 @@ export default function AnimationFWD() {
             전국 지자체가 선택한 검증된 음식물 종량기
           </h2>
         </div>
-        <div className="w-full overflow-hidden relative flex flex-col carousell-container">
+        <div className="w-full overflow-hidden relative flex flex-col space-y-3 sm:space-y-4">
           {/* 왼쪽으로 스크롤하는 첫 번째 이미지 그룹 */}
           <div className="flex carousell-scroll-left whitespace-nowrap">
             <div className="flex-shrink-0 w-[1024px] lg:w-[1980px]">
@@ -43,7 +43,7 @@ export default function AnimationFWD() {
           </div>
           
           {/* 오른쪽으로 스크롤하는 두 번째 이미지 그룹 */}
-          <div className="flex carousell-scroll-right whitespace-nowrap mt-6 sm:mt-10">
+          <div className="flex carousell-scroll-right whitespace-nowrap">
             <div className="flex-shrink-0 w-[1024px] lg:w-[1980px]">
               <Image
                 src="/img/coda_fwd_01.webp"
@@ -74,7 +74,7 @@ export default function AnimationFWD() {
           </div>
 
           {/* 세 번째 그룹 */}
-          <div className="flex carousell-scroll-left whitespace-nowrap mt-6 sm:mt-10">
+          <div className="flex carousell-scroll-left whitespace-nowrap">
             <div className="flex-shrink-0 w-[1024px] lg:w-[1980px]">
               <Image
                 src="/img/coda_fwd_01.webp"
