@@ -17,7 +17,9 @@ export default function CodaFoodPage() {
           />
         </section>
 
-        <AnimationFWD />
+        <div className="pt-20 md:pt-40">
+          <AnimationFWD />
+        </div>
 
         {/* RFID 기반 음식물 종량기 섹션 */}
         <section className="w-full mt-[75px] mb-[75px] md:mt-[150px] md:mb-[150px]">

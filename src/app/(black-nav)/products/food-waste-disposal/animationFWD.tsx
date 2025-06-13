@@ -4,9 +4,11 @@ export default function AnimationFWD() {
   return (
     <>
       <section className="w-full py-[75px] md:py-[150px] flex flex-col items-center mx-auto">
-        <div className="text-center mb-12 px-4">
+        <div className="text-center mb-16 px-4">
           <h2 className="font-bold text-third inline">
-            전국 지자체가 선택한 검증된 음식물 종량기
+            전국 지자체가 선택한
+            <br />
+            검증된 음식물 종량기
           </h2>
         </div>
         
@@ -19,7 +21,7 @@ export default function AnimationFWD() {
                 width={1980}
                 height={61}
                 alt="스크롤 이미지"
-                className="w-full h-[31.72px] md:h-[61.36px]"
+                className="w-full h-[31.72px] md:h-[61.36px] object-cover"
               />
             </div>
             <div className="flex-shrink-0 w-[1024px] lg:w-[1980px]">
@@ -28,7 +30,7 @@ export default function AnimationFWD() {
                 width={1980}
                 height={61}
                 alt="스크롤 이미지"
-                className="w-full h-[31.72px] md:h-[61.36px]"
+                className="w-full h-[31.72px] md:h-[61.36px] object-cover"
               />
             </div>
             <div className="flex-shrink-0 w-[1024px] lg:w-[1980px]">
@@ -37,7 +39,7 @@ export default function AnimationFWD() {
                 width={1980}
                 height={61}
                 alt="스크롤 이미지"
-                className="w-full h-[31.72px] md:h-[61.36px]"
+                className="w-full h-[31.72px] md:h-[61.36px] object-cover"
               />
             </div>
           </div>
@@ -50,7 +52,7 @@ export default function AnimationFWD() {
                 width={1980}
                 height={61}
                 alt="스크롤 이미지"
-                className="w-full h-auto"
+                className="w-full h-[31.72px] md:h-[61.36px] object-cover"
               />
             </div>
             <div className="flex-shrink-0 w-[1024px] lg:w-[1980px]">
@@ -59,16 +61,16 @@ export default function AnimationFWD() {
                 width={1980}
                 height={61}
                 alt="스크롤 이미지"
-                className="w-full h-auto"
+                className="w-full h-[31.72px] md:h-[61.36px] object-cover"
               />
             </div>
-            <div className="flex-shrink-0 w-[1024px] lg:w-[1980px]">
+            <div className="flex-shrink-0 h-[31.72px] md:h-[61.36px] w-[1024px] lg:w-[1980px]">
               <Image
                 src="/img/coda_fwd_02.webp"
                 width={1980}
                 height={61}
                 alt="스크롤 이미지"
-                className="w-full h-auto"
+                className="w-full h-[31.72px] md:h-[61.36px] object-cover"
               />
             </div>
           </div>
@@ -81,7 +83,7 @@ export default function AnimationFWD() {
                 width={1980}
                 height={61}
                 alt="스크롤 이미지"
-                className="w-full h-[31.72px] md:h-[61.36px]"
+                className="w-full h-[31.72px] md:h-[61.36px] object-cover"
               />
             </div>
             <div className="flex-shrink-0 w-[1024px] lg:w-[1980px]">
@@ -90,7 +92,7 @@ export default function AnimationFWD() {
                 width={1980}
                 height={61}
                 alt="스크롤 이미지"
-                className="w-full h-[31.72px] md:h-[61.36px]"
+                className="w-full h-[31.72px] md:h-[61.36px] object-cover"
               />
             </div>
             <div className="flex-shrink-0 w-[1024px] lg:w-[1980px]">
@@ -99,7 +101,7 @@ export default function AnimationFWD() {
                 width={1980}
                 height={61}
                 alt="스크롤 이미지"
-                className="w-full h-[31.72px] md:h-[61.36px]"
+                className="w-full h-[31.72px] md:h-[61.36px] object-cover"
               />
             </div>
           </div>
