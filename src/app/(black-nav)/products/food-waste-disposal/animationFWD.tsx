@@ -10,80 +10,98 @@ export default function AnimationFWD() {
             전국 지자체가 선택한 검증된 음식물 종량기
           </h2>
         </div>
-        <div className="w-full overflow-hidden relative flex flex-col">
+        <div className="w-full overflow-hidden relative flex flex-col leading-none">
           {/* 왼쪽으로 스크롤하는 첫 번째 이미지 그룹 */}
-          <div className="flex carousell-scroll-left whitespace-nowrap">
-            <Image
-              src="/img/coda_fwd_01.webp"
-              width={1980}
-              height={400}
-              alt="스크롤 이미지"
-              className="flex-shrink-0 w-[1024px] lg:w-[1980px] h-auto object-cover"
-            />
-            <Image
-              src="/img/coda_fwd_01.webp"
-              width={1980}
-              height={400}
-              alt="스크롤 이미지"
-              className="flex-shrink-0 w-[1024px] lg:w-[1980px] h-auto object-cover"
-            />
-            <Image
-              src="/img/coda_fwd_01.webp"
-              width={1980}
-              height={400}
-              alt="스크롤 이미지"
-              className="flex-shrink-0 w-[1024px] lg:w-[1980px] h-auto object-cover"
-            />
+          <div className="flex carousell-scroll-left whitespace-nowrap leading-none">
+            <div className="flex-shrink-0 w-[1024px] lg:w-[1980px] leading-none">
+              <Image
+                src="/img/coda_fwd_01.webp"
+                width={1980}
+                height={400}
+                alt="스크롤 이미지"
+                className="w-full h-auto object-cover block"
+              />
+            </div>
+            <div className="flex-shrink-0 w-[1024px] lg:w-[1980px] leading-none">
+              <Image
+                src="/img/coda_fwd_01.webp"
+                width={1980}
+                height={400}
+                alt="스크롤 이미지"
+                className="w-full h-auto object-cover block"
+              />
+            </div>
+            <div className="flex-shrink-0 w-[1024px] lg:w-[1980px] leading-none">
+              <Image
+                src="/img/coda_fwd_01.webp"
+                width={1980}
+                height={400}
+                alt="스크롤 이미지"
+                className="w-full h-auto object-cover block"
+              />
+            </div>
           </div>
           
           {/* 오른쪽으로 스크롤하는 두 번째 이미지 그룹 */}
-          <div className="flex carousell-scroll-right whitespace-nowrap">
-            <Image
-              src="/img/coda_fwd_01.webp"
-              width={1980}
-              height={400}
-              alt="스크롤 이미지"
-              className="flex-shrink-0 w-[1024px] lg:w-[1980px] h-auto object-cover"
-            />
-            <Image
-              src="/img/coda_fwd_01.webp"
-              width={1980}
-              height={400}
-              alt="스크롤 이미지"
-              className="flex-shrink-0 w-[1024px] lg:w-[1980px] h-auto object-cover"
-            />
-            <Image
-              src="/img/coda_fwd_01.webp"
-              width={1980}
-              height={400}
-              alt="스크롤 이미지"
-              className="flex-shrink-0 w-[1024px] lg:w-[1980px] h-auto object-cover"
-            />
+          <div className="flex carousell-scroll-right whitespace-nowrap leading-none">
+            <div className="flex-shrink-0 w-[1024px] lg:w-[1980px] leading-none">
+              <Image
+                src="/img/coda_fwd_01.webp"
+                width={1980}
+                height={400}
+                alt="스크롤 이미지"
+                className="w-full h-auto object-cover block"
+              />
+            </div>
+            <div className="flex-shrink-0 w-[1024px] lg:w-[1980px] leading-none">
+              <Image
+                src="/img/coda_fwd_01.webp"
+                width={1980}
+                height={400}
+                alt="스크롤 이미지"
+                className="w-full h-auto object-cover block"
+              />
+            </div>
+            <div className="flex-shrink-0 w-[1024px] lg:w-[1980px] leading-none">
+              <Image
+                src="/img/coda_fwd_01.webp"
+                width={1980}
+                height={400}
+                alt="스크롤 이미지"
+                className="w-full h-auto object-cover block"
+              />
+            </div>
           </div>
 
           {/* 세 번째 그룹 */}
-          <div className="flex carousell-scroll-left whitespace-nowrap">
-            <Image
-              src="/img/coda_fwd_01.webp"
-              width={1980}
-              height={400}
-              alt="스크롤 이미지"
-              className="flex-shrink-0 w-[1024px] lg:w-[1980px] h-auto object-cover"
-            />
-            <Image
-              src="/img/coda_fwd_01.webp"
-              width={1980}
-              height={400}
-              alt="스크롤 이미지"
-              className="flex-shrink-0 w-[1024px] lg:w-[1980px] h-auto object-cover"
-            />
-            <Image
-              src="/img/coda_fwd_01.webp"
-              width={1980}
-              height={400}
-              alt="스크롤 이미지"
-              className="flex-shrink-0 w-[1024px] lg:w-[1980px] h-auto object-cover"
-            />
+          <div className="flex carousell-scroll-left whitespace-nowrap leading-none">
+            <div className="flex-shrink-0 w-[1024px] lg:w-[1980px] leading-none">
+              <Image
+                src="/img/coda_fwd_01.webp"
+                width={1980}
+                height={400}
+                alt="스크롤 이미지"
+                className="w-full h-auto object-cover block"
+              />
+            </div>
+            <div className="flex-shrink-0 w-[1024px] lg:w-[1980px] leading-none">
+              <Image
+                src="/img/coda_fwd_01.webp"
+                width={1980}
+                height={400}
+                alt="스크롤 이미지"
+                className="w-full h-auto object-cover block"
+              />
+            </div>
+            <div className="flex-shrink-0 w-[1024px] lg:w-[1980px] leading-none">
+              <Image
+                src="/img/coda_fwd_01.webp"
+                width={1980}
+                height={400}
+                alt="스크롤 이미지"
+                className="w-full h-auto object-cover block"
+              />
+            </div>
           </div>
         </div>
       </section>
