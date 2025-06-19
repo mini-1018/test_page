@@ -2,6 +2,7 @@ import NumberedSection from "../NumberedSection";
 import FeatureSection from "../FeatureSection";
 import FeatureItem from "../FeatureItem";
 import Image from "next/image";
+import FadeUpOnView from "@shared/components/common/FadeUpOnView";
 
 export default function ESGPage() {
   return (
@@ -20,6 +21,7 @@ export default function ESGPage() {
         </div>
 
         {/* 인트로 섹션 */}
+        <FadeUpOnView>
         <div className="w-full py-[75px] md:py-[150px]">
           <div className="max-w-7xl mx-auto px-4">
             <div className="mb-[30px]">
@@ -48,8 +50,10 @@ export default function ESGPage() {
             </div>
           </div>
         </div>
+        </FadeUpOnView>
 
         {/* 서브 이미지 */}
+        <FadeUpOnView>
         <div className="w-full">
           <Image
             className="w-full h-auto"
@@ -59,8 +63,10 @@ export default function ESGPage() {
             height={800}
           />
         </div>
+        </FadeUpOnView>
 
         {/* 이산화탄소 저감 섹션 */}
+        <FadeUpOnView>
         <FeatureSection
           bgColor="bg-[#f5f6f9]"
           title={`이산화탄소 저감을 위한 활동\n기업의 선택이 아닌 필수`}
@@ -79,8 +85,10 @@ export default function ESGPage() {
           </div>
           </div>
         </FeatureSection>
+        </FadeUpOnView>
 
         {/* 모으고 줄이고 보존하고 섹션 */}
+        <FadeUpOnView>
         <FeatureSection
           title={`모으고\n줄이고\n보존하고`}
           description={`'무인회수기에 CAN, PET 투입하면\n압축기가 부피를 줄이며 선별 저장, 자원 순환률을 높여\n폐기물 저감 및 자연환경을 보전합니다.'`}
@@ -93,8 +101,10 @@ export default function ESGPage() {
             height={800}
           />
         </FeatureSection>
+        </FadeUpOnView>
 
         {/* 서브 이미지 2 */}
+        <FadeUpOnView>
         <div className="w-full">
           <Image
             className="w-full h-auto"
@@ -104,11 +114,13 @@ export default function ESGPage() {
             height={800}
           />
         </div>
+        </FadeUpOnView>
 
         {/* 차별화 기능 섹션 */}
         <NumberedSection number="1" title={`차별화 기능`} bgColor="bg-[#f5f6f9]">
           <div className="w-full bg-[#f5f6f9]">
             <div className="py-[20px] px-4 mx-auto">
+              <FadeUpOnView>
               <Image
                 src="https://do40f6yw4fd7i.cloudfront.net/img13/common/icon_ai.webp"
                 alt="코다(CODA) 무인회수기 AI"
@@ -122,32 +134,40 @@ export default function ESGPage() {
                 <br />
                 반환(배출) 및 압축을 통한 저장으로 자원 순환률을 높입니다.'
               </div>
+              </FadeUpOnView>
 
+              <FadeUpOnView>
               <FeatureItem
                 title="회수가능자원 1차 판독 / 선별"
                 description="AI 센싱기술 & 고효율 압축성능"
                 imageSrc="https://do40f6yw4fd7i.cloudfront.net/img13/item_coda_esg/coda_coda_s9_1.webp"
                 alt="코다(CODA) ESG AI 센싱기술"
               />
+              </FadeUpOnView>
 
+              <FadeUpOnView>
               <FeatureItem
                 title="회수가능자원 2차 판독 / 자동 배출"
                 description="첨단 로보틱스 활용한 배출구 반환 기능"
                 imageSrc="https://do40f6yw4fd7i.cloudfront.net/img13/item_coda_esg/coda_coda_s9_2.webp"
                 alt="코다(CODA) ESG 첨단 로보틱스"
               />
+              </FadeUpOnView>
 
+              <FadeUpOnView>
               <FeatureItem
                 title="타사 대비 월등한 처리 속도"
                 description="정확한 자원 판단 설계와 고도화된 구조 기반 장비의 최적 성능 구현"
                 imageSrc="https://do40f6yw4fd7i.cloudfront.net/img13/item_coda_coda/coda_coda_s9_6.webp"
                 alt="코다(CODA) ESG 처리 속도"
               />
+              </FadeUpOnView>
             </div>
           </div>
         </NumberedSection>
 
         {/* 사용방법 섹션 */}
+        <FadeUpOnView>
         <NumberedSection number="2" title="사용방법">
           <Image
             className="w-[700px] h-auto mx-auto pt-[30px] pb-[30px]"
@@ -190,8 +210,10 @@ export default function ESGPage() {
             height={600}
           />
         </NumberedSection>
+        </FadeUpOnView>
 
         {/* ESG 전용 APP 연동 섹션 */}
+        <FadeUpOnView>
         <NumberedSection number="3" title="ESG 전용 APP 연동" bgColor="bg-[#f5f6f9]">
           <div className="w-full bg-[#f5f6f9]">
             <div className="py-[20px] px-4 max-w-7xl mx-auto">
@@ -211,8 +233,10 @@ export default function ESGPage() {
             </div>
           </div>
         </NumberedSection>
+        </FadeUpOnView>
 
         {/* CO2 감축 관제시스템 섹션 */}
+        <FadeUpOnView>
         <NumberedSection number="4" title={"CO2 감축\n관제시스템"}>
           <Image
             className="w-[500px] h-auto mx-auto pt-[30px] pb-[30px]"
@@ -240,8 +264,10 @@ export default function ESGPage() {
             height={100}
           />
         </NumberedSection>
+        </FadeUpOnView>
 
         {/* 캐노피 옵션 섹션 */}
+        <FadeUpOnView>
         <div className="w-full bg-[#f5f6f9]">
           <div className="py-[150px] px-4 pb-[30px] max-w-7xl mx-auto">
             <FeatureItem
@@ -252,8 +278,10 @@ export default function ESGPage() {
             />
           </div>
         </div>
+        </FadeUpOnView>
 
         {/* 서브 이미지 3 */}
+        <FadeUpOnView>
         <div className="w-full">
           <Image
             className="w-full h-auto"
@@ -263,6 +291,7 @@ export default function ESGPage() {
             height={800}
           />
         </div>
+        </FadeUpOnView>
       </div>
     </div>
   );

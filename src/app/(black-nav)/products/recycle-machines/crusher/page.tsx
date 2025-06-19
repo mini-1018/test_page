@@ -2,6 +2,7 @@ import NumberedSection from "../NumberedSection";
 import FeatureSection from "../FeatureSection";
 import FeatureItem from "../FeatureItem";
 import Image from "next/image";
+import FadeUpOnView from "@shared/components/common/FadeUpOnView";
 
 export default function CrushPage() {
   return (
@@ -20,6 +21,7 @@ export default function CrushPage() {
         </div>
 
         {/* 인트로 섹션 */}
+        <FadeUpOnView>
         <div className="w-full py-[75px] md:py-[150px]">
           <div className="max-w-7xl mx-auto px-4">
             <div className="mb-[30px]">
@@ -46,8 +48,10 @@ export default function CrushPage() {
             </div>
           </div>
         </div>
+        </FadeUpOnView>
 
         {/* 서브 이미지 */}
+        <FadeUpOnView>
         <div className="w-full">
           <Image
             className="w-full h-auto"
@@ -57,8 +61,10 @@ export default function CrushPage() {
             height={800}
           />
         </div>
+        </FadeUpOnView>
 
         {/* 모으고 살리고 보상받고 섹션 */}
+        <FadeUpOnView>
         <FeatureSection
           bgColor="bg-[#f5f6f9]"
           title={`모으고\n살리고\n보상받고`}
@@ -72,8 +78,10 @@ export default function CrushPage() {
             height={800}
           />
         </FeatureSection>
+        </FadeUpOnView>
 
         {/* 자원 선순환 프로세스 섹션 */}
+        <FadeUpOnView>
         <NumberedSection number="1" title={`자원 선순환\n프로세스`}>
           <Image
             className="pt-[30px] pb-[80px] m-auto"
@@ -89,11 +97,13 @@ export default function CrushPage() {
             투명PET, CAN 회수로 폐플라스틱 소재화 및 폐기물 발생량 체계적 저감
           </div>
         </NumberedSection>
+        </FadeUpOnView>
 
         {/* 차별화 기능 섹션 */}
         <NumberedSection number="2" title={`차별화 기능`} bgColor="bg-[#f5f6f9]">
           <div className="w-full bg-[#f5f6f9]">
             <div className="py-[20px] px-4 mx-auto">
+              <FadeUpOnView>
               <Image
                 src="https://do40f6yw4fd7i.cloudfront.net/img13/common/icon_ai.webp"
                 alt="코다(CODA) 무인회수기 AI"
@@ -107,14 +117,18 @@ export default function CrushPage() {
                 <br />
                 반환(배출) 및 압축을 통한 저장으로 자원 순환률을 높입니다.'
               </div>
+              </FadeUpOnView>
 
+              <FadeUpOnView>
               <FeatureItem
                 title="압축기 / 파쇄기 운송비용 비교"
                 description="가득찬 수거통 회수 시, 운송비 절감"
                 imageSrc="https://do40f6yw4fd7i.cloudfront.net/img13/item_coda_crush/coda_crush_s9_1.webp"
                 alt="코다(CODA) 무인회수기 운송비용 비교"
               />
+              </FadeUpOnView>
 
+              <FadeUpOnView>
               <div className="text-[14px] md:text-[20px] font-light text-[#656565]">
                 동일한 500ml PET 500개 기준
                 <br />
@@ -127,32 +141,40 @@ export default function CrushPage() {
                 width={500}
                 height={300}
               />
+              </FadeUpOnView>
 
+              <FadeUpOnView>
               <FeatureItem
                 title="회수가능자원 1차 판독 / 선별"
                 description="AI 센싱기술 & 고효율 압축성능"
                 imageSrc="https://do40f6yw4fd7i.cloudfront.net/img13/item_coda_crush/coda_crush_s9_2.webp"
                 alt="코다(CODA) 무인회수기 AI 센싱기술"
               />
+              </FadeUpOnView>
 
+              <FadeUpOnView>
               <FeatureItem
                 title="회수가능자원 2차 판독 / 자동 배출"
                 description="첨단 로보틱스 활용한 배출구 반환 기능"
                 imageSrc="https://do40f6yw4fd7i.cloudfront.net/img13/item_coda_crush/coda_crush_s9_3.webp"
                 alt="코다(CODA) 무인회수기 첨단 로보틱스"
               />
+              </FadeUpOnView>
 
+              <FadeUpOnView>
               <FeatureItem
                 title="자원 투입 시, 투입구 센서 자동 인식"
                 description="투입시 LED 표시, 음성 안내 등의 사용 안전성"
                 imageSrc="https://do40f6yw4fd7i.cloudfront.net/img13/item_coda_crush/coda_crush_s9_5.webp"
                 alt="코다(CODA) 무인회수기 투입구 센서 자동 인식"
               />
+              </FadeUpOnView>
             </div>
           </div>
         </NumberedSection>
 
         {/* 사용방법 섹션 */}
+        <FadeUpOnView>
         <NumberedSection number="3" title="사용방법">
           <Image
             className="pt-[30px] pb-[40px] md:pb-[80px] m-auto"
@@ -195,8 +217,10 @@ export default function CrushPage() {
             height={600}
           />
         </NumberedSection>
+        </FadeUpOnView>
 
         {/* 회수자원 보상체계 섹션 */}
+        <FadeUpOnView>
         <NumberedSection number="4" title={`회수자원\n보상체계`} bgColor="bg-[#f5f6f9]">
           <div className="w-full bg-[#f5f6f9]">
             <div className="py-[20px] px-4 max-w-7xl mx-auto">
@@ -244,8 +268,10 @@ export default function CrushPage() {
             </div>
           </div>
         </NumberedSection>
+        </FadeUpOnView>
 
         {/* 무인회수기 파쇄기모델 섹션 */}
+        <FadeUpOnView>
         <NumberedSection number="5" title={"무인회수기\n파쇄기모델"}>
           <Image
             className="pt-[30px] m-auto w-[120px] md:w-[200px]"
@@ -255,8 +281,10 @@ export default function CrushPage() {
             height={300}
           />
         </NumberedSection>
+        </FadeUpOnView>
 
         {/* 캐노피 옵션 섹션 */}
+        <FadeUpOnView>
         <div className="w-full bg-[#f5f6f9]">
           <div className="py-[150px] px-4 pb-[30px] max-w-7xl mx-auto">
             <FeatureItem
@@ -267,8 +295,10 @@ export default function CrushPage() {
             />
           </div>
         </div>
+        </FadeUpOnView>
 
         {/* 다운로드 링크 */}
+        <FadeUpOnView>
         <div className="w-full bg-[#f5f6f9] flex justify-center items-center pb-[150px]">
           <div className="border border-black rounded-[45px] px-[10px] py-[10px]">
             <div className="text-[20px]">
@@ -306,8 +336,10 @@ export default function CrushPage() {
             </div>
           </div>
         </div>
+        </FadeUpOnView>
 
         {/* 서브 이미지 3 */}
+        <FadeUpOnView>
         <div className="w-full">
           <Image
             className="w-full h-auto"
@@ -317,6 +349,7 @@ export default function CrushPage() {
             height={800}
           />
         </div>
+        </FadeUpOnView>
       </div>
     </div>
   );
