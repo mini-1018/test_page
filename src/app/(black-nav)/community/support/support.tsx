@@ -1,158 +1,217 @@
 "use client";
 import React, { useState } from "react";
-import { Calendar, User, Search, FileText, ChevronRight } from "lucide-react";
 import Image from "next/image";
-import Link from "next/link";
+import { Button } from "@shared/components/ui/button";
+import { Input } from "@shared/components/ui/input";
+import { Label } from "@shared/components/ui/label";
+import { Textarea } from "@shared/components/ui/textarea";
+import { Card, CardHeader, CardContent } from "@shared/components/ui/card";
+import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@shared/components/ui/select";
+import { toast } from "sonner";
+import { Mail, Phone } from "lucide-react";
 import ResponsivePadding from "@shared/components/common/ResponsivePadding";
 
-interface SupportPost {
-  id: number;
-  title: string;
-  author: string;
-  date: string;
-  answer: string;
-  category: string;
-  content: string;
-  password: string;
-}
+const Support = () => {
+  const [isSubmitting, setIsSubmitting] = useState(false);
+  const [formData, setFormData] = useState({
+    name: "",
+    email: "",
+    phone: "",
+    category: "",
+    subject: "",
+    message: "",
+  });
 
-interface SupportProps {
-  posts: SupportPost[];
-}
+  const handleInputChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
+    const { name, value } = e.target;
+    setFormData((prev) => ({
+      ...prev,
+      [name]: value,
+    }));
+  };
 
-const Support: React.FC<SupportProps> = ({ posts }) => {
-  const [searchTerm, setSearchTerm] = useState("");
+  const handleSelectChange = (value: string) => {
+    setFormData((prev) => ({
+      ...prev,
+      category: value,
+    }));
+  };
 
-  const filteredPosts = posts.filter(
-    (post) =>
-      post.title.toLowerCase().includes(searchTerm.toLowerCase()) ||
-      post.author.toLowerCase().includes(searchTerm.toLowerCase())
-  );
+  const handleSubmit = async (e: React.FormEvent) => {
+    e.preventDefault();
+    setIsSubmitting(true);
+
+    try {
+      console.log("문의 데이터:", formData);
+
+      await new Promise((resolve) => setTimeout(resolve, 1000));
+
+      toast.success("문의가 성공적으로 전송되었습니다!", {
+        description: "빠른 시일 내에 답변 드리겠습니다.",
+        className: "bg-green-50 text-green-800",
+        action: {
+          label: "확인",
+          onClick: () => console.log("확인 버튼 클릭"),
+        },
+      });
+
+      setFormData({
+        name: "",
+        email: "",
+        phone: "",
+        category: "",
+        subject: "",
+        message: "",
+      });
+    } catch (error) {
+      toast.error("문의 전송 중 오류가 발생했습니다.", {
+        description: "다시 시도해주세요.",
+        action: {
+          label: "확인",
+          onClick: () => {
+            console.log("다시 시도");
+          },
+        },
+      });
+    } finally {
+      setIsSubmitting(false);
+    }
+  };
 
   return (
     <ResponsivePadding>
-    <div className="max-w-5xl mx-auto">
-      {/* 헤더 */}
-      <div className="mb-8 md:mb-12">
-        <div className="flex items-center gap-3 md:gap-4 mb-4">
-          <div className="w-10 h-10 md:w-12 md:h-12 flex items-center justify-center relative flex-shrink-0">
-            <Image
-              src={"/img/common/logo_whale.webp"}
-              fill
-              alt="코다(CODA) 고래 로고"
-              className="rounded-full"
-            />
-          </div>
-          <div className="min-w-0">
-            <h1 className="text-2xl md:text-3xl font-bold text-slate-900 mb-1">고객문의</h1>
-            <p className="text-gray-600 text-base md:text-lg">문의사항을 남겨주세요</p>
-          </div>
-        </div>
-      </div>
-
-      {/* 검색 및 작성 버튼 */}
-      <div className="flex flex-col sm:flex-row gap-3 md:gap-4 mb-6 md:mb-8">
-        <div className="flex-1">
-          <div className="relative group">
-            <div className="absolute inset-0 bg-gradient-to-r from-gray-100 to-gray-50 rounded-xl opacity-0 group-hover:opacity-100 transition-opacity duration-200"></div>
-            <div className="relative">
-              <Search className="absolute left-3 md:left-4 top-1/2 transform -translate-y-1/2 text-gray-400 w-4 h-4 md:w-5 md:h-5 group-focus-within:text-gray-600 transition-colors" />
-              <input
-                type="text"
-                placeholder="검색어를 입력하세요..."
-                value={searchTerm}
-                onChange={(e) => setSearchTerm(e.target.value)}
-                className="w-full pl-10 md:pl-12 pr-3 md:pr-4 py-3 md:py-4 bg-white/80 backdrop-blur-sm border border-gray-200/60 rounded-xl focus:outline-none focus:ring-2 focus:ring-gray-300/50 focus:border-gray-300 transition-all duration-200 placeholder-gray-400 text-slate-700 shadow-sm text-sm md:text-base"
-              />
+      <div className="max-w-5xl mx-auto">
+        {/* 헤더 */}
+        <div className="mb-8 md:mb-12">
+          <div className="flex items-center gap-3 md:gap-4 mb-4">
+            <div className="w-10 h-10 md:w-12 md:h-12 flex items-center justify-center relative flex-shrink-0">
+              <Image src={"/img/common/logo_whale.webp"} fill alt="코다(CODA) 고래 로고" className="rounded-full" />
+            </div>
+            <div className="min-w-0">
+              <h1 className="text-2xl md:text-3xl font-bold text-slate-900 mb-1">고객문의</h1>
+              <p className="text-gray-600 text-base md:text-lg">고객님이 보내주신 문의에 대한 답변은 기재하신 이메일로 발송됩니다.</p>
             </div>
           </div>
         </div>
-        <Link href="/community/support/write" className="sm:flex-shrink-0">
-          <button className="w-full sm:w-auto px-4 md:px-6 py-3 md:py-4 bg-blue-500 hover:bg-blue-800 text-white font-semibold rounded-xl transition-all duration-200 flex items-center justify-center gap-1 whitespace-nowrap shadow-lg hover:shadow-xl transform hover:-translate-y-0.5 text-sm md:text-base">
-            문의하기
-          </button>
-        </Link>
-      </div>
 
-      {/* 게시글 목록 */}
-      <div className="bg-white/90 backdrop-blur-sm rounded-xl md:rounded-2xl border border-gray-200/60 shadow-xl overflow-hidden">
-        {filteredPosts.length === 0 ? (
-          <div className="px-4 md:px-8 py-12 md:py-20 text-center text-gray-500">
-            <div className="w-12 h-12 md:w-16 md:h-16 bg-gray-100 rounded-xl md:rounded-2xl flex items-center justify-center mx-auto mb-4 md:mb-6">
-              <FileText className="w-6 h-6 md:w-8 md:h-8 text-gray-400" />
-            </div>
-            <p className="text-lg md:text-xl font-semibold mb-2 text-slate-700">
-              검색결과가 없습니다
-            </p>
-          </div>
-        ) : (
-          <div className="divide-y divide-gray-100/60">
-            {filteredPosts.map((post) => (
-              <div key={post.id} className="group relative">
-                <Link href={`/community/support/${post.id}`}>
-                  <div className="absolute inset-0 bg-gradient-to-r from-transparent via-gray-50/50 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
-                  <div className="relative px-4 md:px-8 py-4 md:py-6 border-b border-gray-100/80 hover:border-gray-200/60 transition-all duration-200 cursor-pointer">
-                    <div className="space-y-3">
-                      {/* 모바일: 세로 배치, md 이상: 기존 가로 배치 */}
-                      <div className="md:flex md:items-start md:justify-between">
-                        <div className="flex-1 min-w-0 space-y-2 md:space-y-3">
-                          {/* 모바일: 카테고리와 상태를 위아래로, md 이상: 기존 레이아웃 */}
-                          <div className="md:flex md:items-center md:gap-4">
-                            <div className="flex items-center justify-between md:justify-start md:gap-4 mb-2 md:mb-0">
-                              <span className="inline-flex items-center px-2 md:px-3 py-1 rounded-full text-xs font-medium bg-gray-100/80 text-gray-600 border border-gray-200/50">
-                                {post.category}
-                              </span>
-                              <span
-                                className={`inline-flex items-center px-2 py-1 rounded-md text-xs md:text-sm font-medium md:order-last
-                                  ${post.answer
-                                    ? "bg-blue-100 text-blue-600"
-                                    : "bg-red-100 text-red-600"
-                                  }`
-                                }
-                              >
-                                {post.answer ? "답변완료" : "답변대기"}
-                              </span>
-                            </div>
-                            {/* md 이상에서는 제목이 카테고리와 같은 줄에 */}
-                            <h3 className="text-slate-900 font-semibold !text-base md:!text-lg leading-tight group-hover:text-slate-700 transition-colors duration-200 line-clamp-2 md:line-clamp-1 md:flex-1 md:min-w-0">
-                              {post.title}
-                            </h3>
-                          </div>
-                          
-                          {/* 작성자와 날짜 */}
-                          <div className="flex items-center gap-4 md:gap-6 text-xs md:text-sm text-gray-500">
-                            <div className="flex items-center gap-1 md:gap-2">
-                              <div className="w-4 h-4 md:w-5 md:h-5 bg-gray-100 rounded-full flex items-center justify-center">
-                                <User className="w-2.5 h-2.5 md:w-3 md:h-3 text-gray-600" />
-                              </div>
-                              <span className="font-medium truncate max-w-[80px] md:max-w-none">{post.author}</span>
-                            </div>
-                            <div className="flex items-center gap-1 md:gap-2">
-                              <Calendar className="w-3 h-3 md:w-4 md:h-4 text-gray-400" />
-                              <span className="whitespace-nowrap">
-                                {new Date(post.date).toLocaleDateString("ko-KR")}
-                              </span>
-                            </div>
-                          </div>
-                        </div>
-                        
-                        {/* 화살표 아이콘 - md 이상에서만 표시 */}
-                        <div className="hidden md:block ml-6 opacity-0 group-hover:opacity-100 transition-opacity duration-200">
-                          <div className="w-8 h-8 bg-gray-50 rounded-full flex items-center justify-center">
-                            <ChevronRight className="w-4 h-4 text-gray-400" />
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                </Link>
+        {/* 고객문의 폼 */}
+        <Card className="border-none">
+          <CardHeader className="space-y-1 pb-6">
+            <p className="text-sm text-gray-600">아래 양식을 작성해주시면 빠른 시일 내에 답변 드리겠습니다.</p>
+          </CardHeader>
+          <CardContent>
+            <form onSubmit={handleSubmit} className="space-y-6">
+              {/* 이름과 이메일 */}
+              <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+                <div className="space-y-2">
+                  <Label htmlFor="name" className="text-sm font-medium text-slate-700">
+                    이름 <span className="text-red-500">*</span>
+                  </Label>
+                  <Input id="name" name="name" type="text" placeholder="이름을 입력해주세요" value={formData.name} onChange={handleInputChange} required className="h-11" />
+                </div>
+                <div className="space-y-2">
+                  <Label htmlFor="email" className="text-sm font-medium text-slate-700 flex items-center gap-1">
+                    <Mail className="w-4 h-4" />
+                    이메일 <span className="text-red-500">*</span>
+                  </Label>
+                  <Input id="email" name="email" type="email" placeholder="example@email.com" value={formData.email} onChange={handleInputChange} required className="h-11" />
+                </div>
               </div>
-            ))}
-          </div>
-        )}
+
+              {/* 전화번호와 문의 카테고리 */}
+              <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+                <div className="space-y-2">
+                  <Label htmlFor="phone" className="text-sm font-medium text-slate-700 flex items-center gap-1">
+                    <Phone className="w-4 h-4" />
+                    전화번호 <span className="text-red-500">*</span>
+                  </Label>
+                  <Input id="phone" name="phone" type="tel" placeholder="010-0000-0000" value={formData.phone} onChange={handleInputChange} className="h-11" />
+                </div>
+                <div className="space-y-2">
+                  <Label htmlFor="category" className="text-sm font-medium text-slate-700">
+                    문의 유형 <span className="text-red-500">*</span>
+                  </Label>
+                  <Select onValueChange={handleSelectChange} required>
+                    <SelectTrigger className="h-11">
+                      <SelectValue placeholder="문의 유형을 선택해주세요" />
+                    </SelectTrigger>
+                    <SelectContent>
+                      <SelectItem value="product">제품 문의</SelectItem>
+                      <SelectItem value="technical">기술 지원</SelectItem>
+                      <SelectItem value="pricing">견적 문의</SelectItem>
+                      <SelectItem value="partnership">제휴 문의</SelectItem>
+                      <SelectItem value="general">일반 문의</SelectItem>
+                      <SelectItem value="complaint">불만/개선 제안</SelectItem>
+                    </SelectContent>
+                  </Select>
+                </div>
+              </div>
+
+              {/* 제목 */}
+              <div className="space-y-2">
+                <Label htmlFor="subject" className="text-sm font-medium text-slate-700">
+                  문의 제목 <span className="text-red-500">*</span>
+                </Label>
+                <Input id="subject" name="subject" type="text" placeholder="문의 제목을 입력해주세요" value={formData.subject} onChange={handleInputChange} required className="h-11" />
+              </div>
+
+              {/* 문의 내용 */}
+              <div className="space-y-2">
+                <Label htmlFor="message" className="text-sm font-medium text-slate-700">
+                  문의 내용 <span className="text-red-500">*</span>
+                </Label>
+                <Textarea id="message" name="message" placeholder="문의하실 내용을 자세히 입력해주세요..." value={formData.message} onChange={handleInputChange} required rows={6} className="resize-none min-h-[300px]" />
+                <p className="text-xs text-gray-500">최소 10자 이상 입력해주세요.</p>
+              </div>
+
+              {/* 개인정보 동의 */}
+              <div className="bg-gray-50 p-4 rounded-lg border">
+                <p className="text-xs text-gray-600 leading-relaxed">개인정보 수집 및 이용에 동의합니다. 수집된 정보는 문의 답변을 위해서만 사용되며, 답변 완료 후 안전하게 삭제됩니다.</p>
+              </div>
+
+              {/* 제출 버튼 */}
+              <div className="flex justify-end pt-4">
+                <Button type="submit" disabled={isSubmitting} className="bg-blue-600 hover:bg-blue-700 text-white px-8 py-3 h-auto text-base font-medium transition-colors duration-200">
+                  {isSubmitting ? (
+                    <>
+                      <div className="w-4 h-4 border-2 border-white border-t-transparent rounded-full animate-spin mr-2" />
+                      전송 중...
+                    </>
+                  ) : (
+                    <>문의하기</>
+                  )}
+                </Button>
+              </div>
+            </form>
+          </CardContent>
+        </Card>
+
+        {/* 추가 연락처 정보 */}
+        <div className="mt-8 grid grid-cols-1 md:grid-cols-2 gap-6">
+          <Card>
+            <CardContent className="p-6">
+              <div className="flex items-center gap-3 mb-2">
+                <Phone className="w-5 h-5 text-gray-600" />
+                <h3 className="font-semibold text-gray-800">전화 문의</h3>
+              </div>
+              <p className="text-gray-700 font-medium text-lg">1588-0000</p>
+              <p className="text-sm text-gray-600 mt-1">평일 09:00 - 18:00</p>
+            </CardContent>
+          </Card>
+
+          <Card>
+            <CardContent className="p-6">
+              <div className="flex items-center gap-3 mb-2">
+                <Mail className="w-5 h-5 gray-green-600" />
+                <h3 className="font-semibold text-gray-800">이메일 문의</h3>
+              </div>
+              <p className="text-gray-700 font-medium">support@coda.co.kr</p>
+              <p className="text-sm text-gray-600 mt-1">24시간 접수 가능</p>
+            </CardContent>
+          </Card>
+        </div>
       </div>
-    </div>
-  </ResponsivePadding>
+    </ResponsivePadding>
   );
 };
 

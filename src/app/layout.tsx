@@ -1,6 +1,7 @@
 import "@app/globals.css";
 import { Metadata, Viewport } from "next";
 import metaData from "@shared/metaData/metaData";
+import NaverAnalytics from "@shared/metaData/NaverAnalytics";
 
 const title = metaData.home.title;
 const description = metaData.home.description;
@@ -16,11 +17,7 @@ export const viewport: Viewport = {
 };
 
 export const metadata: Metadata = {
-  metadataBase: new URL(
-    process.env.NODE_ENV === "production"
-      ? "https://www.coda230.com"
-      : "http://localhost:3000"
-  ),
+  metadataBase: new URL(process.env.NODE_ENV === "production" ? "https://www.coda230.com" : "http://localhost:3000"),
   title,
   description,
   keywords,
@@ -32,10 +29,7 @@ export const metadata: Metadata = {
   verification: {
     google: "6KrZp8tAMDkIWHQuVwKpltkNFDRpmi3cZ2LVIK_ByhU",
     other: {
-      "naver-site-verification": [
-        "a7dfba88aff5fe7871bcf970ffd8a4ea114748fe",
-        "9ab58b7a394cd99850b14ac9b10192e8cb433cfd",
-      ],
+      "naver-site-verification": ["a7dfba88aff5fe7871bcf970ffd8a4ea114748fe", "9ab58b7a394cd99850b14ac9b10192e8cb433cfd"],
     },
   },
   alternates: {
@@ -150,7 +144,10 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="ko">
-      <body>{children}</body>
+      <body>
+        {children}
+        <NaverAnalytics />
+      </body>
     </html>
   );
 }
