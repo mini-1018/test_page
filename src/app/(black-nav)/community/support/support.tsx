@@ -205,7 +205,7 @@ const Support = () => {
                 <Mail className="w-5 h-5 gray-green-600" />
                 <h3 className="font-semibold text-gray-800">이메일 문의</h3>
               </div>
-              <p className="text-gray-700 font-medium">support@coda.co.kr</p>
+              <p className="text-gray-700 font-medium">support@coda.ai.kr</p>
               <p className="text-sm text-gray-600 mt-1">24시간 접수 가능</p>
             </CardContent>
           </Card>
