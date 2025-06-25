@@ -19,19 +19,13 @@
       }
     ],
     "paths": {
-      "@*": ["./src/*"],
+      "@src/*": ["./src/*"],
       "@app/*": ["./src/app/*"],
       "@shared/*": ["./src/shared/*"],
-      "@root": ["./"]
+      "@root": ["./"],
+      "@lib/*": ["./lib/*"]
     }
   },
-  "include": [
-    "next-env.d.ts",
-    "**/*.ts",
-    "**/*.tsx",
-    ".next/types/**/*.ts",
-    "tailwind.config.ts",
-    "next.config.js"
-  ],
+  "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx", ".next/types/**/*.ts", "tailwind.config.ts", "next.config.js"],
   "exclude": ["node_modules"]
 }

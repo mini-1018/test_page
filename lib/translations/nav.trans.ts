@@ -1,0 +1,42 @@
+import { createTranslator, Locale } from "@lib/translator";
+
+export const navigationTranslations = {
+  ko: {
+    brand: "브랜드",
+    products: "제품",
+    news: "소식",
+    community: "커뮤니티",
+    subMenu: {
+      brand: "브랜드",
+      recycleMachines: "무인회수기",
+      rfid: "차량용RFID",
+      foodWasteDisposal: "음식물종량기",
+      news: "소식",
+      notice: "공지사항",
+      faq: "FAQ",
+      support: "고객문의",
+      downloads: "다운로드",
+    },
+  },
+  en: {
+    brand: "Brand",
+    products: "Products",
+    news: "News",
+    community: "Community",
+    subMenu: {
+      brand: "Brand",
+      recycleMachines: "Recycle Machines",
+      rfid: "Vehicle RFID",
+      foodWasteDisposal: "Food Waste Scale",
+      news: "News",
+      notice: "Notice",
+      faq: "FAQ",
+      support: "Support",
+      downloads: "Downloads",
+    },
+  },
+} as const;
+
+export function getNavigationTranslations(locale: Locale = "ko") {
+  return createTranslator(navigationTranslations, locale);
+}

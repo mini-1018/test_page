@@ -10,8 +10,9 @@ import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@
 import { toast } from "sonner";
 import { Mail, Phone } from "lucide-react";
 import ResponsivePadding from "@shared/components/common/ResponsivePadding";
+import { Translation } from "@src/types/translation.type";
 
-const Support = () => {
+const Support = ({ locale }: Translation) => {
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [formData, setFormData] = useState({
     name: "",
