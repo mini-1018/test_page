@@ -153,13 +153,18 @@ export default async function LocaleLayout({ children, params }: { children: Rea
   }
 
   return (
-    <html lang={locale} suppressHydrationWarning>
-      <head>
-        <link rel="alternate" hrefLang="ko" href="/ko" />
-        <link rel="alternate" hrefLang="en" href="/en" />
-        <link rel="alternate" hrefLang="x-default" href="/ko" />
-      </head>
-      <body>{children}</body>
-    </html>
+    <>
+      <html lang={locale} className="scroll-smooth">
+        <head>
+          <link rel="alternate" hrefLang="ko" href="/ko" />
+          <link rel="alternate" hrefLang="en" href="/en" />
+          <link rel="alternate" hrefLang="x-default" href="/ko" />
+        </head>
+        <body>
+          {children}
+          <NaverAnalytics />
+        </body>
+      </html>
+    </>
   );
 }
