@@ -1,5 +1,4 @@
 import { notFound } from "next/navigation";
-import "@app/globals.css";
 import { Metadata, Viewport } from "next";
 import metaData from "@shared/metaData/metaData";
 import NaverAnalytics from "@shared/metaData/NaverAnalytics";

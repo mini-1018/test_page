@@ -21,6 +21,19 @@ function getLocale(request: NextRequest): string {
 export function middleware(request: NextRequest) {
   const pathname = request.nextUrl.pathname;
 
+  const localePrefix = locales.find((locale) => pathname.startsWith(`/${locale}/`));
+
+  if (localePrefix) {
+    const extension = pathname.split(".").pop()?.toLowerCase();
+    const staticExtensions = ["woff2", "woff", "ttf", "eot", "png", "jpg", "jpeg", "gif", "svg", "ico", "webp", "pdf", "json"];
+
+    if (extension && staticExtensions.includes(extension)) {
+      const url = request.nextUrl.clone();
+      url.pathname = pathname.replace(`/${localePrefix}`, "");
+      return NextResponse.rewrite(url);
+    }
+  }
+
   const pathnameIsMissingLocale = locales.every((locale) => !pathname.startsWith(`/${locale}/`) && pathname !== `/${locale}`);
 
   if (pathnameIsMissingLocale) {

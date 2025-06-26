@@ -14,7 +14,7 @@
   font-family: "Pretendard";
   font-style: bold;
   font-weight: 700;
-  src: url("/fonts/Pretendard-Black.woff2") format("woff2");
+  src: url("/fonts/Pretendard-Bold.woff2") format("woff2");
 }
 
 @theme inline {
@@ -58,8 +58,8 @@
 }
 
 @theme {
-  --color-secondary: #0095D3;
-  --color-third: #131F6B;
+  --color-secondary: #0095d3;
+  --color-third: #131f6b;
 }
 @keyframes carousell-scroll-left {
   0% {
@@ -104,7 +104,7 @@
     animation-duration: 60s;
     width: calc(1980px * 3);
   }
-  
+
   .carousell-scroll-right {
     animation-duration: 60s;
     width: calc(1980px * 3);
@@ -114,7 +114,7 @@
     animation-duration: 60s;
     width: calc(1980px * 3);
   }
-  
+
   .carousell-scroll-right_40s {
     animation-duration: 60s;
     width: calc(1980px * 3);
@@ -128,7 +128,6 @@
 body {
   font-family: "Pretendard";
 }
-
 
 /* 에디터 직접 스타일링 */
 .prose h1 {
@@ -157,7 +156,6 @@ body {
   margin-bottom: 0.6em;
   color: #111827;
 }
-
 
 :root {
   --radius: 0.625rem;
