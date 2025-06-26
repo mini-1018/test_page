@@ -1,26 +1,28 @@
 import FAQ, { FaqPost } from "./FAQ";
+import type { Locale } from "@lib/translator";
+
+interface FaqPageProps {
+  params: Promise<{ locale: Locale }>;
+}
 
 const faqPosts: FaqPost[] = [
   {
     id: 1,
     title: "회원가입은 어떻게 하나요?",
     category: "회원/로그인",
-    content:
-      "홈페이지 우측 상단의 회원가입 버튼을 클릭 후 안내에 따라 정보를 입력하시면 됩니다.",
+    content: "홈페이지 우측 상단의 회원가입 버튼을 클릭 후 안내에 따라 정보를 입력하시면 됩니다.",
   },
   {
     id: 2,
     title: "비밀번호를 잊어버렸어요.",
     category: "회원/로그인",
-    content:
-      "로그인 페이지에서 '비밀번호 찾기'를 클릭해 안내에 따라 비밀번호를 재설정하세요.",
+    content: "로그인 페이지에서 '비밀번호 찾기'를 클릭해 안내에 따라 비밀번호를 재설정하세요.",
   },
   {
     id: 3,
     title: "다운로드 파일은 어떻게 다운로드하나요?",
     category: "다운로드",
-    content:
-      "다운로드 게시판에서 원하는 파일을 클릭하면 다운로드가 시작됩니다.",
+    content: "다운로드 게시판에서 원하는 파일을 클릭하면 다운로드가 시작됩니다.",
   },
   {
     id: 4,
@@ -36,6 +38,7 @@ const faqPosts: FaqPost[] = [
   },
 ];
 
-export default function FAQPage() {
-  return <FAQ posts={faqPosts} />;
+export default async function FAQPage({ params }: FaqPageProps) {
+  const { locale } = await params;
+  return <FAQ posts={faqPosts} locale={locale} />;
 }

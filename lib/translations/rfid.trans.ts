@@ -1,0 +1,201 @@
+// lib/translations/rfid.ts
+import { createTranslator, Locale } from "@lib/translator";
+
+export const rfidTranslations = {
+  ko: {
+    // 메타데이터
+    title: "코다(CODA) RFID 음식물회수 결제시스템",
+    description: "4000여개 F&B 업소가 신뢰하는 코다(CODA) RFID 음식물회수 결제시스템입니다. 신속하고 정확한 수거량 측정 및 선불/후불 결제 시스템을 제공합니다.",
+
+    // 헤더 이미지
+    header: {
+      mainAlt: "코다(CODA) RFID 음식물회수 결제시스템 - 음식점 4000개 업소 운영",
+      subAlt: "코다(CODA) RFID 음식물회수 결제시스템 - 업소방문 원스탑 음식물회수 솔루션",
+      finalAlt: "코다(CODA) RFID 음식물회수 결제시스템 - 원스탑 업소방문 음식회수 솔루션",
+    },
+
+    // RFID 검증 섹션
+    verified: {
+      title: "검증된 관리 솔루션",
+      description: "4000여개 F&B 업소가 신뢰하는",
+      highlight: "신속하고 정확한 수거량 측정 및 결제 시스템",
+    },
+
+    // 인트로 섹션
+    intro: {
+      iconAlt: "코다(CODA) RFID 음식물회수 결제시스템 - 회수 이미지",
+      title1: "차량용RFID 업소용 음식물 회수",
+      title2: "선불/후불 결제시스템",
+      description1: "혹독한 환경에서도 사용 가능한 고정밀 특수 저울을 통해\n정확하고 신속한 수거량 무게 측정 및 결제 시스템",
+      description2: "업소에서 발생되는 수거량에 따라 결제하는 선불/후불 시스템",
+    },
+
+    // 실시간 결제 시스템 섹션
+    realtimePayment: {
+      title: "매일 버려지는 음식물 쓰레기\n무게 기반 실시간 선불 결제시스템",
+      description: "기존 후불결제시스템과 더불어 2024년 선불 시스템의 신규 방식을\n접목한 제주시를 비롯하여 전국에 서비스를 할 예정입니다.",
+      bottomText: "음식점을 순환하는 전용 회수차량으로 신속한 결제 및 회수가 이루어집니다.",
+      alt: "코다(CODA) RFID 음식물회수 결제시스템 - 무게 기반 실시간 선불 결제 시스템",
+    },
+
+    // 신속/정확 섹션
+    quickAccurate: {
+      title: "신속하게, 더 정확하게",
+      subtitle: "고정밀 저울로 수거통 무게 측정 시, 서버 연동 및 즉시 결제시스템",
+      description: "특수 제작된 음식물 회수 전용 차량이 수시로 순회하며 중량 측정\n전용 어플 설치 시, 모바일 연동 / 사용 편의성 향상",
+      alt: "코다(CODA) RFID 음식물회수 결제시스템 - 신속하고 정확한 즉시 결제시스템",
+    },
+
+    // 안전/편안 섹션
+    safeComfortable: {
+      title: "안전하게, 그리고 편안하게",
+      subtitle: "특수 설계로 어떠한 환경에서도 사용 가능한 안정적 시스템",
+      description: "음식물 부식 / 방수 / 충격 방지 등을 적용하여\n고장 없이 오래 사용할 수 있도록 특수 설계",
+      alt: "코다(CODA) RFID 음식물회수 결제시스템 - 안전하고 편리한 시스템",
+    },
+
+    // 업소방문 수거방법 섹션
+    collectionMethod: {
+      title: "업소방문\n수거방법",
+      steps: [
+        {
+          title: "특허 인증 받은 차량용 고정밀 저울",
+          description: "[차량용 RFID 저울, 특허 제 10-2582620]",
+          numAlt: "코다(CODA) RFID 음식물회수 결제시스템 - 업소방문 수거방법 1번",
+          alt: "코다(CODA) RFID 음식물회수 결제시스템 업소방문 수거방법 - 특허 인증 받은 차량용 고정밀 저울",
+        },
+        {
+          title: "방수기능 무게 측정기와 수거통 연결",
+          description: "[차량 리프트 결착 시 개별 인식카드를 RF 리더기로 식별]",
+          numAlt: "코다(CODA) RFID 음식물회수 결제시스템 - 업소방문 수거방법 2번",
+          alt: "코다(CODA) RFID 음식물회수 결제시스템 업소방문 수거방법 - 방수기능 무게 측정기와 수거통 연결",
+        },
+        {
+          title: "인디게이터로 수거량 즉각 확인",
+          description: "[업소별 음식물 쓰레기 무게 측정 결과값 인디게이터 표시]",
+          numAlt: "코다(CODA) RFID 음식물회수 결제시스템 - 업소방문 수거방법 3번",
+          alt: "코다(CODA) RFID 음식물회수 결제시스템 업소방문 수거방법 - 인디게이터로 수거량 즉각 확인",
+        },
+        {
+          title: "서버 연동, 산정 수수료에 대한\n선불 결제시스템 전송 / 관리",
+          description: "[차량, 서버 간 실시간 통신으로 과금 데이터 집계 및 결제]",
+          numAlt: "코다(CODA) RFID 음식물회수 결제시스템 - 업소방문 수거방법 4번",
+          alt: "코다(CODA) RFID 음식물회수 결제시스템 업소방문 수거방법 - 서버 연동, 선불 결제시스템 전송/관리",
+        },
+      ],
+    },
+
+    // 결제시스템 구성도 섹션
+    systemDiagram: {
+      title: "수거 차량 RFID 결제시스템 구성도",
+      systemTitle: "RFID 결제시스템 배출완료 후 실시간 정보 전송",
+      systemSubtitle: "기존 제품 대비, 핵심 부품 중량계량부 내구성 향상 및 시스템 최적화",
+      systemDescription: "스프링 플레이트 및 장시간 사용 가능한 로드셀 내구성 확보\n보다 가벼운 고정밀저울 적용으로 설치 시, 최소 인원 1인 가능",
+      scaleTitle: "특허 기능을 장착한 저울",
+      scaleSubtitle: "선불 결제시스템 인디게이터 (측정데이터 무선통신시스템)",
+      scaleSpecs: "최대하중 200kg / RFID 카드 전용 단말기 내장형",
+      diagramAlt: "코다(CODA) RFID 음식물회수 결제시스템 - 수거 차량 RFID 결제시스템 구성도",
+      indicatorAlt: "코다(CODA) RFID 음식물회수 결제시스템 - 선불 결제시스템 인디게이터",
+    },
+  },
+  en: {
+    // 메타데이터
+    title: "CODA RFID Food Waste Collection Payment System",
+    description: "CODA RFID food waste collection payment system trusted by over 4,000 F&B establishments. Provides fast and accurate collection volume measurement and prepaid/postpaid payment systems.",
+
+    // 헤더 이미지
+    header: {
+      mainAlt: "CODA RFID Food Waste Collection Payment System - Operating 4,000 Restaurant Establishments",
+      subAlt: "CODA RFID Food Waste Collection Payment System - One-Stop Food Waste Collection Solution for Business Visits",
+      finalAlt: "CODA RFID Food Waste Collection Payment System - One-Stop Business Visit Food Collection Solution",
+    },
+
+    // RFID 검증 섹션
+    verified: {
+      title: "Verified Management Solution",
+      description: "Trusted by over 4,000 F&B establishments",
+      highlight: "Fast and accurate collection volume measurement and payment system",
+    },
+
+    // 인트로 섹션
+    intro: {
+      iconAlt: "CODA RFID Food Waste Collection Payment System - Collection Image",
+      title1: "Vehicle RFID Food Waste Collection for Businesses",
+      title2: "Prepaid/Postpaid Payment System",
+      description1: "Accurate and fast collection volume weight measurement and payment system\nthrough high-precision special scales usable in harsh environments",
+      description2: "Prepaid/postpaid system that charges based on collection volume generated by businesses",
+    },
+
+    // 실시간 결제 시스템 섹션
+    realtimePayment: {
+      title: "Daily Food Waste Disposal\nWeight-Based Real-Time Prepaid Payment System",
+      description: "Along with existing postpaid payment systems, we plan to provide services nationwide,\nincluding Jeju City, incorporating the new prepaid system method from 2024.",
+      bottomText: "Fast payment and collection are made with dedicated collection vehicles circulating restaurants.",
+      alt: "CODA RFID Food Waste Collection Payment System - Weight-Based Real-Time Prepaid Payment System",
+    },
+
+    // 신속/정확 섹션
+    quickAccurate: {
+      title: "Fast and More Accurate",
+      subtitle: "Server integration and instant payment system when measuring collection bin weight with high-precision scales",
+      description: "Specially manufactured food waste collection vehicles regularly patrol for weight measurement\nMobile integration when dedicated app is installed / Enhanced user convenience",
+      alt: "CODA RFID Food Waste Collection Payment System - Fast and Accurate Instant Payment System",
+    },
+
+    // 안전/편안 섹션
+    safeComfortable: {
+      title: "Safe and Comfortable",
+      subtitle: "Stable system usable in any environment with special design",
+      description: "Special design for long-term use without breakdowns\nby applying food corrosion / waterproof / shock protection",
+      alt: "CODA RFID Food Waste Collection Payment System - Safe and Convenient System",
+    },
+
+    // 업소방문 수거방법 섹션
+    collectionMethod: {
+      title: "Business Visit\nCollection Method",
+      steps: [
+        {
+          title: "Patent-Certified Vehicle High-Precision Scale",
+          description: "[Vehicle RFID Scale, Patent No. 10-2582620]",
+          numAlt: "CODA RFID Food Waste Collection Payment System - Business Visit Collection Method 1",
+          alt: "CODA RFID Food Waste Collection Payment System Business Visit Collection Method - Patent-Certified Vehicle High-Precision Scale",
+        },
+        {
+          title: "Waterproof Weight Measuring Device Connected to Collection Bin",
+          description: "[Individual recognition cards identified by RF reader when vehicle lift is attached]",
+          numAlt: "CODA RFID Food Waste Collection Payment System - Business Visit Collection Method 2",
+          alt: "CODA RFID Food Waste Collection Payment System Business Visit Collection Method - Waterproof Weight Measuring Device Connected to Collection Bin",
+        },
+        {
+          title: "Immediate Collection Volume Confirmation with Indicator",
+          description: "[Indicator display of food waste weight measurement results by business]",
+          numAlt: "CODA RFID Food Waste Collection Payment System - Business Visit Collection Method 3",
+          alt: "CODA RFID Food Waste Collection Payment System Business Visit Collection Method - Immediate Collection Volume Confirmation with Indicator",
+        },
+        {
+          title: "Server Integration, Prepaid Payment System\nTransmission/Management for Calculated Fees",
+          description: "[Billing data aggregation and payment through real-time communication between vehicles and servers]",
+          numAlt: "CODA RFID Food Waste Collection Payment System - Business Visit Collection Method 4",
+          alt: "CODA RFID Food Waste Collection Payment System Business Visit Collection Method - Server Integration, Prepaid Payment System Transmission/Management",
+        },
+      ],
+    },
+
+    // 결제시스템 구성도 섹션
+    systemDiagram: {
+      title: "Collection Vehicle RFID Payment System Configuration",
+      systemTitle: "Real-Time Information Transmission After RFID Payment System Discharge Completion",
+      systemSubtitle: "Enhanced durability of core component weight measurement unit and system optimization compared to existing products",
+      systemDescription: "Secured durability of spring plates and load cells for long-term use\nMinimum 1-person installation possible with lighter high-precision scale application",
+      scaleTitle: "Scale with Patented Functions",
+      scaleSubtitle: "Prepaid Payment System Indicator (Measurement Data Wireless Communication System)",
+      scaleSpecs: "Maximum load 200kg / Built-in RFID card dedicated terminal",
+      diagramAlt: "CODA RFID Food Waste Collection Payment System - Collection Vehicle RFID Payment System Configuration",
+      indicatorAlt: "CODA RFID Food Waste Collection Payment System - Prepaid Payment System Indicator",
+    },
+  },
+} as const;
+
+export function getRfidTranslations(locale: Locale = "ko") {
+  return createTranslator(rfidTranslations, locale);
+}

@@ -31,7 +31,7 @@ export default function WhiteNav() {
       subMenu: [
         { name: t("subMenu.recycleMachines"), link: `/${locale}/products/recycle-machines` },
         { name: t("subMenu.rfid"), link: `/${locale}/products/rfid` },
-        { name: t("subMenu.foodWasteDisposal"), link: `/${locale}/products/food-waste-disposal` },
+        { name: t("subMenu.foodWasteDisposal"), link: `/${locale}/products/food-waste-scale` },
       ],
     },
     {

@@ -35,7 +35,7 @@ export const footerTranslations = {
         items: [
           { name: "무인회수기", link: "/products/recycle-machines" },
           { name: "차량용RFID", link: "/products/rfid" },
-          { name: "음식물종량기", link: "/products/food-waste-disposal" },
+          { name: "음식물종량기", link: "/products/food-waste-scale" },
         ],
       },
       news: {
@@ -87,7 +87,7 @@ export const footerTranslations = {
         items: [
           { name: "Recycle Machines", link: "/products/recycle-machines" },
           { name: "Vehicle RFID", link: "/products/rfid" },
-          { name: "Food Waste Scale", link: "/products/food-waste-disposal" },
+          { name: "Food Waste Scale", link: "/products/food-waste-scale" },
         ],
       },
       news: {

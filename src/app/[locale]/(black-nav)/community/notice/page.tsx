@@ -1,4 +1,9 @@
 import Notice, { NoticeType } from "./Notice";
+import type { Locale } from "@lib/translator";
+
+interface NoticePageProps {
+  params: Promise<{ locale: Locale }>;
+}
 
 const noticePosts: NoticeType[] = [
   {
@@ -43,10 +48,11 @@ const noticePosts: NoticeType[] = [
   },
 ];
 
-export default function NoticePage() {
+export default async function NoticePage({ params }: NoticePageProps) {
+  const { locale } = await params;
   return (
     <main className="max-w-6xl mx-auto pb-32 pt-32">
-      <Notice notices={noticePosts} />
+      <Notice notices={noticePosts} locale={locale} />
     </main>
   );
 }

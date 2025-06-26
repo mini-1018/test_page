@@ -23,7 +23,7 @@ export default async function BrandPage({ params }: BrandPageProps) {
           </div>
           <div className="text-center">
             <Typewriter className="text-4xl font-bold text-secondary mt-12 mb-8">{t("section1.title")}</Typewriter>
-            <FadeUpOnView delay={1000}>
+            <FadeUpOnView delay={locale == "ko" ? 1000 : 2500}>
               <p className="text-xl font-light text-gray-500">{t("section1.description")}</p>
             </FadeUpOnView>
           </div>

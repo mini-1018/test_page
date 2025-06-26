@@ -1,4 +1,3 @@
-// app/[locale]/(black-nav)/community/support/page.tsx
 import Support from "./support";
 import { Translation } from "@src/types/translation.type";
 
