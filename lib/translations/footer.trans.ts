@@ -33,9 +33,9 @@ export const footerTranslations = {
       products: {
         title: "제품",
         items: [
-          { name: "무인회수기", link: "/products/recycle-machines" },
-          { name: "차량용RFID", link: "/products/rfid" },
-          { name: "음식물종량기", link: "/products/food-waste-scale" },
+          { name: "무인회수기", link: "/products/reverse-vending-machines" },
+          { name: "차량용RFID", link: "/products/vehicle-food-waste-billing-system" },
+          { name: "음식물종량기", link: "/products/food-waste-billing-system" },
         ],
       },
       news: {
@@ -85,9 +85,9 @@ export const footerTranslations = {
       products: {
         title: "Products",
         items: [
-          { name: "Recycle Machines", link: "/products/recycle-machines" },
-          { name: "Vehicle RFID", link: "/products/rfid" },
-          { name: "Billing system for food waste", link: "/products/food-waste-scale" },
+          { name: "ReverseVendingMachine", link: "/products/reverse-vending-machines" },
+          { name: "Vehicle food waste billing system", link: "/products/vehicle-food-waste-billing-system" },
+          { name: "Food waste billing system", link: "/products/food-waste-billing-system" },
         ],
       },
       news: {

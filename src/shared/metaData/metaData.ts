@@ -17,7 +17,7 @@ export const metaData = {
     title: "코다(CODA) 무인회수기",
     description: "코다(CODA)의 무인회수기는 국내 기술 30년 융복합 측정기술 노하우를 바탕으로 한 최적의 자원 선순환 솔루션입니다.",
     alternates: {
-      canonical: "https://www.coda.ai.kr/products/recycle-machines",
+      canonical: "https://www.coda.ai.kr/products/reverse-vending-machines",
     },
     keywords: ["무인회수기", "코다", "CODA", "재활용", "압축기", "파쇄기"],
   },
@@ -25,7 +25,7 @@ export const metaData = {
     title: "코다(CODA) 무인회수기(압축기)",
     description: "코다(CODA)의 무인회수기 압축기는 재활용 자원의 부피를 줄여 효율적인 자원 선순환을 지원합니다.",
     alternates: {
-      canonical: "https://www.coda.ai.kr/products/recycle-machines/compressor",
+      canonical: "https://www.coda.ai.kr/products/reverse-vending-machines/compressor",
     },
     keywords: ["무인회수기", "압축기", "코다", "CODA", "재활용"],
   },
@@ -33,7 +33,7 @@ export const metaData = {
     title: "코다(CODA) 무인회수기(파쇄기)",
     description: "코다(CODA)의 무인회수기 파쇄기는 재활용 자원의 크기를 줄여 효율적인 자원 선순환을 지원합니다.",
     alternates: {
-      canonical: "https://www.coda.ai.kr/products/recycle-machines/crusher",
+      canonical: "https://www.coda.ai.kr/products/reverse-vending-machines/crusher",
     },
     keywords: ["무인회수기", "파쇄기", "코다", "CODA", "재활용"],
   },
@@ -41,7 +41,7 @@ export const metaData = {
     title: "코다(CODA) 무인회수기(ESG)",
     description: "코다(CODA)의 무인회수기는 ESG 경영을 실천하는 기업과 기관에 최적화된 자원 선순환 솔루션입니다.",
     alternates: {
-      canonical: "https://www.coda.ai.kr/products/recycle-machines/esg",
+      canonical: "https://www.coda.ai.kr/products/reverse-vending-machines/esg",
     },
     keywords: ["무인회수기", "ESG", "코다", "CODA", "재활용"],
   },
@@ -49,7 +49,7 @@ export const metaData = {
     title: "코다(CODA) RFID 음식물종량기",
     description: "코다(CODA)의 RFID 음식물종량기는 스마트한 폐기물 관리 솔루션으로, 음식물 쓰레기의 정확한 계량과 관리를 지원합니다.",
     alternates: {
-      canonical: "https://www.coda.ai.kr/products/rfid-food-waste",
+      canonical: "https://www.coda.ai.kr/products/food-waste-billing-system",
     },
     keywords: ["RFID", "음식물종량기", "코다", "CODA", "스마트 폐기물 관리"],
   },

@@ -3,7 +3,7 @@ import { createTranslator, Locale } from "@lib/translator";
 export const machinesTranslations = {
   ko: {
     title: "코다(CODA) 제품 라인업",
-    recycleMachines: {
+    ReverseVendingMachine: {
       title: "무인회수기 제품 안내",
       subtitle: "국내 기술 30년 융복합 측정기술 노하우를 바탕으로 한 최적의 자원 선순환 솔루션",
       products: {
@@ -44,7 +44,7 @@ export const machinesTranslations = {
   },
   en: {
     title: "CODA Product Lineup",
-    recycleMachines: {
+    ReverseVendingMachine: {
       title: "Reverse Vending Machine Product Guide",
       subtitle: "Optimal resource circulation solution based on 30 years of domestic technology convergence measurement technology know-how",
       products: {
@@ -72,14 +72,14 @@ export const machinesTranslations = {
         alt: "CODA Reverse Vending Machine, Compressor (PET, CAN, Universal)",
       },
       rfid: {
-        title: "Vehicle billing system for food waste",
-        subtitle: "Vehicle billing system for food waste",
-        alt: "Vehicle billing system for food waste",
+        title: "Vehicle food waste billing system",
+        subtitle: "Vehicle food waste billing system",
+        alt: "Vehicle food waste billing system",
       },
       foodWaste: {
-        title: "Billing system for food waste",
-        subtitle: "Billing system for food waste",
-        alt: "Billing system for food waste",
+        title: "Food waste billing system",
+        subtitle: "Food waste billing system",
+        alt: "Food waste billing system",
       },
     },
   },

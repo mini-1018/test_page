@@ -30,9 +30,9 @@ export default function MobileNav() {
       name: t("products"),
       link: `/${locale}/products`,
       subMenu: [
-        { name: t("subMenu.recycleMachines"), link: `/${locale}/products/recycle-machines` },
-        { name: t("subMenu.rfid"), link: `/${locale}/products/rfid` },
-        { name: t("subMenu.BillingSystemForFoodWaste"), link: `/${locale}/products/food-waste-scale` },
+        { name: t("subMenu.ReverseVendingMachine"), link: `/${locale}/products/reverse-vending-machines` },
+        { name: t("subMenu.rfid"), link: `/${locale}/products/vehicle-food-waste-billing-system` },
+        { name: t("subMenu.FoodWasteBillingSystem"), link: `/${locale}/products/food-waste-billing-system` },
       ],
     },
     {

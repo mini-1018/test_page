@@ -179,16 +179,16 @@ export async function generateMetadata({ params }: CompressorPageProps) {
     description: t("metaData.description"),
     keywords: t("metaData.keywords"),
     alternates: {
-      canonical: `/${locale}/products/recycle-machines/compressor`,
+      canonical: `/${locale}/products/reverse-vending-machines/compressor`,
       languages: {
-        ko: "/ko/products/recycle-machines/compressor",
-        en: "/en/products/recycle-machines/compressor",
+        ko: "/ko/products/reverse-vending-machines/compressor",
+        en: "/en/products/reverse-vending-machines/compressor",
       },
     },
     openGraph: {
       title: t("metaData.title"),
       description: t("metaData.description"),
-      url: `/${locale}/recycle-machines/compressor`,
+      url: `/${locale}/reverse-vending-machines/compressor`,
       siteName: t("metaData.openGraph.siteName"),
       images: [
         {

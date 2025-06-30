@@ -118,7 +118,7 @@ export async function generateMetadata({ params }: FoodWasteScalePageProps) {
   return {
     title: t("title"),
     description: t("description"),
-    keywords: locale === "ko" ? "코다, CODA, 음식물종량기, RFID, 특허, 우수제품, 조달청, 고장진단, 신용카드, 선불제" : "CODA, Billing system for food waste, RFID, patent, excellent product, public procurement, fault diagnosis, credit card, prepaid",
+    keywords: locale === "ko" ? "코다, CODA, 음식물종량기, RFID, 특허, 우수제품, 조달청, 고장진단, 신용카드, 선불제" : "CODA, Food waste billing system, RFID, patent, excellent product, public procurement, fault diagnosis, credit card, prepaid",
     openGraph: {
       title: t("title"),
       description: t("description"),

@@ -210,7 +210,7 @@ export async function generateMetadata({ params }: RFIDPageProps) {
   return {
     title: t("title"),
     description: t("description"),
-    keywords: locale === "ko" ? "코다, CODA, RFID, 음식물회수, 결제시스템, 선불, 후불, F&B, 업소, 차량용저울" : "CODA, RFID, food waste collection, payment system, prepaid, postpaid, F&B, business, vehicle scale",
+    keywords: locale === "ko" ? "코다, CODA, RFID, 음식물회수, 결제시스템, 선불, 후불, F&B, 업소, 차량용저울" : "CODA, RFID, food waste collection, payment system, prepaid, postpaid, F&B, business",
     openGraph: {
       title: t("title"),
       description: t("description"),

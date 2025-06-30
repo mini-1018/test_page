@@ -5,14 +5,14 @@ export default function ProductLineup() {
   const products = [
     {
       id: "coda",
-      href: "/products/recycle-machines",
+      href: "/products/reverse-vending-machines",
       image: "https://do40f6yw4fd7i.cloudfront.net/img13/item_list_coda/item_coda.webp",
       title: "압축기",
       subtitle: "PET / CAN / 공용",
       alt: "코다(CODA) 무인회수기, 압축기(PET,CAN,공용)",
     },
     {
-      id: "crush",
+      id: "rfid",
       href: "/products/rfid",
       image: "https://do40f6yw4fd7i.cloudfront.net/img13/item/item_rfid.webp",
       title: "차량용RFID",
@@ -20,8 +20,8 @@ export default function ProductLineup() {
       alt: "차량용RFID",
     },
     {
-      id: "esg",
-      href: "/products/food-waste-scale",
+      id: "food-waste-billing-system",
+      href: "/products/food-waste-billing-system",
       image: "https://do40f6yw4fd7i.cloudfront.net/img13/item/item_food.webp",
       title: "음식물 종량기",
       subtitle: "음식물 종량기",

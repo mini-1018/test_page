@@ -1,4 +1,3 @@
-// lib/translations/food-waste-scale.ts
 import { createTranslator, Locale } from "@lib/translator";
 
 export const foodWasteScaleTranslations = {
@@ -69,26 +68,26 @@ export const foodWasteScaleTranslations = {
   },
   en: {
     // 메타데이터
-    title: "CODA RFID Billing system for food waste",
-    description: "CODA RFID Billing system for food waste selected as excellent invention and Public Procurement Service excellent product. Supports fault diagnosis function and credit card prepaid system.",
+    title: "CODA RFID Food waste billing system",
+    description: "CODA RFID Food waste billing system selected as excellent invention and Public Procurement Service excellent product. Supports fault diagnosis function and credit card prepaid system.",
 
     // 헤더 이미지
     header: {
-      mainAlt: "Excellent Invention and Public Procurement Service Excellent Product Selected Billing system for food waste",
-      creditCardAlt: "Credit Card Available Prepaid Equipment - First Certified Billing system for food waste",
-      finalAlt: "CODA Billing system for food waste - RFID Based",
+      mainAlt: "Excellent Invention and Public Procurement Service Excellent Product Selected Food waste billing system",
+      creditCardAlt: "Credit Card Available Prepaid Equipment - First Certified Food waste billing system",
+      finalAlt: "CODA Food waste billing system - RFID Based",
     },
 
     animation: {
       title1: "Chosen by Local Governments Nationwide",
-      title2: "Verified Billing system for food waste",
+      title2: "Verified Food waste billing system",
     },
 
     // RFID 기반 섹션
     rfidBased: {
-      iconAlt: "CODA Billing system for food waste Image",
+      iconAlt: "CODA Food waste billing system Image",
       title1: "RFID Based",
-      title2: "Billing system for food waste",
+      title2: "Food waste billing system",
       description: "Selected as excellent invention, priority purchase recommendation\nSystem that identifies ID using radio frequency\nFee charging method according to discharge amount",
     },
 
@@ -102,7 +101,7 @@ export const foodWasteScaleTranslations = {
 
     // 우수제품 지정증서 섹션
     certificate: {
-      alt: "CODA Billing system for food waste Excellent Product Designation Certificate, Excellent Invention Priority Purchase Recommendation Certificate",
+      alt: "CODA Food waste billing system Excellent Product Designation Certificate, Excellent Invention Priority Purchase Recommendation Certificate",
     },
 
     // 제품 특징 섹션들
@@ -111,24 +110,24 @@ export const foodWasteScaleTranslations = {
         title: "Canopy Interior, Eye-Level Display Application",
         subtitle: "Ergonomic keypad keeps clean without rain and food contamination",
         description: "User convenience considering contamination, dust, and winter condensation",
-        alt: "CODA Billing system for food waste - Convenient Display",
+        alt: "CODA Food waste billing system - Convenient Display",
       },
       inHouseDisplay: {
         title: "In-house Display 128 x 64 Graphics Applied",
         subtitle: "Clear large LCD with 8-line Korean graphics and backlighting function",
         description: "User convenience priority with intuitive UI design",
-        alt: "CODA Billing system for food waste - Intuitive Display",
+        alt: "CODA Food waste billing system - Intuitive Display",
       },
       stainlessMaterial: {
         title: "Easier Water Cleaning with Stainless Steel Material",
         subtitle: "Corrosion prevention from food salt and gas",
         description: "Corrosion prevention and cleanliness management through water cleaning",
-        alt: "CODA Billing system for food waste - Easy Water Cleaning with Stainless Steel Material",
+        alt: "CODA Food waste billing system - Easy Water Cleaning with Stainless Steel Material",
       },
       installationCases: {
         title: "Various Installation Locations and Cases",
         description: "Customized provision of local government logos, sheet designs, banners, etc.",
-        alt: "CODA Billing system for food waste - Various Installation Locations and Cases",
+        alt: "CODA Food waste billing system - Various Installation Locations and Cases",
       },
     },
   },

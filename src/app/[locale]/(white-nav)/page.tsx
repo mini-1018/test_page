@@ -97,18 +97,18 @@ export default async function HomePage({ params }: { params: Promise<Translation
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-[30px]">
                   {[
                     {
-                      title: t("section4.products.recycleMachines"),
-                      link: "products/recycle-machines",
+                      title: t("section4.products.ReverseVendingMachine"),
+                      link: "products/reverse-vending-machines",
                       img: "https://do40f6yw4fd7i.cloudfront.net/img13/main/main_sec03_1.webp",
                     },
                     {
                       title: t("section4.products.rfid"),
-                      link: "products/rfid",
+                      link: "products/vehicle-food-waste-billing-system",
                       img: "https://do40f6yw4fd7i.cloudfront.net/img13/main/main_sec03_2.webp",
                     },
                     {
-                      title: t("section4.products.Billing system for food waste"),
-                      link: "products/food-waste-scale",
+                      title: t("section4.products.Food waste billing system"),
+                      link: "products/food-waste-billing-system",
                       img: "https://do40f6yw4fd7i.cloudfront.net/img13/main/main_sec03_4.webp",
                     },
                     {
