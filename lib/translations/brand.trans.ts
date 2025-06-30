@@ -50,7 +50,7 @@ export const brandTranslations = {
       title: "코다(CODA) 브랜드 | 자원 선순환 플랫폼",
       description: "향유고래의 언어 '코다'에서 영감을 받은 자원 순환 브랜드. 30년 노하우로 재활용 무인회수기와 음식물 종량기를 개발하여 지속가능한 미래를 만들어갑니다.",
       keywords: "코다, CODA, 브랜드, 자원순환, 환경보호, 향유고래, 무인회수기, 음식물종량기, 재활용, 탄소중립, ESG",
-      image: "https://do40f6yw4fd7i.cloudfront.net/img13/brand/coda_brand_s3.webp",
+      image: "https://do40f6yw4fd7i.cloudfront.net/img13/brand/coda_brand_s1.webp",
       openGraph: {
         siteName: "코다(CODA)",
         locale: "ko_KR",
@@ -105,7 +105,7 @@ export const brandTranslations = {
       title: "CODA Brand | Resource Circulation Platform",
       description: "A resource circulation brand inspired by 'coda', the language of sperm whales. Creating a sustainable future with 30 years of expertise in recycling collection machines and food waste meters.",
       keywords: "CODA, brand, resource circulation, environmental protection, sperm whale, recycling machine, food waste meter, recycling, carbon neutral, ESG",
-      image: "https://do40f6yw4fd7i.cloudfront.net/img13/brand/coda_brand_s3.webp",
+      image: "https://do40f6yw4fd7i.cloudfront.net/img13/brand/coda_brand_s1.webp",
       openGraph: {
         siteName: "CODA",
         locale: "en_US",

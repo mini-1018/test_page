@@ -43,7 +43,7 @@ export const metadata: Metadata = {
     siteName: "코다(CODA)",
     images: [
       {
-        url: "/img/favicon/facebook-thumbnail_CODA.bmp",
+        url: "https://do40f6yw4fd7i.cloudfront.net/img13/brand/coda_brand_s1.webp",
         width: 1200,
         height: 630,
         alt: "코다(CODA)",
@@ -56,7 +56,7 @@ export const metadata: Metadata = {
     card: "summary_large_image",
     title,
     description,
-    images: ["/img/favicon/facebook-thumbnail_CODA.bmp"],
+    images: ["https://do40f6yw4fd7i.cloudfront.net/img13/brand/coda_brand_s1.webp"],
   },
   icons: {
     icon: [
