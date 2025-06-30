@@ -107,7 +107,7 @@ export default async function HomePage({ params }: { params: Promise<Translation
                       img: "https://do40f6yw4fd7i.cloudfront.net/img13/main/main_sec03_2.webp",
                     },
                     {
-                      title: t("section4.products.foodWasteDisposal"),
+                      title: t("section4.products.Billing system for food waste"),
                       link: "products/food-waste-scale",
                       img: "https://do40f6yw4fd7i.cloudfront.net/img13/main/main_sec03_4.webp",
                     },

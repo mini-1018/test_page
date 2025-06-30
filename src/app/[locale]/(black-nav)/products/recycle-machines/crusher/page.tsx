@@ -183,7 +183,7 @@ export async function generateMetadata({ params }: CrusherPageProps) {
   return {
     title: t("title"),
     description: t("description"),
-    keywords: locale === "ko" ? "코다, CODA, 무인회수기, 파쇄기, AI센싱, 자원순환, 재활용" : "CODA, unmanned collection machine, crusher, AI sensing, resource circulation, recycling",
+    keywords: locale === "ko" ? "코다, CODA, 무인회수기, 파쇄기, AI센싱, 자원순환, 재활용" : "CODA, Reverse Vending Machine, crusher, AI sensing, resource circulation, recycling",
     openGraph: {
       title: t("title"),
       description: t("description"),

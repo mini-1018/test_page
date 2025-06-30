@@ -3,10 +3,6 @@ import { createTranslator, Locale } from "@lib/translator";
 
 export const compressorTranslations = {
   ko: {
-    // 메타데이터
-    title: "코다(CODA) 무인회수기 압축기",
-    description: "AI 센싱기술과 고효율 압축성능을 갖춘 코다(CODA) 무인회수기 압축기 제품을 소개합니다.",
-
     // 헤더 이미지
     header: {
       mainAlt: "코다(CODA) 무인회수기 메인이미지",
@@ -113,23 +109,30 @@ export const compressorTranslations = {
     download: {
       text: "무인회수기 온라인기술서",
     },
+
+    metaData: {
+      title: "코다(CODA) 무인회수기 | 압축기",
+      description: "코다(CODA), 캔과 페트 재활용으로 포인트가 쌓이는 스마트 무인회수기. 손쉬운 재활용으로 더 나은 환경을 만들어갑니다.",
+      keywords: "코다, CODA, 무인회수기, 압축기, 페트(PET), 캔(CAN), 재활용, 환경보호, 스마트 회수기, 포인트 적립, 자원순환",
+      image: "https://do40f6yw4fd7i.cloudfront.net/img13/item_coda_coda/coda_coda_s3.webp",
+      openGraph: {
+        siteName: "코다(CODA)",
+        locale: "ko_KR",
+      },
+    },
   },
   en: {
-    // 메타데이터
-    title: "CODA Unmanned Collection Machine Compressor",
-    description: "Introducing the CODA unmanned collection machine compressor with AI sensing technology and high-efficiency compression performance.",
-
     // 헤더 이미지
     header: {
-      mainAlt: "CODA Unmanned Collection Machine Main Image",
-      subAlt: "CODA Unmanned Collection Machine Sub Image",
-      finalAlt: "CODA Unmanned Collection Machine Sub Image",
+      mainAlt: "CODA Reverse Vending Machine Main Image",
+      subAlt: "CODA Reverse Vending Machine Sub Image",
+      finalAlt: "CODA Reverse Vending Machine Sub Image",
     },
 
     // 인트로 섹션
     intro: {
       subtitle: "Sperm Whale Guardian",
-      title: "Recyclable Unmanned Collection Machine",
+      title: "Recyclable Reverse Vending Machine",
       description: "'CODA' is a 'resource circulation brand' that collects recycling resources and receives rewards so that sperm whales and other marine animals can live safely.",
       alt: "CODA PET Image",
     },
@@ -137,8 +140,8 @@ export const compressorTranslations = {
     // 기능 섹션 (이미지 1개)
     features: {
       mainTitle: "Collect\nSave\nGet Rewarded",
-      mainDescription: "'When CAN and PET are inserted into the unmanned collection machine,\nthe compressor reduces volume and stores selectively, increasing resource circulation rate\nto restore the environment including marine animals.'",
-      alt: "CODA Unmanned Collection Machine Main Description",
+      mainDescription: "'When CAN and PET are inserted into the Reverse Vending Machine,\nthe compressor reduces volume and stores selectively, increasing resource circulation rate\nto restore the environment including marine animals.'",
+      alt: "CODA Reverse Vending Machine Main Description",
     },
 
     // 섹션 1: 자원 선순환 프로세스 (이미지 1개)
@@ -146,34 +149,34 @@ export const compressorTranslations = {
       title: "Resource Circulation\nProcess",
       subtitle: "Can, PET bottle sorting / Collection and transport / Recyclable resource circulation system",
       description: "Systematic reduction of waste generation and plastic materialization through transparent PET and CAN recovery",
-      alt: "CODA Unmanned Collection Machine Resource Circulation Process",
+      alt: "CODA Reverse Vending Machine Resource Circulation Process",
     },
 
     // 섹션 2: 차별화 기능 (이미지 여러개)
     section2: {
       title: "Differentiated Features",
       description: "'AI sensing technology sorts recoverable resources (CAN, PET) & non-recoverable resources\nto increase resource circulation rate through return (discharge) and compression storage.'",
-      aiIconAlt: "CODA Unmanned Collection Machine AI",
+      aiIconAlt: "CODA Reverse Vending Machine AI",
       features: [
         {
           title: "1st Reading / Sorting of Recoverable Resources",
           description: "AI sensing technology & high-efficiency compression performance",
-          alt: "CODA Unmanned Collection Machine AI Sensing Technology",
+          alt: "CODA Reverse Vending Machine AI Sensing Technology",
         },
         {
           title: "2nd Reading / Auto Discharge of Recoverable Resources",
           description: "Discharge port return function using advanced robotics",
-          alt: "CODA Unmanned Collection Machine Advanced Robotics",
+          alt: "CODA Reverse Vending Machine Advanced Robotics",
         },
         {
           title: "Superior Processing Speed Compared to Competitors",
           description: "Optimal equipment performance based on accurate resource judgment design and advanced structure",
-          alt: "CODA Unmanned Collection Machine Processing Speed",
+          alt: "CODA Reverse Vending Machine Processing Speed",
         },
         {
           title: "Auto Recognition of Input Sensor When Resources are Input",
           description: "Usage safety with LED display and voice guidance during input",
-          alt: "CODA Unmanned Collection Machine Input Sensor Auto Recognition",
+          alt: "CODA Reverse Vending Machine Input Sensor Auto Recognition",
         },
       ],
     },
@@ -181,9 +184,9 @@ export const compressorTranslations = {
     // 섹션 3: 사용방법 (이미지 여러개)
     section3: {
       title: "How to Use",
-      usageAlt: "CODA Unmanned Collection Machine Usage Instructions",
-      convenienceAlt: "CODA Unmanned Collection Machine Convenience",
-      safetyAlt: "CODA Unmanned Collection Machine Safety Features",
+      usageAlt: "CODA Reverse Vending Machine Usage Instructions",
+      convenienceAlt: "CODA Reverse Vending Machine Convenience",
+      safetyAlt: "CODA Reverse Vending Machine Safety Features",
       step1: {
         title: "Easier to Use, Faster to Check!",
         description: "Touch start screen / Enter number / Check input resource points immediately\nMobile connection when dedicated app is installed / Various safety systems considering usage convenience",
@@ -199,31 +202,42 @@ export const compressorTranslations = {
       title: "Resource Recovery\nReward System",
       rewardText: "Customized user rewards according to input amount -",
       rewardTypes: "Cash/Transit Card/Local Currency",
-      rewardAlt: "CODA Unmanned Collection Machine Resource Recovery Reward System",
+      rewardAlt: "CODA Reverse Vending Machine Resource Recovery Reward System",
       appTitle: "How to Use CODA Dedicated App",
       appSlogan: "'Easiest and Fastest'",
       appDescription: "Intuitive point accumulation and remittance system provided",
-      appAlt: "CODA Unmanned Collection Machine App Usage",
+      appAlt: "CODA Reverse Vending Machine App Usage",
       qrTitle: "Search CODA (QR)",
-      qrAlt: "CODA Unmanned Collection Machine QR Code",
+      qrAlt: "CODA Reverse Vending Machine QR Code",
     },
 
     // 섹션 5: 압축기 모델 (이미지 1개)
     section5: {
-      title: "Unmanned Collection Machine\nCompressor Model",
-      alt: "CODA Unmanned Collection Machine Compressor",
+      title: "Reverse Vending Machine\nCompressor Model",
+      alt: "CODA Reverse Vending Machine Compressor",
     },
 
     // 캐노피 옵션 (이미지 1개)
     canopy: {
       title: "Canopy Option Specifications for Outdoor Installation",
       description: "Customized graphics application (local government/company)",
-      alt: "CODA Unmanned Collection Machine Canopy",
+      alt: "CODA Reverse Vending Machine Canopy",
     },
 
     // 다운로드
     download: {
-      text: "Unmanned Collection Machine Online Technical Manual",
+      text: "Reverse Vending Machine Online Technical Manual",
+    },
+
+    metaData: {
+      title: "CODA Reverse Vending Machine | Compressor",
+      description: "CODA smart Reverse Vending Machine that accumulates points through can and PET recycling. Creating a better environment through easy recycling.",
+      keywords: "CODA, Reverse Vending Machine, compressor, PET bottle, CAN, recycling, environmental protection, smart recycling, point reward",
+      image: "https://do40f6yw4fd7i.cloudfront.net/img13/item_coda_coda/coda_coda_s3.webp",
+      openGraph: {
+        siteName: "CODA",
+        locale: "en_US",
+      },
     },
   },
 } as const;

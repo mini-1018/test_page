@@ -46,6 +46,26 @@ export const brandTranslations = {
     section5: {
       imageAlt: "코다(CODA) 포트폴리오",
     },
+    metaData: {
+      title: "코다(CODA) 브랜드 | 자원 선순환 플랫폼",
+      description: "코다(CODA)는 30년 노하우를 가진 융복합 전문 제조기업입니다. 재활용 무인회수기, RFID 기반 음식물종량기, 음식물 수거시스템으로 다양한 수상과 인증을 받은 혁신 제품을 개발합니다.",
+      keywords: "코다, CODA, 브랜드, 무인회수기, 음식물 종량기, RFID, 재활용, 자원순환, 환경보호, 향유고래, 탄소중립, ESG",
+      image: "https://do40f6yw4fd7i.cloudfront.net/img13/brand/coda_brand_s3.webp",
+      imageAlt: "코다(CODA) 브랜드",
+      canonical: "/brand",
+      openGraph: {
+        title: "코다(CODA) 브랜드 | 자원 선순환 플랫폼",
+        description: "코다(CODA)는 30년 노하우를 가진 융복합 전문 제조기업입니다. 재활용 무인회수기, RFID 기반 음식물종량기, 음식물 수거시스템으로 다양한 수상과 인증을 받은 혁신 제품을 개발합니다.",
+        siteName: "코다(CODA)",
+        type: "website",
+        locale: "ko_KR",
+      },
+      twitter: {
+        card: "summary_large_image",
+        title: "코다(CODA) 브랜드 | 자원 선순환 플랫폼",
+        description: "코다(CODA)는 30년 노하우를 가진 융복합 전문 제조기업입니다. 재활용 무인회수기, RFID 기반 음식물종량기, 음식물 수거시스템으로 다양한 수상과 인증을 받은 혁신 제품을 개발합니다.",
+      },
+    },
   },
   en: {
     title: "Brand",
@@ -90,6 +110,26 @@ export const brandTranslations = {
     },
     section5: {
       imageAlt: "CODA Portfolio",
+    },
+    metaData: {
+      title: "CODA Brand | Resource Circulation Platform",
+      description: "CODA is a convergence manufacturing company with 30 years of expertise. We develop innovative products including recycling collection machines, RFID-based food waste measuring systems, and waste collection systems with various awards and certifications.",
+      keywords: "CODA, brand, recycling machine, food waste meter, RFID, recycling, resource circulation, environmental protection, sperm whale, carbon neutral, ESG",
+      image: "https://do40f6yw4fd7i.cloudfront.net/img13/brand/coda_brand_s3.webp",
+      imageAlt: "CODA Brand",
+      canonical: "/en/brand",
+      openGraph: {
+        title: "CODA Brand | Resource Circulation Platform",
+        description: "CODA is a convergence manufacturing company with 30 years of expertise. We develop innovative products including recycling collection machines, RFID-based food waste measuring systems, and waste collection systems with various awards and certifications.",
+        siteName: "CODA",
+        type: "website",
+        locale: "en_US",
+      },
+      twitter: {
+        card: "summary_large_image",
+        title: "CODA Brand | Resource Circulation Platform",
+        description: "CODA is a convergence manufacturing company with 30 years of expertise. We develop innovative products including recycling collection machines, RFID-based food waste measuring systems, and waste collection systems with various awards and certifications.",
+      },
     },
   },
 } as const;

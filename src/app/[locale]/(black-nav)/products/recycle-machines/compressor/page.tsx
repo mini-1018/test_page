@@ -175,16 +175,37 @@ export async function generateMetadata({ params }: CompressorPageProps) {
   const { t } = getCompressorTranslations(locale);
 
   return {
-    title: t("title"),
-    description: t("description"),
-    keywords: locale === "ko" ? "코다, CODA, 무인회수기, 압축기, AI센싱, 자원순환, 재활용" : "CODA, unmanned collection machine, compressor, AI sensing, resource circulation, recycling",
+    title: t("metaData.title"),
+    description: t("metaData.description"),
+    keywords: t("metaData.keywords"),
+    alternates: {
+      canonical: `/${locale}/products/recycle-machines/compressor`,
+      languages: {
+        ko: "/ko/products/recycle-machines/compressor",
+        en: "/en/products/recycle-machines/compressor",
+      },
+    },
     openGraph: {
-      title: t("title"),
-      description: t("description"),
+      title: t("metaData.title"),
+      description: t("metaData.description"),
+      url: `/${locale}/recycle-machines/compressor`,
+      siteName: t("metaData.openGraph.siteName"),
+      images: [
+        {
+          url: t("metaData.image"),
+          width: 1200,
+          height: 630,
+          alt: t("metaData.title"),
+        },
+      ],
+      locale: t("metaData.openGraph.locale"),
+      type: "website",
     },
     twitter: {
-      title: t("title"),
-      description: t("description"),
+      card: "summary_large_image",
+      title: t("metaData.title"),
+      description: t("metaData.description"),
+      images: [t("metaData.image")],
     },
   };
 }

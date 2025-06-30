@@ -104,12 +104,12 @@ export const esgTranslations = {
   },
   en: {
     // 메타데이터
-    title: "CODA ESG Unmanned Collection Machine",
-    description: "CODA ESG unmanned collection machine for carbon neutral practice. Realize sustainable environmental management through CO2 reduction and resource circulation.",
+    title: "CODA ESG Reverse Vending Machine",
+    description: "CODA ESG Reverse Vending Machine for carbon neutral practice. Realize sustainable environmental management through CO2 reduction and resource circulation.",
 
     // 헤더 이미지
     header: {
-      mainAlt: "CODA ESG Unmanned Collection Machine Main Image",
+      mainAlt: "CODA ESG Reverse Vending Machine Main Image",
       subAlt: "CODA ESG Sub Image",
       finalAlt: "CODA ESG Sub Image",
     },
@@ -117,7 +117,7 @@ export const esgTranslations = {
     // 인트로 섹션
     intro: {
       subtitle: "Carbon Neutral Practice Model",
-      title: "Recyclable Unmanned Collection Machine",
+      title: "Recyclable Reverse Vending Machine",
       description: "Our practice for nature conservation\nStarts with saving and collecting transparent PET bottles and can resources.\nESG management dedicated model for CO2 reduction",
       alt: "CODA ESG Image",
     },
@@ -126,14 +126,14 @@ export const esgTranslations = {
     co2Reduction: {
       title: "Activities for Carbon Dioxide Reduction\nNot a Corporate Choice but a Necessity",
       description: "Greenhouse gas damage from industrial waste and pollutants in the production process\naffects not only the current generation but also the next generation.",
-      bottomText: "We propose unmanned collection machines for recyclables as a practical solution for companies to reduce carbon dioxide.",
+      bottomText: "We propose Reverse Vending Machines for recyclables as a practical solution for companies to reduce carbon dioxide.",
       alt: "CODA ESG Image",
     },
 
     // 기능 섹션
     features: {
       mainTitle: "Collect\nReduce\nPreserve",
-      mainDescription: "'When CAN and PET are inserted into the unmanned collection machine,\nthe compressor reduces volume and stores selectively, increasing resource circulation rate\nto reduce waste and preserve the natural environment.'",
+      mainDescription: "'When CAN and PET are inserted into the Reverse Vending Machine,\nthe compressor reduces volume and stores selectively, increasing resource circulation rate\nto reduce waste and preserve the natural environment.'",
       alt: "CODA ESG Collect Reduce Preserve",
     },
 
@@ -141,7 +141,7 @@ export const esgTranslations = {
     section1: {
       title: "Differentiated Features",
       description: "'AI sensing technology sorts recoverable resources (CAN, PET) & non-recoverable resources\nto increase resource circulation rate through return (discharge) and compression storage.'",
-      aiIconAlt: "CODA Unmanned Collection Machine AI",
+      aiIconAlt: "CODA Reverse Vending Machine AI",
       features: [
         {
           title: "1st Reading / Sorting of Recoverable Resources",
@@ -181,7 +181,7 @@ export const esgTranslations = {
     section3: {
       title: "ESG Dedicated APP Integration",
       appTitle: "Intuitive App UI & Resource Collection Display",
-      appDescription: "Mobile, unmanned collection machine, control system - Real-time information integration between devices",
+      appDescription: "Mobile, Reverse Vending Machine, control system - Real-time information integration between devices",
       alt: "CODA ESG App Integration",
     },
 

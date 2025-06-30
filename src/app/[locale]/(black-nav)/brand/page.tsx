@@ -1,5 +1,5 @@
 import Image from "next/image";
-import metaData from "@shared/metaData/metaData";
+import { Metadata } from "next";
 import Typewriter from "@shared/components/common/TyperwriterText";
 import FadeUpOnView from "@shared/components/common/FadeUpOnView";
 import { getBrandTranslations } from "@lib/translations/brand.trans";
@@ -143,25 +143,43 @@ export default async function BrandPage({ params }: BrandPageProps) {
   );
 }
 
-// 메타데이터 생성 함수 (다국어 지원)
-export async function generateMetadata({ params }: BrandPageProps) {
+export async function generateMetadata({ params }: BrandPageProps): Promise<Metadata> {
   const { locale } = await params;
+  console.log(locale);
   const { t } = getBrandTranslations(locale);
 
   return {
-    title: t("title"),
-    description: t("description"),
+    title: t("metaData.title"),
+    description: t("metaData.description"),
+    keywords: t("metaData.keywords"),
     alternates: {
-      canonical: metaData.brand.alternates.canonical,
+      canonical: `/${locale}/brand`,
+      languages: {
+        ko: "/ko/brand",
+        en: "/en/brand",
+      },
     },
-    keywords: metaData.brand.keywords,
     openGraph: {
-      title: t("title"),
-      description: t("description"),
+      title: t("metaData.openGraph.title"),
+      description: t("metaData.openGraph.description"),
+      url: `/${locale}/brand`,
+      siteName: t("metaData.openGraph.siteName"),
+      images: [
+        {
+          url: t("metaData.image"),
+          width: 1200,
+          height: 630,
+          alt: t("metaData.imageAlt"),
+        },
+      ],
+      locale: t("metaData.openGraph.locale"),
+      type: "website",
     },
     twitter: {
-      title: t("title"),
-      description: t("description"),
+      card: "summary_large_image",
+      title: t("metaData.twitter.title"),
+      description: t("metaData.twitter.description"),
+      images: [t("metaData.image")],
     },
   };
 }

@@ -30,7 +30,7 @@ export default function BlackNav() {
       subMenu: [
         { name: t("subMenu.recycleMachines"), link: `/${locale}/products/recycle-machines` },
         { name: t("subMenu.rfid"), link: `/${locale}/products/rfid` },
-        { name: t("subMenu.foodWasteDisposal"), link: `/${locale}/products/food-waste-scale` },
+        { name: t("subMenu.BillingSystemForFoodWaste"), link: `/${locale}/products/food-waste-scale` },
       ],
     },
     {

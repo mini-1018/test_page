@@ -45,23 +45,23 @@ export const machinesTranslations = {
   en: {
     title: "CODA Product Lineup",
     recycleMachines: {
-      title: "Unmanned Collection Machine Product Guide",
+      title: "Reverse Vending Machine Product Guide",
       subtitle: "Optimal resource circulation solution based on 30 years of domestic technology convergence measurement technology know-how",
       products: {
         compressor: {
           title: "Compressor",
           subtitle: "PET / CAN / Universal",
-          alt: "CODA Unmanned Collection Machine, Compressor (PET, CAN, Universal)",
+          alt: "CODA Reverse Vending Machine, Compressor (PET, CAN, Universal)",
         },
         crusher: {
           title: "Crusher",
           subtitle: "PET Only",
-          alt: "CODA Unmanned Collection Machine, Crusher (PET)",
+          alt: "CODA Reverse Vending Machine, Crusher (PET)",
         },
         esg: {
           title: "ESG",
           subtitle: "Carbon Reduction Type",
-          alt: "CODA Unmanned Collection Machine, ESG (Carbon Reduction Type)",
+          alt: "CODA Reverse Vending Machine, ESG (Carbon Reduction Type)",
         },
       },
     },
@@ -69,17 +69,17 @@ export const machinesTranslations = {
       recycleMachine: {
         title: "Compressor",
         subtitle: "PET / CAN / Universal",
-        alt: "CODA Unmanned Collection Machine, Compressor (PET, CAN, Universal)",
+        alt: "CODA Reverse Vending Machine, Compressor (PET, CAN, Universal)",
       },
       rfid: {
-        title: "Vehicle RFID",
-        subtitle: "Vehicle RFID",
-        alt: "Vehicle RFID",
+        title: "Vehicle billing system for food waste",
+        subtitle: "Vehicle billing system for food waste",
+        alt: "Vehicle billing system for food waste",
       },
       foodWaste: {
-        title: "Food Waste Scale",
-        subtitle: "Food Waste Scale",
-        alt: "Food Waste Scale",
+        title: "Billing system for food waste",
+        subtitle: "Billing system for food waste",
+        alt: "Billing system for food waste",
       },
     },
   },

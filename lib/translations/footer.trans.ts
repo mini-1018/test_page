@@ -87,7 +87,7 @@ export const footerTranslations = {
         items: [
           { name: "Recycle Machines", link: "/products/recycle-machines" },
           { name: "Vehicle RFID", link: "/products/rfid" },
-          { name: "Food Waste Scale", link: "/products/food-waste-scale" },
+          { name: "Billing system for food waste", link: "/products/food-waste-scale" },
         ],
       },
       news: {

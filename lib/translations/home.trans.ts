@@ -29,7 +29,7 @@ export const homeTranslations = {
       products: {
         recycleMachines: "무인회수기",
         rfid: "차량용RFID",
-        foodWasteDisposal: "음식물종량기",
+        BillingSystemForFoodWaste: "음식물종량기",
         learnMore: "CODA 더 알아보기",
       },
     },
@@ -40,7 +40,7 @@ export const homeTranslations = {
     logoAlt: "CODA Logo",
     section2: {
       subtitle: "Ocean Sperm Whale Guardian",
-      title: "Resource Circulation CAN+PET Unmanned Collection Machine",
+      title: "Resource Circulation CAN+PET Reverse Vending Machine",
     },
     section3: {
       block1: {
@@ -60,9 +60,9 @@ export const homeTranslations = {
       subtitle: "Product Introduction",
       title: "Together with CODA\nLet's protect the environment.",
       products: {
-        recycleMachines: "Unmanned Collection Machine",
-        rfid: "Vehicle RFID",
-        foodWasteDisposal: "Food Waste Scale",
+        recycleMachines: "Reverse Vending Machine",
+        rfid: "Vehicle billing system for food waste",
+        BillingSystemForFoodWaste: "Billing system for food waste",
         learnMore: "Learn More About CODA",
       },
     },

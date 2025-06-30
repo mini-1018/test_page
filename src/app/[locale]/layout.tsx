@@ -18,7 +18,7 @@ export const viewport: Viewport = {
 };
 
 export const metadata: Metadata = {
-  metadataBase: new URL(process.env.NODE_ENV === "production" ? "https://www.coda230.com" : "http://localhost:3000"),
+  metadataBase: new URL(process.env.NODE_ENV === "production" ? "https://www.coda.ai.kr" : "http://localhost:3000"),
   title,
   description,
   keywords,

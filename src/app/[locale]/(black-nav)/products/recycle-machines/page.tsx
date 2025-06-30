@@ -83,7 +83,7 @@ export async function generateMetadata({ params }: MachinesLineupProps) {
   return {
     title: t("recycleMachines.title"),
     description: t("recycleMachines.subtitle"),
-    keywords: locale === "ko" ? "코다, CODA, 무인회수기, 압축기, 파쇄기, ESG, 탄소저감, 재활용" : "CODA, unmanned collection machine, compressor, crusher, ESG, carbon reduction, recycling",
+    keywords: locale === "ko" ? "코다, CODA, 무인회수기, 압축기, 파쇄기, ESG, 탄소저감, 재활용" : "CODA, Reverse Vending Machine, compressor, crusher, ESG, carbon reduction, recycling",
     openGraph: {
       title: t("recycleMachines.title"),
       description: t("recycleMachines.subtitle"),

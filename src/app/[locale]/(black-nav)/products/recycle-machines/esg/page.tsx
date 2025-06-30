@@ -160,7 +160,7 @@ export async function generateMetadata({ params }: ESGPageProps) {
   return {
     title: t("title"),
     description: t("description"),
-    keywords: locale === "ko" ? "코다, CODA, ESG, 무인회수기, 탄소중립, CO2감축, 지속가능경영, 환경경영" : "CODA, ESG, unmanned collection machine, carbon neutral, CO2 reduction, sustainable management, environmental management",
+    keywords: locale === "ko" ? "코다, CODA, ESG, 무인회수기, 탄소중립, CO2감축, 지속가능경영, 환경경영" : "CODA, ESG, Reverse Vending Machine, carbon neutral, CO2 reduction, sustainable management, environmental management",
     openGraph: {
       title: t("title"),
       description: t("description"),
