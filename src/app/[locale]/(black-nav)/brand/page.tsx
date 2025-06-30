@@ -15,6 +15,7 @@ export default async function BrandPage({ params }: BrandPageProps) {
 
   return (
     <main className="w-full">
+      <h1 className="sr-only">{t("title")}</h1>
       {/* 자원 선순환 플랫폼 섹션 */}
       <section className="w-full mt-40 mb-60 md:mt-60 md:mb-80">
         <div className="max-w-6xl mx-auto px-4 text-center">
@@ -143,9 +144,9 @@ export default async function BrandPage({ params }: BrandPageProps) {
   );
 }
 
+// 브랜드 페이지 generateMetadata
 export async function generateMetadata({ params }: BrandPageProps): Promise<Metadata> {
   const { locale } = await params;
-  console.log(locale);
   const { t } = getBrandTranslations(locale);
 
   return {
@@ -160,8 +161,8 @@ export async function generateMetadata({ params }: BrandPageProps): Promise<Meta
       },
     },
     openGraph: {
-      title: t("metaData.openGraph.title"),
-      description: t("metaData.openGraph.description"),
+      title: t("metaData.title"),
+      description: t("metaData.description"),
       url: `/${locale}/brand`,
       siteName: t("metaData.openGraph.siteName"),
       images: [
@@ -169,7 +170,7 @@ export async function generateMetadata({ params }: BrandPageProps): Promise<Meta
           url: t("metaData.image"),
           width: 1200,
           height: 630,
-          alt: t("metaData.imageAlt"),
+          alt: t("metaData.title"),
         },
       ],
       locale: t("metaData.openGraph.locale"),
@@ -177,8 +178,8 @@ export async function generateMetadata({ params }: BrandPageProps): Promise<Meta
     },
     twitter: {
       card: "summary_large_image",
-      title: t("metaData.twitter.title"),
-      description: t("metaData.twitter.description"),
+      title: t("metaData.title"),
+      description: t("metaData.description"),
       images: [t("metaData.image")],
     },
   };

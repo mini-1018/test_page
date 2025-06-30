@@ -5,6 +5,7 @@ import Image from "next/image";
 import FadeUpOnView from "@shared/components/common/FadeUpOnView";
 import { getEsgTranslations } from "@lib/translations/esg.trans";
 import type { Locale } from "@lib/translator";
+import type { Metadata } from "next";
 
 interface ESGPageProps {
   params: Promise<{ locale: Locale }>;
@@ -152,22 +153,43 @@ export default async function ESGPage({ params }: ESGPageProps) {
   );
 }
 
-// 메타데이터 생성 함수
-export async function generateMetadata({ params }: ESGPageProps) {
+// ESG 페이지 generateMetadata
+export async function generateMetadata({ params }: ESGPageProps): Promise<Metadata> {
   const { locale } = await params;
   const { t } = getEsgTranslations(locale);
 
   return {
-    title: t("title"),
-    description: t("description"),
-    keywords: locale === "ko" ? "코다, CODA, ESG, 무인회수기, 탄소중립, CO2감축, 지속가능경영, 환경경영" : "CODA, ESG, Reverse Vending Machine, carbon neutral, CO2 reduction, sustainable management, environmental management",
+    title: t("metaData.title"),
+    description: t("metaData.description"),
+    keywords: t("metaData.keywords"),
+    alternates: {
+      canonical: `/${locale}/products/reverse-vending-machines/esg`,
+      languages: {
+        ko: "/ko/products/reverse-vending-machines/esg",
+        en: "/en/products/reverse-vending-machines/esg",
+      },
+    },
     openGraph: {
-      title: t("title"),
-      description: t("description"),
+      title: t("metaData.title"),
+      description: t("metaData.description"),
+      url: `/${locale}/products/reverse-vending-machines/esg`,
+      siteName: t("metaData.openGraph.siteName"),
+      images: [
+        {
+          url: t("metaData.image"),
+          width: 1200,
+          height: 630,
+          alt: t("metaData.title"),
+        },
+      ],
+      locale: t("metaData.openGraph.locale"),
+      type: "website",
     },
     twitter: {
-      title: t("title"),
-      description: t("description"),
+      card: "summary_large_image",
+      title: t("metaData.title"),
+      description: t("metaData.description"),
+      images: [t("metaData.image")],
     },
   };
 }

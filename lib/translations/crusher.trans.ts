@@ -3,18 +3,14 @@ import { createTranslator, Locale } from "@lib/translator";
 
 export const crusherTranslations = {
   ko: {
-    // 메타데이터
     title: "코다(CODA) 무인회수기 파쇄기",
-    description: "AI 센싱기술과 고효율 파쇄성능을 갖춘 코다(CODA) 무인회수기 파쇄기 제품을 소개합니다.",
-
-    // 헤더 이미지
+    description: "코다(CODA), 캔과 페트 재활용으로 포인트가 쌓이는 스마트 무인회수기. 손쉬운 재활용으로 더 나은 환경을 만들어갑니다.",
     header: {
       mainAlt: "코다(CODA) 무인회수기 파쇄기 메인이미지",
       subAlt: "코다(CODA) 무인회수기 서브이미지",
       finalAlt: "코다(CODA) 무인회수기 서브이미지",
     },
 
-    // 인트로 섹션
     intro: {
       subtitle: "향유고래 지킴이",
       title: "재활용품 무인회수기",
@@ -22,14 +18,12 @@ export const crusherTranslations = {
       alt: "코다(CODA) 페트 이미지",
     },
 
-    // 기능 섹션
     features: {
       mainTitle: "모으고\n살리고\n보상받고",
       mainDescription: "'무인회수기에 CAN, PET 투입하면\n파쇄기가 부피를 줄이며 선별 저장, 자원 순환률을 높여\n해양동물을 비롯한 환경을 회복합니다.'",
       alt: "코다(CODA) 무인회수기 메인설명",
     },
 
-    // 섹션 1: 자원 선순환 프로세스
     section1: {
       title: "자원 선순환\n프로세스",
       subtitle: "캔, 페트병 선별 / 수거 운반 / 재활용자원 순환시스템",
@@ -37,7 +31,6 @@ export const crusherTranslations = {
       alt: "코다(CODA) 무인회수기 자원 선순환 프로세스",
     },
 
-    // 섹션 2: 차별화 기능
     section2: {
       title: "차별화 기능",
       description: "'인공지능 센싱기술로 회수 가능 자원(CAN, PET) & 불가능 자원을 선별하여\n반환(배출) 및 압축을 통한 저장으로 자원 순환률을 높입니다.'",
@@ -70,7 +63,6 @@ export const crusherTranslations = {
       ],
     },
 
-    // 섹션 3: 사용방법
     section3: {
       title: "사용방법",
       usageAlt: "코다(CODA) 무인회수기 사용설명",
@@ -86,7 +78,6 @@ export const crusherTranslations = {
       },
     },
 
-    // 섹션 4: 회수자원 보상체계
     section4: {
       title: "회수자원\n보상체계",
       rewardText: "투입량 만큼 사용자 맞춤 보상 -",
@@ -100,26 +91,33 @@ export const crusherTranslations = {
       qrAlt: "코다(CODA) 무인회수기 QR 코드",
     },
 
-    // 섹션 5: 파쇄기 모델
     section5: {
       title: "무인회수기\n파쇄기모델",
       alt: "코다(CODA) 무인회수기 파쇄기",
     },
 
-    // 캐노피 옵션
     canopy: {
       title: "외부 설치 시, 캐노피 옵션 사양",
       description: "사용자 맞춤 그래픽 적용 (지자체/기업)",
       alt: "코다(CODA) 무인회수기 캐노피",
     },
 
-    // 다운로드
     download: {
       text: "무인회수기 온라인기술서",
     },
+
+    metaData: {
+      title: "코다(CODA) 무인회수기 | 파쇄기",
+      description: "코다(CODA), 캔과 페트 재활용으로 포인트가 쌓이는 스마트 무인회수기. 손쉬운 재활용으로 더 나은 환경을 만들어갑니다.",
+      keywords: "코다, CODA, 무인회수기, 파쇄기, 페트(PET), 캔(CAN), 재활용, 환경보호, 스마트 회수기, 포인트 적립, 자원순환",
+      image: "https://do40f6yw4fd7i.cloudfront.net/img13/item_coda_crush/coda_crush_s3.webp",
+      openGraph: {
+        siteName: "코다(CODA)",
+        locale: "ko_KR",
+      },
+    },
   },
   en: {
-    // 메타데이터
     title: "CODA Reverse Vending Machine Crusher",
     description: "Introducing the CODA Reverse Vending Machine crusher with AI sensing technology and high-efficiency crushing performance.",
 
@@ -232,6 +230,17 @@ export const crusherTranslations = {
     // 다운로드
     download: {
       text: "Reverse Vending Machine Online Technical Manual",
+    },
+
+    metaData: {
+      title: "CODA Reverse Vending Machine | Crusher",
+      description: "CODA smart reverse vending machine that accumulates points through can and PET recycling. Creating a better environment through easy recycling with advanced crushing technology.",
+      keywords: "CODA, reverse vending machine, crusher, PET bottle, CAN, recycling, environmental protection, smart recycling, point reward, resource circulation",
+      image: "https://do40f6yw4fd7i.cloudfront.net/img13/item_coda_crush/coda_crush_s3.webp",
+      openGraph: {
+        siteName: "CODA",
+        locale: "en_US",
+      },
     },
   },
 } as const;

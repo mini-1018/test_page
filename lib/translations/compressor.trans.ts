@@ -1,8 +1,11 @@
 // lib/translations/compressor.ts
 import { createTranslator, Locale } from "@lib/translator";
+import { title } from "process";
 
 export const compressorTranslations = {
   ko: {
+    title: "코다(CODA) 무인회수기 압축기",
+    description: "코다(CODA), 캔과 페트 재활용으로 포인트가 쌓이는 스마트 무인회수기. 손쉬운 재활용으로 더 나은 환경을 만들어갑니다.",
     // 헤더 이미지
     header: {
       mainAlt: "코다(CODA) 무인회수기 메인이미지",
@@ -122,6 +125,8 @@ export const compressorTranslations = {
     },
   },
   en: {
+    title: "CODA Reverse Vending Machine Compressor",
+    description: "CODA smart Reverse Vending Machine that accumulates points through can and PET recycling. Creating a better environment through easy recycling.",
     // 헤더 이미지
     header: {
       mainAlt: "CODA Reverse Vending Machine Main Image",
