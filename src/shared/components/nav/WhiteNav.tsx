@@ -84,9 +84,9 @@ export default function WhiteNav() {
 
         {/* 네비게이션 */}
         <nav className="relative">
-          <ul className="flex items-center space-x-10 text-center">
+          <ul className="flex items-center space-x-1 lg:space-x-10 text-center">
             {menuItems.map((menu, index) => (
-              <li key={index} className="relative group w-[150px]">
+              <li key={index} className="relative group w-[120px]">
                 {/* 메인 메뉴 */}
                 <a className={`transition-colors text-nomal font-light hover:text-gray-800 relative ${shouldShowDarkTheme ? "text-black" : "text-white"}`}>
                   {menu.name}
@@ -94,7 +94,7 @@ export default function WhiteNav() {
                 </a>
 
                 {/* 서브메뉴 */}
-                <div className={`absolute top-[76px] w-[150px] transition-all duration-300 ${isHovered ? "opacity-100 translate-y-0" : "opacity-0 translate-y-[-10px] pointer-events-none"}`} onMouseEnter={() => setHoveredSubmenu(menu.name)} onMouseLeave={() => setHoveredSubmenu(null)}>
+                <div className={`absolute top-[76px] w-[120px] transition-all duration-300 ${isHovered ? "opacity-100 translate-y-0" : "opacity-0 translate-y-[-10px] pointer-events-none"}`} onMouseEnter={() => setHoveredSubmenu(menu.name)} onMouseLeave={() => setHoveredSubmenu(null)}>
                   {menu.subMenu.map((subItem, subIndex) => (
                     <Link key={subIndex} href={subItem.link} className="block text-sm text-gray-600 hover:text-blue-500 transition-colors mt-3 first:mt-0">
                       {subItem.name}
