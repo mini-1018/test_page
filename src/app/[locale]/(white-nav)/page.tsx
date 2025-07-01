@@ -4,11 +4,13 @@ import ResponsivePadding from "@shared/components/common/ResponsivePadding";
 import { Translation } from "@src/types/translation.type";
 import Image from "next/image";
 import Link from "next/link";
+import { Metadata } from "next";
+import { Locale } from "@lib/translator";
 
-export const metadata = {
-  title: "코다(CODA) 메인페이지",
-  description: "코다(CODA) 메인페이지",
-};
+interface HomePageProps {
+  params: Promise<{ locale: Locale }>;
+}
+
 export default async function HomePage({ params }: { params: Promise<Translation> }) {
   const { locale } = await params;
   const { t } = getHomeTranslations(locale);
@@ -130,4 +132,45 @@ export default async function HomePage({ params }: { params: Promise<Translation
       </main>
     </>
   );
+}
+
+// 홈페이지 generateMetadata
+export async function generateMetadata({ params }: HomePageProps): Promise<Metadata> {
+  const { locale } = await params;
+  const { t } = getHomeTranslations(locale);
+
+  return {
+    title: t("metaData.title"),
+    description: t("metaData.description"),
+    keywords: t("metaData.keywords"),
+    alternates: {
+      canonical: `/${locale}`,
+      languages: {
+        ko: "/ko",
+        en: "/en",
+      },
+    },
+    openGraph: {
+      title: t("metaData.title"),
+      description: t("metaData.description"),
+      url: `/${locale}`,
+      siteName: t("metaData.openGraph.siteName"),
+      images: [
+        {
+          url: t("metaData.image"),
+          width: 1200,
+          height: 630,
+          alt: t("metaData.title"),
+        },
+      ],
+      locale: t("metaData.openGraph.locale"),
+      type: "website",
+    },
+    twitter: {
+      card: "summary_large_image",
+      title: t("metaData.title"),
+      description: t("metaData.description"),
+      images: [t("metaData.image")],
+    },
+  };
 }

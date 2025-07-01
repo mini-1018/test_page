@@ -1,5 +1,7 @@
 import Downloads, { DownloadPost } from "./Downloads";
 import type { Locale } from "@lib/translator";
+import { getDownloadsTranslations } from "@lib/translations/downloads.trans";
+import { Metadata } from "next";
 
 interface DownloadsPageProps {
   params: Promise<{ locale: Locale }>;
@@ -91,24 +93,52 @@ const downloadsPosts: DownloadPost[] = [
 
 export default async function DownloadsPage({ params }: DownloadsPageProps) {
   const { locale } = await params;
+  const { t } = getDownloadsTranslations(locale);
 
   return (
     <main className="max-w-6xl mx-auto pb-32 pt-32">
+      <h1 className="sr-only">{t("title")}</h1>
       <Downloads posts={downloadsPosts} locale={locale} />
     </main>
   );
 }
 
-export async function generateMetadata({ params }: DownloadsPageProps) {
+export async function generateMetadata({ params }: DownloadsPageProps): Promise<Metadata> {
   const { locale } = await params;
+  const { t } = getDownloadsTranslations(locale as Locale);
 
   return {
-    title: locale === "ko" ? "코다(CODA) 자료실" : "CODA Downloads",
-    description: locale === "ko" ? "코다(CODA) 제품 카탈로그, 매뉴얼, 기술 자료를 다운로드하세요" : "Download CODA product catalogs, manuals, and technical materials",
-    keywords: locale === "ko" ? "코다, CODA, 자료실, 다운로드, 카탈로그, 매뉴얼, PDF" : "CODA, downloads, catalog, manual, PDF, technical materials",
+    title: t("metaData.title"),
+    description: t("metaData.description"),
+    keywords: t("metaData.keywords"),
+    alternates: {
+      canonical: `/${locale}/downloads`,
+      languages: {
+        ko: "/ko/downloads",
+        en: "/en/downloads",
+      },
+    },
     openGraph: {
-      title: locale === "ko" ? "코다(CODA) 자료실" : "CODA Downloads",
-      description: locale === "ko" ? "코다(CODA) 제품 카탈로그, 매뉴얼, 기술 자료를 다운로드하세요" : "Download CODA product catalogs, manuals, and technical materials",
+      title: t("metaData.title"),
+      description: t("metaData.description"),
+      url: `/${locale}/downloads`,
+      siteName: t("metaData.openGraph.siteName"),
+      images: [
+        {
+          url: t("metaData.image"),
+          width: 1200,
+          height: 630,
+          alt: t("metaData.title"),
+        },
+      ],
+      locale: t("metaData.openGraph.locale"),
+      type: "website",
+    },
+    twitter: {
+      card: "summary_large_image",
+      title: t("metaData.title"),
+      description: t("metaData.description"),
+      images: [t("metaData.image")],
     },
   };
 }

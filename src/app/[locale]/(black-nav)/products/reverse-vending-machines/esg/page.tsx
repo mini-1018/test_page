@@ -17,6 +17,7 @@ export default async function ESGPage({ params }: ESGPageProps) {
 
   return (
     <div className="w-full">
+      <h1 className="sr-only">{t("title")}</h1>
       <div className="max-w-full flex flex-col text-center">
         {/* 헤더 섹션 */}
         <div className="w-full">

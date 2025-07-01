@@ -3,6 +3,7 @@ import { createTranslator, Locale } from "@lib/translator";
 
 export const supportTranslations = {
   ko: {
+    title: "코다(CODA) 고객문의",
     // 헤더 섹션
     header: {
       logoAlt: "코다(CODA) 고래 로고",
@@ -95,8 +96,19 @@ export const supportTranslations = {
         availability: "24시간 접수 가능",
       },
     },
+    metaData: {
+      title: "코다(CODA) 고객문의 | 고객지원",
+      description: "코다(CODA) 고객문의 페이지입니다. 제품 문의, 기술 지원, 견적 요청 등 다양한 문의를 접수할 수 있습니다.",
+      keywords: "고객문의, 고객지원, 제품 문의, 기술 지원, 견적 요청, 코다, CODA",
+      image: "https://do40f6yw4fd7i.cloudfront.net/img13/favicon/facebook-thumbnail_CODA.webp",
+      openGraph: {
+        siteName: "코다(CODA)",
+        locale: "ko_KR",
+      },
+    },
   },
   en: {
+    title: "CODA Customer Support",
     // 헤더 섹션
     header: {
       logoAlt: "CODA Whale Logo",
@@ -187,6 +199,17 @@ export const supportTranslations = {
         title: "Email Inquiry",
         address: "support@coda.ai.kr",
         availability: "24/7 Available",
+      },
+    },
+
+    metaData: {
+      title: "CODA Customer Support | Customer Service",
+      description: "CODA customer support page. You can submit various inquiries including product inquiries, technical support, quote requests, and more.",
+      keywords: "customer support, customer service, product inquiry, technical support, quote request, CODA",
+      image: "https://do40f6yw4fd7i.cloudfront.net/img13/favicon/facebook-thumbnail_CODA.webp",
+      openGraph: {
+        siteName: "CODA",
+        locale: "en_US",
       },
     },
   },

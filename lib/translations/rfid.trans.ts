@@ -2,8 +2,7 @@ import { createTranslator, Locale } from "@lib/translator";
 
 export const rfidTranslations = {
   ko: {
-    // 메타데이터
-    title: "코다(CODA) RFID 음식물회수 결제시스템",
+    title: "코다(CODA) 차량용 RFID 음식물회수 결제시스템",
     description: "4000여개 F&B 업소가 신뢰하는 코다(CODA) RFID 음식물회수 결제시스템입니다. 신속하고 정확한 수거량 측정 및 선불/후불 결제 시스템을 제공합니다.",
 
     // 헤더 이미지
@@ -96,10 +95,20 @@ export const rfidTranslations = {
       diagramAlt: "코다(CODA) RFID 음식물회수 결제시스템 - 수거 차량 RFID 결제시스템 구성도",
       indicatorAlt: "코다(CODA) RFID 음식물회수 결제시스템 - 선불 결제시스템 인디게이터",
     },
+
+    metaData: {
+      title: "코다(CODA) 차량용 RFID 음식물회수 결제시스템",
+      description: "코다(CODA), 4000개 이상 음식점에서 선택한 차량용(RFID) 음식물회수 결제시스템입니다.",
+      keywords: "코다, CODA, 차량용, RFID, 음식물 회수, 결제 시스템",
+      image: "https://do40f6yw4fd7i.cloudfront.net/img13/item_rfid/coda_rfid_s10.webp",
+      openGraph: {
+        siteName: "코다(CODA)",
+        locale: "ko_KR",
+      },
+    },
   },
   en: {
-    // 메타데이터
-    title: "CODA RFID Food Waste Collection Payment System",
+    title: "CODA Vehicle RFID Food Waste Collection Payment System",
     description: "CODA RFID food waste collection payment system trusted by over 4,000 F&B establishments. Provides fast and accurate collection volume measurement and prepaid/postpaid payment systems.",
 
     // 헤더 이미지
@@ -191,6 +200,16 @@ export const rfidTranslations = {
       scaleSpecs: "Maximum load 200kg / Built-in RFID card dedicated terminal",
       diagramAlt: "CODA RFID Food Waste Collection Payment System - Collection Vehicle Food waste billing system Payment System Configuration",
       indicatorAlt: "CODA RFID Food Waste Collection Payment System - Prepaid Payment System Indicator",
+    },
+    metaData: {
+      title: "CODA Vehicle RFID Food Waste Collection Payment System",
+      description: "CODA RFID food waste collection payment system trusted by over 4,000 restaurants. Fast and accurate weight-based collection volume measurement with prepaid/postpaid payment systems.",
+      keywords: "CODA, vehicle RFID, food waste collection, payment system, restaurant, weight measurement, prepaid postpaid",
+      image: "https://do40f6yw4fd7i.cloudfront.net/img13/item_rfid/coda_rfid_s10.webp",
+      openGraph: {
+        siteName: "CODA",
+        locale: "en_US",
+      },
     },
   },
 } as const;

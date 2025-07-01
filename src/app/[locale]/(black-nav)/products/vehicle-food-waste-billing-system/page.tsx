@@ -14,6 +14,7 @@ export default async function RFIDPage({ params }: RFIDPageProps) {
 
   return (
     <div className="w-full">
+      <h1 className="sr-only">{t("title")}</h1>
       <div className="max-w-full mx-auto">
         {/* 헤더 섹션 */}
         <div className="w-full">
@@ -202,22 +203,42 @@ export default async function RFIDPage({ params }: RFIDPageProps) {
   );
 }
 
-// 메타데이터 생성 함수
 export async function generateMetadata({ params }: RFIDPageProps) {
   const { locale } = await params;
   const { t } = getRfidTranslations(locale);
 
   return {
-    title: t("title"),
-    description: t("description"),
-    keywords: locale === "ko" ? "코다, CODA, RFID, 음식물회수, 결제시스템, 선불, 후불, F&B, 업소, 차량용저울" : "CODA, RFID, food waste collection, payment system, prepaid, postpaid, F&B, business",
+    title: t("metaData.title"),
+    description: t("metaData.description"),
+    keywords: t("metaData.keywords"),
+    alternates: {
+      canonical: `/${locale}/products/vehicle-food-waste-billing-system`,
+      languages: {
+        ko: "/ko/products/vehicle-food-waste-billing-system",
+        en: "/en/products/vehicle-food-waste-billing-system",
+      },
+    },
     openGraph: {
-      title: t("title"),
-      description: t("description"),
+      title: t("metaData.title"),
+      description: t("metaData.description"),
+      url: `/${locale}/products/vehicle-food-waste-billing-system`,
+      siteName: t("metaData.openGraph.siteName"),
+      images: [
+        {
+          url: t("metaData.image"),
+          width: 1200,
+          height: 630,
+          alt: t("metaData.title"),
+        },
+      ],
+      locale: t("metaData.openGraph.locale"),
+      type: "website",
     },
     twitter: {
-      title: t("title"),
-      description: t("description"),
+      card: "summary_large_image",
+      title: t("metaData.title"),
+      description: t("metaData.description"),
+      images: [t("metaData.image")],
     },
   };
 }

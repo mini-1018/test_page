@@ -26,6 +26,7 @@ const News: React.FC<NewsProps> = ({ posts, locale }) => {
   return (
     <ResponsivePadding>
       <div className="max-w-5xl mx-auto">
+        <h1 className="sr-only">{t("title")}</h1>
         {/* 헤더 */}
         <div className="mb-12">
           <div className="flex items-center gap-4 mb-4">
@@ -53,7 +54,7 @@ const News: React.FC<NewsProps> = ({ posts, locale }) => {
         ) : (
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
             {posts.map((post) => (
-              <Link href={`/news/${post.id}`}>
+              <Link href={`/news/${post.id}`} key={post.id} className="no-underline">
                 <div key={post.id} className="group relative">
                   <div className="bg-white/90 backdrop-blur-sm rounded-2xl border border-gray-200/60 shadow-xl overflow-hidden hover:shadow-2xl transition-all duration-300 cursor-pointer">
                     {/* 이미지 미리보기 영역 - 70% */}

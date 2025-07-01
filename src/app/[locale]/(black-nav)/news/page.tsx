@@ -1,5 +1,7 @@
 import News, { NewsPost } from "./News";
 import type { Locale } from "@lib/translator";
+import { getNewsTranslations } from "@lib/translations/news.trans";
+import type { Metadata } from "next";
 
 interface NewsPageProps {
   params: Promise<{ locale: Locale }>;
@@ -103,23 +105,51 @@ const newsPosts: NewsPost[] = [
 
 export default async function NewsPage({ params }: NewsPageProps) {
   const { locale } = await params;
+  const { t } = getNewsTranslations(locale);
   return (
     <main className="max-w-6xl mx-auto pb-32 pt-32">
+      <h1 className="sr-only">{t("title")}</h1>
       <News posts={newsPosts} locale={locale} />
     </main>
   );
 }
 
-export async function generateMetadata({ params }: NewsPageProps) {
+export async function generateMetadata({ params }: NewsPageProps): Promise<Metadata> {
   const { locale } = await params;
+  const { t } = getNewsTranslations(locale);
 
   return {
-    title: locale === "ko" ? "코다(CODA) 소식" : "CODA News",
-    description: locale === "ko" ? "코다(CODA)의 최신 소식과 업데이트를 확인하세요" : "Check out the latest news and updates from CODA",
-    keywords: locale === "ko" ? "코다, CODA, 소식, 뉴스, 업데이트, 공지사항" : "CODA, news, updates, announcements, latest",
+    title: t("metaData.title"),
+    description: t("metaData.description"),
+    keywords: t("metaData.keywords"),
+    alternates: {
+      canonical: `/${locale}/news`,
+      languages: {
+        ko: "/ko/news",
+        en: "/en/news",
+      },
+    },
     openGraph: {
-      title: locale === "ko" ? "코다(CODA) 소식" : "CODA News",
-      description: locale === "ko" ? "코다(CODA)의 최신 소식과 업데이트를 확인하세요" : "Check out the latest news and updates from CODA",
+      title: t("metaData.title"),
+      description: t("metaData.description"),
+      url: `/${locale}/news`,
+      siteName: t("metaData.openGraph.siteName"),
+      images: [
+        {
+          url: t("metaData.image"),
+          width: 1200,
+          height: 630,
+          alt: t("metaData.title"),
+        },
+      ],
+      locale: t("metaData.openGraph.locale"),
+      type: "website",
+    },
+    twitter: {
+      card: "summary_large_image",
+      title: t("metaData.title"),
+      description: t("metaData.description"),
+      images: [t("metaData.image")],
     },
   };
 }

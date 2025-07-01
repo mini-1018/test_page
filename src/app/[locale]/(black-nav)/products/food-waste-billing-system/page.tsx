@@ -1,6 +1,6 @@
 import Image from "next/image";
 import AnimationFWD from "./AnimationFWD";
-import { getFoodWasteScaleTranslations } from "@lib/translations/foodWasteScale.trans";
+import { getFoodWasteBillingSystemTranslations } from "@lib/translations/foodWasteBillingSystem.trans";
 import type { Locale } from "@lib/translator";
 
 interface FoodWasteScalePageProps {
@@ -9,11 +9,12 @@ interface FoodWasteScalePageProps {
 
 export default async function FoodWasteScalePage({ params }: FoodWasteScalePageProps) {
   const { locale } = await params;
-  const { t } = getFoodWasteScaleTranslations(locale);
+  const { t } = getFoodWasteBillingSystemTranslations(locale);
 
   return (
     <>
       <main className="w-full mt-[80px] mb-0 text-center">
+        <h1 className="sr-only">{t("title")}</h1>
         {/* 메인 비주얼 섹션 */}
         <section className="w-full">
           <Image src="https://do40f6yw4fd7i.cloudfront.net/img13/item_food/coda_food_s1.webp" width={1920} height={1080} className="w-full h-auto" alt={t("header.mainAlt")} priority={true} />
@@ -110,22 +111,42 @@ export default async function FoodWasteScalePage({ params }: FoodWasteScalePageP
   );
 }
 
-// 메타데이터 생성 함수
 export async function generateMetadata({ params }: FoodWasteScalePageProps) {
   const { locale } = await params;
-  const { t } = getFoodWasteScaleTranslations(locale);
+  const { t } = getFoodWasteBillingSystemTranslations(locale);
 
   return {
-    title: t("title"),
-    description: t("description"),
-    keywords: locale === "ko" ? "코다, CODA, 음식물종량기, RFID, 특허, 우수제품, 조달청, 고장진단, 신용카드, 선불제" : "CODA, Food waste billing system, RFID, patent, excellent product, public procurement, fault diagnosis, credit card, prepaid",
+    title: t("metaData.title"),
+    description: t("metaData.description"),
+    keywords: t("metaData.keywords"),
+    alternates: {
+      canonical: `/${locale}/products/food-waste-billing-system`,
+      languages: {
+        ko: "/ko/products/food-waste-billing-system",
+        en: "/en/products/food-waste-billing-system",
+      },
+    },
     openGraph: {
-      title: t("title"),
-      description: t("description"),
+      title: t("metaData.title"),
+      description: t("metaData.description"),
+      url: `/${locale}/products/food-waste-billing-system`,
+      siteName: t("metaData.openGraph.siteName"),
+      images: [
+        {
+          url: t("metaData.image"),
+          width: 1200,
+          height: 630,
+          alt: t("metaData.title"),
+        },
+      ],
+      locale: t("metaData.openGraph.locale"),
+      type: "website",
     },
     twitter: {
-      title: t("title"),
-      description: t("description"),
+      card: "summary_large_image",
+      title: t("metaData.title"),
+      description: t("metaData.description"),
+      images: [t("metaData.image")],
     },
   };
 }

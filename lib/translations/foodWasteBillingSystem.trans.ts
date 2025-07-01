@@ -1,8 +1,8 @@
 import { createTranslator, Locale } from "@lib/translator";
+import metaData from "@src/shared/metaData/metaData";
 
-export const foodWasteScaleTranslations = {
+export const foodWasteBillingSystemTranslations = {
   ko: {
-    // 메타데이터
     title: "코다(CODA) RFID 음식물 종량기",
     description: "우수 발명품 선정 및 조달청 우수제품으로 선정된 코다(CODA) RFID 음식물 종량기입니다. 고장 진단 기능과 신용카드 선불제를 지원합니다.",
 
@@ -65,15 +65,24 @@ export const foodWasteScaleTranslations = {
         alt: "코다(CODA) 음식물 종량기 - 다양한 설치 장소 및 사례",
       },
     },
+    metaData: {
+      title: "코다(CODA) RFID 기반 음식물 종량기",
+      description: "우수 발명품 선정 및 조달청 우수제품으로 선정된 코다(CODA) RFID 음식물 종량기입니다. 고장 진단 기능과 신용카드 선불제를 지원합니다.",
+      keywords: "코다, CODA, 음식물 종량기, 우수발명품, 우수제품, RFID",
+      image: "https://do40f6yw4fd7i.cloudfront.net/img13/item_food/coda_food_s1.webp",
+      openGraph: {
+        siteName: "코다(CODA)",
+        locale: "ko_KR",
+      },
+    },
   },
   en: {
-    // 메타데이터
-    title: "CODA RFID Food waste billing system",
-    description: "CODA RFID Food waste billing system selected as excellent invention and Public Procurement Service excellent product. Supports fault diagnosis function and credit card prepaid system.",
+    title: "CODA RFID Food Waste Billing System",
+    description: "CODA RFID Food Waste Billing System selected as excellent invention and Public Procurement Service excellent product. Supports fault diagnosis function and credit card prepaid system.",
 
     // 헤더 이미지
     header: {
-      mainAlt: "Excellent Invention and Public Procurement Service Excellent Product Selected Food waste billing system",
+      mainAlt: "Excellent Invention and Public Procurement Service Excellent Product Selected Food Waste Billing System",
       creditCardAlt: "Credit Card Available Prepaid Equipment - First Certified Food waste billing system",
       finalAlt: "CODA Food waste billing system - RFID Based",
     },
@@ -130,9 +139,19 @@ export const foodWasteScaleTranslations = {
         alt: "CODA Food waste billing system - Various Installation Locations and Cases",
       },
     },
+    metaData: {
+      title: "CODA RFID Food Waste Billing System",
+      description: "CODA RFID Food Waste Billing System selected as excellent invention and Public Procurement Service excellent product. Features fault diagnosis function and credit card prepaid system.",
+      keywords: "CODA, food waste billing system, excellent invention, RFID, government procurement, volume-based billing, credit card payment",
+      image: "https://do40f6yw4fd7i.cloudfront.net/img13/item_food/coda_food_s1.webp",
+      openGraph: {
+        siteName: "CODA",
+        locale: "en_US",
+      },
+    },
   },
 } as const;
 
-export function getFoodWasteScaleTranslations(locale: Locale = "ko") {
-  return createTranslator(foodWasteScaleTranslations, locale);
+export function getFoodWasteBillingSystemTranslations(locale: Locale = "ko") {
+  return createTranslator(foodWasteBillingSystemTranslations, locale);
 }
