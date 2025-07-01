@@ -107,7 +107,7 @@ export default async function NewsPage({ params }: NewsPageProps) {
   const { locale } = await params;
   const { t } = getNewsTranslations(locale);
   return (
-    <main className="max-w-6xl mx-auto pb-32 pt-32">
+    <main className="max-w-6xl mx-auto pb-32 pt-32 min-h-[100vh]">
       <h1 className="sr-only">{t("title")}</h1>
       <News posts={newsPosts} locale={locale} />
     </main>
