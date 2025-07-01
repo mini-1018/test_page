@@ -121,7 +121,7 @@ export const rfidTranslations = {
     // RFID 검증 섹션
     verified: {
       title: "Verified Management Solution",
-      description: "Trusted by over 4,000 F&B establishments",
+      description: "Trusted by over 4,000 F&B businesses",
       highlight: "Fast and accurate collection volume measurement and payment system",
     },
 
@@ -136,8 +136,8 @@ export const rfidTranslations = {
 
     // 실시간 결제 시스템 섹션
     realtimePayment: {
-      title: "Daily Food Waste Disposal\nWeight-Based Real-Time Prepaid Payment System",
-      description: "Along with existing postpaid payment systems, we plan to provide services nationwide,\nincluding Jeju City, incorporating the new prepaid system method from 2024.",
+      title: "Daily Food Waste Disposal\nWeight-Based, Real-Time and Prepaid Payment System",
+      description: "Along with existing postpaid payment systems, we plan to provide services nationwide,\nincluding Jeju City, incorporating the new prepaid system from 2024.",
       bottomText: "Fast payment and collection are made with dedicated collection vehicles circulating restaurants.",
       alt: "CODA RFID Food Waste Collection Payment System - Weight-Based Real-Time Prepaid Payment System",
     },
@@ -154,13 +154,13 @@ export const rfidTranslations = {
     safeComfortable: {
       title: "Safe and Comfortable",
       subtitle: "Stable system usable in any environment with special design",
-      description: "Special design for long-term use without breakdowns\nby applying food corrosion / waterproof / shock protection",
+      description: "Special design for long-term use without breakdowns\nby preventing food corrosion / waterproof / shock protection",
       alt: "CODA RFID Food Waste Collection Payment System - Safe and Convenient System",
     },
 
     // 업소방문 수거방법 섹션
     collectionMethod: {
-      title: "Business Visit\nCollection Method",
+      title: "Visit to businesses\nCollection Method",
       steps: [
         {
           title: "Patent-Certified Vehicle High-Precision Scale",
@@ -170,7 +170,7 @@ export const rfidTranslations = {
         },
         {
           title: "Waterproof Weight Measuring Device Connected to Collection Bin",
-          description: "[Individual recognition cards identified by RF reader when vehicle lift is attached]",
+          description: "[Individual recognition cards identified by RF reader when a bin is attached to the vehicle lift]",
           numAlt: "CODA RFID Food Waste Collection Payment System - Business Visit Collection Method 2",
           alt: "CODA RFID Food Waste Collection Payment System Business Visit Collection Method - Waterproof Weight Measuring Device Connected to Collection Bin",
         },
@@ -182,7 +182,7 @@ export const rfidTranslations = {
         },
         {
           title: "Server Integration, Prepaid Payment System\nTransmission/Management for Calculated Fees",
-          description: "[Billing data aggregation and payment through real-time communication between vehicles and servers]",
+          description: "[Billing data aggregation and payment through real-time communication between vehicles and server]",
           numAlt: "CODA RFID Food Waste Collection Payment System - Business Visit Collection Method 4",
           alt: "CODA RFID Food Waste Collection Payment System Business Visit Collection Method - Server Integration, Prepaid Payment System Transmission/Management",
         },
@@ -191,7 +191,7 @@ export const rfidTranslations = {
 
     // 결제시스템 구성도 섹션
     systemDiagram: {
-      title: "Collection Vehicle Food waste billing system Payment System Configuration",
+      title: "The Payment System Configuration of Vehicle Food waste billing system ",
       systemTitle: "Real-Time Information Transmission After RFID Payment System Discharge Completion",
       systemSubtitle: "Enhanced durability of core component weight measurement unit and system optimization compared to existing products",
       systemDescription: "Secured durability of spring plates and load cells for long-term use\nMinimum 1-person installation possible with lighter high-precision scale application",

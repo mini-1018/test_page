@@ -137,8 +137,8 @@ export const compressorTranslations = {
     // 인트로 섹션
     intro: {
       subtitle: "Sperm Whale Guardian",
-      title: "Recyclable Reverse Vending Machine",
-      description: "'CODA' is a 'resource circulation brand' that collects recycling resources and receives rewards so that sperm whales and other marine animals can live safely.",
+      title: "Reverse Vending Machine",
+      description: "'CODA' is a 'brand of resource circulation' that collects recycling resources and receives rewards so that sperm whales and other marine animals can live safely.",
       alt: "CODA PET Image",
     },
 
@@ -151,8 +151,8 @@ export const compressorTranslations = {
 
     // 섹션 1: 자원 선순환 프로세스 (이미지 1개)
     section1: {
-      title: "Resource Circulation\nProcess",
-      subtitle: "Can, PET bottle sorting / Collection and transport / Recyclable resource circulation system",
+      title: "The Process of Resource Circulation",
+      subtitle: "CAN, PET bottle sorting / Collection and transport / Circulation system of recyclable resources",
       description: "Systematic reduction of waste generation and plastic materialization through transparent PET and CAN recovery",
       alt: "CODA Reverse Vending Machine Resource Circulation Process",
     },
@@ -164,22 +164,22 @@ export const compressorTranslations = {
       aiIconAlt: "CODA Reverse Vending Machine AI",
       features: [
         {
-          title: "1st Reading / Sorting of Recoverable Resources",
+          title: "1st Reading / Sorting for Recoverable Resources",
           description: "AI sensing technology & high-efficiency compression performance",
           alt: "CODA Reverse Vending Machine AI Sensing Technology",
         },
         {
-          title: "2nd Reading / Auto Discharge of Recoverable Resources",
-          description: "Discharge port return function using advanced robotics",
+          title: "2nd Reading / Auto Discharge for Recoverable Resources",
+          description: "Discharge outlet return function using advanced robotics",
           alt: "CODA Reverse Vending Machine Advanced Robotics",
         },
         {
           title: "Superior Processing Speed Compared to Competitors",
-          description: "Optimal equipment performance based on accurate resource judgment design and advanced structure",
+          description: "Optimal equipment performance based on accurate resource judgment and advanced structure",
           alt: "CODA Reverse Vending Machine Processing Speed",
         },
         {
-          title: "Auto Recognition of Input Sensor When Resources are Input",
+          title: "Auto Recognition of Inlet Sensor When Resources are Input",
           description: "Usage safety with LED display and voice guidance during input",
           alt: "CODA Reverse Vending Machine Input Sensor Auto Recognition",
         },
@@ -198,7 +198,7 @@ export const compressorTranslations = {
       },
       step2: {
         title: "Various Sensors Applied Compared to Competitors!",
-        description: "Safe use with user detection sensor and input detection sensor\nVarious accumulation methods such as points, local currency, Cashbee",
+        description: "Safe use with user detection sensor and input detection sensor\nVarious accumulation methods such as points, cash and so on",
       },
     },
 
@@ -206,7 +206,7 @@ export const compressorTranslations = {
     section4: {
       title: "Resource Recovery\nReward System",
       rewardText: "Customized user rewards according to input amount -",
-      rewardTypes: "Cash/Transit Card/Local Currency",
+      rewardTypes: "Points / Cash and so on",
       rewardAlt: "CODA Reverse Vending Machine Resource Recovery Reward System",
       appTitle: "How to Use CODA Dedicated App",
       appSlogan: "'Easiest and Fastest'",
@@ -231,7 +231,7 @@ export const compressorTranslations = {
 
     // 다운로드
     download: {
-      text: "Reverse Vending Machine Online Technical Manual",
+      text: "Online Technical Manual of Reverse Vending Machine",
     },
 
     metaData: {

@@ -56,13 +56,13 @@ export const machinesTranslations = {
   en: {
     title: "CODA Product Lineup",
     ReverseVendingMachine: {
-      title: "Reverse Vending Machine Product Guide",
-      subtitle: "Optimal resource circulation solution based on 30 years of domestic technology convergence measurement technology know-how",
+      title: "The Guide of Reverse Vending Machine",
+      subtitle: "Optimal resource circulation solution based on 30 years of  technology convergence measurement technology",
       products: {
         compressor: {
           title: "Compressor",
-          subtitle: "PET / CAN / Universal",
-          alt: "CODA Reverse Vending Machine, Compressor (PET, CAN, Universal)",
+          subtitle: "PET / CAN",
+          alt: "CODA Reverse Vending Machine, Compressor (PET, CAN)",
         },
         crusher: {
           title: "Crusher",

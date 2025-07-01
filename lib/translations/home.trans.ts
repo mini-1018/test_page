@@ -49,14 +49,14 @@ export const homeTranslations = {
     mainImage: "CODA Main Image",
     logoAlt: "CODA Logo",
     section2: {
-      subtitle: "Ocean Sperm Whale Guardian",
+      subtitle: "The Guardian of Sperm Whale",
       title: "Resource Circulation CAN+PET Reverse Vending Machine",
     },
     section3: {
       block1: {
         number: "01",
         title: "A Small Start to Save Earth\nCODA's Circulation Story",
-        description: "Building sorting/collection systems and logistics infrastructure\nthat turn daily discarded PET bottles and cans into clean resources,\njoining together to protect the earth\nthrough your small habits.",
+        description: "Building sorting/collection systems and logistics infrastructure\nthat turn daily discarded PET bottles and CAN into clean resources,\njoining together to protect the earth\nthrough your small habits.",
         imageAlt: "CODA A Small Start to Save Earth",
       },
       block2: {

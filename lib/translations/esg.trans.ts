@@ -127,7 +127,7 @@ export const esgTranslations = {
     // 인트로 섹션
     intro: {
       subtitle: "Carbon Neutral Practice Model",
-      title: "Recyclable Reverse Vending Machine",
+      title: "Reverse Vending Machine",
       description: "Our practice for nature conservation\nStarts with saving and collecting transparent PET bottles and can resources.\nESG management dedicated model for CO2 reduction",
       alt: "CODA ESG Image",
     },
@@ -154,18 +154,18 @@ export const esgTranslations = {
       aiIconAlt: "CODA Reverse Vending Machine AI",
       features: [
         {
-          title: "1st Reading / Sorting of Recoverable Resources",
+          title: "1st Reading / Sorting for Recoverable Resources",
           description: "AI sensing technology & high-efficiency compression performance",
           alt: "CODA ESG AI Sensing Technology",
         },
         {
-          title: "2nd Reading / Auto Discharge of Recoverable Resources",
-          description: "Discharge port return function using advanced robotics",
+          title: "2nd Reading / Auto Discharge for Recoverable Resources",
+          description: "Discharge outlet return function using advanced robotics",
           alt: "CODA ESG Advanced Robotics",
         },
         {
           title: "Superior Processing Speed Compared to Competitors",
-          description: "Optimal equipment performance based on precise resource judgment design and advanced structure",
+          description: "Optimal equipment performance based on precise resource judgment and advanced structure",
           alt: "CODA ESG Processing Speed",
         },
       ],
@@ -183,7 +183,7 @@ export const esgTranslations = {
       },
       step2: {
         title: "Various Sensors Applied Compared to Competitors!",
-        description: "Safe use with user detection sensor and input detection sensor\nVarious accumulation methods such as points, local currency, Cashbee",
+        description: "Safe use with user detection sensor and input detection sensor\nVarious accumulation methods such as points, cash and so on",
       },
     },
 

@@ -1,5 +1,4 @@
 import { createTranslator, Locale } from "@lib/translator";
-import metaData from "@src/shared/metaData/metaData";
 
 export const foodWasteBillingSystemTranslations = {
   ko: {
@@ -97,14 +96,14 @@ export const foodWasteBillingSystemTranslations = {
       iconAlt: "CODA Food waste billing system Image",
       title1: "RFID Based",
       title2: "Food waste billing system",
-      description: "Selected as excellent invention, priority purchase recommendation\nSystem that identifies ID using radio frequency\nFee charging method according to discharge amount",
+      description: "Selected as excellent invention, priority purchase recommendation\nSystem that identifies ID using radio frequency and charges\nfees according to the discharge amount",
     },
 
     // 고장 진단 기능 섹션
     faultDiagnosis: {
-      title: "Food Waste Volume Management System\nwith Fault Diagnosis Function",
+      title: "Volume Management System for Food Waste\nwith Fault Diagnosis Function",
       subtitle: "Patent No. 10-150711 Performance Certification No. 15-1354 (Small and Medium Business Administration Certification)",
-      bottomText: "Discharge fee omission prevention system applied / Hand pinch prevention / Contamination throwing prevention product",
+      bottomText: "Discharge fee omission prevention system applied / Hand pinch prevention / Preventing waste dumping",
       alt: "Food Waste Volume Management System with Fault Diagnosis Function",
     },
 
@@ -122,8 +121,8 @@ export const foodWasteBillingSystemTranslations = {
         alt: "CODA Food waste billing system - Convenient Display",
       },
       inHouseDisplay: {
-        title: "In-house Display 128 x 64 Graphics Applied",
-        subtitle: "Clear large LCD with 8-line Korean graphics and backlighting function",
+        title: "Display 128 x 64 Graphics Applied",
+        subtitle: "Clear large LCD with 8-line Korean graphics and backlight",
         description: "User convenience priority with intuitive UI design",
         alt: "CODA Food waste billing system - Intuitive Display",
       },

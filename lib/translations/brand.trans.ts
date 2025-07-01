@@ -61,8 +61,8 @@ export const brandTranslations = {
     title: "Brand",
     description: "CODA Brand Introduction",
     section1: {
-      title: "Resource Circulation Platform",
-      description: "A 'resource circulation brand' inspired by coda, the unique language of sperm whales that swim freely in the ocean and communicate with each other",
+      title: "The Platform for Resource Circulation",
+      description: "A 'brand of resource circulation' inspired by coda, the language of sperm whales that swim freely in the ocean and communicate with each other",
       imageAlt: "CODA Resource Circulation Platform",
     },
     section2: {
@@ -77,12 +77,12 @@ export const brandTranslations = {
           imageAlt: "CODA Sperm Whale Found on Beach",
         },
         block2: {
-          title: "Global Marine Waste Damage",
-          description: "[Increasing need for prevention of plastic containers and PET bottle waste]",
+          title: "Damage caused by waste around the world",
+          description: "[Increasing need for prevention of plastic containers and PET bottle]",
           imageAlt: "CODA Global Marine Waste Damage",
         },
         block3: {
-          title: "Overflowing PET Bottles and Can Waste",
+          title: "Overflowing PET Bottles and CAN",
           description: "[UNEP, 8 million tons of marine waste generated annually]",
           imageAlt: "CODA Overflowing PET Bottles and Can Waste",
         },
