@@ -1,46 +1,33 @@
 import { NextResponse } from "next/server";
 import type { NextRequest } from "next/server";
 
-const locales = ["ko", "en"];
-const defaultLocale = "ko";
-
-function getLocale(request: NextRequest): string {
-  const acceptLanguage = request.headers.get("accept-language");
-
-  if (acceptLanguage) {
-    for (const locale of locales) {
-      if (acceptLanguage.includes(locale)) {
-        return locale;
-      }
-    }
-  }
-
-  return defaultLocale;
-}
-
 export function middleware(request: NextRequest) {
   const pathname = request.nextUrl.pathname;
 
-  const localePrefix = locales.find((locale) => pathname.startsWith(`/${locale}/`));
-
-  if (localePrefix) {
-    const extension = pathname.split(".").pop()?.toLowerCase();
-    const staticExtensions = ["woff2", "woff", "ttf", "eot", "png", "jpg", "jpeg", "gif", "svg", "ico", "webp", "pdf", "json"];
-
-    if (extension && staticExtensions.includes(extension)) {
-      const url = request.nextUrl.clone();
-      url.pathname = pathname.replace(`/${localePrefix}`, "");
-      return NextResponse.rewrite(url);
-    }
+  if (pathname.startsWith("/api") || pathname.startsWith("/_next") || pathname === "/favicon.ico") {
+    return;
   }
 
-  const pathnameIsMissingLocale = locales.every((locale) => !pathname.startsWith(`/${locale}/`) && pathname !== `/${locale}`);
-
-  if (pathnameIsMissingLocale) {
-    const locale = getLocale(request);
-
-    return NextResponse.redirect(new URL(`/${locale}${pathname.startsWith("/") ? "" : "/"}${pathname}`, request.url));
+  if (pathname.startsWith("/ko/")) {
+    const newPathname = pathname.replace("/ko", "") || "/";
+    return NextResponse.redirect(new URL(newPathname, request.url));
   }
+
+  if (pathname === "/ko") {
+    return NextResponse.redirect(new URL("/", request.url));
+  }
+
+  if (pathname.startsWith("/en/")) {
+    return NextResponse.next();
+  }
+
+  if (pathname === "/en") {
+    return NextResponse.next();
+  }
+
+  const url = request.nextUrl.clone();
+  url.pathname = `/ko${pathname}`;
+  return NextResponse.rewrite(url);
 }
 
 export const config = {
