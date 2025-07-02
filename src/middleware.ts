@@ -8,6 +8,13 @@ export function middleware(request: NextRequest) {
     return;
   }
 
+  const extension = pathname.split(".").pop()?.toLowerCase();
+  const staticExtensions = ["woff2", "woff", "ttf", "eot", "png", "jpg", "jpeg", "gif", "svg", "ico", "webp", "pdf", "json", "css", "js"];
+
+  if (extension && staticExtensions.includes(extension)) {
+    return NextResponse.next();
+  }
+
   if (pathname.startsWith("/ko/")) {
     const newPathname = pathname.replace("/ko", "") || "/";
     return NextResponse.redirect(new URL(newPathname, request.url));
