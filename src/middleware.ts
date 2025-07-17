@@ -9,7 +9,7 @@ export function middleware(request: NextRequest) {
   }
 
   const extension = pathname.split(".").pop()?.toLowerCase();
-  const staticExtensions = ["woff2", "woff", "ttf", "eot", "png", "jpg", "jpeg", "gif", "svg", "ico", "webp", "pdf", "json", "css", "js"];
+  const staticExtensions = ["woff2", "woff", "ttf", "eot", "png", "jpg", "jpeg", "gif", "svg", "ico", "webp", "pdf", "json", "css", "js", "xml", "txt"];
 
   if (extension && staticExtensions.includes(extension)) {
     return NextResponse.next();
