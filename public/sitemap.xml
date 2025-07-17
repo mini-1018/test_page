@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:xhtml="http://www.w3.org/1999/xhtml">
+  <url>
+    <loc>https://www.coda.ai.kr/</loc>
+    <lastmod>2025-07-17</lastmod>
+    <priority>1.0</priority>
+    <xhtml:link rel="alternate" hreflang="ko" href="https://www.coda.ai.kr/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.coda.ai.kr/en"/>
+  </url>
+  
+  <url>
+    <loc>https://www.coda.ai.kr/brand</loc>
+    <lastmod>2025-07-17</lastmod>
+    <priority>1.0</priority>
+    <xhtml:link rel="alternate" hreflang="ko" href="https://www.coda.ai.kr/brand"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.coda.ai.kr/en/brand"/>
+  </url>
+  
+  <url>
+    <loc>https://www.coda.ai.kr/products/reverse-vending-machines</loc>
+    <lastmod>2025-07-17</lastmod>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="ko" href="https://www.coda.ai.kr/products/reverse-vending-machines"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.coda.ai.kr/en/products/reverse-vending-machines"/>
+  </url>
+  
+  <url>
+    <loc>https://www.coda.ai.kr/products/reverse-vending-machines/compressor</loc>
+    <lastmod>2025-07-17</lastmod>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="ko" href="https://www.coda.ai.kr/products/reverse-vending-machines/compressor"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.coda.ai.kr/en/products/reverse-vending-machines/compressor"/>
+  </url>
+  
+  <url>
+    <loc>https://www.coda.ai.kr/products/reverse-vending-machines/crusher</loc>
+    <lastmod>2025-07-17</lastmod>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="ko" href="https://www.coda.ai.kr/products/reverse-vending-machines/crusher"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.coda.ai.kr/en/products/reverse-vending-machines/crusher"/>
+  </url>
+  
+  <url>
+    <loc>https://www.coda.ai.kr/products/reverse-vending-machines/esg</loc>
+    <lastmod>2025-07-17</lastmod>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="ko" href="https://www.coda.ai.kr/products/reverse-vending-machines/esg"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.coda.ai.kr/en/products/reverse-vending-machines/esg"/>
+  </url>
+  
+  <url>
+    <loc>https://www.coda.ai.kr/products/vehicle-food-waste-billing-system</loc>
+    <lastmod>2025-07-17</lastmod>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="ko" href="https://www.coda.ai.kr/products/vehicle-food-waste-billing-system"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.coda.ai.kr/en/products/vehicle-food-waste-billing-system"/>
+  </url>
+  
+  <url>
+    <loc>https://www.coda.ai.kr/products/food-waste-billing-system</loc>
+    <lastmod>2025-07-17</lastmod>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="ko" href="https://www.coda.ai.kr/products/food-waste-billing-system"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.coda.ai.kr/en/products/food-waste-billing-system"/>
+  </url>
+  
+  <url>
+    <loc>https://www.coda.ai.kr/news</loc>
+    <lastmod>2025-07-17</lastmod>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="ko" href="https://www.coda.ai.kr/news"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.coda.ai.kr/en/news"/>
+  </url>
+  
+  <url>
+    <loc>https://www.coda.ai.kr/community/notice</loc>
+    <lastmod>2025-07-17</lastmod>
+    <priority>0.5</priority>
+    <xhtml:link rel="alternate" hreflang="ko" href="https://www.coda.ai.kr/community/notice"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.coda.ai.kr/en/community/notice"/>
+  </url>
+  
+  <url>
+    <loc>https://www.coda.ai.kr/community/faq</loc>
+    <lastmod>2025-07-17</lastmod>
+    <priority>0.5</priority>
+    <xhtml:link rel="alternate" hreflang="ko" href="https://www.coda.ai.kr/community/faq"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.coda.ai.kr/en/community/faq"/>
+  </url>
+  
+  <url>
+    <loc>https://www.coda.ai.kr/community/support</loc>
+    <lastmod>2025-07-17</lastmod>
+    <priority>0.5</priority>
+    <xhtml:link rel="alternate" hreflang="ko" href="https://www.coda.ai.kr/community/support"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.coda.ai.kr/en/community/support"/>
+  </url>
+  
+  <url>
+    <loc>https://www.coda.ai.kr/community/downloads</loc>
+    <lastmod>2025-07-17</lastmod>
+    <priority>0.5</priority>
+    <xhtml:link rel="alternate" hreflang="ko" href="https://www.coda.ai.kr/community/downloads"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.coda.ai.kr/en/community/downloads"/>
+  </url>
+</urlset>
