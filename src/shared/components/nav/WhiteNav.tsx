@@ -5,6 +5,7 @@ import Image from "next/image";
 import { useParams, usePathname } from "next/navigation";
 import { getNavigationTranslations } from "@lib/translations/nav.trans";
 import type { Locale } from "@lib/translator";
+import LangSelector from "./LangSelector";
 
 export default function WhiteNav() {
   const [isScrolled, setIsScrolled] = useState(false);
@@ -105,16 +106,7 @@ export default function WhiteNav() {
             ))}
           </ul>
         </nav>
-
-        {/* 언어 전환 버튼 */}
-        <div className="flex items-center space-x-2">
-          <Link href={createLanguageLink("ko")} className={`px-2 py-1 text-sm rounded transition-colors ${locale === "ko" ? "bg-blue-500 text-white" : shouldShowDarkTheme ? "text-gray-600 hover:text-blue-500" : "text-white hover:text-blue-300"}`}>
-            KO
-          </Link>
-          <Link href={createLanguageLink("en")} className={`px-2 py-1 text-sm rounded transition-colors ${locale === "en" ? "bg-blue-500 text-white" : shouldShowDarkTheme ? "text-gray-600 hover:text-blue-500" : "text-white hover:text-blue-300"}`}>
-            EN
-          </Link>
-        </div>
+        <LangSelector shouldShowDarkTheme={shouldShowDarkTheme} />
       </div>
 
       {/* 서브메뉴 배경 */}

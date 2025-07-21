@@ -2,23 +2,18 @@
 import { useState } from "react";
 import Link from "next/link";
 import Image from "next/image";
-import { useParams, usePathname } from "next/navigation"; // usePathname 추가
+import { useParams, usePathname } from "next/navigation";
 import { getNavigationTranslations } from "@lib/translations/nav.trans";
 import type { Locale } from "@lib/translator";
+import LangSelector from "./LangSelector";
 
 export default function BlackNav() {
   const [isHovered, setIsHovered] = useState(false);
   const [hoveredSubmenu, setHoveredSubmenu] = useState<string | null>(null);
 
   const params = useParams();
-  const pathname = usePathname(); // 현재 경로 가져오기
   const locale = (params?.locale as Locale) || "ko";
   const { t } = getNavigationTranslations(locale);
-
-  const createLanguageLink = (newLocale: string) => {
-    const pathWithoutLocale = pathname.replace(/^\/(ko|en)/, "") || "/";
-    return `/${newLocale}${pathWithoutLocale}`;
-  };
 
   const menuItems = [
     {
@@ -89,16 +84,7 @@ export default function BlackNav() {
             ))}
           </ul>
         </nav>
-
-        {/* 언어 전환 버튼 수정 */}
-        <div className="flex items-center space-x-2">
-          <Link href={createLanguageLink("ko")} className={`px-2 py-1 text-sm rounded transition-colors ${locale === "ko" ? "bg-blue-500 text-white" : "text-gray-600 hover:text-blue-500"}`}>
-            KO
-          </Link>
-          <Link href={createLanguageLink("en")} className={`px-2 py-1 text-sm rounded transition-colors ${locale === "en" ? "bg-blue-500 text-white" : "text-gray-600 hover:text-blue-500"}`}>
-            EN
-          </Link>
-        </div>
+        <LangSelector />
       </div>
 
       {/* 서브메뉴 배경 */}

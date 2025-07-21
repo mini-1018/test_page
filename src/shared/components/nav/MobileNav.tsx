@@ -5,6 +5,7 @@ import Image from "next/image";
 import { useParams, usePathname } from "next/navigation";
 import { getNavigationTranslations } from "@lib/translations/nav.trans";
 import type { Locale } from "@lib/translator";
+import LangSelector from "./LangSelector";
 
 export default function MobileNav() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -76,16 +77,7 @@ export default function MobileNav() {
 
         {/* 언어 전환 + 메뉴 버튼 */}
         <div className="flex items-center space-x-2">
-          {/* 언어 전환 버튼 */}
-          <div className="flex items-center space-x-1">
-            <Link href={createLanguageLink("ko")} className={`px-2 py-1 text-xs rounded transition-colors ${locale === "ko" ? "bg-blue-500 text-white" : "text-gray-600 hover:text-blue-500"}`}>
-              KO
-            </Link>
-            <Link href={createLanguageLink("en")} className={`px-2 py-1 text-xs rounded transition-colors ${locale === "en" ? "bg-blue-500 text-white" : "text-gray-600 hover:text-blue-500"}`}>
-              EN
-            </Link>
-          </div>
-
+          <LangSelector />
           {/* 메뉴 버튼 */}
           <button onClick={toggleMenu} className="flex items-center justify-center w-12 h-12">
             <Image src="https://do40f6yw4fd7i.cloudfront.net/img13/common/mobile_menu.webp" alt="코다(CODA) 메뉴 버튼" width={24} height={24} />
