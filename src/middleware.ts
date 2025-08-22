@@ -4,6 +4,8 @@ import type { NextRequest } from "next/server";
 export function middleware(request: NextRequest) {
   const pathname = request.nextUrl.pathname;
 
+  console.log(pathname);
+
   if (pathname.startsWith("/api") || pathname.startsWith("/_next") || pathname === "/favicon.ico") {
     return;
   }

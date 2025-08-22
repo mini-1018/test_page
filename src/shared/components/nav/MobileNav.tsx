@@ -41,16 +41,16 @@ export default function MobileNav() {
       link: `/${locale}/news`,
       subMenu: [{ name: t("subMenu.news"), link: `/${locale}/news` }],
     },
-    {
-      name: t("community"),
-      link: `/${locale}/community`,
-      subMenu: [
-        { name: t("subMenu.notice"), link: `/${locale}/community/notice` },
-        { name: t("subMenu.faq"), link: `/${locale}/community/faq` },
-        { name: t("subMenu.support"), link: `/${locale}/community/support` },
-        { name: t("subMenu.downloads"), link: `/${locale}/community/downloads` },
-      ],
-    },
+    // {
+    //   name: t("community"),
+    //   link: `/${locale}/community`,
+    //   subMenu: [
+    //     { name: t("subMenu.notice"), link: `/${locale}/community/notice` },
+    //     { name: t("subMenu.faq"), link: `/${locale}/community/faq` },
+    //     { name: t("subMenu.support"), link: `/${locale}/community/support` },
+    //     { name: t("subMenu.downloads"), link: `/${locale}/community/downloads` },
+    //   ],
+    // },
   ];
 
   const toggleMenu = () => {
@@ -71,7 +71,7 @@ export default function MobileNav() {
       <div className="md:hidden fixed top-0 left-0 w-full bg-white z-50 h-16 flex items-center justify-between px-4">
         <div className="flex items-center">
           <Link href={`/${locale}`}>
-            <Image src="https://do40f6yw4fd7i.cloudfront.net/img13/common/logo.webp" alt="코다(CODA)" width={100} height={40} />
+            <Image src="https://do40f6yw4fd7i.cloudfront.net/img13/common/logo.png" alt="코다(CODA)" width={100} height={40} />
           </Link>
         </div>
 
@@ -93,7 +93,7 @@ export default function MobileNav() {
         {/* 메뉴 헤더 */}
         <div className="flex items-center justify-between p-4 border-b">
           <Link href={`/${locale}`} onClick={toggleMenu}>
-            <Image src="https://do40f6yw4fd7i.cloudfront.net/img13/common/logo.webp" alt="코다(CODA)" width={100} height={40} />
+            <Image src="https://do40f6yw4fd7i.cloudfront.net/img13/common/logo.png" alt="코다(CODA)" width={100} height={40} />
           </Link>
 
           <button onClick={toggleMenu} className="flex items-center justify-center w-12 h-12">

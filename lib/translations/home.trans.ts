@@ -24,13 +24,13 @@ export const homeTranslations = {
       },
     },
     section4: {
-      subtitle: "제품소개",
-      title: "CODA와 함께\n환경을 지켜주세요.",
+      subtitle: "제품소개 삭제",
+      title: "CODA와 함께\n환경을 지켜주세요. 삭제",
       products: {
         ReverseVendingMachine: "무인회수기",
         rfid: "차량용RFID",
         FoodWasteBillingSystem: "음식물종량기",
-        learnMore: "CODA 더 알아보기",
+        IoTRecyclingScale: "재활용품 IoT 저울",
       },
     },
     metaData: {
@@ -67,13 +67,13 @@ export const homeTranslations = {
       },
     },
     section4: {
-      subtitle: "Product Introduction",
-      title: "Together with CODA\nLet's protect the environment.",
+      subtitle: "Product Introduction 삭제",
+      title: "Together with CODA\nLet's protect the environment. 삭제",
       products: {
         ReverseVendingMachine: "Reverse Vending Machine",
         rfid: "Vehicle food waste billing system",
         FoodWasteBillingSystem: "Food waste billing system",
-        learnMore: "Learn More About CODA",
+        IoTRecyclingScale: "IoT recycling scale",
       },
     },
 

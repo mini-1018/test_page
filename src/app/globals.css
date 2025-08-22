@@ -17,6 +17,13 @@
   src: url("/fonts/Pretendard-Bold.woff2") format("woff2");
 }
 
+@font-face {
+  font-family: "Pretendard";
+  font-style: extrabold;
+  font-weight: 900;
+  src: url("/fonts/Pretendard-Black.woff2") format("woff2");
+}
+
 @theme inline {
   --color-background: var(--background);
   --color-foreground: var(--foreground);
@@ -58,8 +65,12 @@
 }
 
 @theme {
-  --color-secondary: #0095d3;
+  --color-main: #008cff;
+  --color-secondary: #1f3c88;
+  /* --color-secondary: #0095d3; */
   --color-third: #131f6b;
+  --color-text: #434343;
+  --color-bg-gray: #f5f5f5;
 }
 @keyframes carousell-scroll-left {
   0% {
@@ -127,6 +138,7 @@
 
 body {
   font-family: "Pretendard";
+  color: var(--color-text);
 }
 
 /* 에디터 직접 스타일링 */
@@ -136,7 +148,7 @@ body {
   line-height: 1.25;
   margin-top: 0;
   margin-bottom: 0.8888889em;
-  color: #111827;
+  color: #434343;
 }
 
 .prose h2 {
@@ -145,7 +157,7 @@ body {
   line-height: 1.3333333;
   margin-top: 1.5555556em;
   margin-bottom: 0.6666667em;
-  color: #111827;
+  color: #434343;
 }
 
 .prose h3 {
@@ -154,7 +166,7 @@ body {
   line-height: 1.6;
   margin-top: 1.6em;
   margin-bottom: 0.6em;
-  color: #111827;
+  color: #434343;
 }
 
 :root {
@@ -237,16 +249,20 @@ body {
 
 h1 {
   @apply text-[24px] md:text-[32px] xl:text-[40px] font-bold leading-tight tracking-tight;
+  color: var(--color-text);
 }
 
 h2 {
   @apply text-[24px] md:text-[32px] xl:text-[40px] font-bold leading-tight tracking-tight;
+  color: var(--color-text);
 }
 
 h3 {
   @apply text-[24px] md:text-[32px] xl:text-[40px] font-bold leading-tight tracking-tight;
+  color: var(--color-text);
 }
 
 h4 {
   @apply text-[24px] md:text-[32px] xl:text-[40px] font-bold leading-tight tracking-tight;
+  color: var(--color-text);
 }

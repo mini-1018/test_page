@@ -32,15 +32,15 @@ export default function BlackNav() {
       name: t("news"),
       subMenu: [{ name: t("subMenu.news"), link: `/${locale}/news` }],
     },
-    {
-      name: t("community"),
-      subMenu: [
-        { name: t("subMenu.notice"), link: `/${locale}/community/notice` },
-        { name: t("subMenu.faq"), link: `/${locale}/community/faq` },
-        { name: t("subMenu.support"), link: `/${locale}/community/support` },
-        { name: t("subMenu.downloads"), link: `/${locale}/community/downloads` },
-      ],
-    },
+    // {
+    //   name: t("community"),
+    //   subMenu: [
+    //     { name: t("subMenu.notice"), link: `/${locale}/community/notice` },
+    //     { name: t("subMenu.faq"), link: `/${locale}/community/faq` },
+    //     { name: t("subMenu.support"), link: `/${locale}/community/support` },
+    //     { name: t("subMenu.downloads"), link: `/${locale}/community/downloads` },
+    //   ],
+    // },
   ];
 
   return (
@@ -57,7 +57,7 @@ export default function BlackNav() {
       <div className="relative flex items-center justify-between w-[1100px] mx-auto max-w-[90%] h-20">
         <div className="flex items-center">
           <Link href={`/${locale}`}>
-            <Image src="https://do40f6yw4fd7i.cloudfront.net/img13/common/logo.webp" alt="코다(CODA)" width={100} height={40} />
+            <Image src="https://do40f6yw4fd7i.cloudfront.net/img13/common/logo.png" alt="코다(CODA)" width={100} height={40} />
           </Link>
         </div>
 

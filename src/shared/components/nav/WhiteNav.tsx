@@ -39,15 +39,15 @@ export default function WhiteNav() {
       name: t("news"),
       subMenu: [{ name: t("subMenu.news"), link: `/${locale}/news` }],
     },
-    {
-      name: t("community"),
-      subMenu: [
-        { name: t("subMenu.notice"), link: `/${locale}/community/notice` },
-        { name: t("subMenu.faq"), link: `/${locale}/community/faq` },
-        { name: t("subMenu.support"), link: `/${locale}/community/support` },
-        { name: t("subMenu.downloads"), link: `/${locale}/community/downloads` },
-      ],
-    },
+    // {
+    //   name: t("community"),
+    //   subMenu: [
+    //     { name: t("subMenu.notice"), link: `/${locale}/community/notice` },
+    //     { name: t("subMenu.faq"), link: `/${locale}/community/faq` },
+    //     { name: t("subMenu.support"), link: `/${locale}/community/support` },
+    //     { name: t("subMenu.downloads"), link: `/${locale}/community/downloads` },
+    //   ],
+    // },
   ];
 
   useEffect(() => {
@@ -79,7 +79,7 @@ export default function WhiteNav() {
         <div className="flex items-center">
           <Link href={`/${locale}`}>
             <Image src="https://do40f6yw4fd7i.cloudfront.net/img13/common/logo_white.webp" alt="코다(CODA)" width={100} height={40} className={`transition-all ${shouldShowDarkTheme ? "hidden" : "block"}`} />
-            <Image src="https://do40f6yw4fd7i.cloudfront.net/img13/common/logo.webp" alt="코다(CODA)" width={100} height={40} className={`transition-all ${shouldShowDarkTheme ? "block" : "hidden"}`} />
+            <Image src="https://do40f6yw4fd7i.cloudfront.net/img13/common/logo.png" alt="코다(CODA)" width={100} height={40} className={`transition-all ${shouldShowDarkTheme ? "block" : "hidden"}`} />
           </Link>
         </div>
 

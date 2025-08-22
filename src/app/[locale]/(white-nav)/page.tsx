@@ -6,6 +6,7 @@ import Image from "next/image";
 import Link from "next/link";
 import { Metadata } from "next";
 import { Locale } from "@lib/translator";
+import AnimationHome from "./AnimationHome";
 
 interface HomePageProps {
   params: Promise<{ locale: Locale }>;
@@ -17,12 +18,20 @@ export default async function HomePage({ params }: { params: Promise<Translation
 
   return (
     <>
-      <main>
+      <main className="bg-bg-gray">
         {/* 메인 비주얼 섹션 */}
         <section className="w-full">
           <h1 className="sr-only">{t("title")}</h1>
           <div className="relative mt-[64px] md:mt-0">
-            <Image src="https://do40f6yw4fd7i.cloudfront.net/img13/brand/coda_brand_s1.webp" width={1920} height={1080} className="w-full h-auto" alt={t("mainImage")} priority={true} />
+            {/* <Image src="https://do40f6yw4fd7i.cloudfront.net/img13/brand/coda_main_s1.jpg" width={1920} height={1080} className="w-full h-auto" alt={t("mainImage")} priority={true} /> */}
+            <img src="https://do40f6yw4fd7i.cloudfront.net/img13/brand/coda_main_s1.jpg" className="w-full" />
+            {/* 텍스트 추가 */}
+            <div className="absolute top-[25%] left-[30%] text-white font-bold leading-[1.5]" style={{ fontSize: "4vw" }}>
+              <p>모으고</p>
+              <p>살리고</p>
+              <p>줄이고</p>
+              <p>보상받기</p>
+            </div>
           </div>
         </section>
 
@@ -31,7 +40,7 @@ export default async function HomePage({ params }: { params: Promise<Translation
           <section className="py-[150px] text-center">
             <div className="w-[1100px] max-w-[95%] mx-auto">
               <FadeUpOnView>
-                <Image src="https://do40f6yw4fd7i.cloudfront.net/img13/common/logo.webp" width={200} height={80} alt={t("logoAlt")} className="mx-auto mb-[30px] w-[120px] md:w-[180px]" />
+                <Image src="https://do40f6yw4fd7i.cloudfront.net/img13/common/logo.png" width={200} height={80} alt={t("logoAlt")} className="mx-auto mb-[30px] w-[120px] md:w-[150px]" />
               </FadeUpOnView>
               <FadeUpOnView delay={200}>
                 <h2 className="mb-[50px]">
@@ -44,13 +53,13 @@ export default async function HomePage({ params }: { params: Promise<Translation
           </section>
 
           {/* 섹션 03 */}
-          <section className="pb-[150px] bg-gradient-to-b from-transparent to-[#f9fafb]">
+          <section className="pb-[150px]">
             <div className="w-[1100px] max-w-[95%] mx-auto">
               {/* 첫 번째 콘텐츠 블록 */}
               <div className="flex flex-col md:flex-row justify-between items-center gap-8 md:gap-0">
                 <div className="w-full md:w-[40%] order-2 md:order-1">
                   <FadeUpOnView>
-                    <p className="text-[32px] text-[#4b8cca] bg-gradient-to-r from-[#4b8cca] to-white text-white pl-[10px] mr-[100px] font-light">{t("section3.block1.number")}</p>
+                    <p className="text-[32px] bg-gradient-to-r from-[#4b8cca] to-white text-white pl-[10px] mr-[100px] font-light">{t("section3.block1.number")}</p>
                     <h3 className="my-[20px] font-bold whitespace-pre-line">{t("section3.block1.title")}</h3>
                   </FadeUpOnView>
                   <FadeUpOnView delay={200}>
@@ -59,7 +68,7 @@ export default async function HomePage({ params }: { params: Promise<Translation
                 </div>
                 <div className="w-full md:w-[47%] overflow-hidden rounded-[30px] order-1 md:order-2">
                   <FadeUpOnView>
-                    <Image src="https://do40f6yw4fd7i.cloudfront.net/img13/main/main_sec02_1.webp" width={600} height={400} alt={t("section3.block1.imageAlt")} className="w-full h-auto transition-transform hover:scale-105" />
+                    <Image src="https://do40f6yw4fd7i.cloudfront.net/img13/main/main_sec02_1.jpg" width={600} height={400} alt={t("section3.block1.imageAlt")} className="w-full h-auto transition-transform hover:scale-105" />
                   </FadeUpOnView>
                 </div>
               </div>
@@ -68,7 +77,7 @@ export default async function HomePage({ params }: { params: Promise<Translation
               <div className="flex flex-col md:flex-row justify-between items-center gap-8 md:gap-0 mt-[150px]">
                 <div className="w-full md:w-[47%] overflow-hidden rounded-[30px]">
                   <FadeUpOnView>
-                    <Image src="https://do40f6yw4fd7i.cloudfront.net/img13/main/main_sec02_2.webp" width={600} height={400} alt={t("section3.block2.imageAlt")} className="w-full h-auto transition-transform hover:scale-105" />
+                    <Image src="https://do40f6yw4fd7i.cloudfront.net/img13/main/main_sec02_2.jpg" width={600} height={400} alt={t("section3.block2.imageAlt")} className="w-full h-auto transition-transform hover:scale-105" />
                   </FadeUpOnView>
                 </div>
                 <div className="w-full md:w-[40%]">
@@ -87,44 +96,14 @@ export default async function HomePage({ params }: { params: Promise<Translation
           {/* 섹션 04 */}
           <section className="pt-[150px] pb-[150px]">
             <div className="w-[1100px] max-w-[95%] mx-auto">
-              <div className="mb-[50px]">
+              <div className="mb-[50px] flex flex-col items-center">
                 <FadeUpOnView>
-                  <h2 className="text-[20px] text-[#4b8cca] font-bold">{t("section4.subtitle")}</h2>
-                </FadeUpOnView>
-                <FadeUpOnView delay={200}>
-                  <h3 className="text-[42px] leading-[1.3] mt-[20px] font-bold whitespace-pre-line">{t("section4.title")}</h3>
+                  <Image src="https://do40f6yw4fd7i.cloudfront.net/img13/main/main_sec03_logo.png" width={110} height={110} alt={t("logoAlt")} className="mx-auto mb-[30px] w-[110px] md:w-[110px]" />
+                  <h3>CODA PRODUCT LINE-UP</h3>
                 </FadeUpOnView>
               </div>
               <FadeUpOnView delay={200}>
-                <div className="grid grid-cols-1 md:grid-cols-2 gap-[30px]">
-                  {[
-                    {
-                      title: t("section4.products.ReverseVendingMachine"),
-                      link: "products/reverse-vending-machines",
-                      img: "https://do40f6yw4fd7i.cloudfront.net/img13/main/main_sec03_1.webp",
-                    },
-                    {
-                      title: t("section4.products.rfid"),
-                      link: "products/vehicle-food-waste-billing-system",
-                      img: "https://do40f6yw4fd7i.cloudfront.net/img13/main/main_sec03_2.webp",
-                    },
-                    {
-                      title: t("section4.products.FoodWasteBillingSystem"),
-                      link: "products/food-waste-billing-system",
-                      img: "https://do40f6yw4fd7i.cloudfront.net/img13/main/main_sec03_4.webp",
-                    },
-                    {
-                      title: t("section4.products.learnMore"),
-                      link: "brand",
-                      img: "https://do40f6yw4fd7i.cloudfront.net/img13/main/main_sec03_5.webp",
-                    },
-                  ].map((item, index) => (
-                    <Link href={`/${locale}/${item.link}`} key={index} className="relative overflow-hidden rounded-[20px] group">
-                      <Image src={item.img} width={600} height={400} alt={item.title} className="w-full h-auto transition-transform group-hover:scale-105" />
-                      <h5 className="absolute bottom-[30px] left-[30px] text-[22px] sm:text-[24px] md:text-[22px] xl:text-[30px] text-[#565656] font-light">{item.title}</h5>
-                    </Link>
-                  ))}
-                </div>
+                <AnimationHome />
               </FadeUpOnView>
             </div>
           </section>
