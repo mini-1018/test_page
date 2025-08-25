@@ -98,7 +98,7 @@ export default function AnimationHome({ locale }: AnimationHomeProps) {
                   </div>
                   {/* 이미지 */}
                   <div className="flex items-center justify-center">
-                    <Image src={staticData[index].src} alt={item.title} width={0} height={0} sizes="100vw" className="w-auto h-auto rounded-lg" unoptimized />
+                    <Image src={staticData[index].src} alt={item.title} width={0} height={0} sizes="100vw" className="w-auto h-auto" unoptimized />
                   </div>
                 </div>
               ) : (
@@ -115,7 +115,7 @@ export default function AnimationHome({ locale }: AnimationHomeProps) {
                     </div>
                     {/* 이미지 */}
                     <div className="flex items-center justify-center">
-                      <Image src={staticData[index].src} alt={item.title} width={0} height={0} sizes="100vw" className="w-auto h-auto rounded-lg" unoptimized />
+                      <Image src={staticData[index].src} alt={item.title} width={0} height={0} sizes="100vw" className="w-auto h-auto" unoptimized />
                     </div>
                   </div>
                 </Link>
