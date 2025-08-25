@@ -28,7 +28,7 @@ const newsPosts: NewsPost[] = [
 
         <p style="font-size: 18px; text-align: center;">
         CODA의 재활용품 무인회수기가 우수제품으로 지정되었습니다!<br>
-        오랫동안 환경을 위해 고민하고 연구해온 저희의 노력이 결실을 맺는 순간이었어요.<br>
+        오랫동안 환경을 위해 고민하고 연구해온 저희의 노력이 결실을 맺는 순간이었습니다.<br>
         사용자 편의성과 환경 보호라는 두 마리 토끼를 모두 잡으려 노력한 결과라고 생각합니다.<br><br><br>
         </p>
 
@@ -38,11 +38,11 @@ const newsPosts: NewsPost[] = [
         <br><br>
 
         <p style="font-size: 18px; text-align: center;">
-          이번 우수제품 지정은 단순한 상이 아닌, 더 많은 사람들에게 CODA를 알릴 수 있는 소중한 기회가 되었습니다.<br>
-          PET와 캔을 투입하면 포인트를 적립해주는 기본 모델부터,<br>
+          이번 우수제품 지정은 더 많은 사람들에게 CODA를 알릴 수 있는 소중한 기회라고 생각합니다.<br>
+          PET와 캔을 투입하면 포인트를 적립해주는 기본 모델부터,
           탄소 저감에 기여하는 ESG 모델까지.<br>
-          다양한 방식으로 사람들의 재활용 참여를 이끌어내고 있어요.<br><br>
-          앞으로도 더 많은 곳에서 CODA를 만나보실 수 있을 겁니다.<br>많은 관심과 사랑 부탁드립니다!
+          다양한 방식으로 사람들의 재활용 참여를 이끌어내고 있습니다.<br><br>
+          앞으로도 더 많은 곳에서 CODA를 만나보실 수 있도록 노력하겠습니다.<br>많은 관심과 사랑 부탁드립니다!
         </p>`,
   },
   {
@@ -50,7 +50,8 @@ const newsPosts: NewsPost[] = [
     title: "음식물 종량기 출시",
     date: "2024-09-04",
     tag: "신제품",
-    imageUrl: "https://do40f6yw4fd7i.cloudfront.net/img13/news/news_2409_bexco/news_2409_bexco_01.webp",
+    imageUrl:
+      "https://do40f6yw4fd7i.cloudfront.net/img13/news/news_2409_bexco/news_2409_bexco_01.webp",
     content: `<h1 class="head_title" style="margin: 0px;">BEXCO 기후산업국제박람회</h1>
         <p style="font-size: 16px;  color: gray; margin-bottom: 50px;">
             2024.9.4 ~ 2024.9.6
@@ -81,7 +82,8 @@ const newsPosts: NewsPost[] = [
     title: "음식물 종량기 우수제품 지정",
     date: "2024-06-28",
     tag: "수상",
-    imageUrl: "https://do40f6yw4fd7i.cloudfront.net/img13/news/news_2406_food_good_invention/food_good_invention_01.webp",
+    imageUrl:
+      "https://do40f6yw4fd7i.cloudfront.net/img13/news/news_2406_food_good_invention/food_good_invention_01.webp",
     content: `        <h1 class="head_title" style="margin: 0px;">음식물 종량기 우수발명품 선정</h1>
         <p style="font-size: 16px; color: gray; margin-bottom: 50px;">
             2024.6.28
@@ -114,7 +116,8 @@ const newsPosts: NewsPost[] = [
     title: "COEX ENVEX 2024",
     date: "2024-06-03",
     tag: "전시회",
-    imageUrl: "https://do40f6yw4fd7i.cloudfront.net/img13/news/news_2406_coex/news_2406_coex_01.webp",
+    imageUrl:
+      "https://do40f6yw4fd7i.cloudfront.net/img13/news/news_2406_coex/news_2406_coex_01.webp",
     content: `<h1 class="head_title" style="margin: 0px;">COEX ENVEX 2024</h1>
         <p style="font-size: 16px; color: gray; margin-bottom: 50px;">
             2024.6.3 ~ 2024.6.5
@@ -162,17 +165,24 @@ export default async function NewsDetailPage({ params }: NewsDetailPageProps) {
       {/* 헤더 영역 */}
       <div className="max-w-4xl mx-auto px-6 pt-32">
         {/* 제목 */}
-        <h1 className="text-4xl font-bold text-gray-900 mb-6 leading-tight">{news.title}</h1>
+        <h1 className="text-4xl font-bold text-gray-900 mb-6 leading-tight">
+          {news.title}
+        </h1>
 
         {/* 서브인포 */}
         <div className="flex items-center gap-4 mb-8">
-          <span className="inline-flex items-center px-3 py-1 rounded-full text-sm font-medium bg-blue-100 text-blue-800">{news.tag}</span>
+          <span className="inline-flex items-center px-3 py-1 rounded-full text-sm font-medium bg-blue-100 text-blue-800">
+            {news.tag}
+          </span>
           <div className="text-sm text-gray-500">
-            {new Date(news.date).toLocaleDateString(locale === "ko" ? "ko-KR" : "en-US", {
-              year: "numeric",
-              month: locale === "ko" ? "long" : "short",
-              day: "numeric",
-            })}
+            {new Date(news.date).toLocaleDateString(
+              locale === "ko" ? "ko-KR" : "en-US",
+              {
+                year: "numeric",
+                month: locale === "ko" ? "long" : "short",
+                day: "numeric",
+              }
+            )}
           </div>
         </div>
       </div>
@@ -182,15 +192,31 @@ export default async function NewsDetailPage({ params }: NewsDetailPageProps) {
         <div className="bg-white rounded-xl shadow-sm border border-gray-200 overflow-hidden">
           <div className="p-8">
             {/* HTML 콘텐츠 렌더링 */}
-            <div className="prose prose-lg prose-gray max-w-none news-content" dangerouslySetInnerHTML={createMarkup(news.content)} />
+            <div
+              className="prose prose-lg prose-gray max-w-none news-content"
+              dangerouslySetInnerHTML={createMarkup(news.content)}
+            />
           </div>
         </div>
 
         {/* 하단 네비게이션 */}
         <div className="mt-12 flex justify-between items-center">
-          <Link href={`/${locale}/news`} className="flex items-center gap-2 px-6 py-3 text-gray-600 hover:text-blue-600 bg-white rounded-lg border border-gray-200 hover:border-blue-200 transition-all duration-200 hover:-translate-x-1 shadow-sm hover:shadow-md">
-            <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 19l-7-7 7-7" />
+          <Link
+            href={`/${locale}/news`}
+            className="flex items-center gap-2 px-6 py-3 text-gray-600 hover:text-blue-600 bg-white rounded-lg border border-gray-200 hover:border-blue-200 transition-all duration-200 hover:-translate-x-1 shadow-sm hover:shadow-md"
+          >
+            <svg
+              className="w-4 h-4"
+              fill="none"
+              stroke="currentColor"
+              viewBox="0 0 24 24"
+            >
+              <path
+                strokeLinecap="round"
+                strokeLinejoin="round"
+                strokeWidth={2}
+                d="M15 19l-7-7 7-7"
+              />
             </svg>
             {locale === "ko" ? "목록으로 돌아가기" : "Back to List"}
           </Link>
@@ -213,7 +239,9 @@ export async function generateMetadata({ params }: NewsDetailPageProps) {
   }
 
   return {
-    title: `${news.title} | ${locale === "ko" ? "코다(CODA) 소식" : "CODA News"}`,
+    title: `${news.title} | ${
+      locale === "ko" ? "코다(CODA) 소식" : "CODA News"
+    }`,
     description: news.title,
     openGraph: {
       title: news.title,
