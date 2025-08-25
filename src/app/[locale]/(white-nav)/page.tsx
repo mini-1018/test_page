@@ -103,7 +103,7 @@ export default async function HomePage({ params }: { params: Promise<Translation
                 </FadeUpOnView>
               </div>
               <FadeUpOnView delay={200}>
-                <AnimationHome />
+                <AnimationHome locale={locale} />
               </FadeUpOnView>
             </div>
           </section>

@@ -9,6 +9,40 @@ interface NewsPageProps {
 
 const newsPosts: NewsPost[] = [
   {
+    id: 4,
+    title: "재활용품 무인회수기 우수제품 지정",
+    date: "2025-04-28",
+    tag: "수상",
+    imageUrl: "/img/news/img1.png",
+    content: `<h1 class="head_title" style="margin: 0px;">재활용품 무인회수기 우수제품 지정</h1>
+        <p style="font-size: 16px;  color: gray; margin-bottom: 50px;">
+            2025.4.28
+        </p>
+        <div style="display: flex; justify-content: center;">
+          <img src="/img/news/img1.png" style="width:800px; border-radius:15px;" alt="">
+        </div>
+        <br><br>
+
+        <p style="font-size: 18px; text-align: center;">
+        CODA의 재활용품 무인회수기가 우수제품으로 지정되었습니다!<br>
+        오랫동안 환경을 위해 고민하고 연구해온 저희의 노력이 결실을 맺는 순간이었어요.<br>
+        사용자 편의성과 환경 보호라는 두 마리 토끼를 모두 잡으려 노력한 결과라고 생각합니다.<br><br><br>
+        </p>
+
+        <div style="display: flex; justify-content: center;">
+          <img src="/img/news/img2.png" style="width:800px; border-radius:15px;" alt="">
+        </div>
+        <br><br>
+
+        <p style="font-size: 18px; text-align: center;">
+          이번 우수제품 지정은 단순한 상이 아닌, 더 많은 사람들에게 CODA를 알릴 수 있는 소중한 기회가 되었습니다.<br>
+          PET와 캔을 투입하면 포인트를 적립해주는 기본 모델부터,<br>
+          탄소 저감에 기여하는 ESG 모델까지.<br>
+          다양한 방식으로 사람들의 재활용 참여를 이끌어내고 있어요.<br><br>
+          앞으로도 더 많은 곳에서 CODA를 만나보실 수 있을 겁니다.<br>많은 관심과 사랑 부탁드립니다!
+        </p>`,
+  },
+  {
     id: 3,
     title: "음식물 종량기 출시",
     date: "2024-09-04",
@@ -41,8 +75,8 @@ const newsPosts: NewsPost[] = [
   },
   {
     id: 2,
-    title: "음식물 종량기 우수발명품 선정",
-    date: "2025-06-28",
+    title: "음식물 종량기 우수제품 지정",
+    date: "2024-06-28",
     tag: "수상",
     imageUrl: "https://do40f6yw4fd7i.cloudfront.net/img13/news/news_2406_food_good_invention/food_good_invention_01.webp",
     content: `        <h1 class="head_title" style="margin: 0px;">음식물 종량기 우수발명품 선정</h1>
@@ -75,7 +109,7 @@ const newsPosts: NewsPost[] = [
   {
     id: 1,
     title: "COEX ENVEX 2024",
-    date: "2025-06-03",
+    date: "2024-06-03",
     tag: "전시회",
     imageUrl: "https://do40f6yw4fd7i.cloudfront.net/img13/news/news_2406_coex/news_2406_coex_01.webp",
     content: `<h1 class="head_title" style="margin: 0px;">COEX ENVEX 2024</h1>

@@ -77,30 +77,30 @@ export default function Footer() {
             <li className="text-xs">{t("contact.manager")}</li>
           </ul>
 
-          <ul className="flex mt-[20px] gap-4">
+          <ul className="flex mt-[20px] gap-[25px]">
+            <li>
+              <Link href="https://blog.naver.com/gtech324" title={t("social.blog")} className="text-text">
+                <Image src={"/img/icons/blog.svg"} alt="Naver Blog" width={30} height={30} className="w-[24px] h-[24px]" />
+              </Link>
+            </li>
             <li>
               <Link href="https://www.youtube.com/@Gtech-international" title={t("social.youtube")} className="text-text">
-                <FontAwesomeIcon icon={faYoutube} className="w-[24px] h-[24px] md:w-[30px] md:h-[30px]" />
+                <Image src={"/img/icons/youtube.svg"} alt="YouTube" width={30} height={30} className="w-[24px] h-[24px]" />
               </Link>
             </li>
             <li>
               <Link href="https://www.instagram.com/gtech__official?igsh=bmZuMDZnbG45eG8=" title={t("social.instagram")} className="text-text">
-                <FontAwesomeIcon icon={faInstagram} className="w-[24px] h-[24px] md:w-[30px] md:h-[30px]" />
-              </Link>
-            </li>
-            <li>
-              <Link href="https://blog.naver.com/gtech324" title={t("social.blog")} className="text-text">
-                <FontAwesomeIcon icon={faNeos} className="w-[24px] h-[24px] md:w-[30px] md:h-[30px]" />
+                <Image src={"/img/icons/insta.svg"} alt="Instagram" width={30} height={30} className="w-[24px] h-[24px]" />
               </Link>
             </li>
             <li>
               <Link href="tel:010-9282-4070" title={t("social.phone")} className="text-text">
-                <FontAwesomeIcon icon={faPhone} className="w-[24px] h-[24px] md:w-[30px] md:h-[30px]" />
+                <Image src={"/img/icons/phone.svg"} alt="Phone" width={30} height={30} className="w-[24px] h-[24px]" />
               </Link>
             </li>
             <li>
               <Link href="mailto:stmo11@gtech21.net" title={t("social.email")} className="text-text">
-                <FontAwesomeIcon icon={faEnvelope} className="w-[24px] h-[24px] md:w-[30px] md:h-[30px]" />
+                <Image src={"/img/icons/email.svg"} alt="Email" width={30} height={30} className="w-[24px] h-[24px]" />
               </Link>
             </li>
           </ul>

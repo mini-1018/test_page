@@ -24,14 +24,31 @@ export const homeTranslations = {
       },
     },
     section4: {
-      subtitle: "제품소개 삭제",
-      title: "CODA와 함께\n환경을 지켜주세요. 삭제",
-      products: {
-        ReverseVendingMachine: "무인회수기",
-        rfid: "차량용RFID",
-        FoodWasteBillingSystem: "음식물종량기",
-        IoTRecyclingScale: "재활용품 IoT 저울",
-      },
+      subtitle: "제품소개",
+      title: "CODA와 함께\n환경을 지켜주세요.",
+      products: [
+        {
+          title: "재활용품 무인회수기",
+          description: "CODA만의 독자적인 인공지능을 통한\n자원 순환 회수 프로세스",
+        },
+        {
+          title: "재활용품 무인회수기\n(ESG전용)",
+          description: "탄소 배출 감축 전용",
+        },
+        {
+          title: "음식물 종량기",
+          description: "RFID를 이용해 ID를 식별하여\n배출량에 따라 요금을 부과",
+        },
+        {
+          title: "음식물 수거 차량\n RFID 결제 시스템",
+          description: "RFID를 이용해 업소에서 발생하는\n배출량에 따라 결제되는 선·후불 시스템",
+        },
+        {
+          title: "재활용 IoT 저울",
+          description: "품목별 무게를 측정하고 실시간으로 서버에\n전송·저장할 수 있는 지능형 계측기",
+        },
+      ],
+      brandButton: "코다 더 알아보기",
     },
     metaData: {
       title: "코다(CODA)",
@@ -67,16 +84,32 @@ export const homeTranslations = {
       },
     },
     section4: {
-      subtitle: "Product Introduction 삭제",
-      title: "Together with CODA\nLet's protect the environment. 삭제",
-      products: {
-        ReverseVendingMachine: "Reverse Vending Machine",
-        rfid: "Vehicle food waste billing system",
-        FoodWasteBillingSystem: "Food waste billing system",
-        IoTRecyclingScale: "IoT recycling scale",
-      },
+      subtitle: "Product Introduction",
+      title: "Together with CODA\nLet's protect the environment.",
+      products: [
+        {
+          title: "Reverse Vending Machine",
+          description: "Resource circulation collection process\nthrough CODA's unique artificial intelligence",
+        },
+        {
+          title: "Reverse Vending Machine\n(ESG)",
+          description: "Dedicated to carbon emission reduction",
+        },
+        {
+          title: "Food Waste Billing System",
+          description: "Using RFID to identify ID and charge\naccording to discharge amount",
+        },
+        {
+          title: "Vehicle Food Waste\nRFID Payment System",
+          description: "Pre/post payment system charged according\nto discharge amount from businesses using RFID",
+        },
+        {
+          title: "IoT Recycling Scale",
+          description: "Intelligent measuring device that can measure weight by item and transmit/store to server in real time",
+        },
+      ],
+      brandButton: "Learn More About CODA",
     },
-
     metaData: {
       title: "CODA",
       description: "Make recycling easier with CODA's reverse vending machines and smartly manage waste with RFID-based food waste meters. As a customized eco-friendly partner for individuals, businesses, and public institutions, we create a sustainable future together.",
