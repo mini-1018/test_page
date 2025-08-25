@@ -84,7 +84,7 @@ export default function AnimationHome({ locale }: AnimationHomeProps) {
       <div className="overflow-hidden" ref={emblaRef}>
         <div className="flex h-[560px]">
           {products.map((item: any, index: number) => (
-            <div key={index} className="min-w-0 flex-shrink-0 flex-grow-0 basis-1/3 px-2" style={{ flexBasis: "calc(100% / 3)" }}>
+            <div key={index} className="min-w-0 flex-shrink-0 flex-grow-0 basis-full sm:basis-1/2 lg:basis-1/3 px-2">
               {item.title.includes("IoT") ? (
                 <div className="w-full h-[530px] bg-white rounded-2xl pt-[50px] pb-[57px] shadow-lg flex flex-col items-center justify-between border-1 cursor-pointer" onClick={handleToastClick}>
                   <div className="flex flex-col items-center">
@@ -125,9 +125,9 @@ export default function AnimationHome({ locale }: AnimationHomeProps) {
         </div>
       </div>
       <Link href={`/${locale}/brand`} className="block relative w-full h-[330px] rounded-[30px] overflow-hidden mt-[50px] cursor-pointer">
-        <Image src="https://do40f6yw4fd7i.cloudfront.net/img13/main/main_sec04_1.jpg" fill alt="재활용품 IoT 저울" />
+        <Image src="https://do40f6yw4fd7i.cloudfront.net/img13/main/main_sec04_1.jpg" fill alt="코다 더 알아보기" className="object-cover object-center" />
         <div className="absolute inset-0 flex items-center justify-center">
-          <div className="min-w-[340px] px-[20px] h-[80px] border-2 border-white rounded-[100px] flex items-center justify-center">
+          <div className="min-w-[320px] px-[20px] h-[80px] border-2 border-white rounded-[100px] flex items-center justify-center">
             <p className="text-white text-[30px] font-extrabold">{t("section4.brandButton")}</p>
           </div>
         </div>
