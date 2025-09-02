@@ -48,7 +48,7 @@ export const homeTranslations = {
           description: "품목별 무게를 측정하고 실시간으로 서버에\n전송·저장할 수 있는 지능형 계측기",
         },
       ],
-      brandButton: "코다 더 알아보기",
+      brandButton: "CODA 더 알아보기",
     },
     metaData: {
       title: "코다(CODA)",

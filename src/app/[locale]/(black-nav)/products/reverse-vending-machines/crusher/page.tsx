@@ -148,7 +148,7 @@ export default async function CrusherPage({ params }: CrusherPageProps) {
           </div>
         </FadeUpOnView>
 
-        {/* 다운로드 링크 */}
+        {/* 다운로드 링크
         <FadeUpOnView>
           <div className="w-full bg-[#f5f6f9] flex justify-center items-center pb-[150px]">
             <div className="border border-black rounded-[45px] px-[10px] py-[10px]">
@@ -164,7 +164,7 @@ export default async function CrusherPage({ params }: CrusherPageProps) {
               </div>
             </div>
           </div>
-        </FadeUpOnView>
+        </FadeUpOnView> */}
 
         {/* 서브 이미지 3 */}
         <FadeUpOnView>
