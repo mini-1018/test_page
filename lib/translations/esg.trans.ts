@@ -105,7 +105,7 @@ export const esgTranslations = {
       title: "코다(CODA) 무인회수기 | ESG",
       description: "코다(CODA) ESG 무인회수기는 탄소중립 실천을 위한 CO2 감축과 자원순환을 통해 지속가능한 환경경영을 실현합니다.",
       keywords: "코다, CODA, ESG, 무인회수기, 탄소중립, CO2 감축, 자원순환, 환경경영",
-      image: "https://do40f6yw4fd7i.cloudfront.net/img13/item_coda_esg/coda_esg_s6.webp",
+      image: "/images/item_coda_esg/coda_esg_s6.webp",
       openGraph: {
         siteName: "코다(CODA)",
         locale: "ko_KR",
@@ -217,7 +217,7 @@ export const esgTranslations = {
       title: "CODA Reverse Vending Machine | ESG",
       description: "CODA ESG Reverse Vending Machine realizes sustainable environmental management through CO2 reduction and resource circulation for carbon neutral practice.",
       keywords: "CODA, ESG, reverse vending machine, carbon neutral, CO2 reduction, resource circulation, environmental management, sustainability",
-      image: "https://do40f6yw4fd7i.cloudfront.net/img13/item_coda_esg/coda_esg_s6.webp",
+      image: "/images/item_coda_esg/coda_esg_s6.webp",
       openGraph: {
         siteName: "CODA",
         locale: "en_US",

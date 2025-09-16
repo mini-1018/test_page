@@ -68,7 +68,7 @@ export const foodWasteBillingSystemTranslations = {
       title: "코다(CODA) RFID 기반 음식물 종량기",
       description: "우수 발명품 선정 및 조달청 우수제품으로 선정된 코다(CODA) RFID 음식물 종량기입니다. 고장 진단 기능과 신용카드 선불제를 지원합니다.",
       keywords: "코다, CODA, 음식물 종량기, 우수발명품, 우수제품, RFID",
-      image: "https://do40f6yw4fd7i.cloudfront.net/img13/item_food/coda_food_s1.webp",
+      image: "/images/item_food/coda_food_s1.webp",
       openGraph: {
         siteName: "코다(CODA)",
         locale: "ko_KR",
@@ -142,7 +142,7 @@ export const foodWasteBillingSystemTranslations = {
       title: "CODA RFID Food Waste Billing System",
       description: "CODA RFID Food Waste Billing System selected as excellent invention and Public Procurement Service excellent product. Features fault diagnosis function and credit card prepaid system.",
       keywords: "CODA, food waste billing system, excellent invention, RFID, government procurement, volume-based billing, credit card payment",
-      image: "https://do40f6yw4fd7i.cloudfront.net/img13/item_food/coda_food_s1.webp",
+      image: "/images/item_food/coda_food_s1.webp",
       openGraph: {
         siteName: "CODA",
         locale: "en_US",

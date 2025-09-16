@@ -110,7 +110,7 @@ export const crusherTranslations = {
       title: "코다(CODA) 무인회수기 | 파쇄기",
       description: "코다(CODA), 캔과 페트 재활용으로 포인트가 쌓이는 스마트 무인회수기. 손쉬운 재활용으로 더 나은 환경을 만들어갑니다.",
       keywords: "코다, CODA, 무인회수기, 파쇄기, 페트(PET), 캔(CAN), 재활용, 환경보호, 스마트 회수기, 포인트 적립, 자원순환",
-      image: "https://do40f6yw4fd7i.cloudfront.net/img13/item_coda_crush/coda_crush_s3.webp",
+      image: "/images/item_coda_crush/coda_crush_s3.webp",
       openGraph: {
         siteName: "코다(CODA)",
         locale: "ko_KR",
@@ -236,7 +236,7 @@ export const crusherTranslations = {
       title: "CODA Reverse Vending Machine | Crusher",
       description: "CODA smart reverse vending machine that accumulates points through can and PET recycling. Creating a better environment through easy recycling with advanced crushing technology.",
       keywords: "CODA, reverse vending machine, crusher, PET bottle, CAN, recycling, environmental protection, smart recycling, point reward, resource circulation",
-      image: "https://do40f6yw4fd7i.cloudfront.net/img13/item_coda_crush/coda_crush_s3.webp",
+      image: "/images/item_coda_crush/coda_crush_s3.webp",
       openGraph: {
         siteName: "CODA",
         locale: "en_US",

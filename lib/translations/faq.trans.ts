@@ -32,7 +32,7 @@ export const faqTranslations = {
       title: "코다(CODA) 자주 묻는 질문",
       description: "코다(CODA)의 자주 묻는 질문을 확인하세요.",
       keywords: "코다, CODA, 자주 묻는 질문, FAQ",
-      image: "https://do40f6yw4fd7i.cloudfront.net/img13/favicon/facebook-thumbnail_CODA.webp",
+      image: "/images/favicon/facebook-thumbnail_CODA.webp",
       openGraph: {
         siteName: "코다(CODA)",
         locale: "ko_KR",
@@ -69,7 +69,7 @@ export const faqTranslations = {
       title: "CODA Frequently Asked Questions",
       description: "Check out frequently asked questions about CODA. Find quick answers to common questions about our reverse vending machines and food waste meters.",
       keywords: "CODA, FAQ, frequently asked questions, customer support, help, troubleshooting",
-      image: "https://do40f6yw4fd7i.cloudfront.net/img13/favicon/facebook-thumbnail_CODA.webp",
+      image: "/images/favicon/facebook-thumbnail_CODA.webp",
       openGraph: {
         siteName: "CODA",
         locale: "en_US",

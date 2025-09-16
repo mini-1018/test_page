@@ -71,7 +71,7 @@ export default function MobileNav() {
       <div className="md:hidden fixed top-0 left-0 w-full bg-white z-50 h-16 flex items-center justify-between px-4">
         <div className="flex items-center">
           <Link href={`/${locale}`}>
-            <Image src="https://do40f6yw4fd7i.cloudfront.net/img13/common/logo.png" alt="코다(CODA)" width={100} height={40} />
+            <Image src="/images/common/logo.png" alt="코다(CODA)" width={100} height={40} />
           </Link>
         </div>
 
@@ -80,7 +80,7 @@ export default function MobileNav() {
           <LangSelector />
           {/* 메뉴 버튼 */}
           <button onClick={toggleMenu} className="flex items-center justify-center w-12 h-12">
-            <Image src="https://do40f6yw4fd7i.cloudfront.net/img13/common/mobile_menu.webp" alt="코다(CODA) 메뉴 버튼" width={24} height={24} />
+            <Image src="/images/common/mobile_menu.webp" alt="코다(CODA) 메뉴 버튼" width={24} height={24} />
           </button>
         </div>
       </div>
@@ -93,11 +93,11 @@ export default function MobileNav() {
         {/* 메뉴 헤더 */}
         <div className="flex items-center justify-between p-4 border-b">
           <Link href={`/${locale}`} onClick={toggleMenu}>
-            <Image src="https://do40f6yw4fd7i.cloudfront.net/img13/common/logo.png" alt="코다(CODA)" width={100} height={40} />
+            <Image src="/images/common/logo.png" alt="코다(CODA)" width={100} height={40} />
           </Link>
 
           <button onClick={toggleMenu} className="flex items-center justify-center w-12 h-12">
-            <Image src="https://do40f6yw4fd7i.cloudfront.net/img13/common/mobile_menu_close.webp" alt="코다(CODA) 메뉴 닫기 버튼" width={24} height={24} />
+            <Image src="/images/common/mobile_menu_close.webp" alt="코다(CODA) 메뉴 닫기 버튼" width={24} height={24} />
           </button>
         </div>
 

@@ -17,23 +17,23 @@ export default function AnimationHome({ locale }: AnimationHomeProps) {
 
   const staticData = [
     {
-      src: "https://do40f6yw4fd7i.cloudfront.net/img13/main/main_sec03_1.png",
+      src: "/images/main/main_sec03_1.png",
       link: `/${locale}/products/reverse-vending-machines/crusher`,
     },
     {
-      src: "https://do40f6yw4fd7i.cloudfront.net/img13/main/main_sec03_2.png",
+      src: "/images/main/main_sec03_2.png",
       link: `/${locale}/products/reverse-vending-machines/esg`,
     },
     {
-      src: "https://do40f6yw4fd7i.cloudfront.net/img13/main/main_sec03_3.png",
+      src: "/images/main/main_sec03_3.png",
       link: `/${locale}/products/food-waste-billing-system`,
     },
     {
-      src: "https://do40f6yw4fd7i.cloudfront.net/img13/main/main_sec03_4.png",
+      src: "/images/main/main_sec03_4.png",
       link: `/${locale}/products/vehicle-food-waste-billing-system`,
     },
     {
-      src: "https://do40f6yw4fd7i.cloudfront.net/img13/main/main_sec03_5.png",
+      src: "/images/main/main_sec03_5.png",
       link: `/${locale}/products/iot-recycling-scale`,
     },
   ];
@@ -125,7 +125,7 @@ export default function AnimationHome({ locale }: AnimationHomeProps) {
         </div>
       </div>
       <Link href={`/${locale}/brand`} className="block relative w-full h-[330px] rounded-[30px] overflow-hidden mt-[50px] cursor-pointer">
-        <Image src="https://do40f6yw4fd7i.cloudfront.net/img13/main/main_sec04_1.jpg" fill alt="코다 더 알아보기" className="object-cover object-center" />
+        <Image src="/images/main/main_sec04_1.jpg" fill alt="코다 더 알아보기" className="object-cover object-center" />
         <div className="absolute inset-0 flex items-center justify-center">
           <div className="min-w-[320px] px-[20px] h-[80px] border-2 border-white rounded-[100px] flex items-center justify-center">
             <p className="text-white text-[30px] font-extrabold">{t("section4.brandButton")}</p>

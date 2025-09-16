@@ -100,7 +100,7 @@ export const rfidTranslations = {
       title: "코다(CODA) 차량용 RFID 음식물회수 결제시스템",
       description: "코다(CODA), 4000개 이상 음식점에서 선택한 차량용(RFID) 음식물회수 결제시스템입니다.",
       keywords: "코다, CODA, 차량용, RFID, 음식물 회수, 결제 시스템",
-      image: "https://do40f6yw4fd7i.cloudfront.net/img13/item_rfid/coda_rfid_s10.webp",
+      image: "/images/item_rfid/coda_rfid_s10.webp",
       openGraph: {
         siteName: "코다(CODA)",
         locale: "ko_KR",
@@ -205,7 +205,7 @@ export const rfidTranslations = {
       title: "CODA Vehicle RFID Food Waste Collection Payment System",
       description: "CODA RFID food waste collection payment system trusted by over 4,000 restaurants. Fast and accurate weight-based collection volume measurement with prepaid/postpaid payment systems.",
       keywords: "CODA, vehicle RFID, food waste collection, payment system, restaurant, weight measurement, prepaid postpaid",
-      image: "https://do40f6yw4fd7i.cloudfront.net/img13/item_rfid/coda_rfid_s10.webp",
+      image: "/images/item_rfid/coda_rfid_s10.webp",
       openGraph: {
         siteName: "CODA",
         locale: "en_US",

@@ -100,7 +100,7 @@ export const supportTranslations = {
       title: "코다(CODA) 고객문의 | 고객지원",
       description: "코다(CODA) 고객문의 페이지입니다. 제품 문의, 기술 지원, 견적 요청 등 다양한 문의를 접수할 수 있습니다.",
       keywords: "고객문의, 고객지원, 제품 문의, 기술 지원, 견적 요청, 코다, CODA",
-      image: "https://do40f6yw4fd7i.cloudfront.net/img13/favicon/facebook-thumbnail_CODA.webp",
+      image: "/images/favicon/facebook-thumbnail_CODA.webp",
       openGraph: {
         siteName: "코다(CODA)",
         locale: "ko_KR",
@@ -206,7 +206,7 @@ export const supportTranslations = {
       title: "CODA Customer Support | Customer Service",
       description: "CODA customer support page. You can submit various inquiries including product inquiries, technical support, quote requests, and more.",
       keywords: "customer support, customer service, product inquiry, technical support, quote request, CODA",
-      image: "https://do40f6yw4fd7i.cloudfront.net/img13/favicon/facebook-thumbnail_CODA.webp",
+      image: "/images/favicon/facebook-thumbnail_CODA.webp",
       openGraph: {
         siteName: "CODA",
         locale: "en_US",

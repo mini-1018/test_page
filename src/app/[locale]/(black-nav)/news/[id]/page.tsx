@@ -16,13 +16,13 @@ const newsPosts: NewsPost[] = [
     title: "재활용품 무인회수기 우수제품 지정",
     date: "2025-04-28",
     tag: "수상",
-    imageUrl: "/img/news/img1.png",
+    imageUrl: "/images/news/img1.png",
     content: `<h1 class="head_title" style="margin: 0px;">재활용품 무인회수기 우수제품 지정</h1>
         <p style="font-size: 16px;  color: gray; margin-bottom: 50px;">
             2025.4.28
         </p>
         <div style="display: flex; justify-content: center;">
-          <img src="/img/news/img1.png" style="width:800px; border-radius:15px;" alt="">
+          <img src="/images/news/img1.png" style="width:800px; border-radius:15px;" alt="">
         </div>
         <br><br>
 
@@ -33,7 +33,7 @@ const newsPosts: NewsPost[] = [
         </p>
 
         <div style="display: flex; justify-content: center;">
-          <img src="/img/news/img2.png" style="width:800px; border-radius:15px;" alt="">
+          <img src="/images/news/img2.png" style="width:800px; border-radius:15px;" alt="">
         </div>
         <br><br>
 
@@ -51,13 +51,13 @@ const newsPosts: NewsPost[] = [
     date: "2024-09-04",
     tag: "신제품",
     imageUrl:
-      "https://do40f6yw4fd7i.cloudfront.net/img13/news/news_2409_bexco/news_2409_bexco_01.webp",
+      "/images/news/news_2409_bexco/news_2409_bexco_01.webp",
     content: `<h1 class="head_title" style="margin: 0px;">BEXCO 기후산업국제박람회</h1>
         <p style="font-size: 16px;  color: gray; margin-bottom: 50px;">
             2024.9.4 ~ 2024.9.6
         </p>
         <div style="display: flex; justify-content: center;">
-          <img src="https://do40f6yw4fd7i.cloudfront.net/img13/news/news_2409_bexco/news_2409_bexco_01.webp" style="width:800px; border-radius:15px;" alt="">
+          <img src="/images/news/news_2409_bexco/news_2409_bexco_01.webp" style="width:800px; border-radius:15px;" alt="">
         </div>
         <br><br>
 
@@ -68,7 +68,7 @@ const newsPosts: NewsPost[] = [
         </p>
 
         <div style="display: flex; justify-content: center;">
-          <img src="https://do40f6yw4fd7i.cloudfront.net/img13/news/news_2409_bexco/news_2409_bexco_02.webp" style="width:800px; border-radius:15px;" alt="">
+          <img src="/images/news/news_2409_bexco/news_2409_bexco_02.webp" style="width:800px; border-radius:15px;" alt="">
         </div>
         <br><br>
 
@@ -83,14 +83,14 @@ const newsPosts: NewsPost[] = [
     date: "2024-06-28",
     tag: "수상",
     imageUrl:
-      "https://do40f6yw4fd7i.cloudfront.net/img13/news/news_2406_food_good_invention/food_good_invention_01.webp",
+      "/images/news/news_2406_food_good_invention/food_good_invention_01.webp",
     content: `        <h1 class="head_title" style="margin: 0px;">음식물 종량기 우수발명품 선정</h1>
         <p style="font-size: 16px; color: gray; margin-bottom: 50px;">
             2024.6.28
         </p>
 
         <div style="display: flex; justify-content: center;">
-          <img src="https://do40f6yw4fd7i.cloudfront.net/img13/news/news_2406_food_good_invention/food_good_invention_01.webp" style="width:800px; border-radius: 15px;" alt="">
+          <img src="/images/news/news_2406_food_good_invention/food_good_invention_01.webp" style="width:800px; border-radius: 15px;" alt="">
         </div>
         <br><br>
 
@@ -101,7 +101,7 @@ const newsPosts: NewsPost[] = [
         </p>
 
         <div style="display: flex; justify-content: center;">
-          <img src="https://do40f6yw4fd7i.cloudfront.net/img13/news/news_2406_food_good_invention/food_good_invention_02.webp" style="width:800px; border-radius: 15px;" alt="">
+          <img src="/images/news/news_2406_food_good_invention/food_good_invention_02.webp" style="width:800px; border-radius: 15px;" alt="">
         </div>
         <br><br>
 
@@ -117,13 +117,13 @@ const newsPosts: NewsPost[] = [
     date: "2024-06-03",
     tag: "전시회",
     imageUrl:
-      "https://do40f6yw4fd7i.cloudfront.net/img13/news/news_2406_coex/news_2406_coex_01.webp",
+      "/images/news/news_2406_coex/news_2406_coex_01.webp",
     content: `<h1 class="head_title" style="margin: 0px;">COEX ENVEX 2024</h1>
         <p style="font-size: 16px; color: gray; margin-bottom: 50px;">
             2024.6.3 ~ 2024.6.5
         </p>
         <div style="display: flex; justify-content: center;">
-          <img src="https://do40f6yw4fd7i.cloudfront.net/img13/news/news_2406_coex/news_2406_coex_01.webp" style="width:800px; border-radius: 15px;" alt="">
+          <img src="/images/news/news_2406_coex/news_2406_coex_01.webp" style="width:800px; border-radius: 15px;" alt="">
         </div>
         <br><br>
         <p style="font-size: 18px; text-align: center;">
@@ -132,7 +132,7 @@ const newsPosts: NewsPost[] = [
             많은 사람들께서 관심을 보여주셔서 뜻깊은 시간이었습니다.<br><br><br>
         </p>
         <div style="display: flex; justify-content: center;">
-          <img src="https://do40f6yw4fd7i.cloudfront.net/img13/news/news_2406_coex/news_2406_coex_02.webp" style="width:800px; border-radius: 15px;" alt="">
+          <img src="/images/news/news_2406_coex/news_2406_coex_02.webp" style="width:800px; border-radius: 15px;" alt="">
         </div>
         <br><br>
         <p style="font-size: 18px; text-align: center;">

@@ -46,7 +46,7 @@ export const machinesTranslations = {
       title: "코다(CODA) 제품 라인업",
       description: "코다(CODA)의 무인회수기로 재활용을 더 쉽게, RFID 기술 기반 음식물 종량기로 폐기물을 스마트하게 관리하세요. 개인, 기업, 공공기관 모두를 위한 맞춤형 친환경 파트너로 지속 가능한 미래를 함께 만들어갑니다.",
       keywords: "코다, CODA, 재활용, 친환경, 무인회수기, 압축기, 파쇄기",
-      image: "https://do40f6yw4fd7i.cloudfront.net/img13/item_coda_coda/coda_coda_s8.webp",
+      image: "/images/item_coda_coda/coda_coda_s8.webp",
       openGraph: {
         siteName: "코다(CODA)",
         locale: "ko_KR",
@@ -98,7 +98,7 @@ export const machinesTranslations = {
       title: "CODA Product Lineup",
       description: "Make recycling easier with CODA's reverse vending machines and smartly manage waste with RFID-based food waste meters. As a customized eco-friendly partner for individuals, businesses, and public institutions, we create a sustainable future together.",
       keywords: "CODA, product lineup, recycling, eco-friendly, reverse vending machine, compressor, crusher, ESG, food waste meter, RFID",
-      image: "https://do40f6yw4fd7i.cloudfront.net/img13/item_coda_coda/coda_coda_s8.webp",
+      image: "/images/item_coda_coda/coda_coda_s8.webp",
       openGraph: {
         siteName: "CODA",
         locale: "en_US",

@@ -31,7 +31,7 @@ const News: React.FC<NewsProps> = ({ posts, locale }) => {
         <div className="mb-12">
           <div className="flex items-center gap-4 mb-4">
             <div className="w-12 h-12 flex items-center justify-center relative">
-              <Image src={"/img/common/logo_whale.webp"} fill alt={t("header.logoAlt")} className="rounded-full" />
+              <Image src={"/images/common/logo_whale.webp"} fill alt={t("header.logoAlt")} className="rounded-full" />
             </div>
             <div>
               <h1 className="text-3xl font-bold text-slate-900 mb-1">{t("header.title")}</h1>

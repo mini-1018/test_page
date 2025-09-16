@@ -31,7 +31,7 @@ export const downloadsTranslations = {
       title: "코다(CODA) 다운로드",
       description: "코다(CODA) 제품 카탈로그와 매뉴얼을 다운로드 하세요.",
       keywords: "코다, CODA, 다운로드, 카탈로그, 제품 정보, 매뉴얼",
-      image: "https://do40f6yw4fd7i.cloudfront.net/img13/favicon/facebook-thumbnail_CODA.webp",
+      image: "/images/favicon/facebook-thumbnail_CODA.webp",
       openGraph: {
         siteName: "코다(CODA)",
         locale: "ko_KR",
@@ -67,7 +67,7 @@ export const downloadsTranslations = {
       title: "CODA Downloads",
       description: "Download CODA product catalogs and manuals. Get comprehensive information about reverse vending machines and food waste billing system.",
       keywords: "CODA, downloads, catalog, product information, manual, brochure, specifications",
-      image: "https://do40f6yw4fd7i.cloudfront.net/img13/favicon/facebook-thumbnail_CODA.webp",
+      image: "/images/favicon/facebook-thumbnail_CODA.webp",
       openGraph: {
         siteName: "CODA",
         locale: "en_US",

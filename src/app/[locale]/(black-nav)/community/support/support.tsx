@@ -141,7 +141,7 @@ const Support = ({ locale }: SupportProps) => {
         <div className="mb-8 md:mb-12">
           <div className="flex items-center gap-3 md:gap-4 mb-4">
             <div className="w-10 h-10 md:w-12 md:h-12 flex items-center justify-center relative flex-shrink-0">
-              <Image src={"/img/common/logo_whale.webp"} fill alt={t("header.logoAlt")} className="rounded-full" />
+              <Image src={"/images/common/logo_whale.webp"} fill alt={t("header.logoAlt")} className="rounded-full" />
             </div>
             <div className="min-w-0">
               <h1 className="text-2xl md:text-3xl font-bold text-slate-900 mb-1">{t("header.title")}</h1>

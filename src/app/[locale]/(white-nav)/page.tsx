@@ -21,7 +21,7 @@ export default async function HomePage({ params }: { params: Promise<Translation
     <>
       <main className="bg-bg-gray">
         <PopUpUseClient
-          imageUrl="img/popup/notice.jpg"
+          imageUrl="images/popup/notice.jpg"
           imageAlt="명의도용 주의팝업"
           popupId="main_notice_popup"
         />
@@ -29,8 +29,8 @@ export default async function HomePage({ params }: { params: Promise<Translation
         <section className="w-full">
           <h1 className="sr-only">{t("title")}</h1>
           <div className="relative mt-[64px] md:mt-0">
-            {/* <Image src="https://do40f6yw4fd7i.cloudfront.net/img13/brand/coda_main_s1.jpg" width={1920} height={1080} className="w-full h-auto" alt={t("mainImage")} priority={true} /> */}
-            <img src="https://do40f6yw4fd7i.cloudfront.net/img13/brand/coda_main_s1.jpg" className="w-full" />
+            {/* <Image src="/images/brand/coda_main_s1.jpg" width={1920} height={1080} className="w-full h-auto" alt={t("mainImage")} priority={true} /> */}
+            <img src="/images/brand/coda_main_s1.jpg" className="w-full" />
             {/* 텍스트 추가 */}
             <div className="absolute top-[25%] left-[30%] text-white font-bold leading-[1.5]" style={{ fontSize: "4vw" }}>
               <p>모으고</p>
@@ -46,7 +46,7 @@ export default async function HomePage({ params }: { params: Promise<Translation
           <section className="py-[150px] text-center">
             <div className="w-[1100px] max-w-[95%] mx-auto">
               <FadeUpOnView>
-                <Image src="https://do40f6yw4fd7i.cloudfront.net/img13/common/logo.png" width={200} height={80} alt={t("logoAlt")} className="mx-auto mb-[30px] w-[120px] md:w-[150px]" />
+                <Image src="/images/common/logo.png" width={200} height={80} alt={t("logoAlt")} className="mx-auto mb-[30px] w-[120px] md:w-[150px]" />
               </FadeUpOnView>
               <FadeUpOnView delay={200}>
                 <h2 className="mb-[50px]">
@@ -74,7 +74,7 @@ export default async function HomePage({ params }: { params: Promise<Translation
                 </div>
                 <div className="w-full md:w-[47%] overflow-hidden rounded-[30px] order-1 md:order-2">
                   <FadeUpOnView>
-                    <Image src="https://do40f6yw4fd7i.cloudfront.net/img13/main/main_sec02_1.jpg" width={600} height={400} alt={t("section3.block1.imageAlt")} className="w-full h-auto transition-transform hover:scale-105" />
+                    <Image src="/images/main/main_sec02_1.jpg" width={600} height={400} alt={t("section3.block1.imageAlt")} className="w-full h-auto transition-transform hover:scale-105" />
                   </FadeUpOnView>
                 </div>
               </div>
@@ -83,7 +83,7 @@ export default async function HomePage({ params }: { params: Promise<Translation
               <div className="flex flex-col md:flex-row justify-between items-center gap-8 md:gap-0 mt-[150px]">
                 <div className="w-full md:w-[47%] overflow-hidden rounded-[30px]">
                   <FadeUpOnView>
-                    <Image src="https://do40f6yw4fd7i.cloudfront.net/img13/main/main_sec02_2.jpg" width={600} height={400} alt={t("section3.block2.imageAlt")} className="w-full h-auto transition-transform hover:scale-105" />
+                    <Image src="/images/main/main_sec02_2.jpg" width={600} height={400} alt={t("section3.block2.imageAlt")} className="w-full h-auto transition-transform hover:scale-105" />
                   </FadeUpOnView>
                 </div>
                 <div className="w-full md:w-[40%]">
@@ -104,7 +104,7 @@ export default async function HomePage({ params }: { params: Promise<Translation
             <div className="w-[1100px] max-w-[95%] mx-auto">
               <div className="mb-[50px] flex flex-col items-center">
                 <FadeUpOnView>
-                  <Image src="https://do40f6yw4fd7i.cloudfront.net/img13/main/main_sec03_logo.png" width={110} height={110} alt={t("logoAlt")} className="mx-auto mb-[30px] w-[110px] md:w-[110px]" />
+                  <Image src="/images/main/main_sec03_logo.png" width={110} height={110} alt={t("logoAlt")} className="mx-auto mb-[30px] w-[110px] md:w-[110px]" />
                   <h3>CODA PRODUCT LINE-UP</h3>
                 </FadeUpOnView>
               </div>

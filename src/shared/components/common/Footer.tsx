@@ -47,7 +47,7 @@ export default function Footer() {
       <div className="flex flex-col-reverse md:flex-row justify-between w-[1300px] max-w-[90%] mx-auto">
         {/* 왼쪽 영역 */}
         <div className="w-full md:w-1/2 mt-8 md:mt-0">
-          <Image src="https://do40f6yw4fd7i.cloudfront.net/img13/common/logo.png" alt={t("logo.alt")} width={100} height={40} className="h-[15%] w-auto" />
+          <Image src="/images/common/logo.png" alt={t("logo.alt")} width={100} height={40} className="h-[15%] w-auto" />
 
           <ul className="flex mt-[25px] mb-[20px]">
             <li className="mr-[15px]">
@@ -80,27 +80,27 @@ export default function Footer() {
           <ul className="flex mt-[20px] gap-[25px]">
             <li>
               <Link href="https://blog.naver.com/gtech324" title={t("social.blog")} className="text-text">
-                <Image src={"/img/icons/blog.svg"} alt="Naver Blog" width={30} height={30} className="w-[24px] h-[24px]" />
+                <Image src={"/images/icons/blog.svg"} alt="Naver Blog" width={30} height={30} className="w-[24px] h-[24px]" />
               </Link>
             </li>
             <li>
               <Link href="https://www.youtube.com/@Gtech-international" title={t("social.youtube")} className="text-text">
-                <Image src={"/img/icons/youtube.svg"} alt="YouTube" width={30} height={30} className="w-[24px] h-[24px]" />
+                <Image src={"/images/icons/youtube.svg"} alt="YouTube" width={30} height={30} className="w-[24px] h-[24px]" />
               </Link>
             </li>
             <li>
               <Link href="https://www.instagram.com/gtech__official?igsh=bmZuMDZnbG45eG8=" title={t("social.instagram")} className="text-text">
-                <Image src={"/img/icons/insta.svg"} alt="Instagram" width={30} height={30} className="w-[24px] h-[24px]" />
+                <Image src={"/images/icons/insta.svg"} alt="Instagram" width={30} height={30} className="w-[24px] h-[24px]" />
               </Link>
             </li>
             <li>
               <Link href="tel:010-9282-4070" title={t("social.phone")} className="text-text">
-                <Image src={"/img/icons/phone.svg"} alt="Phone" width={30} height={30} className="w-[24px] h-[24px]" />
+                <Image src={"/images/icons/phone.svg"} alt="Phone" width={30} height={30} className="w-[24px] h-[24px]" />
               </Link>
             </li>
             <li>
               <Link href="mailto:stmo11@gtech21.net" title={t("social.email")} className="text-text">
-                <Image src={"/img/icons/email.svg"} alt="Email" width={30} height={30} className="w-[24px] h-[24px]" />
+                <Image src={"/images/icons/email.svg"} alt="Email" width={30} height={30} className="w-[24px] h-[24px]" />
               </Link>
             </li>
           </ul>

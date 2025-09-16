@@ -19,7 +19,7 @@ export default function NumberedSection({
       <div className="py-[75px] md:py-[150px] px-4 max-w-7xl mx-auto">
         <FadeUpOnView>
         <Image
-          src={`https://do40f6yw4fd7i.cloudfront.net/img13/common/num_big${number}.webp`}
+          src={`/images/common/num_big${number}.webp`}
           alt={`코다(CODA) ${number}번 설명`}
           width={100}
           height={100}

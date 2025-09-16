@@ -6,7 +6,7 @@ export default function ProductLineup() {
     {
       id: "coda",
       href: "/products/reverse-vending-machines",
-      image: "https://do40f6yw4fd7i.cloudfront.net/img13/item_list_coda/item_coda.webp",
+      image: "/images/item_list_coda/item_coda.webp",
       title: "압축기",
       subtitle: "PET / CAN / 공용",
       alt: "코다(CODA) 무인회수기, 압축기(PET,CAN,공용)",
@@ -14,7 +14,7 @@ export default function ProductLineup() {
     {
       id: "rfid",
       href: "/products/rfid",
-      image: "https://do40f6yw4fd7i.cloudfront.net/img13/item/item_rfid.webp",
+      image: "/images/item/item_rfid.webp",
       title: "차량용RFID",
       subtitle: "차량용RFID",
       alt: "차량용RFID",
@@ -22,7 +22,7 @@ export default function ProductLineup() {
     {
       id: "food-waste-billing-system",
       href: "/products/food-waste-billing-system",
-      image: "https://do40f6yw4fd7i.cloudfront.net/img13/item/item_food.webp",
+      image: "/images/item/item_food.webp",
       title: "음식물 종량기",
       subtitle: "음식물 종량기",
       alt: "음식물 종량기",

@@ -15,7 +15,7 @@ const downloadsPosts: DownloadPost[] = [
     date: "2025-05-25",
     fileSize: "2.4MB",
     downloadCount: 89,
-    imageUrl: "https://do40f6yw4fd7i.cloudfront.net/img13/brand/coda_brand_s1.webp",
+    imageUrl: "/images/brand/coda_brand_s1.webp",
   },
   {
     id: 2,
@@ -24,7 +24,7 @@ const downloadsPosts: DownloadPost[] = [
     date: "2025-05-24",
     fileSize: "15.7MB",
     downloadCount: 67,
-    imageUrl: "https://do40f6yw4fd7i.cloudfront.net/img13/brand/coda_brand_s1.webp",
+    imageUrl: "/images/brand/coda_brand_s1.webp",
   },
   {
     id: 3,
@@ -33,7 +33,7 @@ const downloadsPosts: DownloadPost[] = [
     date: "2025-05-22",
     fileSize: "1.8MB",
     downloadCount: 124,
-    imageUrl: "https://do40f6yw4fd7i.cloudfront.net/img13/brand/coda_brand_s1.webp",
+    imageUrl: "/images/brand/coda_brand_s1.webp",
   },
   {
     id: 4,
@@ -42,7 +42,7 @@ const downloadsPosts: DownloadPost[] = [
     date: "2025-05-20",
     fileSize: "8.3MB",
     downloadCount: 45,
-    imageUrl: "https://do40f6yw4fd7i.cloudfront.net/img13/brand/coda_brand_s1.webp",
+    imageUrl: "/images/brand/coda_brand_s1.webp",
   },
   {
     id: 5,
@@ -51,7 +51,7 @@ const downloadsPosts: DownloadPost[] = [
     date: "2025-05-18",
     fileSize: "856KB",
     downloadCount: 78,
-    imageUrl: "https://do40f6yw4fd7i.cloudfront.net/img13/brand/coda_brand_s1.webp",
+    imageUrl: "/images/brand/coda_brand_s1.webp",
   },
   {
     id: 6,
@@ -60,7 +60,7 @@ const downloadsPosts: DownloadPost[] = [
     date: "2025-05-18",
     fileSize: "856KB",
     downloadCount: 78,
-    imageUrl: "https://do40f6yw4fd7i.cloudfront.net/img13/brand/coda_brand_s1.webp",
+    imageUrl: "/images/brand/coda_brand_s1.webp",
   },
   {
     id: 7,
@@ -69,7 +69,7 @@ const downloadsPosts: DownloadPost[] = [
     date: "2025-05-18",
     fileSize: "856KB",
     downloadCount: 78,
-    imageUrl: "https://do40f6yw4fd7i.cloudfront.net/img13/brand/coda_brand_s1.webp",
+    imageUrl: "/images/brand/coda_brand_s1.webp",
   },
   {
     id: 8,
@@ -78,7 +78,7 @@ const downloadsPosts: DownloadPost[] = [
     date: "2025-05-18",
     fileSize: "856KB",
     downloadCount: 78,
-    imageUrl: "https://do40f6yw4fd7i.cloudfront.net/img13/brand/coda_brand_s1.webp",
+    imageUrl: "/images/brand/coda_brand_s1.webp",
   },
   {
     id: 9,
@@ -87,7 +87,7 @@ const downloadsPosts: DownloadPost[] = [
     date: "2025-05-18",
     fileSize: "856KB",
     downloadCount: 78,
-    imageUrl: "https://do40f6yw4fd7i.cloudfront.net/img13/brand/coda_brand_s1.webp",
+    imageUrl: "/images/brand/coda_brand_s1.webp",
   },
 ];
 

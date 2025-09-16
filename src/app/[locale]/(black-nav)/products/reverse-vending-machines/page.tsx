@@ -16,7 +16,7 @@ export default async function MachinesLineup({ params }: MachinesLineupProps) {
     {
       id: "coda",
       href: `/${locale}/products/reverse-vending-machines/compressor`,
-      image: "https://do40f6yw4fd7i.cloudfront.net/img13/item_list_coda/item_coda.webp",
+      image: "/images/item_list_coda/item_coda.webp",
       title: t("ReverseVendingMachine.products.compressor.title"),
       subtitle: t("ReverseVendingMachine.products.compressor.subtitle"),
       alt: t("ReverseVendingMachine.products.compressor.alt"),
@@ -25,7 +25,7 @@ export default async function MachinesLineup({ params }: MachinesLineupProps) {
     {
       id: "crush",
       href: `/${locale}/products/reverse-vending-machines/crusher`,
-      image: "https://do40f6yw4fd7i.cloudfront.net/img13/item_list_coda/item_coda_crush.webp",
+      image: "/images/item_list_coda/item_coda_crush.webp",
       title: t("ReverseVendingMachine.products.crusher.title"),
       subtitle: t("ReverseVendingMachine.products.crusher.subtitle"),
       alt: t("ReverseVendingMachine.products.crusher.alt"),
@@ -34,7 +34,7 @@ export default async function MachinesLineup({ params }: MachinesLineupProps) {
     {
       id: "esg",
       href: `/${locale}/products/reverse-vending-machines/esg`,
-      image: "https://do40f6yw4fd7i.cloudfront.net/img13/item_list_coda/item_coda_esg.webp",
+      image: "/images/item_list_coda/item_coda_esg.webp",
       title: t("ReverseVendingMachine.products.esg.title"),
       subtitle: t("ReverseVendingMachine.products.esg.subtitle"),
       alt: t("ReverseVendingMachine.products.esg.alt"),

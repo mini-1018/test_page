@@ -20,7 +20,7 @@ export default async function BrandPage({ params }: BrandPageProps) {
       <section className="w-full mt-40 mb-60 md:mt-60 md:mb-80">
         <div className="max-w-6xl mx-auto px-4 text-center">
           <div className="mb-2.5 flex justify-center">
-            <Image src="https://do40f6yw4fd7i.cloudfront.net/img13/brand/coda_brand_s2.webp" width={300} height={300} alt={t("section1.imageAlt")} className="rounded-none w-[150px] md:w-[250px]" priority={true} />
+            <Image src="/images/brand/coda_brand_s2.webp" width={300} height={300} alt={t("section1.imageAlt")} className="rounded-none w-[150px] md:w-[250px]" priority={true} />
           </div>
           <div className="text-center">
             <Typewriter className="text-4xl font-bold text-secondary mt-12 mb-8">{t("section1.title")}</Typewriter>
@@ -35,7 +35,7 @@ export default async function BrandPage({ params }: BrandPageProps) {
       <section className="w-full">
         <div className="max-w-6xl mx-auto px-4">
           <FadeUpOnView>
-            <Image src="https://do40f6yw4fd7i.cloudfront.net/img13/brand/coda_brand_s3_text.webp" width={1200} height={600} alt={t("section2.imageAlt")} className="w-full h-auto" />
+            <Image src="/images/brand/coda_brand_s3_text.webp" width={1200} height={600} alt={t("section2.imageAlt")} className="w-full h-auto" />
           </FadeUpOnView>
         </div>
       </section>
@@ -56,13 +56,13 @@ export default async function BrandPage({ params }: BrandPageProps) {
               <div className="flex flex-col sm:flex-row items-center gap-8">
                 {/* 텍스트 */}
                 <div className="w-full lg:w-1/2 text-right lg:pr-12 order-1">
-                  <Image src="https://do40f6yw4fd7i.cloudfront.net/img13/common/num1.webp" width={50} height={50} alt="코다(CODA) 1번 컨텐츠" className="inline-block mb-2.5" />
+                  <Image src="/images/common/num1.webp" width={50} height={50} alt="코다(CODA) 1번 컨텐츠" className="inline-block mb-2.5" />
                   <h3 className="!text-2xl font-bold text-secondary mb-2">{t("section3.blocks.block1.title")}</h3>
                   <p className="text-base text-black">{t("section3.blocks.block1.description")}</p>
                 </div>
                 {/* 이미지 */}
                 <div className="w-full lg:w-1/2 order-2">
-                  <Image src="https://do40f6yw4fd7i.cloudfront.net/img13/brand/coda_brand_s4_1.webp" width={600} height={400} alt={t("section3.blocks.block1.imageAlt")} className="w-full h-auto rounded-lg" />
+                  <Image src="/images/brand/coda_brand_s4_1.webp" width={600} height={400} alt={t("section3.blocks.block1.imageAlt")} className="w-full h-auto rounded-lg" />
                 </div>
               </div>
             </FadeUpOnView>
@@ -72,13 +72,13 @@ export default async function BrandPage({ params }: BrandPageProps) {
               <div className="flex flex-col sm:flex-row items-center gap-8">
                 {/* 텍스트 */}
                 <div className="w-full lg:w-1/2 text-left lg:pl-12 order-1 sm:order-2">
-                  <Image src="https://do40f6yw4fd7i.cloudfront.net/img13/common/num2.webp" width={50} height={50} alt="코다(CODA) 2번 컨텐츠" className="inline-block mb-2.5" />
+                  <Image src="/images/common/num2.webp" width={50} height={50} alt="코다(CODA) 2번 컨텐츠" className="inline-block mb-2.5" />
                   <h3 className="!text-2xl font-bold text-secondary mb-2">{t("section3.blocks.block2.title")}</h3>
                   <p className="text-base text-black">{t("section3.blocks.block2.description")}</p>
                 </div>
                 {/* 이미지 */}
                 <div className="w-full lg:w-1/2 order-2 sm:order-1">
-                  <Image src="https://do40f6yw4fd7i.cloudfront.net/img13/brand/coda_brand_s4_2.webp" width={600} height={400} alt={t("section3.blocks.block2.imageAlt")} className="w-full h-auto rounded-lg" />
+                  <Image src="/images/brand/coda_brand_s4_2.webp" width={600} height={400} alt={t("section3.blocks.block2.imageAlt")} className="w-full h-auto rounded-lg" />
                 </div>
               </div>
             </FadeUpOnView>
@@ -88,13 +88,13 @@ export default async function BrandPage({ params }: BrandPageProps) {
               <div className="flex flex-col sm:flex-row items-center gap-8">
                 {/* 텍스트 */}
                 <div className="w-full lg:w-1/2 text-right lg:pr-12 order-1">
-                  <Image src="https://do40f6yw4fd7i.cloudfront.net/img13/common/num3.webp" width={50} height={50} alt="코다(CODA) 3번 컨텐츠" className="inline-block mb-2.5" />
+                  <Image src="/images/common/num3.webp" width={50} height={50} alt="코다(CODA) 3번 컨텐츠" className="inline-block mb-2.5" />
                   <h3 className="!text-2xl font-bold text-secondary mb-2">{t("section3.blocks.block3.title")}</h3>
                   <p className="text-base text-black">{t("section3.blocks.block3.description")}</p>
                 </div>
                 {/* 이미지 */}
                 <div className="w-full lg:w-1/2 order-2">
-                  <Image src="https://do40f6yw4fd7i.cloudfront.net/img13/brand/coda_brand_s4_3.webp" width={600} height={400} alt={t("section3.blocks.block3.imageAlt")} className="w-full h-auto rounded-lg" />
+                  <Image src="/images/brand/coda_brand_s4_3.webp" width={600} height={400} alt={t("section3.blocks.block3.imageAlt")} className="w-full h-auto rounded-lg" />
                 </div>
               </div>
             </FadeUpOnView>
@@ -104,13 +104,13 @@ export default async function BrandPage({ params }: BrandPageProps) {
               <div className="flex flex-col sm:flex-row items-center gap-8">
                 {/* 텍스트 */}
                 <div className="w-full lg:w-1/2 text-left lg:pl-12 order-1 sm:order-2">
-                  <Image src="https://do40f6yw4fd7i.cloudfront.net/img13/common/num4.webp" width={50} height={50} alt="코다(CODA) 4번 컨텐츠" className="inline-block mb-2.5" />
+                  <Image src="/images/common/num4.webp" width={50} height={50} alt="코다(CODA) 4번 컨텐츠" className="inline-block mb-2.5" />
                   <h3 className="!text-2xl font-bold text-secondary mb-2 whitespace-pre-line">{t("section3.blocks.block4.title")}</h3>
                   <p className="text-base text-black">{t("section3.blocks.block4.description")}</p>
                 </div>
                 {/* 이미지 */}
                 <div className="w-full lg:w-1/2 order-2 sm:order-1">
-                  <Image src="https://do40f6yw4fd7i.cloudfront.net/img13/brand/coda_brand_s4_4.webp" width={600} height={400} alt={t("section3.blocks.block4.imageAlt")} className="w-full h-auto rounded-lg" />
+                  <Image src="/images/brand/coda_brand_s4_4.webp" width={600} height={400} alt={t("section3.blocks.block4.imageAlt")} className="w-full h-auto rounded-lg" />
                 </div>
               </div>
             </FadeUpOnView>
@@ -124,7 +124,7 @@ export default async function BrandPage({ params }: BrandPageProps) {
           <div className="max-w-6xl mx-auto px-4 text-center flex flex-col items-center">
             <h2 className="text-5xl font-bold text-third leading-tight mb-8 whitespace-pre-line">{t("section4.title")}</h2>
             <p className="text-3xl font-light text-gray-600 mb-24">{t("section4.subtitle")}</p>
-            <Image src="https://do40f6yw4fd7i.cloudfront.net/img13/brand/coda_brand_s5.webp" width={1200} height={600} alt={t("section4.imageAlt")} className="w-[70%] h-auto" />
+            <Image src="/images/brand/coda_brand_s5.webp" width={1200} height={600} alt={t("section4.imageAlt")} className="w-[70%] h-auto" />
           </div>
         </section>
       </FadeUpOnView>
@@ -133,11 +133,11 @@ export default async function BrandPage({ params }: BrandPageProps) {
       <section
         className="w-full py-48 bg-cover bg-center"
         style={{
-          backgroundImage: "url('https://do40f6yw4fd7i.cloudfront.net/img13/brand/coda_brand_s7_bg.webp')",
+          backgroundImage: "url('/images/brand/coda_brand_s7_bg.webp')",
         }}
       >
         <div className="w-[95%] mx-auto px-4 text-center">
-          <Image src="https://do40f6yw4fd7i.cloudfront.net/img13/brand/coda_brand_s7_text.webp" width={1980} height={1000} alt={t("section5.imageAlt")} className="w-full h-auto" />
+          <Image src="/images/brand/coda_brand_s7_text.webp" width={1980} height={1000} alt={t("section5.imageAlt")} className="w-full h-auto" />
         </div>
       </section>
     </main>

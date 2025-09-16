@@ -57,7 +57,7 @@ export default function BlackNav() {
       <div className="relative flex items-center justify-between w-[1100px] mx-auto max-w-[90%] h-20">
         <div className="flex items-center">
           <Link href={`/${locale}`}>
-            <Image src="https://do40f6yw4fd7i.cloudfront.net/img13/common/logo.png" alt="코다(CODA)" width={100} height={40} />
+            <Image src="/images/common/logo.png" alt="코다(CODA)" width={100} height={40} />
           </Link>
         </div>
 

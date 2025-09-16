@@ -43,7 +43,7 @@ export const metadata: Metadata = {
     siteName: "코다(CODA)",
     images: [
       {
-        url: "https://do40f6yw4fd7i.cloudfront.net/img13/brand/coda_brand_s1.webp",
+        url: "/images/brand/coda_brand_s1.webp",
         width: 1200,
         height: 630,
         alt: "코다(CODA)",
@@ -56,85 +56,85 @@ export const metadata: Metadata = {
     card: "summary_large_image",
     title,
     description,
-    images: ["https://do40f6yw4fd7i.cloudfront.net/img13/brand/coda_brand_s1.webp"],
+    images: ["/images/brand/coda_brand_s1.webp"],
   },
   icons: {
     icon: [
       {
-        url: "/img/favicon/FAVICON_16.webp",
+        url: "/images/favicon/FAVICON_16.webp",
         sizes: "16x16",
         type: "image/webp",
       },
       {
-        url: "/img/favicon/FAVICON_32.webp",
+        url: "/images/favicon/FAVICON_32.webp",
         sizes: "32x32",
         type: "image/webp",
       },
       {
-        url: "/img/favicon/FAVICON_96.webp",
+        url: "/images/favicon/FAVICON_96.webp",
         sizes: "96x96",
         type: "image/webp",
       },
       {
-        url: "/img/favicon/FAVICON_192.webp",
+        url: "/images/favicon/FAVICON_192.webp",
         sizes: "192x192",
         type: "image/webp",
       },
     ],
     apple: [
       {
-        url: "/img/favicon/FAVICON_57.webp",
+        url: "/images/favicon/FAVICON_57.webp",
         sizes: "57x57",
         type: "image/webp",
       },
       {
-        url: "/img/favicon/FAVICON_60.webp",
+        url: "/images/favicon/FAVICON_60.webp",
         sizes: "60x60",
         type: "image/webp",
       },
       {
-        url: "/img/favicon/FAVICON_72.webp",
+        url: "/images/favicon/FAVICON_72.webp",
         sizes: "72x72",
         type: "image/webp",
       },
       {
-        url: "/img/favicon/FAVICON_76.webp",
+        url: "/images/favicon/FAVICON_76.webp",
         sizes: "76x76",
         type: "image/webp",
       },
       {
-        url: "/img/favicon/FAVICON_114.webp",
+        url: "/images/favicon/FAVICON_114.webp",
         sizes: "114x114",
         type: "image/webp",
       },
       {
-        url: "/img/favicon/FAVICON_120.webp",
+        url: "/images/favicon/FAVICON_120.webp",
         sizes: "120x120",
         type: "image/webp",
       },
       {
-        url: "/img/favicon/FAVICON_144.webp",
+        url: "/images/favicon/FAVICON_144.webp",
         sizes: "144x144",
         type: "image/webp",
       },
       {
-        url: "/img/favicon/FAVICON_152.webp",
+        url: "/images/favicon/FAVICON_152.webp",
         sizes: "152x152",
         type: "image/webp",
       },
       {
-        url: "/img/favicon/FAVICON_180.webp",
+        url: "/images/favicon/FAVICON_180.webp",
         sizes: "180x180",
         type: "image/webp",
       },
     ],
   },
-  manifest: "/img/favicon/manifest.json",
+  manifest: "/images/favicon/manifest.json",
   other: {
     "format-detection": "telephone=no",
     "theme-color": "#ffffff",
     "msapplication-TileColor": "#ffffff",
-    "msapplication-TileImage": "/img/favicon/FAVICON_96.webp",
+    "msapplication-TileImage": "/images/favicon/FAVICON_96.webp",
   },
 };
 

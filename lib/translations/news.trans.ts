@@ -21,7 +21,7 @@ export const newsTranslations = {
       title: "코다(CODA) 소식",
       description: "코다(CODA)의 소식을 확인하세요.",
       keywords: "코다, CODA, 소식, 뉴스, 무인회수기, 음식물 종량기",
-      image: "https://do40f6yw4fd7i.cloudfront.net/img13/favicon/facebook-thumbnail_CODA.webp",
+      image: "/images/favicon/facebook-thumbnail_CODA.webp",
       openGraph: {
         siteName: "코다(CODA)",
         locale: "ko_KR",
@@ -46,7 +46,7 @@ export const newsTranslations = {
       title: "CODA News",
       description: "Check out information about CODA's news.",
       keywords: "CODA, news, reverse vending machine, food waste billing system, events, updates",
-      image: "https://do40f6yw4fd7i.cloudfront.net/img13/favicon/facebook-thumbnail_CODA.webp",
+      image: "/images/favicon/facebook-thumbnail_CODA.webp",
       openGraph: {
         siteName: "CODA",
         locale: "en_US",
