@@ -48,7 +48,6 @@ const News: React.FC<NewsProps> = ({ posts, locale }) => {
                 <Calendar className="w-8 h-8 text-gray-400" />
               </div>
               <p className="text-xl font-semibold mb-2 text-slate-700">{t("emptyState.title")}</p>
-              <p className="text-gray-500">{t("emptyState.description")}</p>
             </div>
           </div>
         ) : (

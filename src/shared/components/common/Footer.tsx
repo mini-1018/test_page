@@ -29,17 +29,18 @@ export default function Footer() {
     },
     {
       title: t("sitemap.news.title"),
-      subMenu: [{ name: t("sitemap.news.items.0.name"), link: `/${locale}${t("sitemap.news.items.0.link")}` }],
+      subMenu: [{ name: t("sitemap.news.items.0.name"), link: `/${locale}${t("sitemap.news.items.0.link")}` },
+        { name: t("sitemap.news.items.1.name"), link: `/${locale}${t("sitemap.news.items.1.link")}` },
+      ],
     },
-    // {
-    //   title: t("sitemap.community.title"),
-    //   subMenu: [
-    //     { name: t("sitemap.community.items.0.name"), link: `/${locale}${t("sitemap.community.items.0.link")}` },
-    //     { name: t("sitemap.community.items.1.name"), link: `/${locale}${t("sitemap.community.items.1.link")}` },
-    //     { name: t("sitemap.community.items.2.name"), link: `/${locale}${t("sitemap.community.items.2.link")}` },
-    //     { name: t("sitemap.community.items.3.name"), link: `/${locale}${t("sitemap.community.items.3.link")}` },
-    //   ],
-    // },
+    {
+      title: t("sitemap.community.title"),
+      subMenu: [
+        { name: t("sitemap.community.items.0.name"), link: `/${locale}${t("sitemap.community.items.0.link")}` },
+        { name: t("sitemap.community.items.1.name"), link: `/${locale}${t("sitemap.community.items.1.link")}` },
+        { name: t("sitemap.community.items.2.name"), link: `/${locale}${t("sitemap.community.items.2.link")}` },
+      ],
+    },
   ];
 
   return (

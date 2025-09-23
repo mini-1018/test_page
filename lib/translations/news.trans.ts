@@ -15,7 +15,6 @@ export const newsTranslations = {
     // 빈 상태 메시지
     emptyState: {
       title: "등록된 소식이 없습니다",
-      description: "새로운 소식이 등록되면 여기에 표시됩니다",
     },
     metaData: {
       title: "코다(CODA) 소식",

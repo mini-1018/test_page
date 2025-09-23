@@ -21,7 +21,6 @@ interface SupportProps {
 const Support = ({ locale }: SupportProps) => {
   const { t } = getSupportTranslations(locale);
   const [isSubmitting, setIsSubmitting] = useState(false);
-  const [privacyAgreed, setPrivacyAgreed] = useState(false);
   const [attachments, setAttachments] = useState<File[]>([]);
   const fileInputRef = useRef<HTMLInputElement>(null);
 
@@ -33,6 +32,7 @@ const Support = ({ locale }: SupportProps) => {
     phone: "",
     mobile: "",
     subject: "",
+    privacyAgreed: false,
   });
 
   const handleInputChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
@@ -85,7 +85,7 @@ const Support = ({ locale }: SupportProps) => {
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
 
-    if (!privacyAgreed) {
+    if (!formData.privacyAgreed) {
       toast.error(t("form.privacy.required"));
       return;
     }
@@ -93,33 +93,58 @@ const Support = ({ locale }: SupportProps) => {
     setIsSubmitting(true);
 
     try {
-      console.log("문의 데이터:", formData);
-      console.log("첨부파일:", attachments);
-
-      await new Promise((resolve) => setTimeout(resolve, 1000));
-
-      toast.success(t("toast.success.title"), {
-        description: t("toast.success.description"),
-        className: "bg-green-50 text-green-800",
-        action: {
-          label: t("toast.confirm"),
-          onClick: () => console.log("확인 버튼 클릭"),
-        },
+      // FormData 생성하여 파일과 폼 데이터를 함께 전송
+      const formDataToSend = new FormData();
+      
+      // 폼 데이터 추가
+      Object.entries(formData).forEach(([key, value]) => {
+        formDataToSend.append(key, value.toString());
+      });
+      
+      // 추가 정보
+      formDataToSend.append('locale', locale);
+      formDataToSend.append('submittedAt', new Date().toISOString());
+      
+      // 첨부파일 추가
+      attachments.forEach((file, index) => {
+        formDataToSend.append(`attachment_${index}`, file);
       });
 
-      // 폼 리셋
-      setFormData({
-        name: "",
-        email: "",
-        category: "",
-        message: "",
-        phone: "",
-        mobile: "",
-        subject: "",
+      // API로 폼 데이터 전송
+      const response = await fetch('/api/postEmail', {
+        method: 'POST',
+        body: formDataToSend, // Content-Type을 자동으로 설정
       });
-      setAttachments([]);
-      setPrivacyAgreed(false);
+
+      const result = await response.json();
+
+      if (result.success) {
+        toast.success(t("toast.success.title"), {
+          description: t("toast.success.description"),
+          className: "bg-green-50 text-green-800",
+          action: {
+            label: t("toast.confirm"),
+            onClick: () => console.log("확인 버튼 클릭"),
+          },
+        });
+
+        // 폼 리셋
+        setFormData({
+          name: "",
+          email: "",
+          category: "",
+          message: "",
+          phone: "",
+          mobile: "",
+          subject: "",
+          privacyAgreed: false,
+        });
+        setAttachments([]);
+      } else {
+        throw new Error(result.message);
+      }
     } catch (error) {
+      console.error('문의 전송 실패:', error);
       toast.error(t("toast.error.title"), {
         description: t("toast.error.description"),
         action: {
@@ -132,6 +157,19 @@ const Support = ({ locale }: SupportProps) => {
     } finally {
       setIsSubmitting(false);
     }
+  };
+
+  // 필수 필드 validation
+  const isFormValid = () => {
+    return (
+      formData.name.trim() !== "" &&
+      formData.email.trim() !== "" &&
+      formData.mobile.trim() !== "" &&
+      formData.subject.trim() !== "" &&
+      formData.message.trim() !== "" &&
+      formData.category !== "" &&
+      formData.privacyAgreed
+    );
   };
 
   return (
@@ -163,7 +201,7 @@ const Support = ({ locale }: SupportProps) => {
                 <Label htmlFor="category" className="text-base font-medium text-slate-700">
                   {t("form.fields.category")} <span className="text-red-500">*</span>
                 </Label>
-                <Select onValueChange={handleSelectChange} required>
+                <Select value={formData.category} onValueChange={handleSelectChange} required>
                   <SelectTrigger className="h-12 text-base">
                     <SelectValue placeholder={t("form.placeholders.category")} />
                   </SelectTrigger>
@@ -207,9 +245,9 @@ const Support = ({ locale }: SupportProps) => {
                 <div className="space-y-3">
                   <Label htmlFor="mobile" className="text-base font-medium text-slate-700 flex items-center gap-2">
                     <Phone className="w-4 h-4" />
-                    {t("form.fields.mobile")}
+                    {t("form.fields.mobile")} <span className="text-red-500">*</span>
                   </Label>
-                  <Input id="mobile" name="mobile" type="tel" placeholder={t("form.placeholders.mobile")} value={formData.mobile} onChange={handleInputChange} className="h-12 text-base" />
+                  <Input id="mobile" name="mobile" type="tel" placeholder={t("form.placeholders.mobile")} value={formData.mobile} onChange={handleInputChange} required className="h-12 text-base" />
                 </div>
               </div>
 
@@ -266,7 +304,14 @@ const Support = ({ locale }: SupportProps) => {
               {/* 개인정보 동의 */}
               <div className="bg-gray-50 p-6 rounded-lg border space-y-4">
                 <div className="flex items-start space-x-3">
-                  <Checkbox id="privacy" checked={privacyAgreed} onCheckedChange={(checked) => setPrivacyAgreed(checked as boolean)} className="mt-1" />
+                  <Checkbox 
+                    id="privacy" 
+                    checked={formData.privacyAgreed} 
+                    onCheckedChange={(checked) => 
+                      setFormData((prev) => ({ ...prev, privacyAgreed: checked as boolean }))
+                    } 
+                    className="mt-1" 
+                  />
                   <Label htmlFor="privacy" className="text-base font-medium text-slate-700 cursor-pointer">
                     {t("form.privacy.text")} <span className="text-red-500">*</span>
                   </Label>
@@ -276,7 +321,7 @@ const Support = ({ locale }: SupportProps) => {
 
               {/* 제출 버튼 */}
               <div className="flex justify-end pt-6">
-                <Button type="submit" disabled={isSubmitting || !privacyAgreed} className="bg-blue-600 hover:bg-blue-700 disabled:bg-gray-400 text-white px-10 py-4 h-auto text-base font-medium transition-colors duration-200">
+                <Button type="submit" disabled={isSubmitting || !isFormValid()} className="bg-blue-600 hover:bg-blue-700 disabled:bg-gray-400 text-white px-10 py-4 h-auto text-base font-medium transition-colors duration-200">
                   {isSubmitting ? (
                     <>
                       <div className="w-4 h-4 border-2 border-white border-t-transparent rounded-full animate-spin mr-2" />

@@ -87,7 +87,7 @@ export const supportTranslations = {
     contact: {
       phone: {
         title: "전화 문의",
-        number: "1588-0000",
+        number: "031-852-4070",
         hours: "평일 09:00 - 18:00",
       },
       email: {
@@ -192,7 +192,7 @@ export const supportTranslations = {
     contact: {
       phone: {
         title: "Phone Inquiry",
-        number: "1588-0000",
+        number: "031-852-4070",
         hours: "Weekdays 09:00 - 18:00",
       },
       email: {

@@ -64,12 +64,11 @@ const Notice: React.FC<NoticeProps> = ({ notices, locale }) => {
                 <FileText className="w-8 h-8 text-gray-400" />
               </div>
               <p className="text-xl font-semibold mb-2 text-slate-700">{t("emptyState.title")}</p>
-              <p className="text-gray-500">{t("emptyState.description")}</p>
             </div>
           ) : (
             <div className="divide-y divide-gray-100/60">
               {filterednotices.map((notice) => (
-                <Link key={notice.id} href={`/${locale}/community/notice/${notice.id}`}>
+                <Link key={notice.id} href={`/${locale}/news/notice/${notice.id}`}>
                   <div className="group relative">
                     <div className="absolute inset-0 bg-gradient-to-r from-gray-100 to-blue-300 opacity-0 group-hover:opacity-100 transition-opacity duration-200 rounded-xl"></div>
                     <div className="relative px-4 sm:px-8 py-6 border-b border-gray-100/80 hover:border-gray-200/60 transition-all duration-200 cursor-pointer">

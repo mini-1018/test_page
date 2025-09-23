@@ -24,8 +24,51 @@ interface BoardDownloadsProps {
 const Downloads: React.FC<BoardDownloadsProps> = ({ posts, locale }) => {
   const { t } = getDownloadsTranslations(locale);
   const [searchTerm, setSearchTerm] = useState("");
+  const [downloadingIds, setDownloadingIds] = useState<Set<number>>(new Set());
 
-  const filteredPosts = posts.filter((post) => post.title.toLowerCase().includes(searchTerm.toLowerCase()) || post.author.toLowerCase().includes(searchTerm.toLowerCase()));
+  const filteredPosts = posts.filter((post) =>
+    post.title.toLowerCase().includes(searchTerm.toLowerCase()) || post.author.toLowerCase().includes(searchTerm.toLowerCase())
+  );
+
+  const handleDownload = async (post: DownloadPost, event: React.MouseEvent) => {
+    event.preventDefault();
+    event.stopPropagation();
+
+    if (downloadingIds.has(post.id)) return;
+
+    try {
+      setDownloadingIds(prev => new Set([...prev, post.id]));
+
+      const filename = `${post.title.replace(/[^a-zA-Z0-9가-힣]/g, "_")}.pdf`;
+      const response = await fetch(`/api/getStatic?filename=${encodeURIComponent(filename)}&download=true`);
+
+      if (!response.ok) {
+        throw new Error("다운로드에 실패했습니다.");
+      }
+
+      const blob = await response.blob();
+      const url = window.URL.createObjectURL(blob);
+      const a = document.createElement("a");
+      a.href = url;
+      a.download = filename;
+      document.body.appendChild(a);
+      a.click();
+      document.body.removeChild(a);
+      window.URL.revokeObjectURL(url);
+
+    } catch (error) {
+      console.error("다운로드 오류:", error);
+      alert("다운로드 중 오류가 발생했습니다.");
+    } finally {
+      setTimeout(() => {
+        setDownloadingIds(prev => {
+          const newSet = new Set(prev);
+          newSet.delete(post.id);
+          return newSet;
+        });
+      }, 1000);
+    }
+  };
 
   return (
     <ResponsivePadding>
@@ -43,7 +86,7 @@ const Downloads: React.FC<BoardDownloadsProps> = ({ posts, locale }) => {
           </div>
         </div>
 
-        {/* 검색 및 업로드 버튼 */}
+        {/* 검색 */}
         <div className="flex gap-4 mb-8">
           <div className="flex-1">
             <div className="relative group">
@@ -69,66 +112,93 @@ const Downloads: React.FC<BoardDownloadsProps> = ({ posts, locale }) => {
           </div>
         ) : (
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-            {filteredPosts.map((post) => (
-              <div key={post.id} className="group relative">
-                <div className="bg-white/90 backdrop-blur-sm rounded-2xl border border-gray-200/60 shadow-xl overflow-hidden hover:shadow-2xl transition-all duration-300 cursor-pointer">
-                  {/* 이미지 미리보기 영역 - 70% */}
-                  <div className="relative aspect-[4/3] overflow-hidden">
-                    <div className="absolute inset-0 bg-gradient-to-t from-black/30 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-200 z-10"></div>
-                    <Image src={post.imageUrl} alt={post.title} fill className="object-cover group-hover:scale-105 transition-transform duration-300" />
-                    {/* 다운로드 버튼 오버레이 */}
-                    <div className="absolute top-4 right-4 opacity-0 group-hover:opacity-100 transition-opacity duration-200 z-20">
-                      <div className="w-10 h-10 bg-white/90 backdrop-blur-sm rounded-full flex items-center justify-center shadow-lg hover:bg-white transition-colors">
-                        <Download className="w-5 h-5 text-gray-700" />
-                      </div>
-                    </div>
-                    {/* 파일 크기 배지 */}
-                    <div className="absolute bottom-4 left-4 z-20">
-                      <span className="px-3 py-1 bg-black/60 backdrop-blur-sm text-white text-sm font-medium rounded-full">{post.fileSize}</span>
-                    </div>
-                  </div>
-
-                  {/* 텍스트 정보 영역 - 30% */}
-                  <div className="p-6 space-y-4">
-                    {/* 제목 */}
-                    <div className="flex items-center gap-4">
-                      <h3 className="text-slate-900 font-semibold !text-lg leading-tight group-hover:text-blue-600 transition-colors duration-200 line-clamp-2 flex-1">{post.title}</h3>
-                    </div>
-
-                    {/* 메타 정보 */}
-                    <div className="space-y-3">
-                      <div className="flex items-center gap-2 text-sm text-gray-600">
-                        <div className="w-5 h-5 bg-gray-100 rounded-full flex items-center justify-center">
-                          <User className="w-3 h-3 text-gray-600" />
+            {filteredPosts.map((post) => {
+              const isDownloading = downloadingIds.has(post.id);
+              return (
+                <div key={post.id} className="group relative">
+                  <div className="bg-white/90 backdrop-blur-sm rounded-2xl border border-gray-200/60 shadow-xl overflow-hidden hover:shadow-2xl transition-all duration-300">
+                    {/* 이미지 미리보기 영역 */}
+                    <div className="relative aspect-[4/3] overflow-hidden">
+                      {/* 다운로드 중 오버레이 */}
+                      {isDownloading && (
+                        <div className="absolute inset-0 bg-black/20 backdrop-blur-[2px] z-20 flex items-center justify-center">
+                          <div className="bg-white/90 px-4 py-2 rounded-lg shadow-lg">
+                            <div className="flex items-center gap-2">
+                              <div className="w-4 h-4 border-2 border-blue-500 border-t-transparent rounded-full animate-spin"></div>
+                              <span className="text-sm font-medium text-gray-700">다운로드 중...</span>
+                            </div>
+                          </div>
                         </div>
-                        <span className="font-medium">{post.author}</span>
+                      )}
+                      
+                      <div className="absolute inset-0 bg-gradient-to-t from-black/30 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-200 z-10"></div>
+                      <Image src={post.imageUrl} alt={post.title} fill className="object-cover group-hover:scale-105 transition-transform duration-300" />
+                      
+                      {/* 다운로드 버튼 */}
+                      <div className="absolute top-4 right-4 opacity-0 group-hover:opacity-100 transition-opacity duration-200 z-15">
+                        <button
+                          onClick={(e) => handleDownload(post, e)}
+                          disabled={isDownloading}
+                          className={`w-10 h-10 bg-white/90 backdrop-blur-sm rounded-full flex items-center justify-center shadow-lg transition-all focus:outline-none focus:ring-2 focus:ring-blue-400 ${
+                            isDownloading 
+                              ? "opacity-50 cursor-not-allowed scale-95" 
+                              : "hover:bg-white hover:scale-105 cursor-pointer"
+                          }`}
+                          title={isDownloading ? "다운로드 중..." : "다운로드"}
+                        >
+                          <Download className={`w-5 h-5 text-gray-700 transition-transform ${isDownloading ? 'animate-pulse' : ''}`} />
+                        </button>
+                      </div>
+                      
+                      {/* 파일 크기 배지 */}
+                      <div className="absolute bottom-4 left-4 z-15">
+                        <span className="px-3 py-1 bg-black/60 backdrop-blur-sm text-white text-sm font-medium rounded-full">
+                          {post.fileSize}
+                        </span>
+                      </div>
+                    </div>
+
+                    {/* 텍스트 정보 영역 - 30% */}
+                    <div className="p-6 space-y-4">
+                      {/* 제목 */}
+                      <div className="flex items-center gap-4">
+                        <h3 className="text-slate-900 font-semibold !text-lg leading-tight group-hover:text-blue-600 transition-colors duration-200 line-clamp-2 flex-1">{post.title}</h3>
                       </div>
 
-                      <div className="flex items-center justify-between text-sm text-gray-500">
-                        <div className="flex items-center gap-2">
-                          <Calendar className="w-4 h-4 text-gray-400" />
-                          <span>
-                            {new Date(post.date).toLocaleDateString(locale === "ko" ? "ko-KR" : "en-US", {
-                              year: "numeric",
-                              month: locale === "ko" ? "long" : "short",
-                              day: "numeric",
-                            })}
+                      {/* 메타 정보 */}
+                      <div className="space-y-3">
+                        <div className="flex items-center gap-2 text-sm text-gray-600">
+                          <div className="w-5 h-5 bg-gray-100 rounded-full flex items-center justify-center">
+                            <User className="w-3 h-3 text-gray-600" />
+                          </div>
+                          <span className="font-medium">{post.author}</span>
+                        </div>
+
+                        <div className="flex items-center justify-between text-sm text-gray-500">
+                          <div className="flex items-center gap-2">
+                            <Calendar className="w-4 h-4 text-gray-400" />
+                            <span>
+                              {new Date(post.date).toLocaleDateString(locale === "ko" ? "ko-KR" : "en-US", {
+                                year: "numeric",
+                                month: locale === "ko" ? "long" : "short",
+                                day: "numeric",
+                              })}
+                            </span>
+                          </div>
+                        </div>
+
+                        <div className="pt-2 border-t border-gray-100">
+                          <span className="text-gray-500 text-sm">
+                            {t("file.downloads")} {post.downloadCount}
+                            {locale === "ko" ? "회" : ""}
                           </span>
                         </div>
-                        <div className="flex items-center gap-2"></div>
-                      </div>
-
-                      <div className="pt-2 border-t border-gray-100">
-                        <span className="text-gray-500 text-sm">
-                          {t("file.downloads")} {post.downloadCount}
-                          {locale === "ko" ? "회" : ""}
-                        </span>
                       </div>
                     </div>
                   </div>
                 </div>
-              </div>
-            ))}
+              );
+            })}
           </div>
         )}
       </div>

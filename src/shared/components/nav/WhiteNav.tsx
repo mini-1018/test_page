@@ -37,17 +37,18 @@ export default function WhiteNav() {
     },
     {
       name: t("news"),
-      subMenu: [{ name: t("subMenu.news"), link: `/${locale}/news` }],
+      subMenu: [{ name: t("subMenu.news"), link: `/${locale}/news` }
+        ,{ name: t("subMenu.notice"), link: `/${locale}/news/notice` }
+      ],
     },
-    // {
-    //   name: t("community"),
-    //   subMenu: [
-    //     { name: t("subMenu.notice"), link: `/${locale}/community/notice` },
-    //     { name: t("subMenu.faq"), link: `/${locale}/community/faq` },
-    //     { name: t("subMenu.support"), link: `/${locale}/community/support` },
-    //     { name: t("subMenu.downloads"), link: `/${locale}/community/downloads` },
-    //   ],
-    // },
+    {
+      name: t("community"),
+      subMenu: [
+        { name: t("subMenu.faq"), link: `/${locale}/community/faq` },
+        { name: t("subMenu.support"), link: `/${locale}/community/support` },
+        { name: t("subMenu.downloads"), link: `/${locale}/community/downloads` },
+      ],
+    },
   ];
 
   useEffect(() => {

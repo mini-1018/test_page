@@ -40,12 +40,13 @@ export const footerTranslations = {
       },
       news: {
         title: "소식",
-        items: [{ name: "소식", link: "/news" }],
+        items: [{ name: "소식", link: "/news" },
+          { name: "공지사항", link: "/news/notice" },
+        ],
       },
       community: {
         title: "커뮤니티",
         items: [
-          { name: "공지사항", link: "/community/notice" },
           { name: "FAQ", link: "/community/faq" },
           { name: "고객문의", link: "/community/support" },
           { name: "다운로드", link: "/community/downloads" },
@@ -92,12 +93,13 @@ export const footerTranslations = {
       },
       news: {
         title: "News",
-        items: [{ name: "News", link: "/news" }],
+        items: [{ name: "News", link: "/news" },
+          { name: "Notice", link: "/news/notice" },
+        ],
       },
       community: {
         title: "Community",
         items: [
-          { name: "Notice", link: "/community/notice" },
           { name: "FAQ", link: "/community/faq" },
           { name: "Support", link: "/community/support" },
           { name: "Downloads", link: "/community/downloads" },

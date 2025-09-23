@@ -43,7 +43,7 @@ export default function NoticeDetailPage() {
 
         {/* 하단 네비게이션 */}
         <div className="mt-12 flex justify-between items-center">
-          <Link href="/community/notice">
+          <Link href="/news/notice">
             <button className="flex items-center gap-2 px-4 py-2 text-gray-600 hover:text-blue-600 transition-colors transition-transform duration-200 hover:-translate-x-1">
               <svg
                 className="w-4 h-4"
