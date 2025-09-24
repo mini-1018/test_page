@@ -30,6 +30,46 @@ const Downloads: React.FC<BoardDownloadsProps> = ({ posts, locale }) => {
     post.title.toLowerCase().includes(searchTerm.toLowerCase()) || post.author.toLowerCase().includes(searchTerm.toLowerCase())
   );
 
+  // const handleDownload = async (post: DownloadPost, event: React.MouseEvent) => {
+  //   event.preventDefault();
+  //   event.stopPropagation();
+
+  //   if (downloadingIds.has(post.id)) return;
+
+  //   try {
+  //     setDownloadingIds(prev => new Set([...prev, post.id]));
+
+  //     const filename = `${post.title.replace(/[^a-zA-Z0-9가-힣]/g, "_")}.pdf`;
+  //     const response = await fetch(`/api/getStatic?filename=${encodeURIComponent(filename)}&download=true`);
+
+  //     if (!response.ok) {
+  //       throw new Error("다운로드에 실패했습니다.");
+  //     }
+
+  //     const blob = await response.blob();
+  //     const url = window.URL.createObjectURL(blob);
+  //     const a = document.createElement("a");
+  //     a.href = url;
+  //     a.download = filename;
+  //     document.body.appendChild(a);
+  //     a.click();
+  //     document.body.removeChild(a);
+  //     window.URL.revokeObjectURL(url);
+
+  //   } catch (error) {
+  //     console.error("다운로드 오류:", error);
+  //     alert("다운로드 중 오류가 발생했습니다.");
+  //   } finally {
+  //     setTimeout(() => {
+  //       setDownloadingIds(prev => {
+  //         const newSet = new Set(prev);
+  //         newSet.delete(post.id);
+  //         return newSet;
+  //       });
+  //     }, 1000);
+  //   }
+  // };
+
   const handleDownload = async (post: DownloadPost, event: React.MouseEvent) => {
     event.preventDefault();
     event.stopPropagation();
@@ -39,26 +79,31 @@ const Downloads: React.FC<BoardDownloadsProps> = ({ posts, locale }) => {
     try {
       setDownloadingIds(prev => new Set([...prev, post.id]));
 
+      // 파일명 생성 (특수문자를 언더스코어로 변경)
       const filename = `${post.title.replace(/[^a-zA-Z0-9가-힣]/g, "_")}.pdf`;
-      const response = await fetch(`/api/getStatic?filename=${encodeURIComponent(filename)}&download=true`);
-
+      
+      // public/downloads/ 폴더의 파일을 직접 다운로드
+      const fileUrl = `/downloads/${encodeURIComponent(filename)}`;
+      
+      // 파일 존재 여부 확인을 위한 fetch
+      const response = await fetch(fileUrl, { method: 'HEAD' });
+      
       if (!response.ok) {
-        throw new Error("다운로드에 실패했습니다.");
+        throw new Error("파일을 찾을 수 없습니다.");
       }
 
-      const blob = await response.blob();
-      const url = window.URL.createObjectURL(blob);
+      // 다운로드 실행
       const a = document.createElement("a");
-      a.href = url;
+      a.href = fileUrl;
       a.download = filename;
+      a.style.display = 'none';
       document.body.appendChild(a);
       a.click();
       document.body.removeChild(a);
-      window.URL.revokeObjectURL(url);
 
     } catch (error) {
       console.error("다운로드 오류:", error);
-      alert("다운로드 중 오류가 발생했습니다.");
+      alert("다운로드 중 오류가 발생했습니다. 파일이 존재하는지 확인해주세요.");
     } finally {
       setTimeout(() => {
         setDownloadingIds(prev => {
