@@ -34,14 +34,14 @@ export const footerTranslations = {
         title: "제품",
         items: [
           { name: "무인회수기", link: "/products/reverse-vending-machines" },
-          { name: "차량용RFID", link: "/products/vehicle-food-waste-billing-system" },
+          { name: "음식물 수거 차량\nRFID결제 시스템", link: "/products/vehicle-food-waste-billing-system" },
           { name: "음식물종량기", link: "/products/food-waste-billing-system" },
         ],
       },
       news: {
         title: "소식",
-        items: [{ name: "소식", link: "/news" },
-          { name: "공지사항", link: "/news/notice" },
+        items: [{ name: "공지사항", link: "/news/notice" },
+          { name: "코다뉴스", link: "/news" },
         ],
       },
       community: {
@@ -93,8 +93,8 @@ export const footerTranslations = {
       },
       news: {
         title: "News",
-        items: [{ name: "News", link: "/news" },
-          { name: "Notice", link: "/news/notice" },
+        items: [{ name: "Notice", link: "/news/notice" },
+          { name: "News", link: "/news" },
         ],
       },
       community: {

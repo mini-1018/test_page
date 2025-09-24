@@ -23,6 +23,8 @@ interface NewsProps {
 const News: React.FC<NewsProps> = ({ posts, locale }) => {
   const { t } = getNewsTranslations(locale);
 
+  console.log(posts);
+
   return (
     <ResponsivePadding>
       <div className="max-w-5xl mx-auto">

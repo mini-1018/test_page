@@ -9,6 +9,164 @@ interface NewsPageProps {
 
 const newsPosts: NewsPost[] = [
   {
+    id: 5,
+    title: "2025 RETECH 전시회 참가",
+    date: "2025-08-29",
+    tag: "전시회",
+    imageUrl: "/images/news/news_2508_retech/01.jpg",
+    content: `<h1 class="head_title" style="margin: 0px;">2025 RETECH 폐기물·자원순환 산업전 참가</h1>
+        <p style="font-size: 16px; color: gray; margin-bottom: 50px;">
+            2025.8.27 ~ 2025.8.29
+        </p>
+        
+        <p style="font-size: 18px; text-align: center;">
+            안녕하세요.<br>
+            지테크인터내셔날입니다.<br><br>
+            지난 8월 27일부터 29일까지 개최된<br>
+            폐기물 · 자원순환 산업전에 참가하여<br>
+            자사 브랜드 '코다(CODA)'를 선보였습니다.<br><br>
+            올해 2025 리텍전시회는<br>
+            더욱 확대된 규모로 개최가 되었는데요.<br><br>
+            폐기물 관리, 재활용 기술, 자원회수 및 에너지 전환<br>
+            관련 최신 기술 및 장비들이 전시되어 있어<br>
+            흥미로웠습니다.<br><br><br>
+        </p>
+
+        <div style="display: flex; justify-content: center;">
+          <img src="/images/news/news_2508_retech/02.jpg" style="width:800px; border-radius:15px;" alt="">
+        </div>
+        <br><br>
+
+        <p style="font-size: 18px; text-align: center;">
+            CODA(코다)는<br>
+            생활 속 다양한 자원순환 솔루션을<br>
+            제공하는 통합 브랜드로 이번 전시회에서<br><br>
+            ✅ 재활용품 무인회수기<br>
+            ✅ 재활용품 IOT 전자저울<br>
+            ✅ 폐식용유 회수기<br>
+            ✅ 음식물 종량기<br>
+            ✅ RFID 기반 음식물 수거차량 결제 시스템<br>
+            등을 선보였는데요.<br><br>
+            자세히 알아볼까요?<br><br><br>
+        </p>
+
+        <div style="display: flex; justify-content: center;">
+          <img src="/images/news/news_2508_retech/03.jpg" style="width:800px; border-radius:15px;" alt="">
+        </div>
+        <br><br>
+
+        <p style="font-size: 18px; text-align: center;">
+            전시회 입구에 들어서면 바로 보이는 위치!<br>
+            G-TECH의 새로운 CI가 적용된 부스입니다.<br>
+            멀리서 봐도 시선에 확 들어오는데요.<br><br>
+            지테크인터내셔날은 이번 전시회에서<br>
+            재활용품 무인회수기 분야<br>
+            국내최초, 국내유일 우수조달을<br>
+            받은 점을 강조하였습니다.<br><br>
+            지테크인터내셔날 CI가 적용된<br>
+            하늘색 단체복을 입고있었는데 보셨을까요? 😊<br><br><br>
+        </p>
+
+        <div style="display: flex; justify-content: center;">
+          <img src="/images/news/news_2508_retech/04.jpg" style="width:800px; border-radius:15px;" alt="">
+        </div>
+        <br><br>
+
+        <p style="font-size: 18px; text-align: center;">
+            코다 재활용품 무인회수기는<br>
+            투명 페트병과 캔 압축은 물론<br>
+            파쇄 기능을 갖춘 제품까지 함께 전시되어<br>
+            관람객들로부터 큰 주목을 받았습니다.<br><br>
+            출시된 제품 모두는 일관된 디자인을 적용하여<br>
+            지테크인터내셔날의 아이덴티티를 보여드렸습니다.<br><br>
+            추가로 설명드리면<br>
+            오렌지는 음식물 종량기<br>
+            브라운은 폐식용유 회수기<br>
+            블루는 재활용품 무인회수기<br>
+            그린은 재활용품 무인회수기(ESG전용) 입니다.<br><br><br>
+        </p>
+
+        <div style="display: flex; justify-content: center;">
+          <img src="/images/news/news_2508_retech/05.jpg" style="width:800px; border-radius:15px;" alt="">
+        </div>
+        <br><br>
+
+        <p style="font-size: 18px; text-align: center;">
+            재활용품 무인회수기는<br>
+            관제 사이트, 어플로 연동이 되며<br>
+            탄소감축을 위한 ESG 전용 모델로도 가능합니다.<br><br>
+            직접 장비를 구동해볼 수 있게 준비하여<br>
+            방문객들이 자원 순환 과정을<br>
+            직접 체험해 볼수 있도록 하였습니다.<br><br><br>
+        </p>
+
+        <div style="display: flex; justify-content: center;">
+          <img src="/images/news/news_2508_retech/06.jpg" style="width:800px; border-radius:15px;" alt="">
+        </div>
+        <br><br>
+
+        <p style="font-size: 18px; text-align: center;">
+            현재 제주시 전역에서 운용하고 있는<br>
+            음식물 수거차량 RFID 결제 시스템도<br>
+            관제 사이트와 연동하여<br>
+            직접 보실수 있도록 선보였습니다.<br><br><br>
+        </p>
+
+        <div style="display: flex; justify-content: center;">
+          <img src="/images/news/news_2508_retech/07.jpg" style="width:800px; border-radius:15px;" alt="">
+        </div>
+        <br><br>
+
+        <p style="font-size: 18px; text-align: center;">
+            특히 이번 전시회에서<br>
+            재활용품 IOT 저울이<br>
+            높은 관심을 이끌어내며<br>
+            향후 재활용센터의 활용성을 입증하였습니다.<br><br>
+            재활용품 IOT 저울은 사용자가 쉽게 조작하여<br>
+            품목별 무게를 측정하고 실시간으로 서버에<br>
+            전송 및 저장을 할 수 있는 지능형 계측기입니다.<br>
+            음성안내 기능도 있다는 사실!<br>
+            지테크인터내셔날만의 혁신기술이 적용되었습니다.<br><br><br>
+        </p>
+
+        <div style="display: flex; justify-content: center;">
+          <img src="/images/news/news_2508_retech/08.jpg" style="width:800px; border-radius:15px;" alt="">
+        </div>
+        <br><br>
+
+        <p style="font-size: 18px; text-align: center;">
+            재활용센터에 설치시<br>
+            업무 효율성 향상, 재활용 자원 유통 체계 고도화,<br>
+            행정처리 간소화, 작업 편의성 극대화,<br>
+            데이터 정확성 및 신뢰도 향상 등<br>
+            다양한 이점을 가지고 있습니다.<br><br><br>
+        </p>
+
+        <div style="display: flex; justify-content: center;">
+          <img src="/images/news/news_2508_retech/09.jpg" style="width:800px; border-radius:15px;" alt="">
+        </div>
+        <br><br>
+
+        <p style="font-size: 18px; text-align: center;">
+            지테크인터내셔날은<br>
+            앞으로도 코다 브랜드를 통해<br>
+            친환경 기술과 제품을 선보이며<br>
+            지속 가능한 자원순환 사회를 만드는데<br>
+            앞장서겠습니다.<br><br><br>
+        </p>
+
+        <div style="display: flex; justify-content: center;">
+          <img src="/images/news/news_2508_retech/10.jpg" style="width:800px; border-radius:15px;" alt="">
+        </div>
+        <br><br>
+
+        <p style="font-size: 18px; text-align: center;">
+            RETECH과 같은 행사가 지속적으로 개최되어<br>
+            더 많은 사람들이 환경보호와 지속가능한 발전의<br>
+            중요성을 알고 실천할수 있기를 바랍니다.
+        </p>`,
+  },
+  {
     id: 4,
     title: "재활용품 무인회수기 우수제품 지정",
     date: "2025-04-28",

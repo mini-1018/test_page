@@ -117,7 +117,7 @@ export default function Footer() {
                   <ul>
                     {menu.subMenu.map((sub, subIndex) => (
                       <li key={subIndex} className="mb-[20px]">
-                        <Link href={sub.link} className="text-[12px] sm:text-[14px] md:text-[12px] xl:text-[14px] text-[#666] hover:text-text transition-colors">
+                        <Link href={sub.link} className="text-[12px] sm:text-[14px] md:text-[12px] xl:text-[14px] text-[#666] hover:text-text transition-colors whitespace-pre-line">
                           {sub.name}
                         </Link>
                       </li>

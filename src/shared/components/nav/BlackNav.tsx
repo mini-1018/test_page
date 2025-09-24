@@ -30,8 +30,8 @@ export default function BlackNav() {
     },
     {
       name: t("news"),
-      subMenu: [{ name: t("subMenu.news"), link: `/${locale}/news` },
-        { name: t("subMenu.notice"), link: `/${locale}/news/notice` }    
+      subMenu: [{ name: t("subMenu.notice"), link: `/${locale}/news/notice` },
+        { name: t("subMenu.news"), link: `/${locale}/news` },
       ],
     },
     {

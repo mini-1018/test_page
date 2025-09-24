@@ -39,8 +39,9 @@ export default function MobileNav() {
     {
       name: t("news"),
       link: `/${locale}/news`,
-      subMenu: [{ name: t("subMenu.news"), link: `/${locale}/news` },
-                { name: t("subMenu.notice"), link: `/${locale}/news/notice` },],
+      subMenu: [{ name: t("subMenu.notice"), link: `/${locale}/news/notice` },
+        { name: t("subMenu.news"), link: `/${locale}/news` }
+      ],
     },
     {
       name: t("community"),
