@@ -9,7 +9,7 @@ export const navigationTranslations = {
     subMenu: {
       brand: "브랜드",
       ReverseVendingMachine: "무인회수기",
-      rfid: "음식물 수거 차량\nRFID결제 시스템",
+      rfid: "음식물 수거 차량\nRFID 결제 시스템",
       FoodWasteBillingSystem: "음식물종량기",
       news: "코다뉴스",
       notice: "공지사항",

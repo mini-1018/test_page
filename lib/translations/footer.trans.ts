@@ -34,7 +34,7 @@ export const footerTranslations = {
         title: "제품",
         items: [
           { name: "무인회수기", link: "/products/reverse-vending-machines" },
-          { name: "음식물 수거 차량\nRFID결제 시스템", link: "/products/vehicle-food-waste-billing-system" },
+          { name: "음식물 수거 차량\nRFID 결제 시스템", link: "/products/vehicle-food-waste-billing-system" },
           { name: "음식물종량기", link: "/products/food-waste-billing-system" },
         ],
       },
