@@ -352,11 +352,11 @@ const newsPosts: NewsPost[] = [
   },
   {
     id: 1,
-    title: "COEX ENVEX 2024",
+    title: "2024 ENVEX 전시회 참가",
     date: "2024-06-03",
     tag: "전시회",
     imageUrl: "/images/news/news_2406_coex/news_2406_coex_01.webp",
-    content: `<h1 class="head_title" style="margin: 0px;">COEX ENVEX 2024</h1>
+    content: `<h1 class="head_title" style="margin: 0px;">2024 ENVEX 전시회 참가</h1>
         <p style="font-size: 16px; color: gray; margin-bottom: 50px;">
             2024.6.3 ~ 2024.6.5
         </p>
