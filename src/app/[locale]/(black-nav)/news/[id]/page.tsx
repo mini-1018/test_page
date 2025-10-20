@@ -11,6 +11,92 @@ interface NewsDetailPageProps {
 }
 const newsPosts: NewsPost[] = [
   {
+    id: 6,
+    title: "울산고래축제 속 코다의 녹색체험",
+    date: "2025-09-28",
+    tag: "축제",
+    imageUrl: "/images/news/news_2509_ulsan_whale/01.jpg",
+    content: `
+        <div style="display: flex; justify-content: center;">
+          <img src="/images/news/news_2509_ulsan_whale/01.jpg" style="width:800px; border-radius:15px;" alt="">
+        </div>
+        <br><br>
+
+        <h1 class="head_title" style="margin: 0px; text-align: center;">울산고래축제 속 코다의 녹색체험</h1>
+        <p style="font-size: 24px; color: gray; margin-bottom: 50px; text-align: center;">
+            고래의 도시에서 코다가 전한 녹색 메세지
+        </p>
+
+        <p style="font-size: 18px; text-align: center;">
+            안녕하세요. 지테크인터내셔날입니다.<br><br>
+            지난 9월 25일(목)부터 9월 28일(일)까지<br>
+            울산 장생포 고래문화특구 일원에서 열린<br>
+            제 29회 울산고래축제가 많은 시민과 관광객들의<br>
+            참여 속에 성황리에 막을 내렸습니다.<br><br>
+            저희 지테크인터내셔날의 친환경 자원 순환 브랜드<br>
+            CODA(코다)도 참여를 하였는데요.<br>
+            짧게나마 그 소식을 전해드리겠습니다.<br><br><br><br><br>
+        </p>
+
+        <div style="display: flex; justify-content: center;">
+          <img src="/images/news/news_2509_ulsan_whale/02.jpg" style="width:800px; border-radius:15px;" alt="">
+        </div>
+        <br>
+
+        <p style="font-size: 18px; text-align: center;">
+            울산 고래 축제는 수천년 전 선시시대부터<br>
+            이어져 온 고래문화를 기념하는<br>
+            울산을 대표하는 축제인데요.<br><br>
+            근대 포경산업의 중심지였던 장생포를<br>
+            기반으로 1995년부터 매년 개최되고 있습니다.<br><br>
+            올해 축제는 고래의 선물(Gift from a whale)을<br>
+            주제로 생태와 예술, 기술과 체험이 어우러진<br>
+            미래형 콘텐츠를 선보이며<br>
+            울산의 바다와 고래문화를 새롭게 조명했습니다.<br><br><br><br><br>
+        </p>
+
+        <div style="display: flex; justify-content: center;">
+          <img src="/images/news/news_2509_ulsan_whale/03.jpg" style="width:800px; border-radius:15px;" alt="">
+        </div>
+        <br>
+
+        <p style="font-size: 18px; text-align: center;">
+            이번 축제에는 울산 남구청 환경자원과와 함께<br>
+            저희 코다도 동참했는데요.<br><br>
+            투명페트병과 캔을 직접 무인회수기에 투입해<br>
+            포인트로 적립하는 체험 프로그램을 운영하여<br>
+            시민들이 자원 순환의 가치를<br>
+            직접 경험 할 수 있도록 했습니다.<br><br><br><br><br>
+        </p>
+
+        <div style="display: flex; justify-content: center;">
+          <img src="/images/news/news_2509_ulsan_whale/04.jpg" style="width:800px; border-radius:15px;" alt="">
+        </div>
+        <br>
+
+        <p style="font-size: 18px; text-align: center;">
+            특히, 코다의 로고가 향유고래를 모티브로<br>
+            디자인 되어 있어 울산 고래 축제의 상징성과도<br>
+            자연스럽게 맞닿아 있었습니다.<br><br>
+            고래를 사랑하는 도시, 울산에서<br>
+            코다의 친환경 메세지가<br>
+            더욱 뜻깊게 전달된 자리였습니다.<br><br><br><br><br>
+        </p>
+
+        <div style="display: flex; justify-content: center;">
+          <img src="/images/news/news_2509_ulsan_whale/05.jpg" style="width:800px; border-radius:15px;" alt="">
+        </div>
+        <br>
+
+        <p style="font-size: 18px; text-align: center;">
+            코다는 앞으로도 환경과 문화를<br>
+            함께 지키는 지속 가능한 축제 참여와<br>
+            친환경 활동을 이어갈 예정입니다.<br><br>
+            시민과 함께 만드는 깨끗한 자원 순환 사회를<br>
+            위해 꾸준히 노력하겠습니다.
+        </p>`,
+  },
+  {
     id: 5,
     title: "2025 RETECH 전시회 참가",
     date: "2025-08-29",
