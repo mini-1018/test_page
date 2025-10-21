@@ -13,7 +13,7 @@ const newsPosts: NewsPost[] = [
     title: "울산고래축제 속 코다의 녹색체험",
     date: "2025-09-28",
     tag: "축제",
-    imageUrl: "/images/news/news_2509_ulsan_whale/06.jpg",
+    imageUrl: "/images/news/news_2509_ulsan_whale/07.jpg",
     content: `
         <div style="display: flex; justify-content: center;">
           <img src="/images/news/news_2509_ulsan_whale/01.jpg" style="width:800px; border-radius:15px;" alt="">
