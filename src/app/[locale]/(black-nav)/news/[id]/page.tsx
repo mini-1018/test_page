@@ -28,7 +28,6 @@ const newsPosts: NewsPost[] = [
         </p>
 
         <p style="font-size: 18px; text-align: center;">
-            안녕하세요. 지테크인터내셔날입니다.<br><br>
             지난 9월 25일(목)부터 9월 28일(일)까지<br>
             울산 장생포 고래문화특구 일원에서 열린<br>
             제 29회 울산고래축제가 많은 시민과 관광객들의<br>

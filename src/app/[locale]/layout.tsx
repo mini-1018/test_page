@@ -153,13 +153,13 @@ export default async function LocaleLayout({ children, params }: { children: Rea
 
   return (
     <>
-      <html lang={locale} className="scroll-smooth">
+      <html lang={locale} className="scroll-smooth" suppressHydrationWarning>
         <head>
           <link rel="alternate" hrefLang="ko" href="/ko" />
           <link rel="alternate" hrefLang="en" href="/en" />
           <link rel="alternate" hrefLang="x-default" href="/ko" />
         </head>
-        <body>
+        <body suppressHydrationWarning>
           {children}
           <NaverAnalytics />
         </body>

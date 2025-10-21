@@ -13,7 +13,7 @@ const newsPosts: NewsPost[] = [
     title: "울산고래축제 속 코다의 녹색체험",
     date: "2025-09-28",
     tag: "축제",
-    imageUrl: "/images/news/news_2509_ulsan_whale/01.jpg",
+    imageUrl: "/images/news/news_2509_ulsan_whale/06.jpg",
     content: `
         <div style="display: flex; justify-content: center;">
           <img src="/images/news/news_2509_ulsan_whale/01.jpg" style="width:800px; border-radius:15px;" alt="">
@@ -26,7 +26,6 @@ const newsPosts: NewsPost[] = [
         </p>
 
         <p style="font-size: 18px; text-align: center;">
-            안녕하세요. 지테크인터내셔날입니다.<br><br>
             지난 9월 25일(목)부터 9월 28일(일)까지<br>
             울산 장생포 고래문화특구 일원에서 열린<br>
             제 29회 울산고래축제가 많은 시민과 관광객들의<br>
@@ -106,8 +105,6 @@ const newsPosts: NewsPost[] = [
         </p>
         
         <p style="font-size: 18px; text-align: center;">
-            안녕하세요.<br>
-            지테크인터내셔날입니다.<br><br>
             지난 8월 27일부터 29일까지 개최된<br>
             폐기물 · 자원순환 산업전에 참가하여<br>
             자사 브랜드 '코다(CODA)'를 선보였습니다.<br><br>
