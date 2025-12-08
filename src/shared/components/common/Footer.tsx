@@ -1,9 +1,6 @@
 "use client";
 import Image from "next/image";
 import Link from "next/link";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faYoutube, faInstagram, faNeos } from "@fortawesome/free-brands-svg-icons";
-import { faPhone, faEnvelope } from "@fortawesome/free-solid-svg-icons";
 import { useParams } from "next/navigation";
 import { getFooterTranslations } from "@lib/translations/footer.trans";
 import type { Locale } from "@lib/translator";

@@ -7,6 +7,14 @@ export async function GET(request: NextRequest) {
     const download = searchParams.get('download');
     
     console.log('PDF 다운로드 요청:', { filename, download });
+
+    const ALLOWED_FILES = [
+      '코다_환경제품_카다로그.pdf',
+    ];
+
+    if (!filename || !ALLOWED_FILES.includes(filename)) {
+      return NextResponse.json({ message: 'File not allowed' }, { status: 403 });
+    }
     
     if (!filename || typeof filename !== 'string') {
       console.error('파일명이 없습니다:', filename);
