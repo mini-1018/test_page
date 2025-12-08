@@ -1,3 +1,3 @@
 export interface Translation {
-  [key: string]: "ko" | "en";
+  locale: "ko" | "en";
 }
