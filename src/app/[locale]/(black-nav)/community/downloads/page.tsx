@@ -15,7 +15,7 @@ const downloadsPosts: DownloadPost[] = [
     date: "2025-05-25",
     fileSize: "23.6MB",
     downloadCount: 1523,
-    imageUrl: "/images/brand/coda_brand_s1.webp",
+    imageUrl: "/downloads/20251209_catalog.jpg",
   },
 ];
 
