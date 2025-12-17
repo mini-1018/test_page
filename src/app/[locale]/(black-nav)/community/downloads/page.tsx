@@ -13,8 +13,8 @@ const downloadsPosts: DownloadPost[] = [
     title: "코다 환경제품 카다로그",
     author: "코다",
     date: "2025-05-25",
-    fileSize: "24.8MB",
-    downloadCount: 89,
+    fileSize: "23.6MB",
+    downloadCount: 1523,
     imageUrl: "/images/brand/coda_brand_s1.webp",
   },
 ];
