@@ -11,6 +11,111 @@ interface NewsDetailPageProps {
 }
 const newsPosts: NewsPost[] = [
   {
+    id: 7,
+    title: "체험으로 만나는 친환경 기술 | 한강 크리스마스 마켓 현장 스케치",
+    date: "2025-12-29",
+    tag: "축제",
+    imageUrl: "/images/news/news_2512_hangang/01.jpg",
+    content: `
+        <div style="display: flex; justify-content: center;">
+          <img src="/images/news/news_2512_hangang/01.jpg" style="width:800px; border-radius:15px;" alt="">
+        </div>
+        <br><br>
+
+        <h1 class="head_title" style="margin: 0px; text-align: center;">체험으로 만나는 친환경 기술</h1>
+        <p style="font-size: 24px; color: gray; margin-bottom: 50px; text-align: center;">
+            한강 크리스마스 마켓 현장 스케치
+        </p>
+
+        <p style="font-size: 18px; text-align: center;">
+            지난 12월 19일부터 25일까지<br>
+            <span style="color: #ff0010; ">2025 한강 크리스마스 마켓 현장</span>에<br>
+            코다(CODA) 재활용품 무인회수기가 설치되어<br>
+            많은 시민들과 함께 뜻깊은 시간을 가졌습니다.<br><br><br><br><br>
+        </p>
+
+        <div style="display: flex; justify-content: center;">
+          <img src="/images/news/news_2512_hangang/02.jpg" style="width:800px; border-radius:15px;" alt="">
+        </div>
+        <br>
+
+        <p style="font-size: 18px; text-align: center;">
+            연말 분위기가 가득한 행사장 속에서 코다는<br>
+            친환경 기술을 보다 쉽고 친근하게<br>
+            체험할 수 있는 공간으로 참여했습니다.<br><br><br><br><br>
+        </p>
+
+        <div style="display: flex; justify-content: center;">
+          <img src="/images/news/news_2512_hangang/03.jpg" style="width:800px; border-radius:15px;" alt="">
+        </div>
+        <br>
+
+        <p style="font-size: 18px; text-align: center;">
+            이번 행사에서는 크리스마스를 맞아<br>
+            재활용품 무인회수기 터치스크린에<br>
+            크리스마스 분위기가 느껴지는<br>
+            🐳코다 캐릭터 그래픽을 적용해 방문객들이<br>
+            자연스럽게 장비에 관심을 가질 수 있도록 구성했습니다.<br><br>
+
+            단순한 기계가 아닌, 축제의 일부로<br>
+            어우러지는 디자인으로 현장 분위기를<br>
+            한층 더 따뜻하게 만들었습니다.🎄<br><br><br><br><br>
+        </p>
+
+        <div style="display: flex; justify-content: center;">
+          <img src="/images/news/news_2512_hangang/04.jpg" style="width:800px; border-radius:15px;" alt="">
+        </div>
+        <br>
+
+        <p style="font-size: 18px; text-align: center;">
+            재활용품 무인회수기는 다회용기존에 설치되어<br>
+            지원 순환의 흐름을 직관적으로<br>
+            이해할 수 있도록 배치되었는데요.<br><br><br><br><br>
+        </p>
+
+        <div style="display: flex; justify-content: center;">
+          <img src="/images/news/news_2512_hangang/05.jpg" style="width:800px; border-radius:15px;" alt="">
+        </div>
+        <br>
+
+        <p style="font-size: 18px; text-align: center;">
+            입구에 들어서면 크리스마스 트리와<br>
+           화려한 장식들이 방문객을 맞이하고<br>
+            그 안쪽에서 코다의 재활용품 무인회수기가<br>
+            친환경 실천의 역할을 담당했습니다.🌏🌱<br><br><br><br><br>
+        </p>
+        
+        <div style="display: flex; justify-content: center;">
+          <img src="/images/news/news_2512_hangang/06.jpg" style="width:800px; border-radius:15px;" alt="">
+        </div>
+        <br>
+
+        <p style="font-size: 18px; text-align: center;">
+            행사 기간 동안 남녀노소 다양한 연령층의<br>
+            방문객들이 무인회수기를 직접 체험하며<br>
+            재활용품 투입 방식과 친환경 기술의 작동 원리를<br>
+            자연스럽게 이해하는 모습을 볼 수 있었습니다.<br><br>
+            복잡하지 않은 사용 방식과 직관적인 화면 구성<br>
+            덕분에 처음 이용하는 분들도<br>
+            쉽게 참여할 수 있었습니다.👍<br><br><br><br><br>
+        </p>
+        
+        <div style="display: flex; justify-content: center;">
+          <img src="/images/news/news_2512_hangang/07.jpg" style="width:800px; border-radius:15px;" alt="">
+        </div>
+        <br>
+
+        <p style="font-size: 18px; text-align: center;">
+            이번 한강 크리스마스 마켓은 단순한 전시를 넘어,<br>
+            일상 속에서 실천할 수 있는 친환경 기술을<br>
+            경험하는 자리였다는 점에서 의미가 있었습니다.<br><br>
+            코다는 앞으로도 누구나 쉽게 참여할 수 있는<br>
+            자원순환 환경을 만들어가기 위해<br>
+           지속적으로 노력할 예정입니다.<br><br><br><br><br>
+        </p>
+        `,
+  },
+  {
     id: 6,
     title: "울산고래축제 속 코다의 녹색체험",
     date: "2025-09-28",

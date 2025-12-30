@@ -72,7 +72,7 @@ const News: React.FC<NewsProps> = ({ posts, locale }) => {
                       </div>
 
                       {/* 제목 */}
-                      <h3 className="text-slate-900 font-semibold !text-lg leading-tight group-hover:text-blue-600 transition-colors duration-200 line-clamp-2">{post.title}</h3>
+                      <h3 className="text-slate-900 font-semibold !text-lg leading-tight group-hover:text-blue-600 transition-colors duration-200 line-clamp-1">{post.title}</h3>
 
                       {/* 날짜 정보 */}
                       <div className="flex items-center gap-2 text-sm text-gray-500">
