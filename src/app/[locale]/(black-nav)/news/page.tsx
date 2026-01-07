@@ -10,7 +10,7 @@ interface NewsPageProps {
 const newsPosts: NewsPost[] = [
   {
     id: 7,
-    title: "체험으로 만나는 친환경 기술 | 한강 크리스마스 마켓 현장 스케치",
+    title: "체험으로 만나는 친환경 기술",
     date: "2025-12-29",
     tag: "축제",
     imageUrl: "/images/news/news_2512_hangang/01.jpg",
@@ -67,7 +67,7 @@ const newsPosts: NewsPost[] = [
 
         <p style="font-size: 18px; text-align: center;">
             재활용품 무인회수기는 다회용기존에 설치되어<br>
-            지원 순환의 흐름을 직관적으로<br>
+            자원 순환의 흐름을 직관적으로<br>
             이해할 수 있도록 배치되었는데요.<br><br><br><br><br>
         </p>
 
