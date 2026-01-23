@@ -1,6 +1,6 @@
 import "@app/globals.css";
 import BlackNav from "@shared/components/nav/BlackNav";
-import Footer from "@shared/components/common/Footer";
+import Footer from "@src/shared/components/nav/Footer";
 import MobileNav from "@shared/components/nav/MobileNav";
 
 export default function RootLayout({

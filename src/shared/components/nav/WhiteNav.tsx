@@ -2,10 +2,11 @@
 import { useState, useEffect } from "react";
 import Link from "next/link";
 import Image from "next/image";
-import { useParams, usePathname } from "next/navigation";
+import { useParams } from "next/navigation";
 import { getNavigationTranslations } from "@lib/translations/nav.trans";
 import type { Locale } from "@lib/translator";
 import LangSelector from "./LangSelector";
+import { getMenuItems } from "./menuItems";
 
 export default function WhiteNav() {
   const [isScrolled, setIsScrolled] = useState(false);
@@ -13,43 +14,10 @@ export default function WhiteNav() {
   const [hoveredSubmenu, setHoveredSubmenu] = useState<string | null>(null);
 
   const params = useParams();
-  const pathname = usePathname();
   const locale = (params?.locale as Locale) || "ko";
   const { t } = getNavigationTranslations(locale);
 
-  const createLanguageLink = (newLocale: string) => {
-    const pathWithoutLocale = pathname.replace(/^\/(ko|en)/, "") || "/";
-    return `/${newLocale}${pathWithoutLocale}`;
-  };
-
-  const menuItems = [
-    {
-      name: t("brand"),
-      subMenu: [{ name: t("subMenu.brand"), link: `/${locale}/brand` }],
-    },
-    {
-      name: t("products"),
-      subMenu: [
-        { name: t("subMenu.ReverseVendingMachine"), link: `/${locale}/products/reverse-vending-machines` },
-        { name: t("subMenu.rfid"), link: `/${locale}/products/vehicle-food-waste-billing-system` },
-        { name: t("subMenu.FoodWasteBillingSystem"), link: `/${locale}/products/food-waste-billing-system` },
-      ],
-    },
-    {
-      name: t("news"),
-      subMenu: [{ name: t("subMenu.notice"), link: `/${locale}/news/notice` },
-        { name: t("subMenu.news"), link: `/${locale}/news` }
-      ],
-    },
-    {
-      name: t("community"),
-      subMenu: [
-        { name: t("subMenu.faq"), link: `/${locale}/community/faq` },
-        { name: t("subMenu.support"), link: `/${locale}/community/support` },
-        { name: t("subMenu.downloads"), link: `/${locale}/community/downloads` },
-      ],
-    },
-  ];
+  const menuItems = getMenuItems(locale, t);
 
   useEffect(() => {
     const handleScroll = () => {
@@ -69,7 +37,7 @@ export default function WhiteNav() {
     <header
       className={`hidden md:block fixed top-0 left-0 w-full z-50 transition-all duration-300 ${shouldShowDarkTheme ? "bg-white border-b-1 border-gray-200" : "bg-transparent"}`}
       style={{
-        height: isHovered ? "280px" : "80px",
+        height: isHovered ? "320px" : "80px",
         transition: "height 0.3s ease-in-out, background-color 0.3s ease-in-out",
       }}
       onMouseEnter={() => setIsHovered(true)}

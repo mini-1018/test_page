@@ -2,57 +2,21 @@
 import { useState } from "react";
 import Link from "next/link";
 import Image from "next/image";
-import { useParams, usePathname } from "next/navigation";
+import { useParams } from "next/navigation";
 import { getNavigationTranslations } from "@lib/translations/nav.trans";
 import type { Locale } from "@lib/translator";
 import LangSelector from "./LangSelector";
+import { getMenuItems } from "./menuItems";
 
 export default function MobileNav() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [openSubmenu, setOpenSubmenu] = useState<string | null>(null);
 
   const params = useParams();
-  const pathname = usePathname();
   const locale = (params?.locale as Locale) || "ko";
   const { t } = getNavigationTranslations(locale);
 
-  const createLanguageLink = (newLocale: string) => {
-    const pathWithoutLocale = pathname.replace(/^\/(ko|en)/, "") || "/";
-    return `/${newLocale}${pathWithoutLocale}`;
-  };
-
-  const menuItems = [
-    {
-      name: t("brand"),
-      link: `/${locale}/brand`,
-      subMenu: [{ name: t("subMenu.brand"), link: `/${locale}/brand` }],
-    },
-    {
-      name: t("products"),
-      link: `/${locale}/products`,
-      subMenu: [
-        { name: t("subMenu.ReverseVendingMachine"), link: `/${locale}/products/reverse-vending-machines` },
-        { name: t("subMenu.rfid"), link: `/${locale}/products/vehicle-food-waste-billing-system` },
-        { name: t("subMenu.FoodWasteBillingSystem"), link: `/${locale}/products/food-waste-billing-system` },
-      ],
-    },
-    {
-      name: t("news"),
-      link: `/${locale}/news`,
-      subMenu: [{ name: t("subMenu.notice"), link: `/${locale}/news/notice` },
-        { name: t("subMenu.news"), link: `/${locale}/news` }
-      ],
-    },
-    {
-      name: t("community"),
-      link: `/${locale}/community`,
-      subMenu: [
-        { name: t("subMenu.faq"), link: `/${locale}/community/faq` },
-        { name: t("subMenu.support"), link: `/${locale}/community/support` },
-        { name: t("subMenu.downloads"), link: `/${locale}/community/downloads` },
-      ],
-    },
-  ];
+  const menuItems = getMenuItems(locale, t);
 
   const toggleMenu = () => {
     setIsMenuOpen(!isMenuOpen);

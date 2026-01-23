@@ -1,5 +1,5 @@
 import "@app/globals.css";
-import Footer from "@shared/components/common/Footer";
+import Footer from "@src/shared/components/nav/Footer";
 import WhiteNav from "@shared/components/nav/WhiteNav";
 import MobileNav from "@shared/components/nav/MobileNav";
 import { Toaster } from "sonner";

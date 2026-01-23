@@ -3,7 +3,6 @@ import useEmblaCarousel from "embla-carousel-react";
 import Autoplay from "embla-carousel-autoplay";
 import Image from "next/image";
 import Link from "next/link";
-import { toast } from "sonner";
 import { getHomeTranslations, homeTranslations } from "@lib/translations/home.trans";
 
 interface AnimationHomeProps {
@@ -63,63 +62,24 @@ export default function AnimationHome({ locale }: AnimationHomeProps) {
     ]
   );
 
-  const handleToastClick = () => {
-    toast("COMING SOON", {
-      description: "준비중입니다.",
-      style: {
-        background: "white",
-        color: "#434343",
-        fontSize: "16px",
-        display: "flex",
-        flexDirection: "column",
-        alignItems: "center",
-        justifyContent: "center",
-        textAlign: "center",
-      },
-    });
-  };
-
   return (
     <div className="w-full max-w-[1200px] mx-auto">
       <div className="overflow-hidden" ref={emblaRef}>
         <div className="flex h-[560px]">
           {products.map((item: any, index: number) => (
             <div key={index} className="min-w-0 flex-shrink-0 flex-grow-0 basis-full sm:basis-1/2 lg:basis-1/3 px-2">
-              {item.title.includes("IoT") ? (
-                <div className="w-full h-[530px] bg-white rounded-2xl pt-[50px] pb-[57px] shadow-lg flex flex-col items-center justify-between border-1 cursor-pointer" onClick={handleToastClick}>
+              <Link href={staticData[index].link} className="block w-full h-[530px]">
+                <div className="w-full h-full bg-white rounded-2xl pt-[50px] pb-[57px] shadow-lg flex flex-col items-center justify-between border-1 cursor-pointer">
                   <div className="flex flex-col items-center">
-                    {/* 제목 */}
                     <p className="text-[30px] font-bold text-secondary text-center whitespace-pre-line leading-[32px]">{item.title}</p>
-
                     <div className="w-[34px] border-1 border-text mt-4 mb-4" />
-
-                    {/* 설명 */}
                     <p className="text-[16px] text-text text-center whitespace-pre-line leading-[19px] px-3">{item.description}</p>
                   </div>
-                  {/* 이미지 */}
                   <div className="flex items-center justify-center">
                     <Image src={staticData[index].src} alt={item.title} width={0} height={0} sizes="100vw" className="w-auto h-auto" unoptimized />
                   </div>
                 </div>
-              ) : (
-                <Link href={staticData[index].link} className="block w-full h-[530px]">
-                  <div className="w-full h-full bg-white rounded-2xl pt-[50px] pb-[57px] shadow-lg flex flex-col items-center justify-between border-1 cursor-pointer">
-                    <div className="flex flex-col items-center">
-                      {/* 제목 */}
-                      <p className="text-[30px] font-bold text-secondary text-center whitespace-pre-line leading-[32px]">{item.title}</p>
-
-                      <div className="w-[34px] border-1 border-text mt-4 mb-4" />
-
-                      {/* 설명 */}
-                      <p className="text-[16px] text-text text-center whitespace-pre-line leading-[19px] px-3">{item.description}</p>
-                    </div>
-                    {/* 이미지 */}
-                    <div className="flex items-center justify-center">
-                      <Image src={staticData[index].src} alt={item.title} width={0} height={0} sizes="100vw" className="w-auto h-auto" unoptimized />
-                    </div>
-                  </div>
-                </Link>
-              )}
+              </Link>
             </div>
           ))}
         </div>
