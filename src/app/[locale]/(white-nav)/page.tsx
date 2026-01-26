@@ -3,11 +3,9 @@ import FadeUpOnView from "@shared/components/common/FadeUpOnView";
 import ResponsivePadding from "@shared/components/common/ResponsivePadding";
 import { Translation } from "@src/types/translation.type";
 import Image from "next/image";
-import Link from "next/link";
 import { Metadata } from "next";
 import { Locale } from "@lib/translator";
 import AnimationHome from "./AnimationHome";
-import PopUpUseClient from "@src/shared/components/popup/PopUpUseClient";
 
 interface HomePageProps {
   params: Promise<{ locale: Locale }>;
@@ -20,11 +18,6 @@ export default async function HomePage({ params }: { params: Promise<Translation
   return (
     <>
       <main className="bg-bg-gray">
-        <PopUpUseClient
-          imageUrl="images/popup/notice.jpg"
-          imageAlt="명의도용 주의팝업"
-          popupId="main_notice_popup"
-        />
         {/* 메인 비주얼 섹션 */}
         <section className="w-full">
           <h1 className="sr-only">{t("title")}</h1>
