@@ -53,17 +53,17 @@ export default function Footer() {
 
           <ul className="flex mt-[20px] gap-[25px]">
             <li>
-              <Link href="https://blog.naver.com/gtech324" title={t("social.blog")} className="text-text">
+              <Link href="https://blog.naver.com/gtech_official" title={t("social.blog")} className="text-text" target="_blank" rel="noopener noreferrer">
                 <Image src={"/images/icons/blog.svg"} alt="Naver Blog" width={30} height={30} className="w-[24px] h-[24px]" />
               </Link>
             </li>
             <li>
-              <Link href="https://www.youtube.com/@Gtech-international" title={t("social.youtube")} className="text-text">
+              <Link href="https://www.youtube.com/@Gtech-international" title={t("social.youtube")} className="text-text" target="_blank" rel="noopener noreferrer">
                 <Image src={"/images/icons/youtube.svg"} alt="YouTube" width={30} height={30} className="w-[24px] h-[24px]" />
               </Link>
             </li>
             <li>
-              <Link href="https://www.instagram.com/gtech__official?igsh=bmZuMDZnbG45eG8=" title={t("social.instagram")} className="text-text">
+              <Link href="https://www.instagram.com/coda_recycle" title={t("social.instagram")} className="text-text" target="_blank" rel="noopener noreferrer">
                 <Image src={"/images/icons/insta.svg"} alt="Instagram" width={30} height={30} className="w-[24px] h-[24px]" />
               </Link>
             </li>
